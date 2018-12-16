@@ -2,6 +2,7 @@
 /*-------------------------------------------
 - PHP Frame work
 - Created by Le Anh Van - anhvan3103@gmail.com
+- 2018
 --------------------------------------------*/
 	header("location: ".$http_root."admin");
 	
