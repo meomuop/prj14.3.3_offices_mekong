@@ -1,0 +1,34 @@
+RewriteEngine On
+#RewriteBase /
+
+RewriteCond %{THE_REQUEST} ^.+$ [NC]
+
+#[NC,L,R=307] url
+RewriteRule ^Home.html index.php
+RewriteRule ^Distric-view.html ?aboutDetails&mod=config
+RewriteRule ^Feedback.html ?feedback&mod=feedback
+RewriteRule ^Organization.html ?organization&mod=config
+RewriteRule ^Sitemap.html ?index.php&act=1
+
+RewriteRule ^Document.html ?documentList&mod=docs
+RewriteRule ^Document-details/([0-9]+)/(.*).html ?documentDetails&id=$1&mod=docs
+
+RewriteRule ^Procedure.html ?procedureList&mod=procedures
+RewriteRule ^Procedure-details/([0-9]+)/(.*).html ?procedureDetails&id=$1&mod=procedures
+
+RewriteRule ^Schedule.html ?scheduleList&mod=schedules
+
+RewriteRule ^Phone-list.html ?phoneList&mod=phones
+RewriteRule ^Phone-details/([0-9]+)/(.*).html ?phoneDetails&id=$1&mod=phones
+
+RewriteRule ^Category/([0-9]+)/(.*).html ?newsList&id=$1&mod=news
+RewriteRule ^Commune.html ?newsList&isunit=1&mod=news
+RewriteRule ^Commune-details/([0-9]+)/(.*).html ?newsList&unit_id=$1&mod=news
+RewriteRule ^News-details/([0-9]+)/([0-9]+)/(.*).html ?newsDetails&cat_id=$1&id=$2&mod=news
+RewriteRule ^rss/([0-9]+)/(.*).html ?newsRss&id=$1&mod=news
+
+RewriteRule ^Question.html ?questionList&mod=questions
+RewriteRule ^Question-details/([0-9]+)/(.*).html ?questionDetails&id=$1&mod=questions
+RewriteRule ^Question-create.html ?questionCreate&mod=questions
+
+RewriteRule ^Search.html ?newsList&search=true&mod=news

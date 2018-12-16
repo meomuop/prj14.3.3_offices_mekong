@@ -1,0 +1,141 @@
+* {
+padding: 0px ;
+margin : 0px;
+}
+
+body {
+    width: 1020px;
+    height: 568px;
+    margin: auto;
+    background: url("../../images/login.png") no-repeat 166px;
+}
+.boc {
+background: url("../../images/bg-dn3.png") no-repeat 65px 125px;
+width: 800px;
+height: 600px;
+margin: auto;
+}
+.trai {
+    width: 276px;
+    height: 257px;
+    padding-top: 277px;
+    padding-left: 90px;
+    float: left;
+    background: url("../../images/ke-doc.png") no-repeat 346px 277px;
+}
+.trai img{}
+
+.phai {
+    float: left;
+    width: 310px;
+    height: 202px;
+    padding-top: 312px;
+}
+.phai .tren {
+    height: 135px;
+    float: left;
+    width: 310px;
+}
+.phai .tren .hang1 {
+    margin-bottom: 10px;
+}
+.phai .tren .hang1 a {
+    display: block;
+    width: 100px;
+    overflow: hidden;
+    float: left;
+    text-decoration: none;
+    color: 01679b;
+    font-family: arial;
+    font-size: 14px;
+    font-style: normal;
+    text-shadow: 1px 2px 1px rgba(255, 255, 255, 0.63);
+}
+.phai .tren .hang1 input {
+    width: 154px;
+    margin-left: 35px;
+    height: 25px;
+    background: url("../../images/khung.png") no-repeat -3px -4px;
+    border: none;
+}
+
+.phai .tren .hang2 {
+ margin-bottom: 10px;
+}
+.phai .tren .hang2 a {
+    display: block;
+    width: 100px;
+    overflow: hidden;
+    float: left;
+    text-decoration: none;
+    color: 01679b;
+    font-family: arial;
+    font-size: 14px;
+    font-style: normal;
+    text-shadow: 1px 2px 1px rgba(255, 255, 255, 0.63);
+}
+.phai .tren .hang2 input {
+width: 154px;
+    margin-left: 35px;
+    height: 25px;
+    background: url("../../images/khung.png") no-repeat -3px -4px;
+    border: none;
+}
+
+.phai .tren .hang3 {}
+
+.phai .tren .hang3 a {
+    display: block;
+    width: 100px;
+    overflow: hidden;
+    float: left;
+    text-decoration: none;
+    color: 01679b;
+    font-family: arial;
+    font-size: 14px;
+    font-style: normal;
+    text-shadow: 1px 2px 1px rgba(255, 255, 255, 0.63);
+    
+    padding-top: 12px;
+}
+
+.phai .tren .hang3 a.dn {
+    display: block;
+    width: 82px;
+    overflow: hidden;
+    float: left;
+    text-decoration: none;
+    color: 01679b;
+    font-family: arial;
+    font-size: 13px;
+    font-style: normal;
+    text-shadow: 1px 2px 1px rgba(255, 255, 255, 0.63);
+    background: url("../../images/nut.png") no-repeat 3px 10px;
+    height: 40px;
+    margin-left: 18px;
+    text-align: center;
+}
+.phai .tren .hang3 input {
+width: 50px;
+    
+    
+height: 19px;
+    
+background: url("../../images/khungn.png") no-repeat -3px -3px;
+    border: none;
+float: left;
+margin-left: 35px;
+margin-top: 13px;
+}
+
+.phai .duoi{
+    width: 310px;
+    height: 55px;
+    float: left;
+}
+.phai .duoi a {
+    display: block;
+    float: left;
+    width: 300px;
+    padding-bottom: 10px;
+}

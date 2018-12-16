@@ -1,0 +1,348 @@
+@charset "utf-8";
+/* CSS Document */
+/* RESET CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, legend{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 12px;
+	text-decoration:none;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+label{
+    line-height: 14.7px;
+}
+table, caption, tbody, tfoot, thead, tr, th, td{
+	border: 0;
+	text-decoration:none;
+	font-size:12px;
+}
+a{
+	color:#15428b;
+}
+a:hover{
+	color:#C00;
+}
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+	line-height: 0.2em;
+	color: #15428b;
+	background: #FFF;
+	background-position:top;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	
+}
+ol, ul {
+	list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+
+/* END RESET */
+#wrap{
+	width:1200px;
+	height:auto;
+	background:url(New%20folder/banner.jpg) no-repeat;
+	margin:auto;
+}
+#main{
+	width:1200px;
+	height:520px;
+	background:#dfe8f6;
+	border-bottom:1px solid #333;
+}
+
+.main_item_icon{
+	width: 100px;
+	height: 100px;
+	border: 0px none;
+	cursor:pointer;
+}
+
+.main_btn_caption{
+	margin-top: 5px;
+}
+
+#l-main{
+	width:105px;
+	height:auto;
+	float:left;
+}
+#c-main{
+	margin-top: 5px;
+	width:820px;
+	height:508px;
+	border-right:1px solid #333;
+	float:left;
+}
+#r-main{
+	margin-top:7px;
+	width:270px;
+	height:493px;
+	background:#dfe8f6;
+	float:right;
+}
+.c1{
+	width:800px;
+	height:auto;
+	border:1px solid #666;
+}
+.c2{
+	width:255px;
+	height:240px;
+	margin:6px;
+	border:1px solid #666;
+}
+.c1 ul{
+	padding:15px 8px 15px 17px;
+}
+.c12 ul li.outside{
+	float:left;
+	padding-left:30px;
+	padding-right:30px;
+}
+.c12 ul.inside li{
+	text-align:center;
+}
+.c12 ul.inside li a input{
+	padding-bottom:10px;
+}
+.c12 ul.inside li a{
+	font-weight:bold;
+}
+.c21{
+	width:255px;
+	height:240px;
+	border:1px solid #FFF;
+	position:relative;
+}
+.c11{
+	width:800px;
+	height:auto;
+	border:1px solid #FFF;
+	position:relative;
+}
+.c11 a.a1{
+	position:absolute;
+	font-weight:bold;
+	background:#ccd8e7;
+	border:1px solid #666;
+	top:-8px;
+	left:10px;
+	padding:2px 6px;
+	
+}
+.c21 a.a2{
+	position:absolute;
+	font-weight:bold;
+	background:#ccd8e7;
+	border:1px solid #666;
+	top:-8px;
+	left:10px;
+	padding:2px 6px;
+	
+}
+.c12{
+	overflow:hidden;
+}
+.c22{
+	padding-top:20px;
+}
+#text ul li{
+	padding-bottom:36px;
+}
+/*------------------------chung--------------------*/
+.text_date{
+	border:none; width:15px; font-size:12px; height:17px;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+.text_month{
+	border:none; width:15px; font-size:12px; height:17px;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+.text_year{
+	border:none; width:30px; font-size:12px; height:17px;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+.text_time_callender{
+	border:1px solid #99bbe8; width:77px; font-size:12px; height:17px;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+.text_super_tiny{
+	border:1px solid #99bbe8; width:25px; font-size:12px; height:17px;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+.text_tiny{
+	border:1px solid #99bbe8; width:50px; font-size:12px; height:17px;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+.text_short{
+	border:1px solid #99bbe8; width:100px; font-size:12px; height:17px;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+.text_middle{
+	border:1px solid #99bbe8; width:160px; font-size:12px; height:17px;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+.text_middle_long{
+	border:1px solid #99bbe8; width:260px; font-size:12px; height:17px;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+.text_long{
+	border:1px solid #99bbe8; width:352px; font-size:12px; height:17px;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+.select_micro{
+	border:1px solid #99bbe8; width:40px; font-size:12px; height:18px;
+}
+.select_tiny{
+	border:1px solid #99bbe8; width:52px; font-size:12px; height:18px;
+}
+.select_short{
+	border:1px solid #99bbe8; width:102px; font-size:12px; height:18px;
+}
+.select_middle{
+	border:1px solid #99bbe8; width:162px; font-size:12px; height:18px;
+}
+.select_middle_long{
+	border:1px solid #99bbe8; width:230px; font-size:12px; height:18px;
+}
+.select_long{
+	border:1px solid #99bbe8; width:354px; font-size:12px; height:18px;
+}
+
+.text_area_small{
+	border:1px solid #99bbe8; width:370px; font-size:12px; height:42px; margin-top:2px;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+.text_area_wide{
+	border:1px solid #99bbe8; width:418px; font-size:12px; height:112px; margin-top:2px;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+.text_area{
+	border:1px solid #99bbe8; width:300px; font-size:12px; height:66px; margin-top:2px;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+.text_area_long{
+	border:1px solid #99bbe8; width:550px; font-size:12px; height:66px; margin-top:2px;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+.text_area_dongbo{
+	border:1px solid #99bbe8; width:300px; font-size:12px; height:66px; margin-top:2px;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+.text_dongbo{
+	border:1px solid #99bbe8; width:300px; font-size:12px; height:17px;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+.button{
+	border:1px solid #99bbe8; width:80px; font-size:12px; line-height:16px; height:18px; cursor:pointer; background:#ccd8e7; font-weight:bold
+}
+.button_red{
+	border:1px solid #99bbe8; width:100px; font-size:12px; line-height:17px; height:20px; cursor:pointer; background:#ff0000; font-weight:bold; color:#FFF
+}
+
+.button_small{
+	border:1px solid #99bbe8; width:40px; font-size:12px; line-height:20px; height:20px; cursor:pointer; background:#ccd8e7; font-weight:bold
+}
+
+.button_middle{
+	border:1px solid #99bbe8; width:80px; font-size:12px; line-height:20px; height:20px; cursor:pointer; background:#ccd8e7; font-weight:bold
+}
+
+.button_long{
+	border:1px solid #99bbe8; width:140px; font-size:12px; line-height:20px; height:20px; cursor:pointer; background:#ccd8e7; font-weight:bold
+}
+
+.button_seek{
+	border:none; width:50px; font-size:12px; line-height:19px; height:19px; cursor:pointer; background:#ccd8e7; font-weight:bold
+}
+.legend{
+	margin-left:20px; height:20px; border:1px solid #99bbe8; width:100px; font-weight:bold; padding-left:2px; line-height:20px; background-color:#ccd8e7
+}
+.legend_middle{
+	margin-left:20px; height:20px; border:1px solid #99bbe8; width:180px; font-weight:bold; padding-left:2px; line-height:20px; background-color:#ccd8e7
+}
+.legend_list{
+	margin-left:20px; height:20px; border:1px solid #99bbe8; width:370px; font-weight:bold; padding-left:2px; line-height:20px; background-color:#ccd8e7
+}
+.legend_list_search{
+	margin-left:20px; height:20px; border:1px solid #99bbe8; width:430px; font-weight:bold; padding-left:2px; line-height:20px; background-color:#ccd8e7
+}
+.legend_config{
+	margin-left:20px; border:1px solid #99bbe8; width:120px; font-weight:bold; padding-left:2px; line-height:20px; background-color:#ccd8e7
+}
+.legend_list_config{
+	margin-left:20px; border:1px solid #99bbe8; width:370px; font-weight:bold; padding-left:2px; line-height:20px; background-color:#ccd8e7
+}
+
+/*------------------------dacbiet--------------------*/
+.text_seek_tiny{
+	border:none; width:60px; font-size:12px; height:17px; margin-top:2px
+}
+.text_seek{
+	border:none; width:100px; font-size:12px; height:17px; margin-top:2px
+}
+.text_seek_middle{
+	border:none; width:140px; font-size:12px; height:17px; margin-top:2px
+}
+.text_seek_long{
+	border:none; width:300px; font-size:12px; height:17px; margin-top:2px
+}
+.select_seek{
+	border:none; width:140px; font-size:12px; height:18px
+}
+.site_logo{
+	border:1px solid #99bbe8; width:100px; font-size:12px; height:17px
+}

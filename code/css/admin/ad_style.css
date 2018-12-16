@@ -1,0 +1,217 @@
+BODY {
+	MARGIN:0px; BACKGROUND-COLOR: #ffffff;
+}
+TABLE.control {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; BORDER-COLLAPSE: collapse; spacing: 0
+}
+TABLE.control TD {
+	BORDER-RIGHT: #cfcfcf 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #cfcfcf 1px solid; PADDING-LEFT: 3px; PADDING-BOTTOM: 3px; BORDER-LEFT: #cfcfcf 1px solid; PADDING-TOP: 3px; BORDER-BOTTOM: #cfcfcf 1px solid;  TEXT-ALIGN: left; spacing: 1
+}
+
+TABLE.control TD.control_align_center {
+	TEXT-ALIGN: center
+}
+TABLE.control TD.control_align_right {
+	TEXT-ALIGN: right
+}
+TABLE.control TD.control_tooltip {
+	VERTICAL-ALIGN: middle; HEIGHT: 31px
+}
+TABLE.inner_control {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; BORDER-COLLAPSE: collapse; spacing: 0
+}
+TABLE.inner_control TD {
+	BORDER-RIGHT: 0px; PADDING-RIGHT: 3px; BORDER-TOP: 0px; PADDING-LEFT: 3px; PADDING-BOTTOM: 3px; BORDER-LEFT: 0px; PADDING-TOP: 3px; BORDER-BOTTOM: 0px; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: left; spacing: 1
+}
+TABLE.inner_control TD.inner_control_align_right {
+	TEXT-ALIGN: right
+}
+TABLE.inner_control TD.inner_control_align_center {
+	TEXT-ALIGN: center
+}
+TABLE.inner_control_grid {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; WIDTH: 100%; PADDING-TOP: 0px; BORDER-COLLAPSE: collapse; spacing: 0
+}
+TABLE.inner_control_grid TD {
+	BORDER-RIGHT: #cfcfcf 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #cfcfcf 1px solid; PADDING-LEFT: 3px; PADDING-BOTTOM: 3px; BORDER-LEFT: #cfcfcf 1px solid; PADDING-TOP: 3px; BORDER-BOTTOM: #cfcfcf 1px solid; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: left; spacing: 1
+}
+
+TABLE.inner_control_grid TD.inner_control_grid_align_right {
+	TEXT-ALIGN: right
+}
+TABLE.inner_control_grid TD.inner_control_grid_align_center {
+	TEXT-ALIGN: center
+}
+
+TABLE.tooltip {
+	WIDTH: 100%; BORDER-COLLAPSE: collapse; spacing: 0
+}
+TABLE.tooltip TD {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; BACKGROUND-COLOR: #ffffff
+}
+FONT.tooltip_font {
+	FONT-SIZE: 8px; COLOR: #000000; FONT-FAMILY: Verdana, sans-serif
+}
+FONT.link_font {
+	FONT-SIZE: 12px; FONT-FAMILY: Verdana, sans-serif
+}
+FONT.label_font {
+	FONT-SIZE: 12px; FONT-FAMILY: Verdana, sans-serif
+}
+FONT.quick_header {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; FONT-FAMILY: Verdana, sans-serif
+}
+FONT.quick_icon {
+	FONT-SIZE: 12px; FONT-FAMILY: Verdana, sans-serif
+}
+A {
+	COLOR: #0000ff; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #666666; TEXT-DECORATION: none
+}
+DIV.topMenu {
+	POSITION: static
+}
+DIV.topMenu TD {
+	FONT-WEIGHT: normal; FONT-SIZE: 8px; COLOR: black; FONT-FAMILY: Verdana, sans-serif; TEXT-DECORATION: none
+}
+DIV.topMenu A {
+	FONT-WEIGHT: normal; FONT-SIZE: 8px; COLOR: black; FONT-FAMILY: Verdana, sans-serif; TEXT-DECORATION: none
+}
+
+TD.menuTopBlank IMG {
+	WIDTH: 1px; HEIGHT: 17px
+}
+
+TD.menuTopSeparator IMG {
+	WIDTH: 2px; HEIGHT: 17px
+}
+
+TD.menuTopLeftEdge IMG {
+	WIDTH: 1px; HEIGHT: 17px
+}
+
+TD.menuTopRightEdge IMG {
+	WIDTH: 1px; HEIGHT: 17px
+}
+
+TD.menuTopBotLeftCorner IMG {
+	WIDTH: 1px; HEIGHT: 2px
+}
+
+TD.menuTopBotRightCorner IMG {
+	WIDTH: 1px; HEIGHT: 2px
+}
+
+TD.menuTopBotTile IMG {
+	WIDTH: 1px; HEIGHT: 2px
+}
+DIV.subMenuLayer {
+	LEFT: 0px; VISIBILITY: hidden; WIDTH: 100px; POSITION: absolute; TOP: 0px; HEIGHT: 100px
+}
+DIV.subMenuLayer TD {
+	FONT-WEIGHT: normal; FONT-SIZE: 8px; COLOR: black; FONT-FAMILY: Verdana, sans-serif; TEXT-DECORATION: none
+}
+DIV.subMenuLayer A {
+	FONT-WEIGHT: normal; FONT-SIZE: 8px; COLOR: black; FONT-FAMILY: Verdana, sans-serif; TEXT-DECORATION: none
+}
+
+TD.menuSubTopLeftCorner IMG {
+	WIDTH: 2px; HEIGHT: 2px
+}
+
+TD.menuSubTopTile IMG {
+	WIDTH: 100%; HEIGHT: 2px
+}
+
+TD.menuSubTopRightCorner IMG {
+	WIDTH: 2px; HEIGHT: 2px
+}
+
+TD.menuSubBottomLeftCorner IMG {
+	WIDTH: 2px; HEIGHT: 3px
+}
+
+TD.menuSubBottomTile IMG {
+	WIDTH: 100%; HEIGHT: 3px
+}
+
+TD.menuSubBottomRightCorner IMG {
+	WIDTH: 2px; HEIGHT: 3px
+}
+
+TD.menuSubLeftEdge IMG {
+	WIDTH: 2px; HEIGHT: 16px
+}
+
+TD.menuSubRightEdge IMG {
+	WIDTH: 2px; HEIGHT: 16px
+}
+SPAN.CPhighlight
+{
+	background-color:#CCFF00
+}
+
+#gallery
+{ border: 3px solid gray;
+  margin: 1em;
+  padding: 0.75em; }
+  
+#gallery h2 { margin: 0; }
+
+#gallery div
+ { border: 1px solid black;
+   margin: 12px;
+   padding: 12px;
+   width: 100px;
+   font-size: small;
+   float: left;
+   text-align: center; }
+   
+#gallery h2
+ { clear: left; }
+ 
+#credits { clear: both; }
+
+
+.cart_title_tr {
+	background-color:#006699;
+	color:#FFFFFF;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px
+}	
+
+.cart_title_td {
+	padding:2px;
+	text-align:center
+}	
+
+.cart_empty {
+	padding:12px;
+	font-size:14px;
+	font-weight:bold;
+	font-family:Verdana, Arial, Helvetica, sans-serif
+}
+
+fieldset {
+	border:1px #ccc solid;
+}
+
+legend {
+	color:#CC0000;
+	font-weight:bold;
+	padding:0px;
+	margin:0px
+}
+
+.module_title {
+	text-align:left; 
+	padding-left: 12px; 
+	padding-top: 12px; 
+	padding-bottom: 12px; 
+	color:#006699; 
+	font-size: 12px; 
+	font-weight:bold;
+	font-family:Arial;
+}
