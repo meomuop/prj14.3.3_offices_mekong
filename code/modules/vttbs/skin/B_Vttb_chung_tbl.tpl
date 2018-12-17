@@ -17,7 +17,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
 	<form method="post" name="frmList_Vttb_chung" action="?listVTTB_Chung{$vars.arg}" id="frmList_Vttb_chung">
     <!------------------------------------DANH MUC---------------------------------------------->
     <div style="float:left">
-    <fieldset style="width:250px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px; height:482px">
+    <fieldset style="width:259px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px; height:482px">
     <legend class="legend_list" style="width:200px">
         <div style="width:90px; float:left">Danh mục: {$total_num_result}</div>
         <div style="width:90px; float:left">
@@ -35,13 +35,13 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
         </div>
     </legend>
     	<div style="float:left; height:5px; width:100%"></div>
-        <div style="float:left; height:455px; width:250px; overflow-y:scroll">
+        <div style="float:left; height:455px; width:259px; overflow-y:scroll">
             {section name=pi loop=$obj_list}
             {math z=$smarty.section.pi.index t=1 equation="z+t" assign=count}
-            <div style="float:left; line-height:30px">
+            <div style="float:left; line-height:30px; border-bottom: 1px dashed #99bbe8">
             	<div style="float:left; width:20px; text-align:center; background-color:#FFF">&diams;</div>
-                <div style="float:left; width:212px; white-space:nowrap; background-color:#FFF" title="{$obj_list[pi]->vttb_cat_name}">
-                    <div style="float:left; width:190px; white-space:nowrap">
+                <div style="float:left; width:221px; white-space:nowrap; background-color:#FFF" title="{$obj_list[pi]->vttb_cat_name}">
+                    <div style="float:left; width:199px; white-space:nowrap">
                     {$obj_list[pi]->vttb_cat_name|str_string_cut:"45":"1"}
                     </div>
                     <div style="float:right; margin:2px; height:18px; width:16px; text-align:center; background-color:#FFF" title="Chức năng mở rộng" id="extra_icon_vttbcat_{$count}">
@@ -50,8 +50,8 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                     <img src="{$css_path}extra_icon.png" width="14" height="14" border="0" class="img_all" style="margin:1px"></a>
                     {else}<img src="{$css_path}extra_icon.png" width="14" height="14" border="0" class="img_all" style="margin:1px" onclick="alert_error(1)">{/if}
                     </div>
-                    <div id="extra_vttbcat_{$count}" style="position:absolute; display:none; height:auto; width:90px; margin:2px 101px; border:1px solid #8ea4c1; border-right:1px solid #8ea4c1; background-color:#dfe8f6; z-index:2011">
-                        <div style="float:left; width:90px; height:18px; border-right:1px solid #dfe8f6"><b>&nbsp;Thao tác:</b></div>
+                    <div id="extra_vttbcat_{$count}" style="position:absolute; display:none; height:auto; width:99px; margin:2px 101px; border:1px solid #8ea4c1; border-right:1px solid #8ea4c1; background-color:#dfe8f6; z-index:2011">
+                        <div style="float:left; width:99px; height:18px; border-right:1px solid #dfe8f6"><b>&nbsp;Thao tác:</b></div>
                         <div style="float:left; width:90px; padding:0 0 0 3px">
                              - <a href="javascript: void(0)" onclick="javascript: show_edit_vttbcat({$obj_list[pi]->vttb_cat_id})">Sửa</a>
                         </div>
@@ -63,7 +63,9 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                         </div>
                     </div>
                 </div>
-                <div style="float:left; width:192px; white-space:nowrap; margin-left:40px">
+			</div>
+			<div style="float:left; line-height:30px">
+                <div style="float:left; width:201px; white-space:nowrap; margin-left:40px">
                     {php}
                         $sql = "select * from tbl_vttb_subs where vttb_cat_id = ".$this->_tpl_vars['obj_list'][$this->_sections['pi']['index']]->vttb_cat_id;
                         $result = mysql_query($sql);
@@ -72,8 +74,8 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                         $total = mysql_num_rows($result);
                         while($row=mysql_fetch_array($result)):
                         {/php}
-                        <div style="float:left; line-height:30px">
-                            <div style="float:left; width:170px; white-space:nowrap {if $vttb_sub_id eq $obj_list[pi]->vttb_sub_id}; color:#F00{/if}">
+                        <div style="float:left; line-height:30px; border-bottom: 1px dashed #99bbe8">
+                            <div style="float:left; width:179px; white-space:nowrap {if $vttb_sub_id eq $obj_list[pi]->vttb_sub_id}; color:#F00{/if}">
                                 &bull; <a href="javascript:void(0);" onclick="javascript: show_list_vttb({php}echo $row['vttb_sub_id']{/php},'{$vars.arg}')" {php} if($row['vttb_sub_id'] == $this->_tpl_vars['vttb_sub_id']):{/php} style="color:#F00"{php}endif;{/php}>{php}echo fnsSubstr($row['vttb_sub_name'],50,1){/php}</a>
                             </div>
                             <div style="float:right; margin:2px; height:18px; width:16px; text-align:center; background-color:#dfe8f6" title="Chức năng mở rộng" id="extra_icon_vttbsub_{$count}_{php}echo $i;{/php}">
@@ -82,7 +84,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                             <img src="{$css_path}extra_icon_sub.png" width="14" height="14" border="0" class="img_all" style="margin:1px"></a>
                             {else}<img src="{$css_path}extra_icon_sub.png" width="14" height="14" border="0" class="img_all" style="margin:1px" onclick="alert_error(1)">{/if}
                             </div>
-                            <div id="extra_vttbsub_{$count}_{php}echo $i;{/php}" style="position:absolute; display:none; height:auto; width:60px; margin:2px 111px; border:1px solid #8ea4c1; border-right:1px solid #8ea4c1; background-color:#dfe8f6">
+                            <div id="extra_vttbsub_{$count}_{php}echo $i;{/php}" style="position:absolute; display:none; height:auto; width:60px; margin:2px 121px; border:1px solid #8ea4c1; border-right:1px solid #8ea4c1; background-color:#dfe8f6">
                                 <div style="float:left; width:60px; height:18px; border-right:1px solid #dfe8f6"><b>&nbsp;Thao tác:</b></div>
                                 <div style="float:left; width:60px; padding:0 0 0 3px">
                                      - <a href="javascript: void(0)" onclick="javascript: show_edit_vttbsub({$obj_list[pi]->vttb_cat_id},{php}echo $row['vttb_sub_id']{/php})">Sửa</a>
@@ -105,7 +107,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
     </div>
     <!------------------------------------DANH SACH VTTB---------------------------------------------->
     <div style="float:left">
-    <fieldset style="width:525px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px; height:482px">
+    <fieldset style="width:603px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px; height:482px">
     <legend class="legend_list" style="width:340px">
         <div style="width:100px; float:left">Danh sách: {$total_vttb}</div>
         <div style="width:70px; float:left">&nbsp;|&nbsp;Tìm kiếm&nbsp;</div>
@@ -123,14 +125,14 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
         </div>
     </legend>
     	<div style="float:left; height:5px; width:100%"></div>
-    	<div style="float:left; height:25px; width:507px; border-top:1px solid #99bbe8; border-bottom:1px solid #99bbe8 ">
+    	<div style="float:left; height:25px; width:585px; border-top:1px solid #99bbe8; border-bottom:1px solid #99bbe8 ">
             <div class="tbl_tit" style="width:30px; text-align:center"><b>STT</b></div>	
-            <div class="tbl_tit" style="width:242px"><B>&nbsp;Tên vật tư thiết bị</B></div>
-            <div class="tbl_tit" style="width:70px"><B>&nbsp;Sử dụng từ</B></div>
-            <div class="tbl_tit" style="width:70px"><B>&nbsp;Dự kiến đến</B></div>
+            <div class="tbl_tit" style="width:310px"><B>&nbsp;Tên vật tư thiết bị</B></div>
+            <div class="tbl_tit" style="width:75px"><B>&nbsp;Sử dụng từ</B></div>
+            <div class="tbl_tit" style="width:75px"><B>&nbsp;Dự kiến đến</B></div>
             <div class="tbl_tit" style="width:90px"><B>&nbsp;Tình trạng</B></div>
         </div>
-        <div style="float:left; height:428px; width:525px; overflow-y:scroll">
+        <div style="float:left; height:428px; width:603px; overflow-y:scroll">
         	{if $obj_list_vttb}
             {section name=vttb_i loop=$obj_list_vttb}
             {if $smarty.section.vttb_i.index is not div by 2} 
@@ -140,7 +142,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
             {/if}
             {math z=$smarty.section.vttb_i.index t=1 equation="z+t" assign=stt}
             <div class="{$class_td}" style="width:30px; text-align:center">{$stt}</div>
-            <div class="{$class_td}" style="width:242px; white-space:nowrap" title="{$obj_list_vttb[vttb_i]->vttb_desc}">
+            <div class="{$class_td}" style="width:310px; white-space:nowrap" title="{$obj_list_vttb[vttb_i]->vttb_desc}">
             	<div style="float:left; width:130px; white-space:nowrap">
                     <a href='javascript: void(0);' onclick="show_vttb_info({$obj_list_vttb[vttb_i]->vttb_id},{$obj_list_vttb[vttb_i]->vttb_sub_id})">
                     &nbsp;{$obj_list_vttb[vttb_i]->vttb_name|str_string_cut:"20":"1"}</a>
@@ -156,7 +158,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                 <a href='javascript: void(0);' onclick="show_list_vttb_options({$stt},{$total_vttb})">
                 <img src="{$css_path}extra_icon.png" width="14" height="14" border="0" class="img_all"></a>
                 </div>
-                <div id="extra_vttb_{$stt}" style="position:absolute; display:none; height:auto; width:120px; margin:2px 102px; border:1px solid #8ea4c1; border-right:1px solid #8ea4c1; background-color:#dfe8f6">
+                <div id="extra_vttb_{$stt}" style="position:absolute; display:none; height:auto; width:120px; margin:2px 169px; border:1px solid #8ea4c1; border-right:1px solid #8ea4c1; background-color:#dfe8f6">
                     <div style="float:left; width:120px; height:18px; border-right:1px solid #dfe8f6"><b>&nbsp;Thao tác:</b></div>
                     {if $user_level eq 1}
                     <div style="float:left; width:120px; padding:0 0 0 3px">
@@ -192,17 +194,17 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                     {/if}
                 </div>
             </div>
-            <div class="{$class_td}" style="width:70px">
+            <div class="{$class_td}" style="width:75px">
             	&nbsp;{$obj_list_vttb[vttb_i]->vttb_commission|date_format:'%d/%m/%Y'}
             </div>
-            <div class="{$class_td}" style="width:70px">
+            <div class="{$class_td}" style="width:75px">
             	&nbsp;{$obj_list_vttb[vttb_i]->vttb_limit|date_format:'%d/%m/%Y'}
             </div>
             <div class="{$class_td}" style="width:90px">
             	&nbsp;{if $obj_list_vttb[vttb_i]->vttb_active eq 1}Đang sử dụng{else}Không sử dụng{/if}
             </div>
             {/section}
-            {else}<div class="{$class_td}" style="width:507px; text-align:center">Mời chọn danh mục</div>{/if}
+            {else}<div class="{$class_td}" style="width:507px; text-align:center; margin-top: 10px">Mời chọn danh mục</div>{/if}
         </div>
     </fieldset>
     </div>

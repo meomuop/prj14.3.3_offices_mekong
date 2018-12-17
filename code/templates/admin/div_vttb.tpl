@@ -1,6 +1,6 @@
 ﻿{literal}
 <style>
-#div_vttb{ width: 811px; height: 550px; padding: 0px 1px 1px 1px; border:1px solid #8ea4c1; background-color:#ffffff;
+#div_vttb{ width: 900px; height: 550px; padding: 0px 1px 1px 1px; border:1px solid #8ea4c1; background-color:#ffffff;
 	position:absolute; margin:40px 200px; z-index:100; font-size:12px
 	/*display: none; position: absolute; background-color: white2; overflow: auto;	*/
 }
@@ -60,12 +60,12 @@
 /*----------------------end a_e_vttb div---------------------*/
 
 /*----------------------repare div---------------------*/
-#list_repare_main_cont{ float:left; width:100%; height:400px; background-color:#ccd8e7}
+#list_repare_main_cont{ float:left; width:100%; height:450px; background-color:#ccd8e7}
 #list_repare_tab_bar_tit{ float:left; font-weight:bold; text-transform:uppercase; line-height:20px; padding-left:8px; width:80%;cursor:move; color:#15428b;}
 #list_repare_tab_bar_icon{ float:right; width:10%; text-align:right; padding-top:2px; padding-right:6px}
-#list_repare_content_outsign{ float:left; width:95.3%; height:370px; background-color:#ffffff; margin-left:8px; border:1px solid #99bbe8}
-#list_repare_content_insign{ float:left; width:99.7%; height:349px; background-color:#dfe8f6; margin-left:1px;}
-#list_repare_cont{ float:left; width:99.5%; height:369px; background-color:#dfe8f6; margin-left:1px;}
+#list_repare_content_outsign{ float:left; width:95.3%; height:420px; background-color:#ffffff; margin-left:8px; border:1px solid #99bbe8}
+#list_repare_content_insign{ float:left; width:99.7%; height:399px; background-color:#dfe8f6; margin-left:1px;}
+#list_repare_cont{ float:left; width:99.5%; height:419px; background-color:#dfe8f6; margin-left:1px;}
 #list_repare_clear_txt{ float:left; width:100%; height:1px}
 #list_repare_tool_bar{ float:left; width:99.7%; height:20px; background-color:#dfe8f6; margin-left:1px}
 #list_repare_search_area{ float:left; width:120px; height:20px; padding-left:2px}
@@ -74,12 +74,12 @@
 /*----------------------end repare div---------------------*/
 
 /*----------------------replace div---------------------*/
-#list_replace_main_cont{ float:left; width:100%; height:400px; background-color:#ccd8e7}
+#list_replace_main_cont{ float:left; width:100%; height:450px; background-color:#ccd8e7}
 #list_replace_tab_bar_tit{ float:left; font-weight:bold; text-transform:uppercase; line-height:20px; padding-left:8px; width:80%;cursor:move; color:#15428b;}
 #list_replace_tab_bar_icon{ float:right; width:10%; text-align:right; padding-top:2px; padding-right:6px}
-#list_replace_content_outsign{ float:left; width:95.3%; height:370px; background-color:#ffffff; margin-left:8px; border:1px solid #99bbe8}
-#list_replace_content_insign{ float:left; width:99.7%; height:349px; background-color:#dfe8f6; margin-left:1px;}
-#list_replace_cont{ float:left; width:99.5%; height:369px; background-color:#dfe8f6; margin-left:1px;}
+#list_replace_content_outsign{ float:left; width:95.3%; height:420px; background-color:#ffffff; margin-left:8px; border:1px solid #99bbe8}
+#list_replace_content_insign{ float:left; width:99.7%; height:399px; background-color:#dfe8f6; margin-left:1px;}
+#list_replace_cont{ float:left; width:99.5%; height:419px; background-color:#dfe8f6; margin-left:1px;}
 #list_replace_clear_txt{ float:left; width:100%; height:1px}
 #list_replace_tool_bar{ float:left; width:99.7%; height:20px; background-color:#dfe8f6; margin-left:1px}
 #list_replace_search_area{ float:left; width:120px; height:20px; padding-left:2px}
@@ -269,7 +269,7 @@ function change_style_vttb(obj){
     </div>
 </div>
 
-<div id="list_repare" onclick="javascript: change_bgcl_transport('list_repare')" style="width:390px; float:left; font-weight:normal; position:absolute; display:none; margin:90px 0 0 590px; background-color:#ffffff; border:1px solid #99bbe8; z-index:1010; padding: 0px 1px 1px 1px">
+<div id="list_repare" onclick="javascript: change_bgcl_transport('list_repare')" style="width:440px; float:left; font-weight:normal; position:absolute; display:none; margin:90px 0 0 590px; background-color:#ffffff; border:1px solid #99bbe8; z-index:1010; padding: 0px 1px 1px 1px">
 	<div id="list_repare_main_cont">
         <div id="list_repare_tab_bar_tit">Sửa chữa thiết bị</div>
         <div id="list_repare_tab_bar_icon">
@@ -283,7 +283,7 @@ function change_style_vttb(obj){
     </div>
 </div>
 
-<div id="list_replace" onclick="javascript: change_bgcl_transport('list_replace')" style="width:390px; float:left; font-weight:normal; position:absolute; display:none; margin:90px 0 0 590px; background-color:#ffffff; border:1px solid #99bbe8; z-index:1010; padding: 0px 1px 1px 1px">
+<div id="list_replace" onclick="javascript: change_bgcl_transport('list_replace')" style="width:440px; float:left; font-weight:normal; position:absolute; display:none; margin:90px 0 0 590px; background-color:#ffffff; border:1px solid #99bbe8; z-index:1010; padding: 0px 1px 1px 1px">
 	<div id="list_replace_main_cont">
         <div id="list_replace_tab_bar_tit">Thay thế - nâng cấp</div>
         <div id="list_replace_tab_bar_icon">
@@ -297,7 +297,7 @@ function change_style_vttb(obj){
     </div>
 </div>
 
-<div id="list_datlich" onclick="javascript: change_bgcl_transport('list_datlich')" style="width:405px; float:left; font-weight:normal; position:absolute; display:none; margin:90px 0 0 590px; background-color:#ffffff; border:1px solid #99bbe8; z-index:1010; padding: 0px 1px 1px 1px">
+<div id="list_datlich" onclick="javascript: change_bgcl_transport('list_datlich')" style="width:455px; float:left; font-weight:normal; position:absolute; display:none; margin:90px 0 0 590px; background-color:#ffffff; border:1px solid #99bbe8; z-index:1010; padding: 0px 1px 1px 1px">
 	<div id="list_datlich_main_cont">
         <div id="list_datlich_tab_bar_tit">Đặt lịch sử dụng</div>
         <div id="list_datlich_tab_bar_icon">
@@ -311,7 +311,7 @@ function change_style_vttb(obj){
     </div>
 </div>
 
-<div id="div_vttb_info" onclick="javascript: change_bgcl_transport('div_vttb_info')" style="width:492px; float:left; font-weight:normal; position:absolute; display:none; margin:130px 0 0 480px; background-color:#ffffff; border:1px solid #99bbe8; z-index:1010; padding: 0px 1px 1px 1px">
+<div id="div_vttb_info" onclick="javascript: change_bgcl_transport('div_vttb_info')" style="width:542px; float:left; font-weight:normal; position:absolute; display:none; margin:130px 0 0 480px; background-color:#ffffff; border:1px solid #99bbe8; z-index:1010; padding: 0px 1px 1px 1px">
 	<div id="div_vttb_info_main_cont">
         <div id="div_vttb_info_tab_bar_tit">Thông tin vật tư thiết bị</div>
         <div id="div_vttb_info_tab_bar_icon">

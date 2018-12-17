@@ -154,7 +154,7 @@ $(function(){
 <div id="list_datlich_content_insign">
 	<form method="post" name="frmList_Datlich" action="?listDatlich{$vars.arg}" id="frmList_Datlich">
     <!------------------------------------------THEM MOI------------------------------------>
-    <fieldset style="width:373px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px">
+    <fieldset style="width:423px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px">
         {section name=qi loop=$obj_list_vttb}
         {if $obj_list_vttb[qi]->vttb_id eq $vttb_id} 
             {assign var = "vttb_name" value = $obj_list_vttb[qi]->vttb_name}
@@ -172,12 +172,12 @@ $(function(){
             <tr><td colspan="2"></td></tr>
             <tr height="30">
             	<td align="center" valign="top">
-                	<div style="float:left; width:60px; line-height:25px; text-align:left">Mục đích <font color="#FF0000">*</font>:</div>
-                    <div style="float:left; width:248px; line-height:25px; text-align:left">
+                	<div style="float:left; width:80px; line-height:25px; text-align:left">Mục đích <font color="#FF0000">*</font>:</div>
+                    <div style="float:left; width:288px; line-height:25px; text-align:left">
                         <textarea id="vttb_datlich_name" name="vttb_datlich_name" class="text_area" style="height:45px" spellcheck="false" onfocus="hide_message_Datlich();" tabindex="1">{$obj_info.vttb_datlich_name}</textarea>
                     </div>
                     
-                    <div style="float:left; width:60px; line-height:25px; height:25px; text-align:left">Bắt đầu <font color="#FF0000">*</font>:</div>
+                    <div style="float:left; width:80px; line-height:25px; height:25px; text-align:left">Bắt đầu <font color="#FF0000">*</font>:</div>
                     <div style="float:left; width:106px; line-height:25px; height:25px; text-align:left">
                     	<div style="float:left; width:72px; height:21px; border:1px solid #99bbe8; background-color:#FFF; margin-bottom:2px">
                             {if $obj_info.vttb_datlich_start neq '0000-00-00 00:00:00' and $obj_info.vttb_datlich_start neq ''}
@@ -252,7 +252,7 @@ $(function(){
                         </select>			
                     </div>
                     
-                    <div style="float:left; width:60px; line-height:25px; height:25px; text-align:left">Kết thúc <font color="#FF0000">*</font>:</div>
+                    <div style="float:left; width:80px; line-height:25px; height:25px; text-align:left">Kết thúc <font color="#FF0000">*</font>:</div>
                     <div style="float:left; width:106px; line-height:25px; height:25px; text-align:left">
                     	<div style="float:left; width:72px; height:21px; border:1px solid #99bbe8; background-color:#FFF; margin-bottom:2px">
                             {if $obj_info.vttb_datlich_end neq '0000-00-00 00:00:00' and $obj_info.vttb_datlich_end neq ''}
@@ -324,7 +324,7 @@ $(function(){
                         </select>			
                     </div>
                    
-                    <div style="float:left; width:60px; line-height:25px; text-align:left">Chi phí:</div>
+                    <div style="float:left; width:80px; line-height:25px; text-align:left">Chi phí:</div>
                     <div style="float:left; width:288px; line-height:25px; text-align:left">
                     	<input type="text" id="vttb_datlich_cost" name="vttb_datlich_cost" class="text_short" value="{$obj_info.vttb_datlich_cost}" onfocus="hide_message_Datlich();" tabindex="17"/> (vnđ)&nbsp;<i>(nếu có, ví dụ: cho thuê)</i>
                     </div>
@@ -457,18 +457,17 @@ $(function(){
         </table>
     </fieldset>
     <!------------------------------------DANH SACH---------------------------------------------->
-    <fieldset style="width:373px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px; height:186px">
+    <fieldset style="width:423px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px; height:186px">
         <legend class="legend"><div style="width:130px; float:left">Danh sách: {$total_num_result}</div></legend>
     	<div style="float:left; height:5px; width:100%"></div>
-        <div style="float:left; height:25px; width:356px; border-top:1px solid #99bbe8; border-bottom:1px solid #99bbe8 ">
+        <div style="float:left; height:25px; width:406px; border-top:1px solid #99bbe8; border-bottom:1px solid #99bbe8 ">
             <div class="tbl_tit" style="width:30px; text-align:center"><b>STT</b></div>	
-            <div class="tbl_tit" style="width:81px"><B>&nbsp;Mục đích</B></div>
-            <div class="tbl_tit" style="width:90px"><B>&nbsp;Bắt đầu</B></div>
-            <div class="tbl_tit" style="width:90px"><B>&nbsp;Kết thúc</B></div>
+            <div class="tbl_tit" style="width:91px"><B>&nbsp;Mục đích</B></div>
+            <div class="tbl_tit" style="width:110px"><B>&nbsp;Bắt đầu</B></div>
+            <div class="tbl_tit" style="width:110px"><B>&nbsp;Kết thúc</B></div>
             <div class="tbl_tit" style="width:60px; text-align:center"><B>Chọn</B></div>
         </div>
-        <div style="float:left; width:18px; height:25px">&nbsp;</div>
-        <div style="float:left; height:132px; width:374px; overflow-y:scroll">
+        <div style="float:left; height:132px; width:423px; overflow-y:scroll">
             {section name=pi loop=$obj_list}
             {if $smarty.section.pi.index is not div by 2} 
             {assign var="class_td" value="tbl_cont"} 
@@ -478,15 +477,15 @@ $(function(){
             {math x=$vars.curpage-1 y=$vars.numresult z=$smarty.section.pi.index t=1 equation="x*y+z+t" assign=stt}
             <div style="float:left">
                 <div class="{$class_td}" style="width:30px; text-align:center">{$stt}</div>
-                <div class="{$class_td}" style="width:81px; white-space:nowrap" title="{$obj_list[pi]->vttb_datlich_name}">
+                <div class="{$class_td}" style="width:91px; white-space:nowrap" title="{$obj_list[pi]->vttb_datlich_name}">
                 	&nbsp;{if $obj_list[pi]->user_id eq $access_user_id}
                     <a href='javascript: void(0);' onclick="edit_me_Datlich({$obj_list[pi]->vttb_datlich_id},{$vttb_sub_id})">{$obj_list[pi]->vttb_datlich_name|str_string_cut:"20":"1"}</a>
                     {else}{$obj_list[pi]->vttb_datlich_name|str_string_cut:"20":"1"}{/if}
                 </div>
-                <div class="{$class_td}" style="width:90px; text-align:left">
+                <div class="{$class_td}" style="width:110px; text-align:left">
                     &nbsp;{$obj_list[pi]->vttb_datlich_start|date_format:"%d/%m/%Y %H:%M"}
                 </div>
-                <div class="{$class_td}" style="width:90px; text-align:left">
+                <div class="{$class_td}" style="width:110px; text-align:left">
                     &nbsp;{$obj_list[pi]->vttb_datlich_end|date_format:"%d/%m/%Y %H:%M"}
                 </div>
                 <div class="{$class_td}" style="width:29px; text-align:center">

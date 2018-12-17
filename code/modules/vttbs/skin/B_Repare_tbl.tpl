@@ -154,13 +154,13 @@ $(function(){
 <div id="list_repare_content_insign">
 	<form method="post" name="frmList_Repare" action="?listRepare{$vars.arg}" id="frmList_Repare">
     <!------------------------------------------THEM MOI------------------------------------>
-    <fieldset style="width:360px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px">
+    <fieldset style="width:407px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px">
         {section name=qi loop=$obj_list_vttb}
         {if $obj_list_vttb[qi]->vttb_id eq $vttb_id} 
             {assign var = "vttb_name" value = $obj_list_vttb[qi]->vttb_name}
         {/if}
         {/section}
-        <legend class="legend" style="width:250px">Thêm/Sửa mục sửa chữa cho: <span style="color:#00F" title="{$vttb_name}">{$vttb_name|str_string_cut:"45":"1"}</span></legend>
+        <legend class="legend" style="width:200px">Thêm/Sửa mục sửa chữa:</legend>
     	<table width="98%" cellspacing="0" cellpadding="0" border="0" style="margin-left:5px">
             <tr height="20">
                 <td colspan="2"> 
@@ -169,31 +169,36 @@ $(function(){
             		<span id="lblError_Repare" class="error">Thông báo: (*) là các mục bắt buộc!</span>
                 </td>
             </tr>
+			<tr height="30">
+				<td colspan="2">
+					Hạng mục: <span style="color:#00F" title="{$vttb_name}">{$vttb_name|str_string_cut:"80":"1"}</span>
+				</td>
+			</tr>
             <tr><td colspan="2"></td></tr>
             <tr height="30">
             	<td align="center" valign="top">
-                	<div style="float:left; width:90px; line-height:25px; text-align:left">Mục sửa chữa <font color="#FF0000">*</font>:</div>
+                	<div style="float:left; width:105px; line-height:25px; text-align:left">Mục sửa chữa <font color="#FF0000">*</font>:</div>
                     <div style="float:left; width:248px; line-height:25px; text-align:left">
                         <input type="text" id="vttb_repare_name" name="vttb_repare_name" class="text_middle_long" value="{$obj_info.vttb_repare_name}" onfocus="hide_message_Repare();" tabindex="1"/>
                     </div>
                     
-                    <div style="float:left; width:90px; line-height:25px; text-align:left">Đơn vị thực hiện <font color="#FF0000">*</font>:</div>
+                    <div style="float:left; width:105px; line-height:25px; text-align:left">Đơn vị thực hiện <font color="#FF0000">*</font>:</div>
                     <div style="float:left; width:248px; line-height:25px; text-align:left">
                         <input type="text" id="vttb_repare_unit" name="vttb_repare_unit" class="text_middle_long" value="{$obj_info.vttb_repare_unit}" onfocus="hide_message_Repare();" tabindex="2"/>
                     </div>
                    
-                    <div style="float:left; width:90px; line-height:25px; text-align:left">Phí sửa chữa <font color="#FF0000">*</font>:</div>
-                    <div style="float:left; width:168px; line-height:25px; text-align:left">
+                    <div style="float:left; width:105px; line-height:25px; text-align:left">Phí sửa chữa <font color="#FF0000">*</font>:</div>
+                    <div style="float:left; width:162px; line-height:25px; text-align:left">
                     	<input type="text" id="vttb_repare_cost" name="vttb_repare_cost" class="text_short" value="{$obj_info.vttb_repare_cost}" onfocus="hide_message_Repare();" tabindex="3"/> (vnđ)
                     </div>
-                    <div style="float:left; width:42px; line-height:25px; text-align:left">Phiếu <font color="#FF0000">*</font>:</div>
+                    <div style="float:left; width:48px; line-height:25px; text-align:left">Phiếu <font color="#FF0000">*</font>:</div>
                     <div style="float:left; width:40px; line-height:25px; text-align:left">
                     	<input type="text" id="vttb_repare_code" name="vttb_repare_code" class="text_tiny" value="{$obj_info.vttb_repare_code}" onfocus="hide_message_Repare();" tabindex="4"/>
                     </div>
                     
-                    <div style="float:left; width:90px; line-height:25px; text-align:left">Ngày thực hiện <font color="#FF0000">*</font>:</div>
-                    <div style="float:left; width:95px; line-height:25px; text-align:left">
-                    	<div style="float:left; width:72px; height:21px; border:1px solid #99bbe8; background-color:#FFF">
+                    <div style="float:left; width:105px; line-height:25px; text-align:left">Ngày thực hiện <font color="#FF0000">*</font>:</div>
+                    <div style="float:left; width:111px; line-height:25px; text-align:left">
+                    	<div style="float:left; width:90px; height:21px; border:1px solid #99bbe8; background-color:#FFF">
                             {if $obj_info.vttb_repare_date neq '0000-00-00' and $obj_info.vttb_repare_date neq ''}
                                 <input type="text" id="repare_date_1" name="repare_date_1" class="text_date" value="{$obj_info.vttb_repare_date|date_format:'%d'}" onkeypress="set_focus('repare_date_1','repare_date_2')" onfocus="hide_message()" maxlength="2" tabindex="5"/>/
                                 <input type="text" id="repare_date_2" name="repare_date_2" class="text_month" value="{$obj_info.vttb_repare_date|date_format:'%m'}" onkeypress="set_focus('repare_date_2','repare_date_3')" onfocus="hide_message()" maxlength="2" tabindex="6"/>/
@@ -205,7 +210,7 @@ $(function(){
                             {/if}
                         </div>
                     </div>
-                    <div style="float:left; width:65px; line-height:25px; text-align:left">Thanh toán <font color="#FF0000">*</font>:</div>
+                    <div style="float:left; width:75px; line-height:25px; text-align:left">Thanh toán <font color="#FF0000">*</font>:</div>
                     <div style="float:left; width:65px; line-height:25px; text-align:left">
                     	<select id="vttb_repare_paid_type" name="vttb_repare_paid_type" class="select_short" tabindex="8">
                             <option value="1" {if $obj_info.vttb_repare_paid_type eq 1}selected="selected"{/if}>Tiền mặt</option>
@@ -287,17 +292,17 @@ $(function(){
         </table>
     </fieldset>
     <!------------------------------------DANH SACH---------------------------------------------->
-    <fieldset style="width:360px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px; height:167px">
+    <fieldset style="width:407px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px; height:185px">
         <legend class="legend"><div style="width:130px; float:left">Danh sách: {$total_num_result}</div></legend>
     	<div style="float:left; height:5px; width:100%"></div>
-        <div style="float:left; height:25px; width:342px; border-top:1px solid #99bbe8; border-bottom:1px solid #99bbe8 ">
+        <div style="float:left; height:25px; width:389px; border-top:1px solid #99bbe8; border-bottom:1px solid #99bbe8 ">
             <div class="tbl_tit" style="width:30px; text-align:center"><b>STT</b></div>	
-            <div class="tbl_tit" style="width:178px"><B>&nbsp;Mục sửa chữa</B></div>
-            <div class="tbl_tit" style="width:70px"><B>&nbsp;Ngày</B></div>
+            <div class="tbl_tit" style="width:220px"><B>&nbsp;Mục sửa chữa</B></div>
+            <div class="tbl_tit" style="width:75px"><B>&nbsp;Ngày</B></div>
             <div class="tbl_tit" style="width:60px; text-align:center"><B>Chọn</B></div>
         </div>
         <div style="float:left; width:18px; height:25px">&nbsp;</div>
-        <div style="float:left; height:112px; width:359px; overflow-y:scroll">
+        <div style="float:left; height:132px; width:406px; overflow-y:scroll">
             {section name=pi loop=$obj_list}
             {if $smarty.section.pi.index is not div by 2} 
             {assign var="class_td" value="tbl_cont"} 
@@ -307,12 +312,12 @@ $(function(){
             {math x=$vars.curpage-1 y=$vars.numresult z=$smarty.section.pi.index t=1 equation="x*y+z+t" assign=stt}
             <div style="float:left">
                 <div class="{$class_td}" style="width:30px; text-align:center">{$stt}</div>
-                <div class="{$class_td}" style="width:178px; white-space:nowrap" title="{$obj_list[pi]->vttb_repare_name}">
+                <div class="{$class_td}" style="width:220px; white-space:nowrap" title="{$obj_list[pi]->vttb_repare_name}">
                 	{if $obj_list[pi]->user_id eq $access_user_id}
-                    &nbsp;<a href='javascript: void(0);' onclick="edit_me_Repare({$obj_list[pi]->vttb_repare_id},{$vttb_sub_id})">{$obj_list[pi]->vttb_repare_name|str_string_cut:"25":"1"}</a>
+                    &nbsp;<a href='javascript: void(0);' onclick="edit_me_Repare({$obj_list[pi]->vttb_repare_id},{$vttb_sub_id})">{$obj_list[pi]->vttb_repare_name|str_string_cut:"45":"1"}</a>
                     {else}{$obj_list[pi]->vttb_repare_name}{/if}
                 </div>
-                <div class="{$class_td}" style="width:70px; text-align:left">
+                <div class="{$class_td}" style="width:75px; text-align:left">
                     {$obj_list[pi]->vttb_repare_date|date_format:"%d/%m/%Y"}
                 </div>
                 <div class="{$class_td}" style="width:29px; text-align:center">

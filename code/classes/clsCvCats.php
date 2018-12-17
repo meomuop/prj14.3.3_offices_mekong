@@ -12,7 +12,6 @@ class cv_cat_class extends dbBasic {
   	var  $cv_cat_date;
 	var  $cv_cat_sort;
 	var  $cv_cat_active;
-    var  $cv_cat_file;
 	var  $user_id;
  	
 	var $pfields = array (	'cv_cat_id',
@@ -22,7 +21,6 @@ class cv_cat_class extends dbBasic {
 							'cv_cat_date',
 							'cv_cat_sort',
 							'cv_cat_active',
-                            'cv_cat_file',
 							'user_id'); //table private fields
 							
   	var $pkeys = array ('cv_cat_id'); //key fields

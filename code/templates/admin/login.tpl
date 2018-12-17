@@ -70,10 +70,10 @@
 <body leftmargin="5" rightmargin="0" onload="document.frmLogin.user_name.focus()">
 <div style="float:left; width: 100%">
     <!-----------------------------------phan banner---------------------------------------------->
-    <div style="float:left; width:1200px; height:auto; margin:0 3% 0 2%; border:1px solid #bad2d5"><img src="../images/banner.jpg" width="1200"></div>
+    <div style="float:left; width:1200px; height:auto; margin:1% 3% 0 5%; border:1px solid #bad2d5"><img src="../images/banner.jpg" width="1200"></div>
 
     <!-----------------------------------phan noi dung------------------------------------>
-    <div style="float:left; width:1200px; height:535px; margin:1% 3% 0 2%; border:1px solid #bad2d5; background:url(../images/login_bg.jpg)">
+    <div style="float:left; width:1200px; height:535px; margin:1% 3% 0 5%; border:1px solid #bad2d5; background:url(../images/login_bg.jpg)">
         <fieldset class="login_fieldset">
             <legend class="login_legend">
                 <div style="float:left; margin-left:5px; width:100px" id="cont_legend">Đăng nhập</div>

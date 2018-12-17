@@ -1,6 +1,6 @@
 ﻿{literal}
 <style>
-#div_danhba{ width: 800px; height: 550px; padding: 0px 1px 1px 1px; border:1px solid #8ea4c1; background-color:#ffffff;
+#div_danhba{ width: 900px; height: 550px; padding: 0px 1px 1px 1px; border:1px solid #8ea4c1; background-color:#ffffff;
 	position:absolute; margin:40px 200px; z-index:100; font-size:12px
 	/*display: none; position: absolute; background-color: white2; overflow: auto;	*/
 }

@@ -40,7 +40,7 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>THA-OFFICES</title>
+<title>MEKONG GROUP OFFICES MANAGE SYSTEM</title>
 </head>
 {literal}
 <style>
@@ -504,7 +504,7 @@ function close_div(obj){
             </div>
             <!--**************************************HET KHUNG HDSD - NGUOI DUNG******************************-->
             <!--*******************************************KHUNG FOOTER****************************************-->
-            <div style="float:left; width:100%; line-height:25px; font-size: 11px; margin-top: 3px">
+            <div style="float:left; width:100%; line-height:25px; font-size: 11px; margin-top: 15px">
                 <br>
                 <a href="http://mekonggroup.net/" target="_blank" style="text-decoration:none; color:#666; font-size: 11px">&copy; 2018 - {php}echo date('Y');{/php} Tập đoàn MEKONG.</a>&nbsp;|&nbsp;
                 <span style="text-decoration:none; color:#666; font-size: 11px">Trụ sở:</span>
@@ -573,6 +573,8 @@ function close_div(obj){
             </div>
         </div>
     </div>
-    <div id="div_systray_info" style="position: absolute; display: none; border: 1px solid #F00; background-color: #fff; width: 1200px; height: 27px; margin: 2px 50px 30px 82px"></div>
+    <div id="div_systray_info" style="position: absolute; display: none; border: 1px solid #F00; background-color: #fff; width: 1200px; height: 30px; margin: 10px 50px 30px 82px; padding-top:3px">
+        Không có thông báo mới
+    </div>
 </body>
 </html>

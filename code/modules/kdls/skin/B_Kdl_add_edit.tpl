@@ -29,14 +29,14 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
             <tr height="30">
             	<td align="center" valign="top">
                 	<div style="float:left; width:500px">
-                        <div style="float:left; width:90px; line-height:25px; text-align:left">Tên danh mục <font color="#FF0000">*</font>:</div>
+                        <div style="float:left; width:100px; line-height:25px; text-align:left">Tên danh mục <font color="#FF0000">*</font>:</div>
                         <div style="float:left; width:400px; line-height:25px; text-align:left">
                         <input type="text" name="kdl_name" id="kdl_name" class="text_long" value="{$obj_info.kdl_name}" onfocus="hide_message_Kdl()"/>
                         </div>
                     </div>
                     <div style="float:left; width:500px">
-                        <div style="float:left; width:90px; line-height:25px; text-align:left">Người được xem:</div>
-                        <div style="float:left; width:200px; line-height:25px; text-align:left">
+                        <div style="float:left; width:100px; line-height:25px; text-align:left">Người được xem:</div>
+                        <div style="float:left; width:225px; line-height:25px; text-align:left">
                             <select name="kdl_type" id="kdl_type" class="select_middle" style="width:142px">
                                 <option value="1" {if $obj_info.kdl_type eq 1}selected="selected"{/if}>Tất cả</option>
                                 <option value="2" {if $obj_info.kdl_type eq 2}selected="selected"{/if}>Phòng ban</option>
@@ -44,7 +44,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                             </select>
                         </div>
                         <div style="float:left; width:70px; line-height:25px; text-align:left">Ngày tháng:</div>
-                        <div style="float:left; width:120px; line-height:25px; text-align:left">
+                        <div style="float:left; width:105px; line-height:25px; text-align:left">
                             {$smarty.now|date_format:'%d/%m/%Y'}
                         </div>
                     </div>
@@ -53,26 +53,26 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
             <tr height="30">
             	<td align="center">
                     <div style="float:left; width:500px">
-                        <div style="float:left; width:90px; line-height:25px; text-align:left">Tình trạng:</div>
-                        <div style="float:left; width:200px; line-height:25px; text-align:left">
+                        <div style="float:left; width:100px; line-height:25px; text-align:left">Tình trạng:</div>
+                        <div style="float:left; width:225px; line-height:25px; text-align:left">
                             {if $obj_info.kdl_active neq ''}
                             <div style="float:left; width:80px">
                             <input type="radio" id="kdl_active" name="kdl_active" value="1" {if $obj_info.kdl_active eq 1} checked="checked" {/if} />&nbsp;Hiển thị
                             </div>
-                            <div style="float:left; width:90px">
+                            <div style="float:left; width:110px">
                             <input type="radio" id="kdl_active" name="kdl_active" value="2" {if $obj_info.kdl_active eq 2} checked="checked" {/if} />&nbsp;Không hiển thị
                             </div>
                             {else}
                             <div style="float:left; width:80px">
                             <input type="radio" id="kdl_active" name="kdl_active" value="1" checked/>&nbsp;Hiển thị
                             </div>
-                            <div style="float:left; width:90px">
+                            <div style="float:left; width:110px">
                             <input type="radio" id="kdl_active" name="kdl_active" value="2" />&nbsp;Không hiển thị
                             </div>
                             {/if}
                         </div>
                         <div style="float:left; width:70px; line-height:25px; text-align:left">Người tạo:</div>
-                        <div style="float:left; width:120px; line-height:25px; text-align:left">
+                        <div style="float:left; width:105px; line-height:25px; text-align:left">
                             {$access_user_fullname}
                         </div>
                     </div>

@@ -16,8 +16,8 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
 <div id="add_edit_cv_sub_content_insign">
 	<form method="post" name="frmAdd_CvSub" action="?addEditCvSub{$vars.arg}" id="frmAdd_CvSub">
     <!------------------------------------------THEM MOI------------------------------------>
-    <fieldset style="width:598px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px">
-        <legend class="legend" style="width:125px">Thêm/Sửa nhánh việc:</legend>
+    <fieldset style="width:595px; height: 295px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px">
+        <legend class="legend" style="width:140px">Thêm/Sửa nhánh việc:</legend>
     	<table width="98%" cellspacing="0" cellpadding="0" border="0" style="margin-left:5px">
             <tr height="20">
                 <td colspan="2"> 
@@ -29,15 +29,15 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
             <tr height="30">
             	<td align="center" valign="top">
                 	<div style="float:left; width:583px">
-                        <div style="float:left; width:70px; line-height:25px; text-align:left">Nhánh việc <font color="#FF0000">*</font>:</div>
-                        <div style="float:left; width:480px; line-height:25px; text-align:left">
-                        	<input type="text" name="cv_sub_name" id="cv_sub_name" class="text_long" style="width: 500px" value="{$obj_info.cv_sub_name}" onfocus="hide_message_Cv_sub()"/>
+                        <div style="float:left; width:80px; line-height:25px; text-align:left">Nhánh việc <font color="#FF0000">*</font>:</div>
+                        <div style="float:left; width:490px; line-height:25px; text-align:left">
+                        	<input type="text" name="cv_sub_name" id="cv_sub_name" class="text_long" style="width: 490px" value="{$obj_info.cv_sub_name}" onfocus="hide_message_Cv_sub()"/>
                         </div>
                     </div>
                     <div style="float:left; width:583px">
-                        <div style="float:left; width:70px; line-height:25px; text-align:left">Ghi chú:</div>
-                        <div style="float:left; width:480px; line-height:25px; text-align:left">
-                            <input type="text" name="cv_sub_desc" id="cv_sub_desc" class="text_long" style="width: 500px" value="{$obj_info.cv_sub_desc}"/>
+                        <div style="float:left; width:80px; line-height:25px; text-align:left">Ghi chú:</div>
+                        <div style="float:left; width:490px; line-height:25px; text-align:left">
+                            <input type="text" name="cv_sub_desc" id="cv_sub_desc" class="text_long" style="width: 490px" value="{$obj_info.cv_sub_desc}"/>
                         </div>
                     </div>
                     <!--{if $user_level eq 4}
@@ -53,8 +53,8 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                     </div>
                     {/if}-->
                     <div style="float:left; width:583px">
-                        <div style="float:left; width:70px; line-height:25px; text-align:left">Chủ trì <font color="#FF0000">*</font>:</div>
-                        <div style="float:left; width:480px; line-height:25px; text-align:left">
+                        <div style="float:left; width:80px; line-height:25px; text-align:left">Chủ trì <font color="#FF0000">*</font>:</div>
+                        <div style="float:left; width:490px; line-height:25px; text-align:left">
                             {section name=qi loop=$obj_list_depart}
                                 <div style="float:left; width: 95px" title="{$obj_list_depart[qi]->department_name}">
                                     <input type="checkbox" name="department_id_{$smarty.section.qi.index}" id="department_id_{$smarty.section.qi.index}" value="{$obj_list_depart[qi]->department_id}" {if $obj_list_depart[qi]->department_id eq $obj_info.department_id}checked="true"{/if}>&nbsp;{$obj_list_depart[qi]->department_standfor}</option>
@@ -73,7 +73,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                         </div>
                     </div>-->
                     <div style="float:left; width:583px">
-                        <div style="float:left; width:70px; line-height:25px; text-align:left">Thời hạn <font color="#FF0000">*</font>:</div>
+                        <div style="float:left; width:80px; line-height:25px; text-align:left">Thời hạn <font color="#FF0000">*</font>:</div>
                         <div style="float:left; width:110px; line-height:25px; text-align:left">
                             <input type="text" class="text_time_callender" name="cv_sub_time_limit" id="cv_sub_time_limit" value="{if $obj_info.cv_sub_time_limit}{$obj_info.cv_sub_time_limit|date_format:'%d/%m/%Y'}{else}{$smarty.now|date_format:'%d/%m/%Y'}{/if}" readonly/>
                             <img src="../images/admin/img.gif"  align="absmiddle" id="icon_cv_sub_time_limit" style="cursor: pointer; border: 0" title="Chọn ngày trên lịch"/>
@@ -96,7 +96,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                             <input type="hidden" name="cv_cat_id" id="cv_cat_id" value="{$cv_cat_id}">
                             <input type="hidden" name="cv_sub_id" id="cv_sub_id" value="{$obj_info.cv_sub_id}">
                             <input type="hidden" name="total_depart" id="total_depart" value="{$total_depart}">
-                            <input type="reset" name="Reset" value="Hủy bỏ" class="button" />
+                            <input type="reset" name="Reset" value="Hủy bỏ" class="button" /><br>
                             <i>({$access_user_fullname} tạo ngày {$smarty.now|date_format:'%d/%m/%Y'})</i>
                         </div>
                     </div>

@@ -1,6 +1,6 @@
 ﻿{literal}
 <style>
-#div_kdl{ width: 811px; height: 550px; padding: 0px 1px 1px 1px; border:1px solid #8ea4c1; background-color:#ffffff;
+#div_kdl{ width: 900px; height: 550px; padding: 0px 1px 1px 1px; border:1px solid #8ea4c1; background-color:#ffffff;
 	position:absolute; margin:40px 200px; z-index:100; font-size:12px
 	/*display: none; position: absolute; background-color: white2; overflow: auto;	*/
 }
@@ -46,12 +46,12 @@
 /*----------------------end add_edit_dl div---------------------*/
 
 /*----------------------dl file div---------------------*/
-#dl_file_main_cont{ float:left; width:100%; height:350px; background-color:#ccd8e7}
+#dl_file_main_cont{ float:left; width:100%; height:380px; background-color:#ccd8e7}
 #dl_file_tab_bar_tit{ float:left; font-weight:bold; text-transform:uppercase; line-height:20px; padding-left:8px; width:80%;cursor:move; color:#15428b;}
 #dl_file_tab_bar_icon{ float:right; width:10%; text-align:right; padding-top:2px; padding-right:6px}
-#dl_file_content_outsign{ float:left; width:93%; height:320px; background-color:#ffffff; margin-left:8px; border:1px solid #99bbe8}
-#dl_file_content_insign{ float:left; width:99.7%; height:297px; background-color:#dfe8f6; margin-left:1px;}
-#dl_file_cont{ float:left; width:99.5%; height:319px; background-color:#dfe8f6; margin-left:1px;}
+#dl_file_content_outsign{ float:left; width:93%; height:350px; background-color:#ffffff; margin-left:8px; border:1px solid #99bbe8}
+#dl_file_content_insign{ float:left; width:99.7%; height:329px; background-color:#dfe8f6; margin-left:1px;}
+#dl_file_cont{ float:left; width:99.5%; height:349px; background-color:#dfe8f6; margin-left:1px;}
 #dl_file_clear_txt{ float:left; width:100%; height:1px}
 #dl_file_tool_bar{ float:left; width:99.7%; height:20px; background-color:#dfe8f6; margin-left:1px}
 #dl_file_search_area{ float:left; width:120px; height:20px; padding-left:2px}
@@ -153,11 +153,11 @@ function change_style_kdl(obj){
         <div id="kdl_menu">
         	<div style="width:10px; float:left">&nbsp;</div>
             <a href="javascript: void(0)" onclick="change_style_kdl(1)" id="a_menu_kdl_1">
-            <div class="c_menu_kdl" id="c_menu_kdl_1" style="width:110px; border-left:1px solid #99bbe8; border-bottom:1px solid #dfe8f6; background-color:#dfe8f6; height:25px; margin-top:0px">Dữ liệu chung</div></a>
+            <div class="c_menu_kdl" id="c_menu_kdl_1" style="width:100px; border-left:1px solid #99bbe8; border-bottom:1px solid #dfe8f6; background-color:#dfe8f6; height:25px; margin-top:0px">Dữ liệu chung</div></a>
             <a href="javascript: void(0)" onclick="change_style_kdl(2)" id="a_menu_kdl_2">
-            <div class="c_menu_kdl" id="c_menu_kdl_2" style="width:110px;">Dữ liệu phòng/ban</div></a>
+            <div class="c_menu_kdl" id="c_menu_kdl_2" style="width:115px;">Dữ liệu phòng/ban</div></a>
             <a href="javascript: void(0)" onclick="change_style_kdl(3)" id="a_menu_kdl_3">
-            <div class="c_menu_kdl" id="c_menu_kdl_3" style="width:100px;">Dữ liệu cá nhân</div></a>
+            <div class="c_menu_kdl" id="c_menu_kdl_3" style="width:105px;">Dữ liệu cá nhân</div></a>
         </div>
         <div style="float:left; height:26px; width:100%"></div>
         <!-- Content -->
@@ -197,7 +197,7 @@ function change_style_kdl(obj){
     </div>
 </div>
 
-<div id="dl_file" onclick="javascript: change_bgcl_transport('dl_file')" style="width:280px; float:left; font-weight:normal; position:absolute; display:none; margin:90px 0 0 690px; background-color:#ffffff; border:1px solid #99bbe8; z-index:1010; padding: 0px 1px 1px 1px">
+<div id="dl_file" onclick="javascript: change_bgcl_transport('dl_file')" style="width:320px; float:left; font-weight:normal; position:absolute; display:none; margin:90px 0 0 690px; background-color:#ffffff; border:1px solid #99bbe8; z-index:1010; padding: 0px 1px 1px 1px">
 	<div id="dl_file_main_cont">
         <div id="dl_file_tab_bar_tit">Tệp tin dữ liệu</div>
         <div id="dl_file_tab_bar_icon">

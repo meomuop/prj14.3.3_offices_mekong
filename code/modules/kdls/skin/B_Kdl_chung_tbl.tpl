@@ -17,7 +17,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
 	<form method="post" name="frmList_Kdl_chung" action="?listKDL_Chung{$vars.arg}" id="frmList_Kdl_chung">
     <!------------------------------------KHO DU LIEU---------------------------------------------->
     <div style="float:left">
-    <fieldset style="width:250px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px; height:482px">
+    <fieldset style="width:259px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px; height:482px">
     <legend class="legend_list" style="width:200px">
         <div style="width:90px; float:left">Danh mục: {$total_num_result}</div>
         <div style="width:90px; float:left">
@@ -33,13 +33,13 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
         </div>
     </legend>
     	<div style="float:left; height:5px; width:100%"></div>
-        <div style="float:left; height:455px; width:250px; overflow-y:scroll">
+        <div style="float:left; height:455px; width:259px; overflow-y:scroll">
             {section name=pi loop=$obj_list}
             {math z=$smarty.section.pi.index t=1 equation="z+t" assign=count}
-            <div style="float:left; line-height:30px">
+            <div style="float:left; line-height:30px; border-bottom: 1px dashed #99bbe8">
             	<div style="float:left; width:20px; text-align:center">&diams;</div>
-                <div style="float:left; width:212px; white-space:nowrap" title="{$obj_list[pi]->kdl_name}">
-                    <div style="float:left; width:190px; white-space:nowrap">
+                <div style="float:left; width:221px; white-space:nowrap" title="{$obj_list[pi]->kdl_name}">
+                    <div style="float:left; width:199px; white-space:nowrap">
                     <a href="javascript:void(0);" onclick="javascript: show_list_dl({$obj_list[pi]->kdl_id},{$obj_list[pi]->kdl_type},'{$vars.arg}')" {if $kdl_id eq $obj_list[pi]->kdl_id}} style="color:#F00" {/if}>{$obj_list[pi]->kdl_name|str_string_cut:"45":"1"}</a>
                     </div>
                     <div style="float:right; margin:2px; height:18px; width:16px; text-align:center; background-color:#dfe8f6" title="Chức năng mở rộng" id="extra_icon_kdl_{$count}">
@@ -64,7 +64,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
     </div>
     <!------------------------------------DU LIEU---------------------------------------------->
     <div style="float:left">
-    <fieldset style="width:525px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px; height:482px">
+    <fieldset style="width:605px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px; height:482px">
     <legend class="legend_list" style="width:340px">
         <div style="width:100px; float:left">Dữ liệu: {$total_dl}</div>
         <div style="width:70px; float:left">&nbsp;|&nbsp;Tìm kiếm&nbsp;</div>
@@ -80,14 +80,14 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
         </div>
     </legend>
     	<div style="float:left; height:5px; width:100%"></div>
-    	<div style="float:left; height:25px; width:507px; border-top:1px solid #99bbe8; border-bottom:1px solid #99bbe8 ">
+    	<div style="float:left; height:25px; width:587px; border-top:1px solid #99bbe8; border-bottom:1px solid #99bbe8 ">
             <div class="tbl_tit" style="width:30px; text-align:center"><b>STT</b></div>	
-            <div class="tbl_tit" style="width:160px"><B>&nbsp;Tên dữ liệu</B></div>
-            <div class="tbl_tit" style="width:192px"><B>&nbsp;Mô tả</B></div>
+            <div class="tbl_tit" style="width:180px"><B>&nbsp;Tên dữ liệu</B></div>
+            <div class="tbl_tit" style="width:252px"><B>&nbsp;Mô tả</B></div>
             <div class="tbl_tit" style="width:70px"><B>&nbsp;Ngày tháng</B></div>
             <div class="tbl_tit" style="width:50px"><B>&nbsp;Tệp tin</B></div>
         </div>
-        <div style="float:left; height:428px; width:525px; overflow-y:scroll">
+        <div style="float:left; height:428px; width:605px; overflow-y:scroll">
         	{if $obj_list_dl}
             {section name=dli loop=$obj_list_dl}
             {if $smarty.section.dli.index is not div by 2} 
@@ -97,13 +97,13 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
             {/if}
             {math z=$smarty.section.dli.index t=1 equation="z+t" assign=stt}
             <div class="{$class_td}" style="width:30px; text-align:center">{$stt}</div>
-            <div class="{$class_td}" style="width:160px; white-space:nowrap" title="{$obj_list_dl[dli]->dl_name}">
-            	<div style="float:left; width:130px; white-space:nowrap">&nbsp;{$obj_list_dl[dli]->dl_name|str_string_cut:"30":"1"}</div>
+            <div class="{$class_td}" style="width:180px; white-space:nowrap" title="{$obj_list_dl[dli]->dl_name}">
+            	<div style="float:left; width:130px; white-space:nowrap">&nbsp;{$obj_list_dl[dli]->dl_name|str_string_cut:"35":"1"}</div>
                 <div style="float:right; margin:2px; border:1px solid #8ea4c1; height:18px; width:16px; text-align:center; background-color:#dfe8f6" title="Chức năng mở rộng">
                 <a href='javascript: void(0);' onclick="show_list_dl_options({$stt},{$total_dl})">
                 <img src="{$css_path}extra_icon.png" width="14" height="14" border="0" class="img_all"></a>
                 </div>
-                <div id="extra_dl_{$stt}" style="position:absolute; display:none; height:auto; width:60px; margin:2px 79px; border:1px solid #8ea4c1; border-right:1px solid #8ea4c1; background-color:#dfe8f6">
+                <div id="extra_dl_{$stt}" style="position:absolute; display:none; height:auto; width:60px; margin:2px 99px; border:1px solid #8ea4c1; border-right:1px solid #8ea4c1; background-color:#dfe8f6">
                     <div style="float:left; width:60px; height:18px; border-right:1px solid #dfe8f6"><b>&nbsp;Thao tác:</b></div>
                     <div style="float:left; width:60px; padding:0 0 0 3px">
                          - <a href="javascript: void(0)" onclick="javascript: show_edit_dl_form({$obj_list_dl[dli]->dl_id},{$kdl_id},{$kdl_type})">Sửa</a>
@@ -113,8 +113,8 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                     </div>
                 </div>
             </div>
-            <div class="{$class_td}" style="width:192px; white-space:nowrap" title="{$obj_list_dl[dli]->dl_note}">
-                &nbsp;{$obj_list_dl[dli]->dl_note|str_string_cut:"50":"1"}
+            <div class="{$class_td}" style="width:252px; white-space:nowrap" title="{$obj_list_dl[dli]->dl_note}">
+                &nbsp;{$obj_list_dl[dli]->dl_note|str_string_cut:"60":"1"}
             </div>
             <div class="{$class_td}" style="width:70px">
             	&nbsp;{$obj_list_dl[dli]->dl_date|date_format:'%d/%m/%Y'}
@@ -129,7 +129,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                 {/if}
             </div>
             {/section}
-            {else}<div class="{$class_td}" style="width:507px; text-align:center">Mời chọn danh mục</div>{/if}
+            {else}<div class="{$class_td}" style="width:587px; text-align:center; margin-top: 10px">Mời chọn danh mục</div>{/if}
         </div>
     </fieldset>
     </div>

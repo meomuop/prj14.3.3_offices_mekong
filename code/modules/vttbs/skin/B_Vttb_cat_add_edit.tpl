@@ -29,18 +29,18 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
             <tr height="30">
             	<td align="center" valign="top">
                 	<div style="float:left; width:360px">
-                        <div style="float:left; width:90px; line-height:25px; text-align:left">Tên danh mục <font color="#FF0000">*</font>:</div>
-                        <div style="float:left; width:270px; line-height:25px; text-align:left">
+                        <div style="float:left; width:100px; line-height:25px; text-align:left">Tên danh mục <font color="#FF0000">*</font>:</div>
+                        <div style="float:left; width:260px; line-height:25px; text-align:left">
                         <input type="text" name="vttb_cat_name" id="vttb_cat_name" class="text_middle_long" value="{$obj_info.vttb_cat_name}" onfocus="hide_message_Vttb()"/>
                         </div>
                     </div>
                     <div style="float:left; width:360px">
-                        <div style="float:left; width:90px; line-height:25px; text-align:left">Ngày tạo:</div>
-                        <div style="float:left; width:100px; line-height:25px; text-align:left">
+                        <div style="float:left; width:100px; line-height:25px; text-align:left">Ngày tạo:</div>
+                        <div style="float:left; width:90px; line-height:25px; text-align:left">
                             {$smarty.now|date_format:'%d/%m/%Y'}
                         </div>
                         <div style="float:left; width:70px; line-height:25px; text-align:left">Người tạo:</div>
-                        <div style="float:left; width:100px; line-height:25px; text-align:left">
+                        <div style="float:left; width:90px; line-height:25px; text-align:left">
                             {$access_user_fullname}
                         </div>
                     </div>
@@ -49,20 +49,20 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
             <tr height="30">
             	<td align="center">
                     <div style="float:left; width:360px">
-                        <div style="float:left; width:90px; line-height:25px; text-align:left">Tình trạng:</div>
+                        <div style="float:left; width:100px; line-height:25px; text-align:left">Tình trạng:</div>
                         <div style="float:left; width:200px; line-height:25px; text-align:left">
                             {if $obj_info.vttb_cat_active neq ''}
-                            <div style="float:left; width:80px">
+                            <div style="float:left; width:90px">
                             <input type="radio" id="vttb_cat_active" name="vttb_cat_active" value="1" {if $obj_info.vttb_cat_active eq 1} checked="checked" {/if} />&nbsp;Hiển thị
                             </div>
-                            <div style="float:left; width:90px">
+                            <div style="float:left; width:110px">
                             <input type="radio" id="vttb_cat_active" name="vttb_cat_active" value="2" {if $obj_info.vttb_cat_active eq 2} checked="checked" {/if} />&nbsp;Không hiển thị
                             </div>
                             {else}
-                            <div style="float:left; width:80px">
+                            <div style="float:left; width:90px">
                             <input type="radio" id="vttb_cat_active" name="vttb_cat_active" value="1" checked/>&nbsp;Hiển thị
                             </div>
-                            <div style="float:left; width:90px">
+                            <div style="float:left; width:110px">
                             <input type="radio" id="vttb_cat_active" name="vttb_cat_active" value="2" />&nbsp;Không hiển thị
                             </div>
                             {/if}

@@ -18,14 +18,14 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
 </style>
 {/literal}
 <div id="div_vttb_info_content_insign">
-	<form method="post" name="frmView_Vttb" action="?viewVttv{$vars.arg}" id="frmView_Vttb">
+	<form method="post" name="frmView_Vttb_info" action="?viewVttv{$vars.arg}" id="frmView_Vttb_info">
     <!------------------------------------------THONG TIN------------------------------------>
-    <fieldset style="width:463px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px">
+    <fieldset style="width:513px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px">
         <legend class="legend">Thông tin:</legend>
     	<table width="98%" cellspacing="0" cellpadding="0" border="0" style="margin-left:5px">
             <tr height="30">
             	<td align="left" valign="top">
-                	<div style="float:left; width:453px; height:auto; line-height:20px">
+                	<div style="float:left; width:503px; height:auto; line-height:20px">
                     	- <b>{$obj_info.vttb_name}</b> <i>({$obj_info.vttb_desc})</i> có chi phí đầu tư <b>{$obj_info.vttb_cost|price_format} vnđ</b>, được đưa vào sử dụng từ ngày <b>{$obj_info.vttb_commission|date_format:'%d/%m/%Y'}</b> và dự kiến hết hạn vào ngày <b>{$obj_info.vttb_limit|date_format:'%d/%m/%Y'}</b>. Đây là VTTB(CSVC) thuộc nhóm {if $obj_sub_info.vttb_sub_type eq 1} sử dụng cho cá nhân và đang được quản lý bởi 
                                 <b>{section name=ui loop=$obj_list_user}
                                     {if $obj_list_user[ui]->user_id eq $obj_info.vttb_useby}
@@ -91,17 +91,17 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
     </fieldset>
     
     <!------------------------------------------THONG TIN LICH DAT------------------------------------>
-    <fieldset style="width:463px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px">
+    <fieldset style="width:513px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px">
         <legend class="legend" style="width:120px">Trạng thái sử dụng:</legend>
     	<div style="float:left; height:5px; width:100%"></div>
-        <div style="float:left; height:25px; width:442px; border-top:1px solid #99bbe8; border-bottom:1px solid #99bbe8 ">
+        <div style="float:left; height:25px; width:492px; border-top:1px solid #99bbe8; border-bottom:1px solid #99bbe8 ">
             <div class="tbl_tit" style="width:30px; text-align:center"><b>STT</b></div>	
-            <div class="tbl_tit" style="width:228px"><B>&nbsp;Mục đích</B></div>
-            <div class="tbl_tit" style="width:90px"><B>&nbsp;Bắt đầu</B></div>
-            <div class="tbl_tit" style="width:90px"><B>&nbsp;Kết thúc</B></div>
+            <div class="tbl_tit" style="width:238px"><B>&nbsp;Mục đích</B></div>
+            <div class="tbl_tit" style="width:110px"><B>&nbsp;Bắt đầu</B></div>
+            <div class="tbl_tit" style="width:110px"><B>&nbsp;Kết thúc</B></div>
         </div>
         <div style="float:left; width:18px; height:25px">&nbsp;</div>
-        <div style="float:left; height:190px; width:461px; overflow-y:scroll">
+        <div style="float:left; height:190px; width:511px; overflow-y:scroll">
             {section name=pi loop=$obj_list}
             {if $smarty.section.pi.index is not div by 2} 
             {assign var="class_td" value="tbl_cont"} 
@@ -111,20 +111,23 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
             {math x=$vars.curpage-1 y=$vars.numresult z=$smarty.section.pi.index t=1 equation="x*y+z+t" assign=stt}
             <div style="float:left">
                 <div class="{$class_td}" style="width:30px; text-align:center">{$stt}</div>
-                <div class="{$class_td}" style="width:228px; white-space:nowrap" title="{$obj_list[pi]->vttb_datlich_name}">
+                <div class="{$class_td}" style="width:238px; white-space:nowrap" title="{$obj_list[pi]->vttb_datlich_name}">
                 	&nbsp;{if $obj_list[pi]->user_id eq $access_user_id}
                     <a href='javascript: void(0);' onclick="edit_me_Vttb_info({$obj_list[pi]->vttb_datlich_id},{$vttb_sub_id})">{$obj_list[pi]->vttb_datlich_name|str_string_cut:"50":"1"}</a>
                     {else}{$obj_list[pi]->vttb_datlich_name|str_string_cut:"50":"1"}{/if}
                 </div>
-                <div class="{$class_td}" style="width:90px; text-align:left">
+                <div class="{$class_td}" style="width:110px; text-align:left">
                     &nbsp;{$obj_list[pi]->vttb_datlich_start|date_format:"%d/%m/%Y %H:%M"}
                 </div>
-                <div class="{$class_td}" style="width:90px; text-align:left">
+                <div class="{$class_td}" style="width:110px; text-align:left">
                     &nbsp;{$obj_list[pi]->vttb_datlich_end|date_format:"%d/%m/%Y %H:%M"}
                 </div>
             </div>
             {/section}
         </div>
+        <input type="hidden" name="vttb_sub_id" id="vttb_sub_id" value="{$vars.vttb_sub_id}">
+        <input type="hidden" name="user_id" id="user_id" value="{$obj_info.user_id}">
+        <input type="hidden" name="vttb_id" id="vttb_id" value="{$vars.vttb_id}">
         <input type="hidden" id="curpage_Vttb_info" name="curpage" value="{$vars.curpage}" />
     </fieldset>
     </form>
@@ -198,7 +201,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
 		var vttb_id = document.frmView_Vttb_info.vttb_id.value;
 		var vttb_sub_id = document.frmView_Vttb_info.vttb_sub_id.value;
 		$('#div_vttb_info_cont').hide();
-		$('#div_vttb_info_cont').fadeOut('fast').load("?viewVttv&mod=vttbs&vttb_id="+vttb_id+"&vttb_sub_id="+vttb_sub_id).fadeIn("fast");
+		$('#div_vttb_info_cont').fadeOut('fast').load("?viewVTTB&mod=vttbs&vttb_id="+vttb_id+"&vttb_sub_id="+vttb_sub_id).fadeIn("fast");
 	});
 </script>
 {/literal}

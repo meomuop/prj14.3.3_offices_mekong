@@ -8,39 +8,146 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/templates/admin/admin_home.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="364" column="71" selection-start-line="364" selection-start-column="52" selection-end-line="364" selection-end-column="71" />
+            <state relative-caret-position="421">
+              <caret line="576" column="30" selection-start-line="576" selection-start-column="30" selection-end-line="576" selection-end-column="30" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#2;n#div#0;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#1;n#div#2;n#div#0;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#2;n#div#2;n#div#0;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#1;n#div#2;n#div#0;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/templates/admin/div_danhba.tpl">
+        <entry file="file://$PROJECT_DIR$/code/modules/congviecs/skin/B_CvCat_add_edit.tpl">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/code/modules/congviecs/skin/B_Congviec_tbl.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
-              <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+            <state relative-caret-position="240">
+              <caret line="150" column="85" selection-start-line="150" selection-start-column="85" selection-end-line="150" selection-end-column="85" />
+              <folding>
+                <element signature="e#956#1048#0#HTML" expanded="true" />
+                <element signature="e#946#5296#0#HTML" />
+                <element signature="e#2265#2329#0#HTML" expanded="true" />
+                <element signature="e#2503#2574#0#HTML" expanded="true" />
+                <element signature="e#2671#2722#0#HTML" expanded="true" />
+                <element signature="e#2798#2849#0#HTML" expanded="true" />
+                <element signature="e#2984#3113#0#HTML" expanded="true" />
+                <element signature="e#3937#4103#0#HTML" expanded="true" />
+                <element signature="e#5470#5562#0#HTML" expanded="true" />
+                <element signature="e#6501#6543#0#HTML" expanded="true" />
+                <element signature="e#6572#6649#0#HTML" expanded="true" />
+                <element signature="e#6779#6804#0#HTML" expanded="true" />
+                <element signature="e#7057#7088#0#HTML" expanded="true" />
+                <element signature="e#7925#9625#0#HTML" />
+                <element signature="e#9757#9785#0#HTML" expanded="true" />
+                <element signature="e#12351#12449#0#HTML" expanded="true" />
+                <element signature="e#12535#12596#0#HTML" expanded="true" />
+                <element signature="e#12597#12603#1#HTML" expanded="true" />
+                <element signature="e#12624#12642#0#HTML" expanded="true" />
+                <element signature="e#12692#15080#0#HTML" />
+                <element signature="e#12802#12862#0#HTML" expanded="true" />
+                <element signature="e#12927#12958#0#HTML" expanded="true" />
+                <element signature="e#13021#13172#0#HTML" expanded="true" />
+                <element signature="e#15134#15179#0#HTML" expanded="true" />
+                <element signature="e#15129#18645#0#HTML" />
+                <element signature="e#15238#15307#0#HTML" expanded="true" />
+                <element signature="e#15370#15429#0#HTML" expanded="true" />
+                <element signature="e#15365#16015#0#HTML" />
+                <element signature="e#16077#16136#0#HTML" expanded="true" />
+                <element signature="e#16072#16689#0#HTML" />
+                <element signature="e#16867#16927#0#HTML" expanded="true" />
+                <element signature="e#16862#17241#0#HTML" />
+                <element signature="e#17460#17519#0#HTML" expanded="true" />
+                <element signature="e#17855#17914#0#HTML" expanded="true" />
+                <element signature="e#18307#18394#0#HTML" expanded="true" />
+                <element signature="e#20823#20950#0#HTML" expanded="true" />
+                <element signature="e#20951#20957#1#HTML" expanded="true" />
+                <element signature="e#21736#21780#0#HTML" expanded="true" />
+                <element signature="e#21847#22018#0#HTML" expanded="true" />
+                <element signature="e#22091#22122#0#HTML" expanded="true" />
+                <element signature="e#22193#22344#0#HTML" expanded="true" />
+                <element signature="e#22708#22768#0#HTML" expanded="true" />
+                <element signature="e#23724#23899#0#HTML" expanded="true" />
+                <element signature="e#23966#24035#0#HTML" expanded="true" />
+                <element signature="e#24106#24165#0#HTML" expanded="true" />
+                <element signature="e#58947#69007#0#Smarty" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/modules/docs/B_DocField_list.php">
+        <entry file="file://$PROJECT_DIR$/code/templates/admin/div_congviec.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1835" />
+            <state relative-caret-position="32">
+              <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/modules/congviecs/skin/B_CvSub_add_edit.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-144">
+              <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+              <folding>
+                <element signature="n#style#0;n#legend#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#1;n#div#1;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#2;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#3;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#3;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/admin/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="41" column="28" lean-forward="true" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/classes/clsCvCats.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="16">
+              <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+            </state>
           </provider>
         </entry>
       </file>
@@ -53,90 +160,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/modules/docs/skin/B_Doc_tbl.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="306" column="31" selection-start-line="306" selection-start-column="31" selection-end-line="306" selection-end-column="31" />
-              <folding>
-                <element signature="n#style#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#fieldset#0;n#form#0;n#div#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/templates/admin/div_doc.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="307" column="103" selection-start-line="307" selection-start-column="103" selection-end-line="307" selection-end-column="103" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#a#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#a#1;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#a#2;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#4;n#div#4;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/code/modules/users/skin/B_UserPhone_tbl.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="49" column="48" selection-start-line="49" selection-start-column="48" selection-end-line="49" selection-end-column="48" />
-              <folding>
-                <element signature="e#825#917#0#HTML" expanded="true" />
-                <element signature="e#815#1898#0#HTML" />
-                <element signature="e#2016#2034#0#HTML" expanded="true" />
-                <element signature="e#2050#2142#0#HTML" expanded="true" />
-                <element signature="e#2301#2343#0#HTML" expanded="true" />
-                <element signature="e#2361#2469#0#HTML" expanded="true" />
-                <element signature="e#2504#2541#0#HTML" expanded="true" />
-                <element signature="e#2593#2612#0#HTML" expanded="true" />
-                <element signature="e#2672#2691#0#HTML" expanded="true" />
-                <element signature="e#2752#2770#0#HTML" expanded="true" />
-                <element signature="e#2907#2971#0#HTML" expanded="true" />
-                <element signature="e#3336#3373#0#HTML" expanded="true" />
-                <element signature="e#3424#3443#0#HTML" expanded="true" />
-                <element signature="e#3551#3570#0#HTML" expanded="true" />
-                <element signature="e#3875#3893#0#HTML" expanded="true" />
-                <element signature="e#3998#4017#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/templates/admin/div_user.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16">
-              <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
-              <folding>
-                <element signature="n#style#0;n#a#2;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#a#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>width: 93px; height: 93px; border: 0px none; cursor:pointer;</find>
-      <find>&lt;li&gt;&lt;input type=&quot;button&quot;</find>
-      <find>css_img_bg</find>
-      <find>transport_content_main</find>
-      <find>div_systray_info</find>
-      <find>c_menu_config_5</find>
-      <find>a_menu_config_3</find>
-      <find>&lt;div style=&quot;float:left; width:40px&quot;&gt;Hiển thị&lt;/div&gt;</find>
-      <find>legend_list</find>
-      <find>div_note</find>
-      <find>user</find>
       <find>div_user</find>
       <find>function close_all_window_doc</find>
       <find>close_all_window_doc</find>
@@ -154,6 +181,19 @@
       <find>thuoctinh</find>
       <find>danhba_content_main</find>
       <find>class_td</find>
+      <find>dl_file</find>
+      <find>297px</find>
+      <find>file_content_insign</find>
+      <find>list_repare_main_cont</find>
+      <find>a_ref_Vttb_info</find>
+      <find>frmList_Repare</find>
+      <find>frmView_Vttb_info</find>
+      <find>vttb_id</find>
+      <find>show_vttb_info</find>
+      <find>div_vttb_info_main_cont</find>
+      <find>$obj_list</find>
+      <find>from tbl_cv_logs where cv_sub_id</find>
+      <find>javascript: show_add_log_form_ld(</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;li&gt;&lt;input type=&quot;button&quot; class=&quot;main_item_icon&quot;</replace>
@@ -169,17 +209,24 @@
       <replace>font-size:12px</replace>
       <replace>font-size: 12px</replace>
       <replace>thuoctinh_content_main</replace>
+      <replace>$row_index</replace>
     </replaceStrings>
     <dirStrings>
       <dir>E:\Projects\wamp64\www\smarty\prj14.3.3_offices_mekong\code\modules</dir>
       <dir>E:\Projects\wamp64\www\smarty\prj14.3.3_offices_mekong\code\js</dir>
       <dir>E:\Projects\wamp64\www\smarty\prj14.3.3_offices_mekong\code</dir>
+      <dir>E:\Projects\wamp64\www\smarty\prj14.3.3_offices_mekong\code\modules\kdls</dir>
     </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.txt" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/code/includes/login_requires.php" />
         <option value="$PROJECT_DIR$/code/includes/dbfunc.php" />
         <option value="$PROJECT_DIR$/code/includes/config.php" />
         <option value="$PROJECT_DIR$/code/admin/index.php" />
@@ -210,9 +257,27 @@
         <option value="$PROJECT_DIR$/code/modules/docs/skin/B_DocLevel_tbl.tpl" />
         <option value="$PROJECT_DIR$/code/modules/docs/skin/B_DocCat_tbl.tpl" />
         <option value="$PROJECT_DIR$/code/templates/admin/div_doc.tpl" />
-        <option value="$PROJECT_DIR$/code/templates/admin/admin_home.tpl" />
+        <option value="$PROJECT_DIR$/code/templates/admin/login.tpl" />
         <option value="$PROJECT_DIR$/code/templates/admin/div_danhba.tpl" />
         <option value="$PROJECT_DIR$/code/modules/users/skin/B_UserPhone_tbl.tpl" />
+        <option value="$PROJECT_DIR$/code/modules/kdls/skin/B_Kdl_chung_tbl.tpl" />
+        <option value="$PROJECT_DIR$/code/modules/kdls/skin/B_Kdl_add_edit.tpl" />
+        <option value="$PROJECT_DIR$/code/templates/admin/div_kdl.tpl" />
+        <option value="$PROJECT_DIR$/code/modules/kdls/skin/B_DlFile_tbl.tpl" />
+        <option value="$PROJECT_DIR$/code/templates/admin/admin_home.tpl" />
+        <option value="$PROJECT_DIR$/code/modules/vttbs/skin/B_Vttb_cat_add_edit.tpl" />
+        <option value="$PROJECT_DIR$/code/modules/vttbs/skin/B_Vttb_sub_add_edit.tpl" />
+        <option value="$PROJECT_DIR$/code/modules/vttbs/skin/B_Vttb_chung_tbl.tpl" />
+        <option value="$PROJECT_DIR$/code/modules/vttbs/skin/B_Replace_tbl.tpl" />
+        <option value="$PROJECT_DIR$/code/modules/vttbs/skin/B_Repare_tbl.tpl" />
+        <option value="$PROJECT_DIR$/code/modules/vttbs/skin/B_Vttb_view.tpl" />
+        <option value="$PROJECT_DIR$/code/templates/admin/div_vttb.tpl" />
+        <option value="$PROJECT_DIR$/code/modules/vttbs/skin/B_Datlich_tbl.tpl" />
+        <option value="$PROJECT_DIR$/code/classes/clsCvCats.php" />
+        <option value="$PROJECT_DIR$/code/modules/congviecs/B_Congviec_list.php" />
+        <option value="$PROJECT_DIR$/code/modules/congviecs/skin/B_CvSub_add_edit.tpl" />
+        <option value="$PROJECT_DIR$/code/templates/admin/div_congviec.tpl" />
+        <option value="$PROJECT_DIR$/code/modules/congviecs/skin/B_Congviec_tbl.tpl" />
       </list>
     </option>
   </component>
@@ -230,6 +295,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -246,25 +312,6 @@
               <item name="prj14.3.3_offices_mekong" type="b2602c69:ProjectViewProjectNode" />
               <item name="prj14.3.3_offices_mekong" type="462c0819:PsiDirectoryNode" />
               <item name="code" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="prj14.3.3_offices_mekong" type="b2602c69:ProjectViewProjectNode" />
-              <item name="prj14.3.3_offices_mekong" type="462c0819:PsiDirectoryNode" />
-              <item name="code" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="prj14.3.3_offices_mekong" type="b2602c69:ProjectViewProjectNode" />
-              <item name="prj14.3.3_offices_mekong" type="462c0819:PsiDirectoryNode" />
-              <item name="code" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="prj14.3.3_offices_mekong" type="b2602c69:ProjectViewProjectNode" />
-              <item name="prj14.3.3_offices_mekong" type="462c0819:PsiDirectoryNode" />
-              <item name="code" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -272,14 +319,14 @@
               <item name="prj14.3.3_offices_mekong" type="462c0819:PsiDirectoryNode" />
               <item name="code" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="importants" type="462c0819:PsiDirectoryNode" />
+              <item name="congviecs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="prj14.3.3_offices_mekong" type="b2602c69:ProjectViewProjectNode" />
               <item name="prj14.3.3_offices_mekong" type="462c0819:PsiDirectoryNode" />
               <item name="code" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="importants" type="462c0819:PsiDirectoryNode" />
+              <item name="congviecs" type="462c0819:PsiDirectoryNode" />
               <item name="skin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -287,14 +334,14 @@
               <item name="prj14.3.3_offices_mekong" type="462c0819:PsiDirectoryNode" />
               <item name="code" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
+              <item name="kdls" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="prj14.3.3_offices_mekong" type="b2602c69:ProjectViewProjectNode" />
               <item name="prj14.3.3_offices_mekong" type="462c0819:PsiDirectoryNode" />
               <item name="code" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
+              <item name="kdls" type="462c0819:PsiDirectoryNode" />
               <item name="skin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -314,14 +361,15 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -357,18 +405,21 @@
       <workItem from="1544683776741" duration="2777000" />
       <workItem from="1544851877737" duration="9425000" />
       <workItem from="1544942721116" duration="14221000" />
+      <workItem from="1545011214548" duration="24504000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26423000" />
+    <option name="totallyTimeSpent" value="50927000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2647504" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2685325" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Command Line Tools Console" weight="0.32850242" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -377,15 +428,15 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32850242" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Remote Host" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32980332" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,278 +448,12 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/code/js/admin/ad_common.js</url>
           <line>6</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/code/includes/ad_requires.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-259" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/includes/login_requires.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="28" column="121" selection-start-line="28" selection-start-column="121" selection-end-line="28" selection-end-column="121" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/includes/dbfunc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="45" column="6" lean-forward="true" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/includes/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/css/style.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/admin/admin_index.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/admin/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="123" column="18" selection-start-line="123" selection-start-column="18" selection-end-line="123" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/templates/admin/_header.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-576" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/config/skin/B_config_edit.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="147" column="21" lean-forward="true" selection-start-line="147" selection-start-column="21" selection-end-line="147" selection-end-column="21" />
-          <folding>
-            <element signature="n#style#0;n#fieldset#0;n#div#0;n#form#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/ports/skin/B_Port_tbl.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="143" column="52" selection-start-line="143" selection-start-column="52" selection-end-line="143" selection-end-column="52" />
-          <folding>
-            <element signature="e#786#864#0#HTML" expanded="true" />
-            <element signature="e#4613#4705#0#HTML" expanded="true" />
-            <element signature="e#4760#4791#0#HTML" expanded="true" />
-            <element signature="e#4842#4872#0#HTML" expanded="true" />
-            <element signature="e#4920#4951#0#HTML" expanded="true" />
-            <element signature="e#5403#5511#0#HTML" expanded="true" />
-            <element signature="e#5635#5654#0#HTML" expanded="true" />
-            <element signature="e#6655#6719#0#HTML" expanded="true" />
-            <element signature="e#12598#12653#0#HTML" expanded="true" />
-            <element signature="e#12668#12698#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/ports/skin/B_Port_list.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/holidays/skin/B_Holiday_list.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/holidays/skin/B_Holiday_tbl.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="141" column="47" selection-start-line="141" selection-start-column="47" selection-end-line="141" selection-end-column="47" />
-          <folding>
-            <element signature="e#795#873#0#HTML" expanded="true" />
-            <element signature="e#5885#5977#0#HTML" expanded="true" />
-            <element signature="e#6678#6786#0#HTML" expanded="true" />
-            <element signature="e#6991#7010#0#HTML" expanded="true" />
-            <element signature="e#7939#8003#0#HTML" expanded="true" />
-            <element signature="e#8496#8514#0#HTML" expanded="true" />
-            <element signature="e#8735#8754#0#HTML" expanded="true" />
-            <element signature="e#14025#14080#0#HTML" expanded="true" />
-            <element signature="e#14095#14125#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/templates/admin/div_config.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2512">
-          <caret line="157" column="54" selection-start-line="157" selection-start-column="54" selection-end-line="157" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/templates/admin/restore.tpl">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/templates/admin/sysreset.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/templates/admin/backup_restore.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="55" column="54" selection-start-line="55" selection-start-column="54" selection-end-line="55" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/admin/backup_restore.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/hdsds/skin/B_Hdsd_tbl.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="115" column="30" selection-start-line="115" selection-start-column="27" selection-end-line="115" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/users/skin/B_User_list.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/trinhdos/skin/B_Trinhdo_tbl.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="138" column="54" selection-start-line="138" selection-start-column="51" selection-end-line="138" selection-end-column="54" />
-          <folding>
-            <element signature="e#793#871#0#HTML" expanded="true" />
-            <element signature="e#783#6456#0#HTML" />
-            <element signature="e#6575#6667#0#HTML" expanded="true" />
-            <element signature="e#7504#7541#0#HTML" expanded="true" />
-            <element signature="e#7593#7612#0#HTML" expanded="true" />
-            <element signature="e#7678#7696#0#HTML" expanded="true" />
-            <element signature="e#7758#7777#0#HTML" expanded="true" />
-            <element signature="e#7836#7854#0#HTML" expanded="true" />
-            <element signature="e#7916#7953#0#HTML" expanded="true" />
-            <element signature="e#8008#8045#0#HTML" expanded="true" />
-            <element signature="e#8101#8138#0#HTML" expanded="true" />
-            <element signature="e#8190#8227#0#HTML" expanded="true" />
-            <element signature="e#8786#8850#0#HTML" expanded="true" />
-            <element signature="e#9343#9362#0#HTML" expanded="true" />
-            <element signature="e#9560#9578#0#HTML" expanded="true" />
-            <element signature="e#9689#9708#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/departments/skin/B_Department_tbl.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="143" column="20" lean-forward="true" selection-start-line="143" selection-start-column="20" selection-end-line="143" selection-end-column="20" />
-          <folding>
-            <element signature="e#802#880#0#HTML" expanded="true" />
-            <element signature="e#792#7306#0#HTML" />
-            <element signature="e#7425#7517#0#HTML" expanded="true" />
-            <element signature="e#7979#8009#0#HTML" expanded="true" />
-            <element signature="e#8233#8341#0#HTML" expanded="true" />
-            <element signature="e#8465#8484#0#HTML" expanded="true" />
-            <element signature="e#8551#8569#0#HTML" expanded="true" />
-            <element signature="e#8635#8654#0#HTML" expanded="true" />
-            <element signature="e#8724#8742#0#HTML" expanded="true" />
-            <element signature="e#8804#8841#0#HTML" expanded="true" />
-            <element signature="e#9367#9415#0#HTML" expanded="true" />
-            <element signature="e#9686#9750#0#HTML" expanded="true" />
-            <element signature="e#10243#10283#0#HTML" expanded="true" />
-            <element signature="e#10531#10549#0#HTML" expanded="true" />
-            <element signature="e#10663#10682#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/objects/skin/B_Object_tbl.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="138" column="54" selection-start-line="138" selection-start-column="51" selection-end-line="138" selection-end-column="54" />
-          <folding>
-            <element signature="e#790#868#0#HTML" expanded="true" />
-            <element signature="e#780#6385#0#HTML" />
-            <element signature="e#6504#6596#0#HTML" expanded="true" />
-            <element signature="e#6644#6675#0#HTML" expanded="true" />
-            <element signature="e#6726#6756#0#HTML" expanded="true" />
-            <element signature="e#6804#6835#0#HTML" expanded="true" />
-            <element signature="e#7039#7069#0#HTML" expanded="true" />
-            <element signature="e#7226#7268#0#HTML" expanded="true" />
-            <element signature="e#7521#7540#0#HTML" expanded="true" />
-            <element signature="e#7605#7623#0#HTML" expanded="true" />
-            <element signature="e#7685#7704#0#HTML" expanded="true" />
-            <element signature="e#7763#7781#0#HTML" expanded="true" />
-            <element signature="e#7843#7880#0#HTML" expanded="true" />
-            <element signature="e#7935#7972#0#HTML" expanded="true" />
-            <element signature="e#8028#8065#0#HTML" expanded="true" />
-            <element signature="e#8117#8154#0#HTML" expanded="true" />
-            <element signature="e#8394#8442#0#HTML" expanded="true" />
-            <element signature="e#8709#8773#0#HTML" expanded="true" />
-            <element signature="e#9266#9285#0#HTML" expanded="true" />
-            <element signature="e#9480#9498#0#HTML" expanded="true" />
-            <element signature="e#9608#9627#0#HTML" expanded="true" />
-            <element signature="e#12290#15683#0#HTML" />
-            <element signature="e#15112#15142#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/thangluongs/skin/B_Thangluong_tbl.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="169" column="49" selection-start-line="169" selection-start-column="49" selection-end-line="169" selection-end-column="49" />
-          <folding>
-            <element signature="e#802#880#0#HTML" expanded="true" />
-            <element signature="e#792#10247#0#HTML" />
-            <element signature="e#10366#10458#0#HTML" expanded="true" />
-            <element signature="e#11467#11575#0#HTML" expanded="true" />
-            <element signature="e#11779#11797#0#HTML" expanded="true" />
-            <element signature="e#11854#11889#0#HTML" expanded="true" />
-            <element signature="e#11954#11989#0#HTML" expanded="true" />
-            <element signature="e#13117#13181#0#HTML" expanded="true" />
-            <element signature="e#13674#13693#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/docs/skin/B_Doc_tbl.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="306" column="31" selection-start-line="306" selection-start-column="31" selection-end-line="306" selection-end-column="31" />
-          <folding>
-            <element signature="n#style#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#fieldset#0;n#form#0;n#div#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/templates/admin/div_plan.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-144" />
@@ -688,11 +473,6 @@
         <state relative-caret-position="96">
           <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/docs/B_DocField_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1835" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/code/modules/users/skin/B_User_tbl.tpl">
@@ -1252,16 +1032,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/docs/B_DocField_list.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/templates/admin/div_user.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/templates/admin/login.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="72" column="72" selection-start-line="72" selection-start-column="72" selection-end-line="72" selection-end-column="72" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/templates/admin/div_danhba.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/users/skin/B_UserPhone_tbl.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="39" column="30" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+          <folding>
+            <element signature="e#825#917#0#HTML" expanded="true" />
+            <element signature="e#1137#1201#0#HTML" expanded="true" />
+            <element signature="e#1417#1448#0#HTML" expanded="true" />
+            <element signature="e#2361#2469#0#HTML" expanded="true" />
+            <element signature="e#2593#2612#0#HTML" expanded="true" />
+            <element signature="e#2672#2691#0#HTML" expanded="true" />
+            <element signature="e#2752#2770#0#HTML" expanded="true" />
+            <element signature="e#2834#2853#0#HTML" expanded="true" />
+            <element signature="e#2907#2971#0#HTML" expanded="true" />
+            <element signature="e#3336#3373#0#HTML" expanded="true" />
+            <element signature="e#3424#3443#0#HTML" expanded="true" />
+            <element signature="e#3551#3570#0#HTML" expanded="true" />
+            <element signature="e#3875#3893#0#HTML" expanded="true" />
+            <element signature="e#3998#4017#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/code/templates/admin/div_doc.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
           <caret line="307" column="103" selection-start-line="307" selection-start-column="103" selection-end-line="307" selection-end-column="103" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#a#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#1;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#2;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#div#4;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/docs/skin/B_Doc_tbl.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="306" column="31" selection-start-line="306" selection-start-column="31" selection-end-line="306" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -1272,62 +1104,425 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/templates/admin/div_user.tpl">
+    <entry file="file://$PROJECT_DIR$/code/modules/kdls/skin/B_Kdl_list.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+        <state>
           <folding>
-            <element signature="n#style#0;n#a#2;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/kdls/skin/B_Kdl_add_edit.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="74" column="57" selection-start-line="74" selection-start-column="57" selection-end-line="74" selection-end-column="57" />
+          <folding>
+            <element signature="n#style#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#1;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#td#0;n#tr#2;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#td#0;n#tr#2;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#td#0;n#tr#2;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#td#0;n#tr#2;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#td#0;n#tr#2;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#td#0;n#tr#2;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#td#0;n#tr#2;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/templates/admin/div_kdl.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="52" column="60" selection-start-line="52" selection-start-column="60" selection-end-line="52" selection-end-column="60" />
+          <folding>
             <element signature="n#style#0;n#div#0;n#a#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#1;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#2;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/kdls/skin/B_DlFile_tbl.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="133" column="77" selection-start-line="133" selection-start-column="77" selection-end-line="133" selection-end-column="77" />
+          <folding>
+            <element signature="e#799#877#0#HTML" expanded="true" />
+            <element signature="e#789#5942#0#HTML" />
+            <element signature="e#6056#6148#0#HTML" expanded="true" />
+            <element signature="e#6337#6445#0#HTML" expanded="true" />
+            <element signature="e#6569#6588#0#HTML" expanded="true" />
+            <element signature="e#6653#6690#0#HTML" expanded="true" />
+            <element signature="e#6807#6870#0#HTML" expanded="true" />
+            <element signature="e#7316#7353#0#HTML" expanded="true" />
+            <element signature="e#7408#7447#0#HTML" expanded="true" />
+            <element signature="e#7809#7866#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/calendar/json.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/calendar/json_add.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/vttbs/skin/B_Vttb_cat_add_edit.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="49" column="35" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#1;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#td#0;n#tr#2;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#td#0;n#tr#2;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#td#0;n#tr#2;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#td#0;n#tr#2;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#td#0;n#tr#2;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#td#0;n#tr#2;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/cd628182-b125-412d-84d6-ce8ea06bfc48/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="das://cd628182-b125-412d-84d6-ce8ea06bfc48/collation/utf8_general_ci">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/vttbs/skin/B_Vttb_sub_add_edit.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="592">
+          <caret line="77" column="61" selection-start-line="77" selection-start-column="61" selection-end-line="77" selection-end-column="61" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#3;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#td#0;n#tr#3;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#td#0;n#tr#3;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#td#0;n#tr#3;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#td#0;n#tr#3;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#td#0;n#tr#3;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/vttbs/skin/B_Replace_tbl.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="316" column="184" selection-start-line="316" selection-start-column="182" selection-end-line="316" selection-end-column="184" />
+          <folding>
+            <element signature="e#4390#4468#0#HTML" expanded="true" />
+            <element signature="e#4380#13891#0#HTML" />
+            <element signature="e#4711#4730#0#HTML" expanded="true" />
+            <element signature="e#5440#5505#0#HTML" expanded="true" />
+            <element signature="e#5582#5648#0#HTML" expanded="true" />
+            <element signature="e#5926#5991#0#HTML" expanded="true" />
+            <element signature="e#6072#6138#0#HTML" expanded="true" />
+            <element signature="e#6415#6480#0#HTML" expanded="true" />
+            <element signature="e#6557#6623#0#HTML" expanded="true" />
+            <element signature="e#6877#6942#0#HTML" expanded="true" />
+            <element signature="e#7012#7077#0#HTML" expanded="true" />
+            <element signature="e#7345#7410#0#HTML" expanded="true" />
+            <element signature="e#7489#7554#0#HTML" expanded="true" />
+            <element signature="e#7582#7674#0#HTML" expanded="true" />
+            <element signature="e#9365#9430#0#HTML" expanded="true" />
+            <element signature="e#9505#9570#0#HTML" expanded="true" />
+            <element signature="e#10062#10127#0#HTML" expanded="true" />
+            <element signature="e#14005#14097#0#HTML" expanded="true" />
+            <element signature="e#14286#14394#0#HTML" expanded="true" />
+            <element signature="e#14518#14537#0#HTML" expanded="true" />
+            <element signature="e#14603#14621#0#HTML" expanded="true" />
+            <element signature="e#14833#14897#0#HTML" expanded="true" />
+            <element signature="e#15282#15300#0#HTML" expanded="true" />
+            <element signature="e#15435#15474#0#HTML" expanded="true" />
+            <element signature="e#15908#15943#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/vttbs/B_Vttb_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1488" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/vttbs/skin/B_Vttb_view.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="789">
+          <caret line="201" column="71" selection-start-line="201" selection-start-column="71" selection-end-line="201" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/vttbs/skin/B_log_tbl.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="18" column="28" lean-forward="true" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/vttbs/skin/B_Repare_tbl.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="225" column="97" lean-forward="true" selection-start-line="223" selection-start-column="24" selection-end-line="225" selection-end-column="97" />
+          <folding>
+            <element signature="e#4385#4463#0#HTML" expanded="true" />
+            <element signature="e#4706#4725#0#HTML" expanded="true" />
+            <element signature="e#5252#5270#0#HTML" expanded="true" />
+            <element signature="e#5434#5499#0#HTML" expanded="true" />
+            <element signature="e#5576#5642#0#HTML" expanded="true" />
+            <element signature="e#5916#5981#0#HTML" expanded="true" />
+            <element signature="e#6401#6466#0#HTML" expanded="true" />
+            <element signature="e#6543#6609#0#HTML" expanded="true" />
+            <element signature="e#6859#6924#0#HTML" expanded="true" />
+            <element signature="e#6994#7059#0#HTML" expanded="true" />
+            <element signature="e#7323#7388#0#HTML" expanded="true" />
+            <element signature="e#7467#7532#0#HTML" expanded="true" />
+            <element signature="e#7560#7652#0#HTML" expanded="true" />
+            <element signature="e#9318#9383#0#HTML" expanded="true" />
+            <element signature="e#9458#9523#0#HTML" expanded="true" />
+            <element signature="e#13897#13989#0#HTML" expanded="true" />
+            <element signature="e#14115#14157#0#HTML" expanded="true" />
+            <element signature="e#14178#14286#0#HTML" expanded="true" />
+            <element signature="e#14410#14429#0#HTML" expanded="true" />
+            <element signature="e#14495#14513#0#HTML" expanded="true" />
+            <element signature="e#14571#14608#0#HTML" expanded="true" />
+            <element signature="e#14655#14698#0#HTML" expanded="true" />
+            <element signature="e#14725#14789#0#HTML" expanded="true" />
+            <element signature="e#15174#15192#0#HTML" expanded="true" />
+            <element signature="e#15327#15366#0#HTML" expanded="true" />
+            <element signature="e#15795#15830#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/vttbs/skin/B_Datlich_tbl.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="468" column="14" selection-start-line="468" selection-start-column="14" selection-end-line="468" selection-end-column="14" />
+          <folding>
+            <element signature="e#4390#4468#0#HTML" expanded="true" />
+            <element signature="e#4711#4730#0#HTML" expanded="true" />
+            <element signature="e#5433#5498#0#HTML" expanded="true" />
+            <element signature="e#5571#5637#0#HTML" expanded="true" />
+            <element signature="e#5939#6017#0#HTML" expanded="true" />
+            <element signature="e#6089#6168#0#HTML" expanded="true" />
+            <element signature="e#7909#7968#0#HTML" expanded="true" />
+            <element signature="e#9559#9637#0#HTML" expanded="true" />
+            <element signature="e#13490#13568#0#HTML" expanded="true" />
+            <element signature="e#20130#20208#0#HTML" expanded="true" />
+            <element signature="e#20707#20772#0#HTML" expanded="true" />
+            <element signature="e#27654#27746#0#HTML" expanded="true" />
+            <element signature="e#27935#28043#0#HTML" expanded="true" />
+            <element signature="e#28167#28185#0#HTML" expanded="true" />
+            <element signature="e#28247#28265#0#HTML" expanded="true" />
+            <element signature="e#28326#28344#0#HTML" expanded="true" />
+            <element signature="e#28560#28624#0#HTML" expanded="true" />
+            <element signature="e#29162#29200#0#HTML" expanded="true" />
+            <element signature="e#29658#29693#0#HTML" expanded="true" />
+            <element signature="e#29850#29885#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/vttbs/skin/B_Vttb_chung_tbl.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="357" column="57" selection-start-line="357" selection-start-column="49" selection-end-line="357" selection-end-column="57" />
+          <folding>
+            <element signature="e#835#927#0#HTML" expanded="true" />
+            <element signature="e#995#1025#0#HTML" expanded="true" />
+            <element signature="e#1075#1105#0#HTML" expanded="true" />
+            <element signature="e#1503#1562#0#HTML" expanded="true" />
+            <element signature="e#1917#1959#0#HTML" expanded="true" />
+            <element signature="e#1980#2044#0#HTML" expanded="true" />
+            <element signature="e#2186#2257#0#HTML" expanded="true" />
+            <element signature="e#2242#2314#0#HTML" expanded="true" />
+            <element signature="e#2350#2424#0#HTML" expanded="true" />
+            <element signature="e#2525#2611#0#HTML" expanded="true" />
+            <element signature="e#3364#3544#0#HTML" expanded="true" />
+            <element signature="e#3575#3650#0#HTML" expanded="true" />
+            <element signature="e#4538#4609#0#HTML" expanded="true" />
+            <element signature="e#4506#4575#0#HTML" expanded="true" />
+            <element signature="e#5098#5169#0#HTML" expanded="true" />
+            <element signature="e#5134#5250#0#HTML" expanded="true" />
+            <element signature="e#5643#5744#0#HTML" expanded="true" />
+            <element signature="e#6480#6646#0#HTML" expanded="true" />
+            <element signature="e#7850#7942#0#HTML" expanded="true" />
+            <element signature="e#9074#9182#0#HTML" expanded="true" />
+            <element signature="e#9306#9325#0#HTML" expanded="true" />
+            <element signature="e#9398#9416#0#HTML" expanded="true" />
+            <element signature="e#9480#9498#0#HTML" expanded="true" />
+            <element signature="e#9563#9581#0#HTML" expanded="true" />
+            <element signature="e#9640#9704#0#HTML" expanded="true" />
+            <element signature="e#10203#10242#0#HTML" expanded="true" />
+            <element signature="e#11648#11815#0#HTML" expanded="true" />
+            <element signature="e#14345#14363#0#HTML" expanded="true" />
+            <element signature="e#14505#14523#0#HTML" expanded="true" />
+            <element signature="e#14992#15048#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/templates/admin/div_vttb.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="299" column="98" selection-start-line="299" selection-start-column="98" selection-end-line="299" selection-end-column="98" />
+          <folding>
+            <element signature="n#style#0;n#div#4;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#7;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/code/templates/admin/admin_home.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="364" column="71" selection-start-line="364" selection-start-column="52" selection-end-line="364" selection-end-column="71" />
+        <state relative-caret-position="421">
+          <caret line="576" column="30" selection-start-line="576" selection-start-column="30" selection-end-line="576" selection-end-column="30" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#2;n#div#0;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#2;n#div#0;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#2;n#div#2;n#div#0;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#div#2;n#div#0;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/templates/admin/div_danhba.tpl">
+    <entry file="file://$PROJECT_DIR$/code/modules/congviecs/skin/B_CvCat_add_edit.tpl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/congviecs/skin/B_Congviec_list.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        <state>
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/users/skin/B_UserPhone_tbl.tpl">
+    <entry file="file://$PROJECT_DIR$/code/admin/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="49" column="48" selection-start-line="49" selection-start-column="48" selection-end-line="49" selection-end-column="48" />
+        <state relative-caret-position="272">
+          <caret line="41" column="28" lean-forward="true" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/classes/clsCvCats.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/congviecs/B_Congviec_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="35" column="69" lean-forward="true" selection-start-line="35" selection-start-column="69" selection-end-line="35" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/kdls/skin/B_Kdl_chung_tbl.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="38" column="52" lean-forward="true" selection-start-line="38" selection-start-column="52" selection-end-line="38" selection-end-column="87" />
           <folding>
-            <element signature="e#825#917#0#HTML" expanded="true" />
-            <element signature="e#815#1898#0#HTML" />
-            <element signature="e#2016#2034#0#HTML" expanded="true" />
-            <element signature="e#2050#2142#0#HTML" expanded="true" />
-            <element signature="e#2301#2343#0#HTML" expanded="true" />
-            <element signature="e#2361#2469#0#HTML" expanded="true" />
-            <element signature="e#2504#2541#0#HTML" expanded="true" />
-            <element signature="e#2593#2612#0#HTML" expanded="true" />
-            <element signature="e#2672#2691#0#HTML" expanded="true" />
-            <element signature="e#2752#2770#0#HTML" expanded="true" />
-            <element signature="e#2907#2971#0#HTML" expanded="true" />
-            <element signature="e#3336#3373#0#HTML" expanded="true" />
-            <element signature="e#3424#3443#0#HTML" expanded="true" />
-            <element signature="e#3551#3570#0#HTML" expanded="true" />
-            <element signature="e#3875#3893#0#HTML" expanded="true" />
-            <element signature="e#3998#4017#0#HTML" expanded="true" />
+            <element signature="e#9103#9159#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/congviecs/skin/B_CvSub_add_edit.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-144">
+          <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+          <folding>
+            <element signature="n#style#0;n#legend#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#1;n#div#1;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#3;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/templates/admin/div_congviec.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/congviecs/skin/B_Congviec_tbl.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="150" column="85" selection-start-line="150" selection-start-column="85" selection-end-line="150" selection-end-column="85" />
+          <folding>
+            <element signature="e#956#1048#0#HTML" expanded="true" />
+            <element signature="e#946#5296#0#HTML" />
+            <element signature="e#2265#2329#0#HTML" expanded="true" />
+            <element signature="e#2503#2574#0#HTML" expanded="true" />
+            <element signature="e#2671#2722#0#HTML" expanded="true" />
+            <element signature="e#2798#2849#0#HTML" expanded="true" />
+            <element signature="e#2984#3113#0#HTML" expanded="true" />
+            <element signature="e#3937#4103#0#HTML" expanded="true" />
+            <element signature="e#5470#5562#0#HTML" expanded="true" />
+            <element signature="e#6501#6543#0#HTML" expanded="true" />
+            <element signature="e#6572#6649#0#HTML" expanded="true" />
+            <element signature="e#6779#6804#0#HTML" expanded="true" />
+            <element signature="e#7057#7088#0#HTML" expanded="true" />
+            <element signature="e#7925#9625#0#HTML" />
+            <element signature="e#9757#9785#0#HTML" expanded="true" />
+            <element signature="e#12351#12449#0#HTML" expanded="true" />
+            <element signature="e#12535#12596#0#HTML" expanded="true" />
+            <element signature="e#12597#12603#1#HTML" expanded="true" />
+            <element signature="e#12624#12642#0#HTML" expanded="true" />
+            <element signature="e#12692#15080#0#HTML" />
+            <element signature="e#12802#12862#0#HTML" expanded="true" />
+            <element signature="e#12927#12958#0#HTML" expanded="true" />
+            <element signature="e#13021#13172#0#HTML" expanded="true" />
+            <element signature="e#15134#15179#0#HTML" expanded="true" />
+            <element signature="e#15129#18645#0#HTML" />
+            <element signature="e#15238#15307#0#HTML" expanded="true" />
+            <element signature="e#15370#15429#0#HTML" expanded="true" />
+            <element signature="e#15365#16015#0#HTML" />
+            <element signature="e#16077#16136#0#HTML" expanded="true" />
+            <element signature="e#16072#16689#0#HTML" />
+            <element signature="e#16867#16927#0#HTML" expanded="true" />
+            <element signature="e#16862#17241#0#HTML" />
+            <element signature="e#17460#17519#0#HTML" expanded="true" />
+            <element signature="e#17855#17914#0#HTML" expanded="true" />
+            <element signature="e#18307#18394#0#HTML" expanded="true" />
+            <element signature="e#20823#20950#0#HTML" expanded="true" />
+            <element signature="e#20951#20957#1#HTML" expanded="true" />
+            <element signature="e#21736#21780#0#HTML" expanded="true" />
+            <element signature="e#21847#22018#0#HTML" expanded="true" />
+            <element signature="e#22091#22122#0#HTML" expanded="true" />
+            <element signature="e#22193#22344#0#HTML" expanded="true" />
+            <element signature="e#22708#22768#0#HTML" expanded="true" />
+            <element signature="e#23724#23899#0#HTML" expanded="true" />
+            <element signature="e#23966#24035#0#HTML" expanded="true" />
+            <element signature="e#24106#24165#0#HTML" expanded="true" />
+            <element signature="e#58947#69007#0#Smarty" />
           </folding>
         </state>
       </provider>

@@ -68,14 +68,14 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                             <div style="float:left; width:80px">
                             <input type="radio" id="vttb_sub_active" name="vttb_sub_active" value="1" {if $obj_info.vttb_sub_active eq 1} checked="checked" {/if} />&nbsp;Hiển thị
                             </div>
-                            <div style="float:left; width:90px">
+                            <div style="float:left; width:110px">
                             <input type="radio" id="vttb_sub_active" name="vttb_sub_active" value="2" {if $obj_info.vttb_sub_active eq 2} checked="checked" {/if} />&nbsp;Không hiển thị
                             </div>
                             {else}
                             <div style="float:left; width:80px">
                             <input type="radio" id="vttb_sub_active" name="vttb_sub_active" value="1" checked/>&nbsp;Hiển thị
                             </div>
-                            <div style="float:left; width:90px">
+                            <div style="float:left; width:110px">
                             <input type="radio" id="vttb_sub_active" name="vttb_sub_active" value="2" />&nbsp;Không hiển thị
                             </div>
                             {/if}
