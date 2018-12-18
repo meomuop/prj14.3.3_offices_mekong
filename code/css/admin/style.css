@@ -123,8 +123,8 @@ blockquote, q {
 }
 .c12 ul li.outside{
 	float:left;
-	padding-left:30px;
-	padding-right:30px;
+	padding-left:13px;
+	padding-right:13px;
 }
 .c12 ul.inside li{
 	text-align:center;

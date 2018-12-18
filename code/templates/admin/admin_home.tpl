@@ -58,7 +58,7 @@ function create_width(){
 
 // --- xac dinh div focus
 function change_Zindex(obj){
-	var div_arr_zindex 	= ['div_user','div_config','div_thuoctinh','div_vttb','div_plan','div_doc','div_transport','div_cv_cat','div_msg','div_kdl','div_chatol','div_danhba'];
+	var div_arr_zindex 	= ['div_user','div_config','div_thuoctinh','div_tthd','div_vttb','div_plan','div_doc','div_transport','div_cv_cat','div_msg','div_kdl','div_chatol','div_danhba'];
 	var div_doc_arr = ['list_file','list_reply','list_phanloai','div_view_doc','div_doc_report','div_huongdan'];
 	var div_tnvb_arr = ['div_view_transport','list_truyenvb'];	
 	var div_kdl_arr = ['add_edit_kdl','add_edit_dl','dl_file'];
@@ -143,6 +143,8 @@ function close_div(obj){
     <!--*******************************************VUNG DIV CHUC NANG*****************************************-->
     {include file="div_config.tpl"}
     {include file="div_thuoctinh.tpl"}
+    {include file="div_thuoctinh_hopdong.tpl"}
+    {include file="div_tthd.tpl"}
     {include file="div_user.tpl"}
     {include file="div_vttb.tpl"}
     {include file="div_plan.tpl"}
@@ -187,12 +189,26 @@ function close_div(obj){
                                 <li class="outside">
                                     <ul class="inside">
                                         <li><input type="button" class="main_item_icon" style="background: url({$css_btn_bg}doc_config_btn_blur.png) repeat scroll 0% 0% transparent;" onmouseout="this.style.background='url({$css_btn_bg}doc_config_btn_blur.png)'" onmouseover="this.style.background='url({$css_btn_bg}doc_config_btn_focus.png)'" value="" name="thuoctinh" id="thuoctinh" onClick="javascript: document.getElementById('div_thuoctinh').style.display='block'" {if $user_level neq 1} disabled{/if}></li>
-                                        <li class="main_btn_caption">Thuộc tính</li>
+                                        <li class="main_btn_caption">Thuộc tính văn bản</li>
                                     </ul>
                                     {literal}
                                         <script language="javascript">
                                             $("#thuoctinh").click( function () {
                                                 $("#thuoctinh_content_main").load("index.php?listDocCat&mod=docs");
+                                            });
+                                        </script>
+                                    {/literal}
+                                </li>
+
+                                <li class="outside">
+                                    <ul class="inside">
+                                        <li><input type="button" class="main_item_icon" style="background: url({$css_btn_bg}contract_config_btn_blur.png) repeat scroll 0% 0% transparent;" onmouseout="this.style.background='url({$css_btn_bg}contract_config_btn_blur.png)'" onmouseover="this.style.background='url({$css_btn_bg}contract_config_btn_focus.png)'" value="" name="tthd" id="tthd" onClick="javascript: document.getElementById('div_tthd').style.display='block'" {if $user_level neq 1} disabled{/if}></li>
+                                        <li class="main_btn_caption">Thuộc tính hợp đồng</li>
+                                    </ul>
+                                    {literal}
+                                        <script language="javascript">
+                                            $("#tthd").click( function () {
+                                                $("#tthd_content_main").load("index.php?listDanhmuc&mod=tthopdong");
                                             });
                                         </script>
                                     {/literal}

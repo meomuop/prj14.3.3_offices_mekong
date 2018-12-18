@@ -12,7 +12,7 @@
 		//redirect("login.php");
 		header("location: ".$http_root."login.php");
 	}
-	
+
 	require_once("../includes/ad_requires.php");
 	require_once($CLASSES_PATH."clsModule.php");
 	require_once($CLASSES_PATH."clsUsers.php");
@@ -23,8 +23,8 @@
 	require_once($CLASSES_PATH.'clsMsgs.php');
 	require_once($CLASSES_PATH.'clsHdsds.php');
 	//include("../phpjobscheduler/firepjs.php");	
-	
-	
+
+
 	$vars = array_merge($_POST,$_GET, $_FILES);
 	$obj = new module_class();
 	$obj ->checkmodules();
@@ -40,7 +40,7 @@
 	endif;
 	
 	//$dbconn->debug = true;
-		
+
 	//Get user modules permission
 	$obj_user = new users_class();
 	$user_mod_01 = $obj_user->check_mod($_SESSION["user_id"],1);
@@ -70,7 +70,7 @@
 	$assign_list['access_user_name'] 	= $_SESSION["user_name"];
 	$assign_list['access_user_fullname'] 	= $_SESSION["user_fullname"];
 	$assign_list['access_user_pass_encode'] = $obj_user->user_encode_pass;
-	
+
 	$obj_unit 		= new unit_class();
 	$unit_name		= $obj_unit->getTitle($obj_user->unit_id);
 	$_SESSION['access_unit_id'] 		= $obj_user->unit_id;
@@ -129,6 +129,7 @@
 	$smarty->assign($assign_list);
 	global $key; // Key ---> is define in common file
 	// Check url --> redirect to page
+
 	switch ($key[0])
 	{
 		/*  -----------------------------------------------------------------------------------------------
@@ -337,6 +338,21 @@
 		
 		// Muc 6:
 		case 'listUserPhone': 	include ($MODULE_PATH.$module_name.'B_UserPhone_list.php'); exit();
+
+        /*  -----------------------------------------------------------------------------------------------
+            Module: DANH MUC CHUC NANG
+            Quan ly hop dong:
+                1. Thuoc tinh
+                        1.1 Danh muc hang
+                        1.2 Hang hoa
+
+                2. Hop dong mua
+                3. Hop dong ban
+        */
+
+        // Muc 1:
+        case 'listDanhmuc'		: include ($MODULE_PATH.$module_name.'B_Danhmuc_list.php'); exit();
+        case 'listHanghoa'		: include ($MODULE_PATH.$module_name.'B_Hanghoa_list.php'); exit();
 															
 		/* --------------------------Utilities--------------------------- */
 		// ------- Logout

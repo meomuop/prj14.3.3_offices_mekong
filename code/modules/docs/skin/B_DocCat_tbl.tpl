@@ -28,11 +28,11 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                 <td align="left" width="22%">
                 <input type="text" name="docCat_name" id="docCat_name" class="text_middle" value="{$obj_info.docCat_name}"/>
                 </td>
-                <td align="left" width="15%">Tên viết tắt <font color="#FF0000">*</font>:</td>
-                <td align="left" width="22%">
+                <td align="left" width="16%">Tên viết tắt <font color="#FF0000">*</font>:</td>
+                <td align="left" width="21%">
                 <input type="text" id="docCat_standfor" name="docCat_standfor" class="text_short" value="{$obj_info.docCat_standfor}" onfocus="hide_message_DocCat()"/>
                 </td>
-                <td align="left" width="15%">Cách chuyển:</td>
+                <td align="left" width="16%">Cách chuyển:</td>
                 <td align="left">
                 <select name="docCat_type" id="docCat_type" class="select_short">
                 	<option value="0" {if $obj_info.docCat_type eq 0} selected="selected"{/if}>Có phân loại</option>
