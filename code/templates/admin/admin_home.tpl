@@ -452,22 +452,22 @@ function close_div(obj){
 
                 {literal}
                     <script language="javascript">
-                        function hide_systray() {
-                            $('#div_systray_info').css({'display':'none'});
-
-                            return setTimeout('show_systray()', 5000);
-                        }
-
-                        function show_systray() {
-                            $( "#div_systray_info" ).load( "systray_info.php", function(response) {
-                                if(parseInt(response) != 1){
-                                    $('#div_systray_info').css({'display':'block'});
-                                }
-                            });
-
-                            return setTimeout('hide_systray()', 5000);
-                        }
-                        setTimeout('show_systray()', 5000);
+                        // function hide_systray() {
+                        //     $('#div_systray_info').css({'display':'none'});
+                        //
+                        //     return setTimeout('show_systray()', 5000);
+                        // }
+                        //
+                        // function show_systray() {
+                        //     $( "#div_systray_info" ).load( "systray_info.php", function(response) {
+                        //         if(parseInt(response) != 1){
+                        //             $('#div_systray_info').css({'display':'block'});
+                        //         }
+                        //     });
+                        //
+                        //     return setTimeout('hide_systray()', 5000);
+                        // }
+                        // setTimeout('show_systray()', 5000);
                     </script>
                 {/literal}
                 <!-----------------------------------THONG TIN NGUOI DUNG---------------------------------------->

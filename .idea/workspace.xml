@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8c3f3dc-c879-4987-a3e0-10e5381e58f3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/code/classes/hopdong/clsDanhmuc.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/modules/tthopdong/B_Danhmuc_list.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/modules/tthopdong/skin/B_Danhmuc_list.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/modules/tthopdong/skin/B_Danhmuc_tbl.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/templates/admin/div_thuoctinh_hopdong.tpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/classes/hopdong/clsHanghoa.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/modules/tthopdong/B_Hanghoa_list.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/modules/tthopdong/skin/B_Hanghoa_tbl.tpl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/admin/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/css/admin/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/code/css/admin/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/modules/docs/skin/B_DocCat_tbl.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/code/modules/docs/skin/B_DocCat_tbl.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/hopdong/clsDanhmuc.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/hopdong/clsDanhmuc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/modules/tthopdong/B_Danhmuc_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/modules/tthopdong/B_Danhmuc_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/modules/tthopdong/skin/B_Danhmuc_tbl.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/code/modules/tthopdong/skin/B_Danhmuc_tbl.tpl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/templates/admin/admin_home.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/code/templates/admin/admin_home.tpl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,121 +31,141 @@
     <expand />
     <select />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="prj14.3.3_offices_mekong" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/code/templates/admin/admin_home.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="210" column="113" selection-start-line="210" selection-start-column="113" selection-end-line="210" selection-end-column="113" />
+            <state relative-caret-position="4563">
+              <caret line="454" column="26" lean-forward="true" selection-start-line="454" selection-start-column="26" selection-end-line="454" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/modules/docs/skin/B_DocCat_tbl.tpl">
+        <entry file="file://$PROJECT_DIR$/code/templates/admin/div_user.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="82" column="21" lean-forward="true" selection-start-line="73" selection-start-column="16" selection-end-line="82" selection-end-column="21" />
+            <state relative-caret-position="-432" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/classes/hopdong/clsHanghoa.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="251">
+              <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/classes/hopdong/clsDanhmuc.php">
+        <entry file="file://$PROJECT_DIR$/code/modules/tthopdong/B_Hanghoa_list.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="18" column="24" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="24" />
+            <state relative-caret-position="185">
+              <caret line="82" column="17" selection-start-line="82" selection-start-column="8" selection-end-line="82" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/modules/tthopdong/B_Danhmuc_list.php">
+        <entry file="file://$PROJECT_DIR$/code/modules/docs/skin/B_Doc_tbl.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="53" column="19" selection-start-line="53" selection-start-column="11" selection-end-line="53" selection-end-column="19" />
+            <state relative-caret-position="-451">
+              <caret line="224" column="99" lean-forward="true" selection-start-line="224" selection-start-column="32" selection-end-line="224" selection-end-column="99" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/modules/tthopdong/skin/B_Danhmuc_tbl.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="47" column="82" selection-start-line="47" selection-start-column="82" selection-end-line="47" selection-end-column="82" />
+            <state relative-caret-position="481">
+              <caret line="111" column="111" lean-forward="true" selection-end-line="383" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/modules/tthopdong/skin/B_Hanghoa_tbl.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="30" column="56" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
               <folding>
                 <element signature="e#910#988#0#HTML" expanded="true" />
                 <element signature="e#1061#1067#0#HTML" expanded="true" />
                 <element signature="e#1068#1074#0#HTML" expanded="true" />
                 <element signature="e#1084#1090#0#HTML" expanded="true" />
                 <element signature="e#1277#1300#0#HTML" expanded="true" />
-                <element signature="e#2665#2671#0#HTML" expanded="true" />
-                <element signature="e#2679#2685#0#HTML" expanded="true" />
-                <element signature="e#2685#2691#0#HTML" expanded="true" />
-                <element signature="e#2691#2697#0#HTML" expanded="true" />
-                <element signature="e#2697#2703#0#HTML" expanded="true" />
-                <element signature="e#2865#2871#0#HTML" expanded="true" />
-                <element signature="e#3026#3032#0#HTML" expanded="true" />
-                <element signature="e#3040#3046#0#HTML" expanded="true" />
-                <element signature="e#3046#3052#0#HTML" expanded="true" />
-                <element signature="e#3052#3058#0#HTML" expanded="true" />
-                <element signature="e#3058#3064#0#HTML" expanded="true" />
-                <element signature="e#3368#3374#1#HTML" expanded="true" />
-                <element signature="e#10065#10157#0#HTML" expanded="true" />
-                <element signature="e#10221#10252#0#HTML" expanded="true" />
-                <element signature="e#10311#10341#0#HTML" expanded="true" />
-                <element signature="e#10342#10348#0#HTML" expanded="true" />
-                <element signature="e#10349#10355#0#HTML" expanded="true" />
-                <element signature="e#10363#10369#0#HTML" expanded="true" />
-                <element signature="e#10397#10428#0#HTML" expanded="true" />
-                <element signature="e#10667#10697#0#HTML" expanded="true" />
-                <element signature="e#10881#10923#0#HTML" expanded="true" />
-                <element signature="e#10948#11056#0#HTML" expanded="true" />
-                <element signature="e#11095#11132#0#HTML" expanded="true" />
-                <element signature="e#11187#11206#0#HTML" expanded="true" />
-                <element signature="e#11210#11216#0#HTML" expanded="true" />
-                <element signature="e#11272#11290#0#HTML" expanded="true" />
-                <element signature="e#11294#11300#0#HTML" expanded="true" />
-                <element signature="e#11356#11375#0#HTML" expanded="true" />
-                <element signature="e#11379#11385#0#HTML" expanded="true" />
-                <element signature="e#11844#11881#0#HTML" expanded="true" />
-                <element signature="e#11940#11977#0#HTML" expanded="true" />
-                <element signature="e#12037#12074#0#HTML" expanded="true" />
-                <element signature="e#12130#12167#0#HTML" expanded="true" />
-                <element signature="e#12438#12486#0#HTML" expanded="true" />
-                <element signature="e#12617#12711#0#HTML" expanded="true" />
-                <element signature="e#12770#12834#0#HTML" expanded="true" />
-                <element signature="e#13304#13341#0#HTML" expanded="true" />
-                <element signature="e#13400#13419#0#HTML" expanded="true" />
-                <element signature="e#13445#13451#0#HTML" expanded="true" />
-                <element signature="e#13644#13662#0#HTML" expanded="true" />
-                <element signature="e#13688#13694#0#HTML" expanded="true" />
-                <element signature="e#13800#13819#0#HTML" expanded="true" />
-                <element signature="e#13845#13851#0#HTML" expanded="true" />
-                <element signature="e#17138#17175#0#HTML" expanded="true" />
-                <element signature="e#17829#17866#0#HTML" expanded="true" />
-                <element signature="e#18518#18555#0#HTML" expanded="true" />
-                <element signature="e#18857#18894#0#HTML" expanded="true" />
-                <element signature="e#19214#19251#0#HTML" expanded="true" />
-                <element signature="e#19833#19894#0#HTML" expanded="true" />
-                <element signature="e#20238#20315#0#HTML" expanded="true" />
-                <element signature="e#20316#20322#1#HTML" expanded="true" />
-                <element signature="e#21085#21121#0#HTML" expanded="true" />
-                <element signature="e#21136#21166#0#HTML" expanded="true" />
-                <element signature="e#21192#21222#0#HTML" expanded="true" />
-                <element signature="e#21365#21438#0#HTML" expanded="true" />
-                <element signature="e#21468#21498#0#HTML" expanded="true" />
-                <element signature="e#22306#22383#0#HTML" expanded="true" />
-                <element signature="e#22384#22390#1#HTML" expanded="true" />
-                <element signature="e#22406#22436#0#HTML" expanded="true" />
-                <element signature="e#22592#22669#0#HTML" expanded="true" />
-                <element signature="e#22670#22676#1#HTML" expanded="true" />
-                <element signature="e#22692#22747#0#HTML" expanded="true" />
-                <element signature="e#22762#22792#0#HTML" expanded="true" />
-                <element signature="e#22816#22846#0#HTML" expanded="true" />
-                <element signature="e#22908#22968#0#HTML" expanded="true" />
-                <element signature="e#23273#23291#0#HTML" expanded="true" />
+                <element signature="e#2601#2607#0#HTML" expanded="true" />
+                <element signature="e#2662#2668#0#HTML" expanded="true" />
+                <element signature="e#2676#2682#0#HTML" expanded="true" />
+                <element signature="e#2682#2688#0#HTML" expanded="true" />
+                <element signature="e#2688#2694#0#HTML" expanded="true" />
+                <element signature="e#2694#2700#0#HTML" expanded="true" />
+                <element signature="e#2862#2868#0#HTML" expanded="true" />
+                <element signature="e#3023#3029#0#HTML" expanded="true" />
+                <element signature="e#3037#3043#0#HTML" expanded="true" />
+                <element signature="e#3043#3049#0#HTML" expanded="true" />
+                <element signature="e#3049#3055#0#HTML" expanded="true" />
+                <element signature="e#3055#3061#0#HTML" expanded="true" />
+                <element signature="e#3164#3170#0#HTML" expanded="true" />
+                <element signature="e#6992#7084#0#HTML" expanded="true" />
+                <element signature="e#7148#7179#0#HTML" expanded="true" />
+                <element signature="e#7238#7268#0#HTML" expanded="true" />
+                <element signature="e#7269#7275#0#HTML" expanded="true" />
+                <element signature="e#7276#7282#0#HTML" expanded="true" />
+                <element signature="e#7290#7296#0#HTML" expanded="true" />
+                <element signature="e#7324#7355#0#HTML" expanded="true" />
+                <element signature="e#7594#7624#0#HTML" expanded="true" />
+                <element signature="e#7808#7850#0#HTML" expanded="true" />
+                <element signature="e#7875#7983#0#HTML" expanded="true" />
+                <element signature="e#8022#8059#0#HTML" expanded="true" />
+                <element signature="e#8114#8133#0#HTML" expanded="true" />
+                <element signature="e#8137#8143#0#HTML" expanded="true" />
+                <element signature="e#8199#8217#0#HTML" expanded="true" />
+                <element signature="e#8221#8227#0#HTML" expanded="true" />
+                <element signature="e#8283#8302#0#HTML" expanded="true" />
+                <element signature="e#8306#8312#0#HTML" expanded="true" />
+                <element signature="e#8365#8402#0#HTML" expanded="true" />
+                <element signature="e#8461#8498#0#HTML" expanded="true" />
+                <element signature="e#8558#8595#0#HTML" expanded="true" />
+                <element signature="e#8651#8688#0#HTML" expanded="true" />
+                <element signature="e#8959#9007#0#HTML" expanded="true" />
+                <element signature="e#9138#9232#0#HTML" expanded="true" />
+                <element signature="e#9291#9355#0#HTML" expanded="true" />
+                <element signature="e#9825#9862#0#HTML" expanded="true" />
+                <element signature="e#9921#9940#0#HTML" expanded="true" />
+                <element signature="e#9966#9972#0#HTML" expanded="true" />
+                <element signature="e#10189#10207#0#HTML" expanded="true" />
+                <element signature="e#10233#10239#0#HTML" expanded="true" />
+                <element signature="e#10351#10370#0#HTML" expanded="true" />
+                <element signature="e#10396#10402#0#HTML" expanded="true" />
+                <element signature="e#10528#10565#0#HTML" expanded="true" />
+                <element signature="e#11219#11256#0#HTML" expanded="true" />
+                <element signature="e#11908#11945#0#HTML" expanded="true" />
+                <element signature="e#12247#12284#0#HTML" expanded="true" />
+                <element signature="e#12604#12641#0#HTML" expanded="true" />
+                <element signature="e#13223#13284#0#HTML" expanded="true" />
+                <element signature="e#13628#13705#0#HTML" expanded="true" />
+                <element signature="e#13706#13712#1#HTML" expanded="true" />
+                <element signature="e#14475#14511#0#HTML" expanded="true" />
+                <element signature="e#14526#14556#0#HTML" expanded="true" />
+                <element signature="e#14582#14612#0#HTML" expanded="true" />
+                <element signature="e#14755#14828#0#HTML" expanded="true" />
+                <element signature="e#14858#14888#0#HTML" expanded="true" />
+                <element signature="e#15696#15773#0#HTML" expanded="true" />
+                <element signature="e#15774#15780#1#HTML" expanded="true" />
+                <element signature="e#15796#15826#0#HTML" expanded="true" />
+                <element signature="e#15982#16059#0#HTML" expanded="true" />
+                <element signature="e#16060#16066#1#HTML" expanded="true" />
+                <element signature="e#16082#16137#0#HTML" expanded="true" />
+                <element signature="e#16152#16182#0#HTML" expanded="true" />
+                <element signature="e#16206#16236#0#HTML" expanded="true" />
+                <element signature="e#16298#16358#0#HTML" expanded="true" />
+                <element signature="e#16663#16681#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -157,17 +175,15 @@
         <entry file="file://$PROJECT_DIR$/code/admin/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="354">
-              <caret line="41" column="28" lean-forward="true" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="28" />
+              <caret line="41" column="6" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/css/admin/style.css">
+        <entry file="file://$PROJECT_DIR$/code/templates/admin/div_thuoctinh.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="122" column="1" lean-forward="true" selection-start-line="122" selection-start-column="1" selection-end-line="122" selection-end-column="1" />
-            </state>
+            <state relative-caret-position="-3670" />
           </provider>
         </entry>
       </file>
@@ -175,18 +191,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>doc_content_main</find>
-      <find>11px</find>
-      <find>font-size:11px</find>
-      <find>font-size: 11px</find>
-      <find>danhba_content_main</find>
-      <find>class_td</find>
-      <find>dl_file</find>
-      <find>297px</find>
-      <find>file_content_insign</find>
-      <find>list_repare_main_cont</find>
-      <find>a_ref_Vttb_info</find>
-      <find>frmList_Repare</find>
       <find>frmView_Vttb_info</find>
       <find>vttb_id</find>
       <find>show_vttb_info</find>
@@ -202,9 +206,21 @@
       <find>$module_name</find>
       <find>$key</find>
       <find>thuoctinh</find>
-      <find>docs</find>
       <find>add_edit</find>
       <find>docCat_</find>
+      <find>danhmuc_mota</find>
+      <find>div_systray_info</find>
+      <find>reloadPage_Danhmuc</find>
+      <find>danhmuc</find>
+      <find>docs</find>
+      <find>mod=</find>
+      <find>processurl</find>
+      <find>hanghoa_viettat</find>
+      <find>viettat</find>
+      <find>dlevel</find>
+      <find>$obj_info</find>
+      <find>docLevel</find>
+      <find>viết</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;li&gt;&lt;input type=&quot;button&quot; class=&quot;main_item_icon&quot;</replace>
@@ -224,9 +240,12 @@
       <replace>$danhmuc_name</replace>
       <replace>Danhmuc</replace>
       <replace>tthd</replace>
-      <replace>danhmuc</replace>
       <replace>tthopdong</replace>
       <replace>danhmuc_</replace>
+      <replace>hanghoa</replace>
+      <replace>hanghoa_mahang</replace>
+      <replace>mahang</replace>
+      <replace>danhmuc</replace>
     </replaceStrings>
     <dirStrings>
       <dir>E:\Projects\wamp64\www\smarty\prj14.3.3_offices_mekong\code\modules</dir>
@@ -236,16 +255,12 @@
     </dirStrings>
   </component>
   <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/code/templates/admin/div_config.tpl" />
-        <option value="$PROJECT_DIR$/code/templates/admin/sysreset.tpl" />
-        <option value="$PROJECT_DIR$/code/templates/admin/backup_restore.tpl" />
-        <option value="$PROJECT_DIR$/code/modules/users/skin/B_User_tbl.tpl" />
-        <option value="$PROJECT_DIR$/code/modules/trinhdos/skin/B_Trinhdo_tbl.tpl" />
         <option value="$PROJECT_DIR$/code/modules/departments/skin/B_Department_tbl.tpl" />
         <option value="$PROJECT_DIR$/code/modules/objects/skin/B_Object_tbl.tpl" />
         <option value="$PROJECT_DIR$/code/modules/thangluongs/skin/B_Thangluong_tbl.tpl" />
@@ -286,12 +301,17 @@
         <option value="$PROJECT_DIR$/code/css/admin/style.css" />
         <option value="$PROJECT_DIR$/code/modules/hopdong/thuoctinh/danhmuc/skin/B_Danhmuc_tbl.tpl" />
         <option value="$PROJECT_DIR$/code/modules/hopdong/thuoctinh/danhmuc/B_Danhmuc_list.php" />
-        <option value="$PROJECT_DIR$/code/templates/admin/admin_home.tpl" />
-        <option value="$PROJECT_DIR$/code/admin/index.php" />
+        <option value="$PROJECT_DIR$/code/templates/admin/div_thuoctinh_hopdong.tpl" />
+        <option value="$PROJECT_DIR$/code/includes/config.php" />
+        <option value="$PROJECT_DIR$/code/admin/login.php" />
+        <option value="$PROJECT_DIR$/code/modules/tthopdong/skin/B_Danhmuc_tbl.tpl" />
         <option value="$PROJECT_DIR$/code/modules/tthopdong/B_Danhmuc_list.php" />
         <option value="$PROJECT_DIR$/code/classes/hopdong/clsDanhmuc.php" />
-        <option value="$PROJECT_DIR$/code/templates/admin/div_thuoctinh_hopdong.tpl" />
-        <option value="$PROJECT_DIR$/code/modules/tthopdong/skin/B_Danhmuc_tbl.tpl" />
+        <option value="$PROJECT_DIR$/code/classes/hopdong/clsHanghoa.php" />
+        <option value="$PROJECT_DIR$/code/modules/tthopdong/B_Hanghoa_list.php" />
+        <option value="$PROJECT_DIR$/code/admin/index.php" />
+        <option value="$PROJECT_DIR$/code/modules/tthopdong/skin/B_Hanghoa_tbl.tpl" />
+        <option value="$PROJECT_DIR$/code/templates/admin/admin_home.tpl" />
       </list>
     </option>
   </component>
@@ -337,14 +357,8 @@
               <item name="prj14.3.3_offices_mekong" type="b2602c69:ProjectViewProjectNode" />
               <item name="prj14.3.3_offices_mekong" type="462c0819:PsiDirectoryNode" />
               <item name="code" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="prj14.3.3_offices_mekong" type="b2602c69:ProjectViewProjectNode" />
-              <item name="prj14.3.3_offices_mekong" type="462c0819:PsiDirectoryNode" />
-              <item name="code" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="hopdong" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="prj14.3.3_offices_mekong" type="b2602c69:ProjectViewProjectNode" />
@@ -378,6 +392,14 @@
               <item name="prj14.3.3_offices_mekong" type="b2602c69:ProjectViewProjectNode" />
               <item name="prj14.3.3_offices_mekong" type="462c0819:PsiDirectoryNode" />
               <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="tthopdong" type="462c0819:PsiDirectoryNode" />
+              <item name="skin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="prj14.3.3_offices_mekong" type="b2602c69:ProjectViewProjectNode" />
+              <item name="prj14.3.3_offices_mekong" type="462c0819:PsiDirectoryNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -397,17 +419,18 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="C:/Program Files/Git/cmd/git.exe" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Works\wamp64\www\smarty\prj14.3.3_offices_mekong\code\modules\tthopdong\skin" />
+      <recent name="D:\Works\wamp64\www\smarty\prj14.3.3_offices_mekong\code\modules\tthopdong" />
+      <recent name="D:\Works\wamp64\www\smarty\prj14.3.3_offices_mekong\code\classes\hopdong" />
       <recent name="E:\Projects\wamp64\www\smarty\prj14.3.3_offices_mekong\code\templates\admin" />
       <recent name="E:\Projects\wamp64\www\smarty\prj14.3.3_offices_mekong\code\modules\hopdong\thuoctinh\danhmuc\skin" />
-      <recent name="E:\Projects\wamp64\www\smarty\prj14.3.3_offices_mekong\code\modules\hopdong\thuoctinh\danhmuc" />
-      <recent name="E:\Projects\wamp64\www\smarty\prj14.3.3_offices_mekong\code\classes\hopdong" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Projects\wamp64\www\smarty\prj14.3.3_offices_mekong\code\modules" />
@@ -443,19 +466,21 @@
       <workItem from="1544942721116" duration="14221000" />
       <workItem from="1545011214548" duration="24967000" />
       <workItem from="1545096573346" duration="10963000" />
+      <workItem from="1545142059391" duration="7131000" />
+      <workItem from="1545149359361" duration="2402000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62353000" />
+    <option name="totallyTimeSpent" value="71886000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="-4" y="-4" width="1374" height="748" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27231467" />
+      <window_info active="true" content_ui="combo" x="3" y="157" width="283" height="630" id="Project" order="0" visible="true" weight="0.21374622" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" weight="0.32930514" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -491,332 +516,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/code/modules/daydocs/skin/B_Docday_tbl.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6531">
-          <caret line="392" column="38" selection-start-line="392" selection-start-column="38" selection-end-line="392" selection-end-column="38" />
-          <folding>
-            <element signature="e#7512#7604#0#HTML" expanded="true" />
-            <element signature="e#7652#7683#0#HTML" expanded="true" />
-            <element signature="e#7734#7764#0#HTML" expanded="true" />
-            <element signature="e#7765#7771#0#HTML" expanded="true" />
-            <element signature="e#7772#7778#0#HTML" expanded="true" />
-            <element signature="e#7786#7792#0#HTML" expanded="true" />
-            <element signature="e#7812#7843#0#HTML" expanded="true" />
-            <element signature="e#8047#8077#0#HTML" expanded="true" />
-            <element signature="e#8234#8276#0#HTML" expanded="true" />
-            <element signature="e#8297#8405#0#HTML" expanded="true" />
-            <element signature="e#8440#8477#0#HTML" expanded="true" />
-            <element signature="e#8529#8548#0#HTML" expanded="true" />
-            <element signature="e#8552#8558#0#HTML" expanded="true" />
-            <element signature="e#8620#8638#0#HTML" expanded="true" />
-            <element signature="e#8642#8648#0#HTML" expanded="true" />
-            <element signature="e#8700#8736#0#HTML" expanded="true" />
-            <element signature="e#8747#8753#0#HTML" expanded="true" />
-            <element signature="e#8797#8815#0#HTML" expanded="true" />
-            <element signature="e#8819#8825#0#HTML" expanded="true" />
-            <element signature="e#8877#8914#0#HTML" expanded="true" />
-            <element signature="e#8969#9006#0#HTML" expanded="true" />
-            <element signature="e#9062#9099#0#HTML" expanded="true" />
-            <element signature="e#9151#9188#0#HTML" expanded="true" />
-            <element signature="e#9428#9476#0#HTML" expanded="true" />
-            <element signature="e#9598#9692#0#HTML" expanded="true" />
-            <element signature="e#9743#9807#0#HTML" expanded="true" />
-            <element signature="e#10212#10249#0#HTML" expanded="true" />
-            <element signature="e#10300#10319#0#HTML" expanded="true" />
-            <element signature="e#10371#10377#0#HTML" expanded="true" />
-            <element signature="e#10575#10593#0#HTML" expanded="true" />
-            <element signature="e#10608#10614#0#HTML" expanded="true" />
-            <element signature="e#10703#10739#0#HTML" expanded="true" />
-            <element signature="e#10754#10760#0#HTML" expanded="true" />
-            <element signature="e#10787#10793#0#HTML" expanded="true" />
-            <element signature="e#10850#10868#0#HTML" expanded="true" />
-            <element signature="e#10883#10889#0#HTML" expanded="true" />
-            <element signature="e#10997#11034#0#HTML" expanded="true" />
-            <element signature="e#11606#11643#0#HTML" expanded="true" />
-            <element signature="e#12232#12269#0#HTML" expanded="true" />
-            <element signature="e#12533#12570#0#HTML" expanded="true" />
-            <element signature="e#12852#12889#0#HTML" expanded="true" />
-            <element signature="e#13430#13491#0#HTML" expanded="true" />
-            <element signature="e#13790#13867#0#HTML" expanded="true" />
-            <element signature="e#13868#13874#1#HTML" expanded="true" />
-            <element signature="e#14547#14583#0#HTML" expanded="true" />
-            <element signature="e#14598#14628#0#HTML" expanded="true" />
-            <element signature="e#14655#14685#0#HTML" expanded="true" />
-            <element signature="e#14815#14888#0#HTML" expanded="true" />
-            <element signature="e#14918#14948#0#HTML" expanded="true" />
-            <element signature="e#15673#15750#0#HTML" expanded="true" />
-            <element signature="e#15751#15757#1#HTML" expanded="true" />
-            <element signature="e#15773#15803#0#HTML" expanded="true" />
-            <element signature="e#15958#16035#0#HTML" expanded="true" />
-            <element signature="e#16036#16042#1#HTML" expanded="true" />
-            <element signature="e#16058#16113#0#HTML" expanded="true" />
-            <element signature="e#16128#16158#0#HTML" expanded="true" />
-            <element signature="e#16182#16212#0#HTML" expanded="true" />
-            <element signature="e#16273#16333#0#HTML" expanded="true" />
-            <element signature="e#16633#16651#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/importants/skin/B_Important_tbl.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="370" column="38" selection-start-line="370" selection-start-column="38" selection-end-line="370" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/secrets/skin/B_Secret_tbl.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6195">
-          <caret line="372" column="38" selection-start-line="372" selection-start-column="38" selection-end-line="372" selection-end-column="38" />
-          <folding>
-            <element signature="e#5773#5865#0#HTML" expanded="true" />
-            <element signature="e#5913#5944#0#HTML" expanded="true" />
-            <element signature="e#5995#6025#0#HTML" expanded="true" />
-            <element signature="e#6026#6032#0#HTML" expanded="true" />
-            <element signature="e#6033#6039#0#HTML" expanded="true" />
-            <element signature="e#6047#6053#0#HTML" expanded="true" />
-            <element signature="e#6073#6104#0#HTML" expanded="true" />
-            <element signature="e#6308#6338#0#HTML" expanded="true" />
-            <element signature="e#6495#6537#0#HTML" expanded="true" />
-            <element signature="e#6558#6666#0#HTML" expanded="true" />
-            <element signature="e#6701#6738#0#HTML" expanded="true" />
-            <element signature="e#6790#6809#0#HTML" expanded="true" />
-            <element signature="e#6813#6819#0#HTML" expanded="true" />
-            <element signature="e#6873#6891#0#HTML" expanded="true" />
-            <element signature="e#6895#6901#0#HTML" expanded="true" />
-            <element signature="e#6954#6991#0#HTML" expanded="true" />
-            <element signature="e#7046#7083#0#HTML" expanded="true" />
-            <element signature="e#7139#7176#0#HTML" expanded="true" />
-            <element signature="e#7228#7265#0#HTML" expanded="true" />
-            <element signature="e#7505#7553#0#HTML" expanded="true" />
-            <element signature="e#7675#7769#0#HTML" expanded="true" />
-            <element signature="e#7820#7884#0#HTML" expanded="true" />
-            <element signature="e#8289#8326#0#HTML" expanded="true" />
-            <element signature="e#8377#8396#0#HTML" expanded="true" />
-            <element signature="e#8411#8417#0#HTML" expanded="true" />
-            <element signature="e#8591#8609#0#HTML" expanded="true" />
-            <element signature="e#8624#8630#0#HTML" expanded="true" />
-            <element signature="e#8737#8774#0#HTML" expanded="true" />
-            <element signature="e#9346#9383#0#HTML" expanded="true" />
-            <element signature="e#9972#10009#0#HTML" expanded="true" />
-            <element signature="e#10273#10310#0#HTML" expanded="true" />
-            <element signature="e#10592#10629#0#HTML" expanded="true" />
-            <element signature="e#11124#11142#0#HTML" expanded="true" />
-            <element signature="e#11187#11247#0#HTML" expanded="true" />
-            <element signature="e#11546#11623#0#HTML" expanded="true" />
-            <element signature="e#11624#11630#1#HTML" expanded="true" />
-            <element signature="e#11665#11683#0#HTML" expanded="true" />
-            <element signature="e#12329#12365#0#HTML" expanded="true" />
-            <element signature="e#12380#12410#0#HTML" expanded="true" />
-            <element signature="e#12437#12467#0#HTML" expanded="true" />
-            <element signature="e#12604#12677#0#HTML" expanded="true" />
-            <element signature="e#12707#12737#0#HTML" expanded="true" />
-            <element signature="e#12798#12816#0#HTML" expanded="true" />
-            <element signature="e#13488#13565#0#HTML" expanded="true" />
-            <element signature="e#13566#13572#1#HTML" expanded="true" />
-            <element signature="e#13588#13618#0#HTML" expanded="true" />
-            <element signature="e#13773#13850#0#HTML" expanded="true" />
-            <element signature="e#13851#13857#1#HTML" expanded="true" />
-            <element signature="e#13873#13928#0#HTML" expanded="true" />
-            <element signature="e#13943#13973#0#HTML" expanded="true" />
-            <element signature="e#13997#14027#0#HTML" expanded="true" />
-            <element signature="e#14088#14148#0#HTML" expanded="true" />
-            <element signature="e#14448#14466#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/docs/skin/B_DocField_tbl.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4768">
-          <caret line="366" column="38" selection-start-line="366" selection-start-column="38" selection-end-line="366" selection-end-column="38" />
-          <folding>
-            <element signature="e#795#873#0#HTML" expanded="true" />
-            <element signature="e#791#5571#0#HTML" />
-            <element signature="e#5690#5782#0#HTML" expanded="true" />
-            <element signature="e#5830#5861#0#HTML" expanded="true" />
-            <element signature="e#5912#5942#0#HTML" expanded="true" />
-            <element signature="e#5943#5949#0#HTML" expanded="true" />
-            <element signature="e#5950#5956#0#HTML" expanded="true" />
-            <element signature="e#5964#5970#0#HTML" expanded="true" />
-            <element signature="e#5990#6021#0#HTML" expanded="true" />
-            <element signature="e#6225#6255#0#HTML" expanded="true" />
-            <element signature="e#6414#6456#0#HTML" expanded="true" />
-            <element signature="e#6477#6585#0#HTML" expanded="true" />
-            <element signature="e#6620#6657#0#HTML" expanded="true" />
-            <element signature="e#6709#6728#0#HTML" expanded="true" />
-            <element signature="e#6732#6738#0#HTML" expanded="true" />
-            <element signature="e#6794#6831#0#HTML" expanded="true" />
-            <element signature="e#6886#6923#0#HTML" expanded="true" />
-            <element signature="e#6979#7016#0#HTML" expanded="true" />
-            <element signature="e#7068#7105#0#HTML" expanded="true" />
-            <element signature="e#7351#7399#0#HTML" expanded="true" />
-            <element signature="e#7523#7617#0#HTML" expanded="true" />
-            <element signature="e#7668#7732#0#HTML" expanded="true" />
-            <element signature="e#8137#8174#0#HTML" expanded="true" />
-            <element signature="e#8225#8244#0#HTML" expanded="true" />
-            <element signature="e#8259#8265#0#HTML" expanded="true" />
-            <element signature="e#8445#8482#0#HTML" expanded="true" />
-            <element signature="e#9066#9103#0#HTML" expanded="true" />
-            <element signature="e#9706#9743#0#HTML" expanded="true" />
-            <element signature="e#10011#10048#0#HTML" expanded="true" />
-            <element signature="e#10334#10371#0#HTML" expanded="true" />
-            <element signature="e#10872#10890#0#HTML" expanded="true" />
-            <element signature="e#10937#10997#0#HTML" expanded="true" />
-            <element signature="e#11298#11375#0#HTML" expanded="true" />
-            <element signature="e#11376#11382#1#HTML" expanded="true" />
-            <element signature="e#11417#11435#0#HTML" expanded="true" />
-            <element signature="e#12087#12123#0#HTML" expanded="true" />
-            <element signature="e#12138#12168#0#HTML" expanded="true" />
-            <element signature="e#12195#12225#0#HTML" expanded="true" />
-            <element signature="e#12366#12439#0#HTML" expanded="true" />
-            <element signature="e#12469#12499#0#HTML" expanded="true" />
-            <element signature="e#12560#12578#0#HTML" expanded="true" />
-            <element signature="e#13256#13333#0#HTML" expanded="true" />
-            <element signature="e#13334#13340#1#HTML" expanded="true" />
-            <element signature="e#13356#13386#0#HTML" expanded="true" />
-            <element signature="e#13543#13620#0#HTML" expanded="true" />
-            <element signature="e#13621#13627#1#HTML" expanded="true" />
-            <element signature="e#13643#13698#0#HTML" expanded="true" />
-            <element signature="e#13713#13743#0#HTML" expanded="true" />
-            <element signature="e#13767#13797#0#HTML" expanded="true" />
-            <element signature="e#13860#13920#0#HTML" expanded="true" />
-            <element signature="e#14222#14240#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/docs/skin/B_DocLevel_tbl.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4832">
-          <caret line="376" column="38" selection-start-line="376" selection-start-column="38" selection-end-line="376" selection-end-column="38" />
-          <folding>
-            <element signature="e#795#873#0#HTML" expanded="true" />
-            <element signature="e#791#6117#0#HTML" />
-            <element signature="e#6236#6328#0#HTML" expanded="true" />
-            <element signature="e#6376#6407#0#HTML" expanded="true" />
-            <element signature="e#6458#6488#0#HTML" expanded="true" />
-            <element signature="e#6489#6495#0#HTML" expanded="true" />
-            <element signature="e#6496#6502#0#HTML" expanded="true" />
-            <element signature="e#6510#6516#0#HTML" expanded="true" />
-            <element signature="e#6536#6567#0#HTML" expanded="true" />
-            <element signature="e#6771#6801#0#HTML" expanded="true" />
-            <element signature="e#6960#7002#0#HTML" expanded="true" />
-            <element signature="e#7023#7131#0#HTML" expanded="true" />
-            <element signature="e#7166#7203#0#HTML" expanded="true" />
-            <element signature="e#7255#7274#0#HTML" expanded="true" />
-            <element signature="e#7278#7284#0#HTML" expanded="true" />
-            <element signature="e#7339#7357#0#HTML" expanded="true" />
-            <element signature="e#7361#7367#0#HTML" expanded="true" />
-            <element signature="e#7419#7456#0#HTML" expanded="true" />
-            <element signature="e#7511#7548#0#HTML" expanded="true" />
-            <element signature="e#7604#7641#0#HTML" expanded="true" />
-            <element signature="e#7693#7730#0#HTML" expanded="true" />
-            <element signature="e#7976#8024#0#HTML" expanded="true" />
-            <element signature="e#8148#8242#0#HTML" expanded="true" />
-            <element signature="e#8293#8357#0#HTML" expanded="true" />
-            <element signature="e#8762#8799#0#HTML" expanded="true" />
-            <element signature="e#8850#8869#0#HTML" expanded="true" />
-            <element signature="e#8884#8890#0#HTML" expanded="true" />
-            <element signature="e#9070#9088#0#HTML" expanded="true" />
-            <element signature="e#9103#9109#0#HTML" expanded="true" />
-            <element signature="e#9200#9237#0#HTML" expanded="true" />
-            <element signature="e#9821#9858#0#HTML" expanded="true" />
-            <element signature="e#10461#10498#0#HTML" expanded="true" />
-            <element signature="e#10766#10803#0#HTML" expanded="true" />
-            <element signature="e#11089#11126#0#HTML" expanded="true" />
-            <element signature="e#11627#11645#0#HTML" expanded="true" />
-            <element signature="e#11692#11752#0#HTML" expanded="true" />
-            <element signature="e#12053#12130#0#HTML" expanded="true" />
-            <element signature="e#12131#12137#1#HTML" expanded="true" />
-            <element signature="e#12172#12190#0#HTML" expanded="true" />
-            <element signature="e#12842#12878#0#HTML" expanded="true" />
-            <element signature="e#12893#12923#0#HTML" expanded="true" />
-            <element signature="e#12950#12980#0#HTML" expanded="true" />
-            <element signature="e#13121#13194#0#HTML" expanded="true" />
-            <element signature="e#13224#13254#0#HTML" expanded="true" />
-            <element signature="e#13315#13333#0#HTML" expanded="true" />
-            <element signature="e#14011#14088#0#HTML" expanded="true" />
-            <element signature="e#14089#14095#1#HTML" expanded="true" />
-            <element signature="e#14111#14141#0#HTML" expanded="true" />
-            <element signature="e#14298#14375#0#HTML" expanded="true" />
-            <element signature="e#14376#14382#1#HTML" expanded="true" />
-            <element signature="e#14398#14453#0#HTML" expanded="true" />
-            <element signature="e#14468#14498#0#HTML" expanded="true" />
-            <element signature="e#14522#14552#0#HTML" expanded="true" />
-            <element signature="e#14615#14675#0#HTML" expanded="true" />
-            <element signature="e#14977#14995#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/docs/B_DocField_list.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/templates/admin/div_user.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/templates/admin/login.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="72" column="72" selection-start-line="72" selection-start-column="72" selection-end-line="72" selection-end-column="72" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/templates/admin/div_danhba.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/users/skin/B_UserPhone_tbl.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="39" column="30" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
-          <folding>
-            <element signature="e#825#917#0#HTML" expanded="true" />
-            <element signature="e#1137#1201#0#HTML" expanded="true" />
-            <element signature="e#1417#1448#0#HTML" expanded="true" />
-            <element signature="e#2361#2469#0#HTML" expanded="true" />
-            <element signature="e#2593#2612#0#HTML" expanded="true" />
-            <element signature="e#2672#2691#0#HTML" expanded="true" />
-            <element signature="e#2752#2770#0#HTML" expanded="true" />
-            <element signature="e#2834#2853#0#HTML" expanded="true" />
-            <element signature="e#2907#2971#0#HTML" expanded="true" />
-            <element signature="e#3336#3373#0#HTML" expanded="true" />
-            <element signature="e#3424#3443#0#HTML" expanded="true" />
-            <element signature="e#3551#3570#0#HTML" expanded="true" />
-            <element signature="e#3875#3893#0#HTML" expanded="true" />
-            <element signature="e#3998#4017#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/templates/admin/div_doc.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="307" column="103" selection-start-line="307" selection-start-column="103" selection-end-line="307" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/docs/skin/B_Doc_tbl.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="306" column="31" selection-start-line="306" selection-start-column="31" selection-end-line="306" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/modules/kdls/skin/B_Kdl_list.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -912,9 +611,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/cd628182-b125-412d-84d6-ce8ea06bfc48/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/cd628182-b125-412d-84d6-ce8ea06bfc48/console.sql" />
     <entry file="das://cd628182-b125-412d-84d6-ce8ea06bfc48/collation/utf8_general_ci" />
     <entry file="file://$PROJECT_DIR$/code/modules/vttbs/skin/B_Vttb_sub_add_edit.tpl">
       <provider selected="true" editor-type-id="text-editor">
@@ -1149,16 +846,6 @@
     <entry file="file://$PROJECT_DIR$/code/classes/clsAddUsers.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/templates/admin/div_thuoctinh.tpl">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/css/admin/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="122" column="1" lean-forward="true" selection-start-line="122" selection-start-column="1" selection-end-line="122" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/modules/congviecs/skin/B_CvCat_add_edit.tpl">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1175,16 +862,6 @@
           <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/admin/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="41" column="28" lean-forward="true" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/tthopdong/skin/B_Danhmuc_list.tpl">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/code/templates/admin/div_thuoctinh_hopdong.tpl">
       <provider selected="true" editor-type-id="text-editor">
@@ -1204,118 +881,214 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/classes/hopdong/clsDanhmuc.php">
+    <entry file="file://$PROJECT_DIR$/code/css/admin/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="18" column="24" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="24" />
+        <state relative-caret-position="1952">
+          <caret line="122" column="1" selection-start-line="122" selection-start-column="1" selection-end-line="122" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/tthopdong/B_Danhmuc_list.php">
+    <entry file="file://$PROJECT_DIR$/code/includes/ad_requires.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/includes/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="53" column="19" selection-start-line="53" selection-start-column="11" selection-end-line="53" selection-end-column="19" />
+        <state relative-caret-position="112">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/congviecs/skin/B_Congviec_tbl.tpl">
+    <entry file="file://$PROJECT_DIR$/code/admin/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="150" column="85" selection-start-line="150" selection-start-column="85" selection-end-line="150" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/templates/admin/admin_home.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="210" column="113" selection-start-line="210" selection-start-column="113" selection-end-line="210" selection-end-column="113" />
+        <state relative-caret-position="112">
+          <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/code/modules/docs/skin/B_DocCat_tbl.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="82" column="21" lean-forward="true" selection-start-line="73" selection-start-column="16" selection-end-line="82" selection-end-column="21" />
+        <state relative-caret-position="-1691">
+          <caret line="82" column="21" selection-start-line="73" selection-start-column="16" selection-end-line="82" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/congviecs/skin/B_Congviec_tbl.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="87" column="126" selection-start-line="87" selection-start-column="101" selection-end-line="87" selection-end-column="126" />
+          <folding>
+            <element signature="e#12732#12778#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/docs/B_DocCat_list.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/classes/hopdong/clsDanhmuc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/tthopdong/B_Danhmuc_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/code/modules/tthopdong/skin/B_Danhmuc_tbl.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="47" column="82" selection-start-line="47" selection-start-column="82" selection-end-line="47" selection-end-column="82" />
+        <state relative-caret-position="481">
+          <caret line="111" column="111" lean-forward="true" selection-end-line="383" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/truyennhans/B_DocCat_list.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/admin/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="41" column="6" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/tthopdong/skin/B_Danhmuc_list.tpl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/docs/B_Doc_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="208" column="95" selection-start-line="205" selection-start-column="4" selection-end-line="208" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/tthopdong/B_Hanghoa_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="82" column="17" selection-start-line="82" selection-start-column="8" selection-end-line="82" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/docs/skin/B_Doc_tbl.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-451">
+          <caret line="224" column="99" lean-forward="true" selection-start-line="224" selection-start-column="32" selection-end-line="224" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/tthopdong/skin/B_Hanghoa_tbl.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="30" column="56" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
           <folding>
             <element signature="e#910#988#0#HTML" expanded="true" />
             <element signature="e#1061#1067#0#HTML" expanded="true" />
             <element signature="e#1068#1074#0#HTML" expanded="true" />
             <element signature="e#1084#1090#0#HTML" expanded="true" />
             <element signature="e#1277#1300#0#HTML" expanded="true" />
-            <element signature="e#2665#2671#0#HTML" expanded="true" />
-            <element signature="e#2679#2685#0#HTML" expanded="true" />
-            <element signature="e#2685#2691#0#HTML" expanded="true" />
-            <element signature="e#2691#2697#0#HTML" expanded="true" />
-            <element signature="e#2697#2703#0#HTML" expanded="true" />
-            <element signature="e#2865#2871#0#HTML" expanded="true" />
-            <element signature="e#3026#3032#0#HTML" expanded="true" />
-            <element signature="e#3040#3046#0#HTML" expanded="true" />
-            <element signature="e#3046#3052#0#HTML" expanded="true" />
-            <element signature="e#3052#3058#0#HTML" expanded="true" />
-            <element signature="e#3058#3064#0#HTML" expanded="true" />
-            <element signature="e#3368#3374#1#HTML" expanded="true" />
-            <element signature="e#10065#10157#0#HTML" expanded="true" />
-            <element signature="e#10221#10252#0#HTML" expanded="true" />
-            <element signature="e#10311#10341#0#HTML" expanded="true" />
-            <element signature="e#10342#10348#0#HTML" expanded="true" />
-            <element signature="e#10349#10355#0#HTML" expanded="true" />
-            <element signature="e#10363#10369#0#HTML" expanded="true" />
-            <element signature="e#10397#10428#0#HTML" expanded="true" />
-            <element signature="e#10667#10697#0#HTML" expanded="true" />
-            <element signature="e#10881#10923#0#HTML" expanded="true" />
-            <element signature="e#10948#11056#0#HTML" expanded="true" />
-            <element signature="e#11095#11132#0#HTML" expanded="true" />
-            <element signature="e#11187#11206#0#HTML" expanded="true" />
-            <element signature="e#11210#11216#0#HTML" expanded="true" />
-            <element signature="e#11272#11290#0#HTML" expanded="true" />
-            <element signature="e#11294#11300#0#HTML" expanded="true" />
-            <element signature="e#11356#11375#0#HTML" expanded="true" />
-            <element signature="e#11379#11385#0#HTML" expanded="true" />
-            <element signature="e#11844#11881#0#HTML" expanded="true" />
-            <element signature="e#11940#11977#0#HTML" expanded="true" />
-            <element signature="e#12037#12074#0#HTML" expanded="true" />
-            <element signature="e#12130#12167#0#HTML" expanded="true" />
-            <element signature="e#12438#12486#0#HTML" expanded="true" />
-            <element signature="e#12617#12711#0#HTML" expanded="true" />
-            <element signature="e#12770#12834#0#HTML" expanded="true" />
-            <element signature="e#13304#13341#0#HTML" expanded="true" />
-            <element signature="e#13400#13419#0#HTML" expanded="true" />
-            <element signature="e#13445#13451#0#HTML" expanded="true" />
-            <element signature="e#13644#13662#0#HTML" expanded="true" />
-            <element signature="e#13688#13694#0#HTML" expanded="true" />
-            <element signature="e#13800#13819#0#HTML" expanded="true" />
-            <element signature="e#13845#13851#0#HTML" expanded="true" />
-            <element signature="e#17138#17175#0#HTML" expanded="true" />
-            <element signature="e#17829#17866#0#HTML" expanded="true" />
-            <element signature="e#18518#18555#0#HTML" expanded="true" />
-            <element signature="e#18857#18894#0#HTML" expanded="true" />
-            <element signature="e#19214#19251#0#HTML" expanded="true" />
-            <element signature="e#19833#19894#0#HTML" expanded="true" />
-            <element signature="e#20238#20315#0#HTML" expanded="true" />
-            <element signature="e#20316#20322#1#HTML" expanded="true" />
-            <element signature="e#21085#21121#0#HTML" expanded="true" />
-            <element signature="e#21136#21166#0#HTML" expanded="true" />
-            <element signature="e#21192#21222#0#HTML" expanded="true" />
-            <element signature="e#21365#21438#0#HTML" expanded="true" />
-            <element signature="e#21468#21498#0#HTML" expanded="true" />
-            <element signature="e#22306#22383#0#HTML" expanded="true" />
-            <element signature="e#22384#22390#1#HTML" expanded="true" />
-            <element signature="e#22406#22436#0#HTML" expanded="true" />
-            <element signature="e#22592#22669#0#HTML" expanded="true" />
-            <element signature="e#22670#22676#1#HTML" expanded="true" />
-            <element signature="e#22692#22747#0#HTML" expanded="true" />
-            <element signature="e#22762#22792#0#HTML" expanded="true" />
-            <element signature="e#22816#22846#0#HTML" expanded="true" />
-            <element signature="e#22908#22968#0#HTML" expanded="true" />
-            <element signature="e#23273#23291#0#HTML" expanded="true" />
+            <element signature="e#2601#2607#0#HTML" expanded="true" />
+            <element signature="e#2662#2668#0#HTML" expanded="true" />
+            <element signature="e#2676#2682#0#HTML" expanded="true" />
+            <element signature="e#2682#2688#0#HTML" expanded="true" />
+            <element signature="e#2688#2694#0#HTML" expanded="true" />
+            <element signature="e#2694#2700#0#HTML" expanded="true" />
+            <element signature="e#2862#2868#0#HTML" expanded="true" />
+            <element signature="e#3023#3029#0#HTML" expanded="true" />
+            <element signature="e#3037#3043#0#HTML" expanded="true" />
+            <element signature="e#3043#3049#0#HTML" expanded="true" />
+            <element signature="e#3049#3055#0#HTML" expanded="true" />
+            <element signature="e#3055#3061#0#HTML" expanded="true" />
+            <element signature="e#3164#3170#0#HTML" expanded="true" />
+            <element signature="e#6992#7084#0#HTML" expanded="true" />
+            <element signature="e#7148#7179#0#HTML" expanded="true" />
+            <element signature="e#7238#7268#0#HTML" expanded="true" />
+            <element signature="e#7269#7275#0#HTML" expanded="true" />
+            <element signature="e#7276#7282#0#HTML" expanded="true" />
+            <element signature="e#7290#7296#0#HTML" expanded="true" />
+            <element signature="e#7324#7355#0#HTML" expanded="true" />
+            <element signature="e#7594#7624#0#HTML" expanded="true" />
+            <element signature="e#7808#7850#0#HTML" expanded="true" />
+            <element signature="e#7875#7983#0#HTML" expanded="true" />
+            <element signature="e#8022#8059#0#HTML" expanded="true" />
+            <element signature="e#8114#8133#0#HTML" expanded="true" />
+            <element signature="e#8137#8143#0#HTML" expanded="true" />
+            <element signature="e#8199#8217#0#HTML" expanded="true" />
+            <element signature="e#8221#8227#0#HTML" expanded="true" />
+            <element signature="e#8283#8302#0#HTML" expanded="true" />
+            <element signature="e#8306#8312#0#HTML" expanded="true" />
+            <element signature="e#8365#8402#0#HTML" expanded="true" />
+            <element signature="e#8461#8498#0#HTML" expanded="true" />
+            <element signature="e#8558#8595#0#HTML" expanded="true" />
+            <element signature="e#8651#8688#0#HTML" expanded="true" />
+            <element signature="e#8959#9007#0#HTML" expanded="true" />
+            <element signature="e#9138#9232#0#HTML" expanded="true" />
+            <element signature="e#9291#9355#0#HTML" expanded="true" />
+            <element signature="e#9825#9862#0#HTML" expanded="true" />
+            <element signature="e#9921#9940#0#HTML" expanded="true" />
+            <element signature="e#9966#9972#0#HTML" expanded="true" />
+            <element signature="e#10189#10207#0#HTML" expanded="true" />
+            <element signature="e#10233#10239#0#HTML" expanded="true" />
+            <element signature="e#10351#10370#0#HTML" expanded="true" />
+            <element signature="e#10396#10402#0#HTML" expanded="true" />
+            <element signature="e#10528#10565#0#HTML" expanded="true" />
+            <element signature="e#11219#11256#0#HTML" expanded="true" />
+            <element signature="e#11908#11945#0#HTML" expanded="true" />
+            <element signature="e#12247#12284#0#HTML" expanded="true" />
+            <element signature="e#12604#12641#0#HTML" expanded="true" />
+            <element signature="e#13223#13284#0#HTML" expanded="true" />
+            <element signature="e#13628#13705#0#HTML" expanded="true" />
+            <element signature="e#13706#13712#1#HTML" expanded="true" />
+            <element signature="e#14475#14511#0#HTML" expanded="true" />
+            <element signature="e#14526#14556#0#HTML" expanded="true" />
+            <element signature="e#14582#14612#0#HTML" expanded="true" />
+            <element signature="e#14755#14828#0#HTML" expanded="true" />
+            <element signature="e#14858#14888#0#HTML" expanded="true" />
+            <element signature="e#15696#15773#0#HTML" expanded="true" />
+            <element signature="e#15774#15780#1#HTML" expanded="true" />
+            <element signature="e#15796#15826#0#HTML" expanded="true" />
+            <element signature="e#15982#16059#0#HTML" expanded="true" />
+            <element signature="e#16060#16066#1#HTML" expanded="true" />
+            <element signature="e#16082#16137#0#HTML" expanded="true" />
+            <element signature="e#16152#16182#0#HTML" expanded="true" />
+            <element signature="e#16206#16236#0#HTML" expanded="true" />
+            <element signature="e#16298#16358#0#HTML" expanded="true" />
+            <element signature="e#16663#16681#0#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/templates/admin/div_thuoctinh.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3670" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/classes/hopdong/clsHanghoa.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/templates/admin/div_doc.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7462">
+          <caret line="307" column="103" selection-start-line="307" selection-start-column="103" selection-end-line="307" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/templates/admin/div_user.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-432" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/templates/admin/admin_home.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4563">
+          <caret line="454" column="26" lean-forward="true" selection-start-line="454" selection-start-column="26" selection-end-line="454" selection-end-column="26" />
         </state>
       </provider>
     </entry>

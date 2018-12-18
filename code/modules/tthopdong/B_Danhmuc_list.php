@@ -16,7 +16,7 @@
  $obj = new danhmuc_class();
 
  // --- Variables is used in this page
- $order_arr = array(0 => "Thứ tự cập nhật", 1 => "Theo tên đổ khẩn", 2 => "Theo thứ  tự");
+ $order_arr = array(0 => "Thứ tự cập nhật", 1 => "Theo tên gọi", 2 => "Theo thứ  tự");
  $nrs_arr = array(5,10, 20, 30, 40, 50, 100);
  $vars = array_merge($_POST, $_GET);
  
@@ -29,7 +29,7 @@
  $cur_pos = ($vars['curpage'] - 1) * $vars['numresult'];
  $order_id = (int)$vars['order'];
  
- $processurl = "?listDanhmuc&mod=danhmuc";
+ $processurl = "?listDanhmuc&mod=tthopdong";
  $processurl .= trim($vars['keyword'])?"&keyword=".trim($vars['keyword']):"";
 
  // --- Del Product which is selected
@@ -57,7 +57,6 @@
 		$obj->readForm();
 		if ((is_null($error)) || ($error == "")) {
 			$obj->danhmuc_date = date("Y-m-d");
-			$obj->danhmuc_ununicode = fnsUnUnicode($vars['danhmuc_name']);
 			$obj->insertnew();
 			unset($obj);
 		}
@@ -66,7 +65,6 @@
 		$obj->readForm();
 		if ((is_null($error)) || ($error == "")) {
 			$obj->danhmuc_date = date("Y-m-d");
-			$obj->danhmuc_ununicode = fnsUnUnicode($vars['danhmuc_name']);
 			if ($obj->is_already_used($obj->tablename, "danhmuc_id", $obj->danhmuc_id))
 			{
 				$obj->update();
