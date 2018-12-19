@@ -681,7 +681,7 @@ CREATE TABLE `tbl_feedbacks` (
 DROP TABLE IF EXISTS `tbl_hd_doitac`;
 
 CREATE TABLE `tbl_hd_doitac` (
-  `doctac_id` int(11) NOT NULL,
+  `doctac_id` int(11) NOT NULL AUTO_INCREMENT,
   `doctac_name` varchar(250) NOT NULL,
   `doctac_viettat` varchar(100) DEFAULT NULL,
   `doctac_daidien` varchar(100) DEFAULT NULL,
@@ -692,7 +692,7 @@ CREATE TABLE `tbl_hd_doitac` (
   `doctac_fax` varchar(50) DEFAULT NULL,
   `doctac_email` varchar(150) DEFAULT NULL,
   `doctac_sort` int(11) DEFAULT NULL,
-  `doctac_active` bit(1) DEFAULT NULL,
+  `doctac_active` tinyint(4) DEFAULT NULL,
   `doctac_date` date DEFAULT NULL,
   PRIMARY KEY (`doctac_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
@@ -704,23 +704,42 @@ CREATE TABLE `tbl_hd_doitac` (
 DROP TABLE IF EXISTS `tbl_hd_duan`;
 
 CREATE TABLE `tbl_hd_duan` (
-  `duan_id` int(11) NOT NULL,
+  `duan_id` int(11) NOT NULL AUTO_INCREMENT,
   `duan_name` varchar(150) NOT NULL,
   `duan_mota` varchar(250) DEFAULT NULL,
   `duan_sort` int(11) DEFAULT NULL,
-  `duan_active` bit(1) DEFAULT NULL,
+  `duan_active` tinyint(4) DEFAULT NULL,
   `duan_date` date DEFAULT NULL,
   PRIMARY KEY (`duan_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 /*Data for the table `tbl_hd_duan` */
 
+/*Table structure for table `tbl_hd_dvtiente` */
+
+DROP TABLE IF EXISTS `tbl_hd_dvtiente`;
+
+CREATE TABLE `tbl_hd_dvtiente` (
+  `dvtiente_id` int(11) NOT NULL AUTO_INCREMENT,
+  `dvtiente_name` varchar(150) DEFAULT NULL,
+  `dvtiente_name_e` varchar(150) DEFAULT NULL,
+  `dvtiente_unit` varchar(50) DEFAULT NULL,
+  `dvtiente_sort` int(11) DEFAULT '0',
+  `dvtiente_active` tinyint(1) DEFAULT NULL,
+  `dvtiente_date` date DEFAULT NULL,
+  PRIMARY KEY (`dvtiente_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+
+/*Data for the table `tbl_hd_dvtiente` */
+
+insert  into `tbl_hd_dvtiente`(`dvtiente_id`,`dvtiente_name`,`dvtiente_name_e`,`dvtiente_unit`,`dvtiente_sort`,`dvtiente_active`,`dvtiente_date`) values (1,'Việt Nam Đồng','Vietnamese Dong','VND',NULL,1,'2018-12-19'),(2,'Dollar Mỹ','US Dollar','USD',NULL,1,'2018-12-19'),(3,'Tiền chung Châu Âu','Euro','EUR',NULL,1,'2018-12-19'),(4,'Bảng Anh','Great Britain Pound','GBP',NULL,1,'2018-12-19'),(5,'Nhân Dân Tệ','Chiness Yuan','CNY',NULL,1,'2018-12-19'),(6,'Yên Nhật','Japanese Yen','JPY',NULL,1,'2018-12-19');
+
 /*Table structure for table `tbl_hd_hdban` */
 
 DROP TABLE IF EXISTS `tbl_hd_hdban`;
 
 CREATE TABLE `tbl_hd_hdban` (
-  `hdban_id` int(11) DEFAULT NULL,
+  `hdban_id` int(11) NOT NULL AUTO_INCREMENT,
   `duan_id` int(11) DEFAULT NULL,
   `hdban_sohd` varchar(100) DEFAULT NULL,
   `hdban_ngayky` date DEFAULT NULL,
@@ -741,7 +760,8 @@ CREATE TABLE `tbl_hd_hdban` (
   `hdban_dieukhoankhac` text,
   `hdban_nguoinhap` int(11) DEFAULT NULL,
   `hdban_ngaynhap` date DEFAULT NULL,
-  `hdban_tinhtrang` int(11) DEFAULT NULL COMMENT '1. moi, 2. phongduyet, 3. ctyduyet, 4. dangthuchien, 5. daxong, 6.dahuy, 7. dagiahan'
+  `hdban_tinhtrang` int(11) DEFAULT NULL COMMENT '1. moi, 2. phongduyet, 3. ctyduyet, 4. dangthuchien, 5. daxong, 6.dahuy, 7. dagiahan',
+  PRIMARY KEY (`hdban_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 /*Data for the table `tbl_hd_hdban` */
@@ -751,7 +771,7 @@ CREATE TABLE `tbl_hd_hdban` (
 DROP TABLE IF EXISTS `tbl_hd_hdban_chiphi`;
 
 CREATE TABLE `tbl_hd_hdban_chiphi` (
-  `chiphi_id` int(11) NOT NULL,
+  `chiphi_id` int(11) NOT NULL AUTO_INCREMENT,
   `hdban_id` int(11) DEFAULT NULL,
   `chiphi_diengiai` varchar(250) DEFAULT NULL,
   `chiphi_giatri` int(11) DEFAULT NULL,
@@ -760,7 +780,7 @@ CREATE TABLE `tbl_hd_hdban_chiphi` (
   `chiphi_nguoinhan` int(11) DEFAULT NULL,
   `chiphi_ghichu` varchar(250) DEFAULT NULL,
   `chiphi_nguoinhap` int(11) DEFAULT NULL,
-  `chiphi_tinhtrang` bit(1) DEFAULT NULL,
+  `chiphi_tinhtrang` tinyint(1) DEFAULT NULL,
   `chiphi_date` date DEFAULT NULL,
   PRIMARY KEY (`chiphi_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -772,13 +792,13 @@ CREATE TABLE `tbl_hd_hdban_chiphi` (
 DROP TABLE IF EXISTS `tbl_hd_hdban_hoadon`;
 
 CREATE TABLE `tbl_hd_hdban_hoadon` (
-  `hoadon_id` int(11) NOT NULL,
+  `hoadon_id` int(11) NOT NULL AUTO_INCREMENT,
   `hoadon_sohd` varchar(100) DEFAULT NULL,
   `hoadon_noidung` varchar(250) DEFAULT NULL,
   `hdban_id` int(11) DEFAULT NULL,
   `hoadon_giatri` int(11) DEFAULT NULL,
   `hoadon_ngayhd` date DEFAULT NULL,
-  `hoadon_tinhtrang` int(11) DEFAULT NULL COMMENT '1. chua xuat, 2.da xuat, 3. bi huy',
+  `hoadon_tinhtrang` tinyint(4) DEFAULT NULL COMMENT '1. chua xuat, 2.da xuat, 3. bi huy',
   `hoadon_date` date DEFAULT NULL,
   PRIMARY KEY (`hoadon_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -790,14 +810,15 @@ CREATE TABLE `tbl_hd_hdban_hoadon` (
 DROP TABLE IF EXISTS `tbl_hd_hdban_thuchien`;
 
 CREATE TABLE `tbl_hd_hdban_thuchien` (
-  `thuchien_id` int(11) DEFAULT NULL,
+  `thuchien_id` int(11) NOT NULL AUTO_INCREMENT,
   `hdban_id` int(11) DEFAULT NULL,
   `thuchien_noidung` text,
   `thuchien_batdau` date DEFAULT NULL,
   `thuchien_ketthuc` date DEFAULT NULL,
   `user_id` int(11) DEFAULT NULL,
-  `thuchien_tinhtrang` bit(1) DEFAULT NULL,
-  `thuchien_date` date DEFAULT NULL
+  `thuchien_tinhtrang` tinyint(1) DEFAULT NULL,
+  `thuchien_date` date DEFAULT NULL,
+  PRIMARY KEY (`thuchien_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 /*Data for the table `tbl_hd_hdban_thuchien` */
@@ -807,7 +828,7 @@ CREATE TABLE `tbl_hd_hdban_thuchien` (
 DROP TABLE IF EXISTS `tbl_hd_hdban_xuatkho`;
 
 CREATE TABLE `tbl_hd_hdban_xuatkho` (
-  `xuatkho_id` int(11) NOT NULL,
+  `xuatkho_id` int(11) NOT NULL AUTO_INCREMENT,
   `hoadon_id` int(11) DEFAULT NULL,
   `mathang_id` int(11) DEFAULT NULL,
   `xuatkho_soluong` int(11) DEFAULT NULL,
@@ -823,7 +844,7 @@ CREATE TABLE `tbl_hd_hdban_xuatkho` (
 DROP TABLE IF EXISTS `tbl_hd_hdmua`;
 
 CREATE TABLE `tbl_hd_hdmua` (
-  `hdmua_id` int(11) NOT NULL,
+  `hdmua_id` int(11) NOT NULL AUTO_INCREMENT,
   `hdmua_sohd` varchar(100) DEFAULT NULL,
   `hdmua_ngayhd` date DEFAULT NULL,
   `hdmua_hieuluc` date DEFAULT NULL,
@@ -838,7 +859,7 @@ CREATE TABLE `tbl_hd_hdmua` (
   `doitac_id` int(11) DEFAULT NULL,
   `department_id` int(11) DEFAULT NULL COMMENT 'phong theo doi',
   `user_id` int(11) DEFAULT NULL COMMENT 'nguoi theo doi',
-  `hdmua_tinhtrang` int(11) DEFAULT NULL COMMENT '1. moi, 2. dang thuc hien, 3. da xong, 4. da huy',
+  `hdmua_tinhtrang` tinyint(4) DEFAULT NULL COMMENT '1. moi, 2. dang thuc hien, 3. da xong, 4. da huy',
   `hdmua_tl_huybo` int(11) DEFAULT NULL,
   `hdmua_lydo_huydo` varchar(250) DEFAULT NULL,
   `hdmua_dieukhoankhac` text,
@@ -854,7 +875,7 @@ CREATE TABLE `tbl_hd_hdmua` (
 DROP TABLE IF EXISTS `tbl_hd_hdmua_chiphi`;
 
 CREATE TABLE `tbl_hd_hdmua_chiphi` (
-  `chiphi_id` int(11) NOT NULL,
+  `chiphi_id` int(11) NOT NULL AUTO_INCREMENT,
   `hdmua_id` int(11) DEFAULT NULL,
   `chiphi_diengiai` varchar(250) DEFAULT NULL,
   `chiphi_giatri` int(11) DEFAULT NULL,
@@ -863,7 +884,7 @@ CREATE TABLE `tbl_hd_hdmua_chiphi` (
   `chiphi_nguoinhan` int(11) DEFAULT NULL,
   `chiphi_ghichu` varchar(250) DEFAULT NULL,
   `chiphi_nguoinhap` int(11) DEFAULT NULL,
-  `chiphi_tinhtrang` bit(1) DEFAULT NULL,
+  `chiphi_tinhtrang` tinyint(4) DEFAULT NULL,
   `chiphi_date` date DEFAULT NULL,
   PRIMARY KEY (`chiphi_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -875,7 +896,7 @@ CREATE TABLE `tbl_hd_hdmua_chiphi` (
 DROP TABLE IF EXISTS `tbl_hd_hdmua_hoadon`;
 
 CREATE TABLE `tbl_hd_hdmua_hoadon` (
-  `hoadon_id` int(11) NOT NULL,
+  `hoadon_id` int(11) NOT NULL AUTO_INCREMENT,
   `hoadon_sohd` varchar(100) DEFAULT NULL,
   `hoadon_noidung` varchar(250) DEFAULT NULL,
   `hdmua_id` int(11) DEFAULT NULL,
@@ -892,7 +913,7 @@ CREATE TABLE `tbl_hd_hdmua_hoadon` (
 DROP TABLE IF EXISTS `tbl_hd_hdmua_tonkho`;
 
 CREATE TABLE `tbl_hd_hdmua_tonkho` (
-  `tonkho_id` int(11) NOT NULL,
+  `tonkho_id` int(11) NOT NULL AUTO_INCREMENT,
   `hoadon_id` int(11) DEFAULT NULL,
   `mathang_id` int(11) DEFAULT NULL,
   `tonkho_soluong` int(11) DEFAULT NULL,
@@ -959,11 +980,11 @@ CREATE TABLE `tbl_hdmua_hanghoa` (
   `hanghoa_active` tinyint(1) DEFAULT NULL,
   `hanghoa_date` date DEFAULT NULL,
   PRIMARY KEY (`hanghoa_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 /*Data for the table `tbl_hdmua_hanghoa` */
 
-insert  into `tbl_hdmua_hanghoa`(`hanghoa_id`,`danhmuc_id`,`hanghoa_name`,`hanghoa_mahang`,`hanghoa_mota`,`hanghoa_sort`,`hanghoa_active`,`hanghoa_date`) values (1,1,'Tấm bê tông đúc sẵn 3x3 m','BTĐS 3x3','Tấm bê tông đúc sẵn 3x3 m',NULL,1,'2018-12-18'),(2,1,'Thép phi 12','T-D12','Thép phi 12',NULL,1,'2018-12-18');
+insert  into `tbl_hdmua_hanghoa`(`hanghoa_id`,`danhmuc_id`,`hanghoa_name`,`hanghoa_mahang`,`hanghoa_mota`,`hanghoa_sort`,`hanghoa_active`,`hanghoa_date`) values (1,1,'Tấm bê tông đúc sẵn 3x3 m','BTĐS 3x3','Tấm bê tông đúc sẵn 3x3 m',NULL,1,'2018-12-18'),(2,1,'Thép phi 12','T-D12','Thép phi 12',NULL,1,'2018-12-18'),(3,1,'Thép phi 15','T-D15','Thép phi 15',0,1,'2018-12-19');
 
 /*Table structure for table `tbl_hdsds` */
 
@@ -1067,11 +1088,11 @@ CREATE TABLE `tbl_modules` (
   `mod_sort` int(11) DEFAULT '0',
   `mod_active` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`mod_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=289 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=290 DEFAULT CHARSET=utf8;
 
 /*Data for the table `tbl_modules` */
 
-insert  into `tbl_modules`(`mod_id`,`mod_name`,`mod_desc`,`mod_date`,`mod_sort`,`mod_active`) values (259,'chat',NULL,NULL,0,0),(260,'config',NULL,NULL,0,0),(261,'congviecs',NULL,NULL,0,0),(262,'daydocs',NULL,NULL,0,0),(263,'departments',NULL,NULL,0,0),(264,'docs',NULL,NULL,0,0),(265,'hdsds',NULL,NULL,0,0),(266,'holidays',NULL,NULL,0,0),(267,'importants',NULL,NULL,0,0),(268,'interdiscis',NULL,NULL,0,0),(269,'kdls',NULL,NULL,0,0),(270,'modules',NULL,NULL,0,0),(271,'msgs',NULL,NULL,0,0),(272,'objects',NULL,NULL,0,0),(273,'plans',NULL,NULL,0,0),(274,'ports',NULL,NULL,0,0),(275,'secrets',NULL,NULL,0,0),(276,'signobjs',NULL,NULL,0,0),(277,'signpers',NULL,NULL,0,0),(278,'thamgia',NULL,NULL,0,0),(279,'thangluongs',NULL,NULL,0,0),(280,'trinhdos',NULL,NULL,0,0),(282,'units',NULL,NULL,0,0),(283,'users',NULL,NULL,0,0),(284,'vttbs',NULL,NULL,0,0),(285,'truyennhans',NULL,NULL,0,0),(288,'tthopdong',NULL,NULL,0,0);
+insert  into `tbl_modules`(`mod_id`,`mod_name`,`mod_desc`,`mod_date`,`mod_sort`,`mod_active`) values (259,'chat',NULL,NULL,0,0),(260,'config',NULL,NULL,0,0),(261,'congviecs',NULL,NULL,0,0),(262,'daydocs',NULL,NULL,0,0),(263,'departments',NULL,NULL,0,0),(264,'docs',NULL,NULL,0,0),(265,'hdsds',NULL,NULL,0,0),(266,'holidays',NULL,NULL,0,0),(267,'importants',NULL,NULL,0,0),(268,'interdiscis',NULL,NULL,0,0),(269,'kdls',NULL,NULL,0,0),(270,'modules',NULL,NULL,0,0),(271,'msgs',NULL,NULL,0,0),(272,'objects',NULL,NULL,0,0),(273,'plans',NULL,NULL,0,0),(274,'ports',NULL,NULL,0,0),(275,'secrets',NULL,NULL,0,0),(276,'signobjs',NULL,NULL,0,0),(277,'signpers',NULL,NULL,0,0),(278,'thamgia',NULL,NULL,0,0),(279,'thangluongs',NULL,NULL,0,0),(280,'trinhdos',NULL,NULL,0,0),(282,'units',NULL,NULL,0,0),(283,'users',NULL,NULL,0,0),(284,'vttbs',NULL,NULL,0,0),(285,'truyennhans',NULL,NULL,0,0),(288,'tthopdong',NULL,NULL,0,0),(289,'hdmua',NULL,NULL,0,0);
 
 /*Table structure for table `tbl_msgs` */
 
