@@ -4,29 +4,31 @@
 - Created by Le Anh Van - anhvan3103@gmail.com
 --------------------------------------------*/
 
-class danhmuc_class extends dbBasic {
+class hanghoa_class extends dbBasic {
+    var  $hanghoa_id;
     var  $danhmuc_id;
-    var  $danhmuc_name;
-    var  $danhmuc_viettat;
-    var  $danhmuc_mota;
-    var  $danhmuc_date;
-    var  $danhmuc_sort;
-    var  $danhmuc_active;
+    var  $hanghoa_name;
+    var  $hanghoa_mahang;
+    var  $hanghoa_mota;
+    var  $hanghoa_date;
+    var  $hanghoa_sort;
+    var  $hanghoa_active;
 
     var $pfields = array (
+        'hanghoa_id',
         'danhmuc_id',
-        'danhmuc_name',
-        'danhmuc_viettat',
-        'danhmuc_mota',
-        'danhmuc_date',
-        'danhmuc_sort',
-        'danhmuc_active'); //table private fields
+        'hanghoa_name',
+        'hanghoa_mahang',
+        'hanghoa_mota',
+        'hanghoa_date',
+        'hanghoa_sort',
+        'hanghoa_active'); //table private fields
 
-    var $pkeys = array ('danhmuc_id'); //key fields
+    var $pkeys = array ('hanghoa_id'); //key fields
 
-    function danhmuc_class(){
+    function hanghoa_class(){
         $this->dbBasic();
-        $this->tablename = "tbl_hdmua_danhmuc";
+        $this->tablename = "tbl_hdmua_hanghoa";
     }
 
     function readform(){
@@ -40,7 +42,7 @@ class danhmuc_class extends dbBasic {
     function getTitle($id){
         global $dbconn;
         // ---- Get sql query
-        $sql = " SELECT danhmuc_name FROM $this->tablename where danhmuc_id=".$id;
+        $sql = " SELECT hanghoa_name FROM $this->tablename where hanghoa_id=".$id;
         // ---- Execute SQL
         $result = $dbconn->Execute($sql);
         return $result->fields[0];
@@ -50,7 +52,7 @@ class danhmuc_class extends dbBasic {
     function sortItem($sort,$id){
         global $dbconn;
         // ---- Get sql query
-        $sql = " UPDATE $this->tablename set danhmuc_sort=".$sort." where danhmuc_id=".$id;
+        $sql = " UPDATE $this->tablename set hanghoa_sort=".$sort." where hanghoa_id=".$id;
         // ---- Execute SQL
         $dbconn->Execute($sql);
     }
@@ -58,7 +60,7 @@ class danhmuc_class extends dbBasic {
     function update_uutien($id){
         global $dbconn;
         // ---- Get sql query
-        $sql = " UPDATE $this->tablename set danhmuc_priority = 1 where danhmuc_id=".$id;
+        $sql = " UPDATE $this->tablename set hanghoa_priority = 1 where hanghoa_id=".$id;
         // ---- Execute SQL
         $dbconn->Execute($sql);
     }
@@ -67,7 +69,7 @@ class danhmuc_class extends dbBasic {
     function getNumresult($where = ""){
         global $dbconn;
         // ---- Get sql query
-        $sql = " SELECT count(danhmuc_id) FROM $this->tablename ".$where;
+        $sql = " SELECT count(hanghoa_id) FROM $this->tablename ".$where;
         // ---- Execute SQL
         $result = $dbconn->Execute($sql);
         return $result->fields[0];
@@ -75,8 +77,8 @@ class danhmuc_class extends dbBasic {
 
     // --- get top 1 news
     function getTopRows(){
-        $where = " 1 = 1 and danhmuc_active = 1";
-        $rows = $this->getDBList($where," danhmuc_id DESC",true," Limit 1");
+        $where = " 1 = 1 and hanghoa_active = 1";
+        $rows = $this->getDBList($where," hanghoa_id DESC",true," Limit 1");
         return $rows;
     }
 }
