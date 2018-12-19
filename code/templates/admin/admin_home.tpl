@@ -144,7 +144,7 @@ function close_div(obj){
     {include file="div_config.tpl"}
     {include file="div_thuoctinh.tpl"}
     {include file="div_thuoctinh_hopdong.tpl"}
-    {include file="div_tthd.tpl"}
+    {include file="div_hdmua.tpl"}
     {include file="div_user.tpl"}
     {include file="div_vttb.tpl"}
     {include file="div_plan.tpl"}
@@ -291,22 +291,31 @@ function close_div(obj){
                                 <!-----------------------chuc nang truyen nhan van ban------------------------->
                                 <li class="outside">
                                 	<ul class="inside">
-                                    	<li><input type="button" class="main_item_icon" style="background: url({$css_btn_bg}contract_btn_blur.png) repeat scroll 0% 0% transparent;" onmouseout="this.style.background='url({$css_btn_bg}contract_btn_blur.png)'" onmouseover="this.style.background='url({$css_btn_bg}contract_btn_focus.png)'" value="" name="iconcontract" id="iconcontract" onClick="javascript: document.getElementById('div_transport').style.display=''"></li>
-                                        <li class="main_btn_caption">Hợp đồng</li>
+                                    	<li><input type="button" class="main_item_icon" style="background: url({$css_btn_bg}contract_btn_blur.png) repeat scroll 0% 0% transparent;" onmouseout="this.style.background='url({$css_btn_bg}contract_btn_blur.png)'" onmouseover="this.style.background='url({$css_btn_bg}contract_btn_focus.png)'" value="" name="iconcontract" id="iconcontract" onClick="javascript: document.getElementById('div_hdban').style.display=''"></li>
+                                        <li class="main_btn_caption">Hợp đồng bán</li>
                                     </ul>
                                     {literal}
                                     <script language="javascript">
 									$("#iconcontract").click( function () {
-										
-										//var user_level_tnvb 	= document.getElementById('user_level_tnvb').value;
-										
 										document.getElementById('contract_content_main').style.display='block';
-										//if(user_level_tnvb==1 || user_level_tnvb==2)
-											$("#contract_content_main").load("index.php?listHopdong&mod=hopdong");
-										//else
-											//$("#contract_content_main").load("index.php?listHopdong&mod=hopdong");
+                                        $("#contract_content_main").load("index.php?listHdban&mod=hdban");
 									});
 									</script>
+                                    {/literal}
+                                </li>
+
+                                <li class="outside">
+                                    <ul class="inside">
+                                        <li><input type="button" class="main_item_icon" style="background: url({$css_btn_bg}contract_btn_blur.png) repeat scroll 0% 0% transparent;" onmouseout="this.style.background='url({$css_btn_bg}contract_btn_blur.png)'" onmouseover="this.style.background='url({$css_btn_bg}contract_btn_focus.png)'" value="" name="btn_hdmua" id="btn_hdmua" onClick="javascript: document.getElementById('div_hdmua').style.display=''"></li>
+                                        <li class="main_btn_caption">Hợp đồng mua</li>
+                                    </ul>
+                                    {literal}
+                                        <script language="javascript">
+                                            $("#btn_hdmua").click( function () {
+                                                document.getElementById('hdmua_content_main').style.display='block';
+                                                $("#hdmua_content_main").load("index.php?listHdmua&mod=hdmua");
+                                            });
+                                        </script>
                                     {/literal}
                                 </li>
                                 

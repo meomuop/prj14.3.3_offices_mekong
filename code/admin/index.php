@@ -353,6 +353,8 @@
         // Muc 1:
         case 'listDanhmuc'		: include ($MODULE_PATH.$module_name.'B_Danhmuc_list.php'); exit();
         case 'listHanghoa'		: include ($MODULE_PATH.$module_name.'B_Hanghoa_list.php'); exit();
+        case 'listDvtiente'		: include ($MODULE_PATH.$module_name.'B_Dvtiente_list.php'); exit();
+        case 'listHdmua'		: include ($MODULE_PATH.$module_name.'B_Hdmua_list.php'); exit();
 															
 		/* --------------------------Utilities--------------------------- */
 		// ------- Logout
