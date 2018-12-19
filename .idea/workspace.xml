@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b8c3f3dc-c879-4987-a3e0-10e5381e58f3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/code/classes/hopdong/clsDanhmuc.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/modules/tthopdong/B_Danhmuc_list.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/modules/tthopdong/skin/B_Danhmuc_list.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/modules/tthopdong/skin/B_Danhmuc_tbl.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/templates/admin/div_thuoctinh_hopdong.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/admin/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/css/admin/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/code/css/admin/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/modules/docs/skin/B_DocCat_tbl.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/code/modules/docs/skin/B_DocCat_tbl.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/templates/admin/admin_home.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/code/templates/admin/admin_home.tpl" afterDir="false" />
-    </list>
+    <list default="true" id="b8c3f3dc-c879-4987-a3e0-10e5381e58f3" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -442,16 +431,15 @@
       <workItem from="1544851877737" duration="9425000" />
       <workItem from="1544942721116" duration="14221000" />
       <workItem from="1545011214548" duration="24967000" />
-      <workItem from="1545096573346" duration="10963000" />
+      <workItem from="1545096573346" duration="11166000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62353000" />
+    <option name="totallyTimeSpent" value="62556000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27231467" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
