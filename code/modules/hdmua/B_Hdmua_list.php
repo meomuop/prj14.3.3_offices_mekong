@@ -13,17 +13,16 @@
     include ($CLASSES_PATH.'/hopdong/clsHdmua.php');
     include ($CLASSES_PATH.'/hopdong/clsDoitac.php');
     include ($CLASSES_PATH.'/hopdong/clsDvtiente.php');
-    include ($CLASSES_PATH.'/clsDepartments.php');
-    include ($CLASSES_PATH.'/clsUsers.php');
+
 	// --- Class is used in this page
 	$obj = new hdmua_class();
-	
+
 	// --- Variables is used in this page
-	$order_arr = array(0 => "VB Chưa phân loại", 1 => "VB Đã phân loại", 2 => "VB Đã chỉ đạo", 3 => "VB Đã giải quyết");
+	$order_arr = array(0 => "Hợp đồng mới", 1 => "Đang thực hiện", 2 => "Đã hoàn thành", 2 => "Đã hủy");
 	$nrs_arr = array(5,10, 20, 30, 40, 50, 100, 150, 200);
 	$vars = array_merge($_POST, $_GET);
 	
-	if(!$vars['mod']) $vars['mod'] = 'docs';
+	if(!$vars['mod']) $vars['mod'] = 'hdmua';
 	
 	if (!(int)$vars['curpage']){
 	$vars['curpage'] = 1;
@@ -34,12 +33,10 @@
 	$cur_pos = ($vars['curpage'] - 1) * $vars['numresult'];
 	$order_id = (int)$vars['order'];
 	
-	$processurl = "?listDoc&mod=docs";
-	$processurl .= $vars['docCat_id_fs']?"&docCat_id=".$vars['docCat_id_fs']:"";
-	$processurl .= trim($vars['unit_name_fs'])?"&unit_name=".trim($vars['unit_name_fs']):"";
-	$processurl .= trim($vars['hdmua_code_fs'])?"&hdmua_code=".trim($vars['hdmua_code_fs']):"";
-	$processurl .= trim($vars['hdmua_desc_fs'])?"&hdmua_desc=".trim($vars['hdmua_desc_fs']):"";
-	$processurl .= $vars['hdmua_num_fs']?"&hdmua_num=".$vars['hdmua_num_fs']:"";
+	$processurl = "?listHdmua&mod=hdmua";
+	$processurl .= $vars['doitac_id_fs']?"&doitac_id=".$vars['doitac_id_fs']:"";
+	$processurl .= trim($vars['hdmua_sohd_fs'])?"&hdmua_sohd=".trim($vars['hdmua_sohd_fs']):"";
+	$processurl .= trim($vars['hdmua_noidung_fs'])?"&hdmua_noidung=".trim($vars['hdmua_noidung_fs']):"";
 	
 	// --- Del record which is selected
 	if ($vars['dlStr']){
@@ -61,111 +58,66 @@
 	
 	// --- Add - Edit
 	if($vars['add_edit']==1):
-	 if (!isset($vars['hdmua_id']) || $vars['hdmua_id'] < 1) {
-		$obj = new hdmua_class();
-		$obj->readForm();
-		if ((is_null($error)) || ($error == "")) {
-			$obj->hdmua_date = date("Y-m-d");
-			$obj->hdmua_signed = date('Y-m-d',strtotime(str_replace('/','-',$vars['hdmua_signed'])));
-			$obj->hdmua_recevied = date('Y-m-d',strtotime(str_replace('/','-',$vars['hdmua_recevied'])));
-			$obj->hdmua_limit_time = date('Y-m-d',strtotime(str_replace('/','-',$vars['hdmua_limit_time'])));
-			$obj->hdmua_moved = date('Y-m-d',strtotime(str_replace('/','-',$vars['hdmua_moved'])));
-			$obj->input_per = $_SESSION['user_id'];
-			
-			// ---- kiem tra so den van ban
-			$count_num = $obj->getSameNum($vars['hdmua_num'],$vars['docLevel_id']);
-			if($count_num > 0):
-				// ---- neu da ton tai: lay so cuoi cong 1
-				$hdmua_num = $obj->getLastNum($vars['docLevel_id']);
-				$obj->hdmua_num = $hdmua_num + 1;
-			endif;
-			
-			// ---- kiem tra loai van ban chuyen thang hoac phan loai
-			$obj_doccat = new doccat_class();
-			$docCat_type = $obj_doccat->getTypebyName($vars['docCat_id']);
-			if($docCat_type==1):
-				$obj_user = new users_class();
-				$user_id_01 = $obj_user->getUserIDbyLevel(3);
-				$user_id_02 = $obj_user->getUserIDbyLevel(4);
-				
-				$user_id_cvp = '';
-				$user_id_gd = '';
-				
-				$i=1;
-				while($row_01 = mysql_fetch_array($user_id_01)):
-					$user_id_cvp .= $row_01['user_id'];
-					if($i<mysql_num_rows($user_id_01)) $user_id_cvp .= ',';
-					$i++;
-				endwhile;
-				unset($i);
-				
-				$j=1;
-				while($row_02 = mysql_fetch_array($user_id_02)):
-					$user_id_gd .= $row_02['user_id'];
-					if($j<mysql_num_rows($user_id_02)) $user_id_gd .= ',';
-					$j++;
-				endwhile;
-				unset($j);
-				
-				$obj->user_id = $user_id_cvp.','.$user_id_gd;
-				$obj->hdmua_traned = 1;
-				unset($obj_user);
-			endif;
-			
-			// ---- kiem tra van ban ton tai
-			$obj_docCoincidence = new hdmua_class();
-			$isTheSame = $obj_docCoincidence->checkCoincidence($vars['hdmua_code'],date('Y-m-d',strtotime(str_replace('/','-',$vars['hdmua_signed']))),$vars['unit_name'],$vars['docCat_id']);
-			if ($isTheSame>0) {
-				$error = "Văn bản đã tồn tại";
-			}else{
-				$obj->insertnew();
-				$lastNum = $obj->getLastNumbyInputPer($_SESSION['user_id']);
-				$complete = "Đã thêm mới văn bản có số đến: ".$lastNum;
-				unset($obj);
-			}
-		}
-	 }else{
-		$obj = new hdmua_class();
-		$obj->readForm();
-		if ((is_null($error)) || ($error == "")) {
-			if ($obj->is_already_used($obj->tablename, "hdmua_id", $obj->hdmua_id))
-			{
-				$obj->hdmua_signed = date('Y-m-d',strtotime(str_replace('/','-',$vars['hdmua_signed'])));
-				$obj->hdmua_recevied = date('Y-m-d',strtotime(str_replace('/','-',$vars['hdmua_recevied'])));
-				$obj->hdmua_limit_time = date('Y-m-d',strtotime(str_replace('/','-',$vars['hdmua_limit_time'])));
-				$obj->hdmua_moved = date('Y-m-d',strtotime(str_replace('/','-',$vars['hdmua_moved'])));
-				$obj->input_per = $_SESSION['user_id'];
-				
-				// ---- kiem tra so den van ban
-				$count_num = $obj->getSameNum($vars['hdmua_num'],$vars['docLevel_id'],$obj->hdmua_id);
-				if($count_num > 0):
-					// ---- neu da ton tai: lay so cuoi cong 1
-					$hdmua_num = $obj->getLastNum($vars['docLevel_id']);
-					$obj->hdmua_num = $hdmua_num + 1;
-				endif;
-				
-				// ---- kiem tra van ban ton tai ngoai van ban hien tai
-				$obj_docCoincidence = new hdmua_class();
-				$isTheSame = $obj_docCoincidence->checkCoincidence($vars['hdmua_code'],date('Y-m-d',strtotime(str_replace('/','-',$vars['hdmua_signed']))),$vars['unit_name'],$vars['docCat_id'],$obj->hdmua_id);
-				if ($isTheSame>0) {
-					$error = "Văn bản đã tồn tại";
-				}else{
-					$obj->update();
-					$complete = "Đã cập nhật thành công!";
-					unset($obj);
-				}
-			}
-		}
-	 }
+        if (!isset($vars['hdmua_id']) || $vars['hdmua_id'] < 1) {
+            $obj = new hdmua_class();
+            $obj->readForm();
+            if ((is_null($error)) || ($error == "")) {
+                $obj->hdmua_date = date("Y-m-d");
+                $obj->hdmua_ngayhd = date('Y-m-d',strtotime(str_replace('/','-',$vars['hdmua_signed'])));
+                $obj->hdmua_hieuluc = date('Y-m-d',strtotime(str_replace('/','-',$vars['hdmua_recevied'])));
+                $obj->hdmua_nguoinhap = $_SESSION['user_id'];
+
+                // ---- kiem tra hop dong ton tai
+                $obj_trunghop = new hdmua_class();
+                $isTheSame = $obj_trunghop->checkTrunghop($vars['hdmua_sohd']);
+                if ($isTheSame>0) {
+                    $error = "Văn bản đã tồn tại";
+                }else{
+                    $obj->insertnew();
+                    $complete = "Đã thêm mới hợp đồng có số: ".$vars['hdmua_sohd'];
+                    unset($obj);
+                }
+            }
+        }else{
+            $obj = new hdmua_class();
+            $obj->readForm();
+            if ((is_null($error)) || ($error == "")) {
+                if ($obj->is_already_used($obj->tablename, "hdmua_id", $obj->hdmua_id))
+                {
+                    $obj->hdmua_ngayhd = date('Y-m-d',strtotime(str_replace('/','-',$vars['hdmua_signed'])));
+                    $obj->hdmua_hieuluc = date('Y-m-d',strtotime(str_replace('/','-',$vars['hdmua_recevied'])));
+                    $obj->hdmua_nguoinhap = $_SESSION['user_id'];
+
+                    // ---- kiem tra so den van ban
+                    $count_num = $obj->getSameNum($vars['hdmua_num'],$vars['docLevel_id'],$obj->hdmua_id);
+                    if($count_num > 0):
+                        // ---- neu da ton tai: lay so cuoi cong 1
+                        $hdmua_num = $obj->getLastNum($vars['docLevel_id']);
+                        $obj->hdmua_num = $hdmua_num + 1;
+                    endif;
+
+                    // ---- kiem tra van ban ton tai ngoai van ban hien tai
+                    $obj_docCoincidence = new hdmua_class();
+                    $isTheSame = $obj_docCoincidence->checkCoincidence($vars['hdmua_sohd'],date('Y-m-d',strtotime(str_replace('/','-',$vars['hdmua_signed']))),$vars['unit_name'],$vars['doitac_id'],$obj->hdmua_id);
+                    if ($isTheSame>0) {
+                        $error = "Văn bản đã tồn tại";
+                    }else{
+                        $obj->update();
+                        $complete = "Đã cập nhật thành công!";
+                        unset($obj);
+                    }
+                }
+            }
+        }
 	endif;
 
 	// --- Get record for edit
 	if($vars['edit_me']==1):
-	 $obj = new hdmua_class();
-	 $obj->getDBbyPkey($vars['hdmua_id']);
-	 if (!$obj->hdmua_id) redirect("?listDoc".$arg['arg']);
-	 $obj_info = (array)$obj;
-	 $hdmua_num = $obj->hdmua_num;
+        $obj = new hdmua_class();
+        $obj->getDBbyPkey($vars['hdmua_id']);
+        if (!$obj->hdmua_id) redirect("?listHdmua".$arg['arg']);
+        $obj_info = (array)$obj;
+        $hdmua_num = $obj->hdmua_num;
 	endif;
 	
 	// --- Condition
@@ -173,23 +125,21 @@
 	
 	// --- Get data to view in homepage 
 	if ($vars['search_me']==1):
-		if ($vars['docCat_id_fs']) 	$where .= " AND docCat_id LIKE '%".$vars['docCat_id_fs']."%'";
-		if ($vars['unit_name_fs']) 	$where .= " AND unit_name ='".$vars['unit_name_fs']."'";
-		if ($vars['hdmua_code_fs']) 	$where .= " AND hdmua_code regexp binary '".$vars['hdmua_code_fs']."'";
-		if ($vars['hdmua_desc_fs']) 	$where .= " AND hdmua_desc regexp binary '".$vars['hdmua_desc_fs']."'";
-		if ($vars['hdmua_num_fs']) 	$where .= " AND hdmua_num ='".$vars['hdmua_num_fs']."'";
+		if ($vars['doitac_id_fs']) 	$where .= " AND doitac_id LIKE '%".$vars['doitac_id_fs']."%'";
+		if ($vars['hdmua_sohd_fs']) 	$where .= " AND hdmua_sohd regexp binary '".$vars['hdmua_sohd_fs']."'";
+		if ($vars['hdmua_noidung_fs']) 	$where .= " AND hdmua_noidung regexp binary '".$vars['hdmua_noidung_fs']."'";
 	endif;
 	
 	$limit = " LIMIT ".(string)$cur_pos.", ".(int)$vars['numresult'];
 	
 	if($order_id == 0):
-		$where.=" and hdmua_active=2 and hdmua_traned=2 and hdmua_replied=2"; // chua giai quyet, phan loai, y kien
+		$where.=" and hdmua_tinhtrang = 1"; // moi
 	elseif($order_id == 1):
-		$where.=" and hdmua_active=2 and hdmua_traned=1 and hdmua_replied=2"; // chua giai quyet, y kien, da phan loai
+		$where.=" and hdmua_tinhtrang = 2"; // dang lam
 	elseif($order_id == 2):
-		$where.=" and hdmua_active=2 and hdmua_traned=1 and hdmua_replied=1"; // chua giai quyet, da phan loai, da y kien
+		$where.=" and hdmua_tinhtrang = 3"; // da xong
 	else:
-		$where.=" and hdmua_active=1";
+		$where.=" and hdmua_tinhtrang = 4"; // da huy
 	endif;
 	
 	$obj = new hdmua_class();
@@ -257,9 +207,7 @@
     $assign_list['obj_list_dvtiente'] 	= $obj_list_dvtiente;
     $assign_list['obj_list_department'] = $obj_list_department;
 	
-	$assign_list['docCat_id'] 		= $vars['docCat_id'];
-	$assign_list['docField_id'] 	= $vars['docField_id'];
-	$assign_list['docLevel_id'] 	= $vars['docLevel_id'];
+	$assign_list['doitac_id'] 		= $vars['doitac_id'];
 	
 	$assign_list['pager_str'] 	= $pager_str;
 	$assign_list["parentArr"] 	= $parentArr; 
@@ -275,14 +223,13 @@
 	$assign_list['lastNum'] 	= $lastNum;
 	$assign_list['complete'] 	= $complete;
 	
-	$display = dirname(__FILE__)."/skin/B_Doc_tbl.tpl";
+	$display = dirname(__FILE__)."/skin/B_Hdmua_tbl.tpl";
 	$assign_list['display'] = $display;
 	
 	$smarty->assign($assign_list);
 	
 	// --- Display template
 	if (isset($vars['activeAjax']))
-	$smarty->display(dirname(__FILE__)."/skin/B_Doc_tbl.tpl");
+	$smarty->display(dirname(__FILE__)."/skin/B_Hdmua_tbl.tpl");
 	else
-	$smarty->display(dirname(__FILE__)."/skin/B_Doc_list.tpl");
-?>
+	$smarty->display(dirname(__FILE__)."/skin/B_Hdmua_list.tpl");

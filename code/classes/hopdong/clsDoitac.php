@@ -8,13 +8,13 @@ class doitac_class extends dbBasic {
     var  $doitac_id;
     var  $doitac_name;
     var  $doitac_viettat;
-    var  $doctac_daidien;
-    var  $doctac_mst;
-    var  $doctac_truso;
-    var  $doctac_vpgd;
-    var  $doctac_sdt;
-    var  $doctac_fax;
-    var  $doctac_email;
+    var  $doitac_daidien;
+    var  $doitac_mst;
+    var  $doitac_truso;
+    var  $doitac_vpgd;
+    var  $doitac_sdt;
+    var  $doitac_fax;
+    var  $doitac_email;
     var  $doitac_date;
     var  $doitac_sort;
     var  $doitac_active;
@@ -23,13 +23,13 @@ class doitac_class extends dbBasic {
         'doitac_id',
         'doitac_name',
         'doitac_viettat',
-        'doctac_daidien',
-        'doctac_mst',
-        'doctac_truso',
-        'doctac_vpgd',
-        'doctac_sdt',
-        'doctac_fax',
-        'doctac_email',
+        'doitac_daidien',
+        'doitac_mst',
+        'doitac_truso',
+        'doitac_vpgd',
+        'doitac_sdt',
+        'doitac_fax',
+        'doitac_email',
         'doitac_date',
         'doitac_sort',
         'doitac_active'); //table private fields

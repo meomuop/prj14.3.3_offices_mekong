@@ -13,291 +13,255 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
 }
 </style>
 {/literal}
-<div id="doc_content_insign">
-	<form method="post" name="frmList_Doc" action="?listDoc{$vars.arg}" id="frmList_Doc">
+<div id="hdmua_content_insign">
+	<form method="post" name="frmList_Hdmua" action="?listHdmua{$vars.arg}" id="frmList_Hdmua">
     <!------------------------------------------THEM MOI------------------------------------>
     <fieldset style="width:1012px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px">
         <legend class="legend_list_search">
             Thêm/Chỉnh sửa&nbsp;|&nbsp;Thông báo:&nbsp;
             <span id="mess_doc" class="msg">{$error}{$complete}</span>
-            <span id="lblError_Doc" class="error">(*) là các mục bắt buộc!</span>
+            <span id="lblError_Hdmua" class="error">(*) là các mục bắt buộc!</span>
         </legend>
     	<table width="98%" cellspacing="0" cellpadding="0" border="0" style="margin-left:5px">
         	<tr height="10"><td colspan="2"></td></tr>
             <tr height="30">
-            	<td align="center" width="30%" valign="top">
-                	<div style="float:left; width:30%; line-height:25px; text-align:left">Nhà cung cấp:</div>
-                    <div style="float:left; width:70%; line-height:25px; text-align:left">
-                        <select name="docLevel_id" id="docLevel_id" class="select_middle" tabindex="1">
-                            <option value="0">Chọn đối tác</option>
-                            {section name=qi loop=$obj_list_doitac}
-                            <option value="{$obj_list_doitac[qi]->docLevel_id}" {if $obj_list_doitac[qi]->docLevel_id eq $obj_info.docLevel_id}selected="selected"{/if}>-&nbsp;{$obj_list_doitac[qi]->docLevel_name}</option>
-                            {/section}
-                        </select>
+            	<td align="center" width="35%" valign="top">
+                    <div style="float:left; width:40%; line-height:25px; text-align:left">Số hợp đồng <font color="#FF0000">*</font>:</div>
+                    <div style="float:left; width:60%; line-height:25px; text-align:left">
+                        <input type="text" id="hdmua_sohd" name="hdmua_sohd" class="text_short" value="{$obj_info.hdmua_sohd}" tabindex="1" onfocus="hide_message_Hdmua();"/>
+                    </div>
+                    <div style="float:left; width:40%; line-height:25px; text-align:left">Ngày ký <font color="#FF0000">*</font>:</div>
+                    <div style="float:left; width:60%; line-height:25px; text-align:left">
+                        <input type="text" name="hdmua_hieuluc" id="hdmua_hieuluc" class="text_time_callender" value="{$obj_info.hdmua_hieuluc|date_format:'%d/%m/%Y'}" tabindex="2" onfocus="hide_message_Hdmua();"/>&nbsp;<img src="../images/admin/img.gif"  align="absmiddle" id="date_hdmua_hieuluc" style="cursor: pointer; border: 0" title="Chọn ngày trên lịch"/>
                         {literal}
                             <script type="text/javascript">
-                                $("#docLevel_id").change(function(){
-                                    $("#doc_num_div").load("B_num_auto.php", {docLevel_id: $("#docLevel_id").val()});
+                                Calendar.setup({
+                                    inputField   :   "hdmua_hieuluc",
+                                    ifFormat     :   "%d/%m/%Y",
+                                    button       :   "date_hdmua_hieuluc",
+                                    align        :   "Br",
+                                    timeFormat   :   "24",
+                                    showsTime    :   true,
+                                    singleClick  :   true
                                 });
                             </script>
                         {/literal}
                     </div>
-                    <div style="float:left; width:30%; line-height:25px; text-align:left">Nơi gửi đến <font color="#FF0000">*</font>:</div>
-                    <div style="float:left; width:70%; line-height:25px; text-align:left">
-                    	<input type="text" value="{$obj_info.unit_name}" id="unit_name" name="unit_name" class="text_middle" tabindex="2" onfocus="hide_message_Doc();"/>
+                    <div style="float:left; width:40%; line-height:25px; text-align:left">Ngày hiệu lực <font color="#FF0000">*</font>:</div>
+                    <div style="float:left; width:60%; line-height:25px; text-align:left">
+                        <input type="text" name="hdmua_hieuluc" id="hdmua_hieuluc" class="text_time_callender" value="{$obj_info.hdmua_hieuluc|date_format:'%d/%m/%Y'}" tabindex="3" onfocus="hide_message_Hdmua();"/>&nbsp;<img src="../images/admin/img.gif"  align="absmiddle" id="date_hdmua_hieuluc" style="cursor: pointer; border: 0" title="Chọn ngày trên lịch"/>
                         {literal}
-						<script type="text/javascript">
-                        $().ready(function() {
-                            $("#unit_name").autocomplete("B_unit_auto.php", {
-                                width: 160,
-                                matchContains: true,
-                                selectFirst: true
+                            <script type="text/javascript">
+                                Calendar.setup({
+                                    inputField   :   "hdmua_hieuluc",
+                                    ifFormat     :   "%d/%m/%Y",
+                                    button       :   "date_hdmua_hieuluc",
+                                    align        :   "Br",
+                                    timeFormat   :   "24",
+                                    showsTime    :   true,
+                                    singleClick  :   true
+                                });
+                            </script>
+                        {/literal}
+                    </div>
+                	<div style="float:left; width:40%; line-height:25px; text-align:left">Nhà cung cấp:</div>
+                    <div style="float:left; width:60%; line-height:25px; text-align:left">
+                        <select name="doitac_id" id="doitac_id" class="select_middle" tabindex="4">
+                            <option value="0">Chọn đối tác</option>
+                            {section name=qi loop=$obj_list_doitac}
+                            <option value="{$obj_list_doitac[qi]->doitac_id}" {if $obj_list_doitac[qi]->doitac_id eq $obj_info.doitac_id}selected="selected"{/if}>-&nbsp;{$obj_list_doitac[qi]->doitac_name}</option>
+                            {/section}
+                        </select>
+                    </div>
+                    <div style="float:left; width:40%; line-height:25px; text-align:left">Thời gian thực hiện <font color="#FF0000">*</font>:</div>
+                    <div style="float:left; width:20%; line-height:25px; text-align:left">
+                    	<input type="text" value="{$obj_info.hdmua_tgth}" id="hdmua_tgth" name="hdmua_tgth" class="text_tiny" tabindex="5"/>
+                    </div>
+                    <div style="float:left; width:40%; line-height:25px; text-align:left">
+                        <select name="hdmua_kieu_tgth" id="hdmua_kieu_tgth" class="select_short" tabindex="6">
+                            <option value="1" {if $obj_info.hdmua_kieu_tgth eq 1}selected="selected"{/if}>-&nbsp;Ngày</option>
+                            <option value="2" {if $obj_info.hdmua_kieu_tgth eq 2}selected="selected"{/if}>-&nbsp;Tháng</option>
+                            <option value="3" {if $obj_info.hdmua_kieu_tgth eq 3}selected="selected"{/if}>-&nbsp;Năm</option>
+                        </select>
+                    </div>
+
+                    <div style="float:left; width:40%; line-height:25px; text-align:left">Phòng/ban phụ trách:</div>
+                    <div style="float:left; width:60%; line-height:25px; text-align:left">
+                        <select name="department_id" id="department_id" class="select_middle" tabindex="10">
+                            <option value="0">Chọn phòng/ban</option>
+                            {section name=qi loop=$obj_list_department}
+                                <option value="{$obj_list_department[qi]->department_id}" {if $obj_list_department[qi]->department_id eq $obj_info.department_id}selected="selected"{/if}>-&nbsp;{$obj_list_department[qi]->department_name}</option>
+                            {/section}
+                        </select>
+                        {literal}
+                        <script type="text/javascript">
+                            $("#department_id").change(function(){
+                                alert($("#department_id").val());
+                                $("#div_hdmua_user_id").load('index.php?listUserSelect&mod=users&department_id='+$("#department_id").val());
                             });
-                        });
                         </script>
                         {/literal}
                     </div>
-                    <div style="float:left; width:30%; line-height:25px; text-align:left">Số ký hiệu <font color="#FF0000">*</font>:</div>
-                    <div style="float:left; width:70%; line-height:25px; text-align:left">
-                    	<input type="text" id="doc_code" name="doc_code" class="text_middle" value="{$obj_info.doc_code}" tabindex="3" onfocus="hide_message_Doc();"/>
+                    <div style="float:left; width:40%; line-height:25px; text-align:left">Người phụ trách:</div>
+                    <div style="float:left; width:60%; line-height:25px; text-align:left" id="div_hdmua_user_id">
+                        <select name="user_id" id="user_id" class="select_middle" tabindex="11">
+                            <option value="0">Chọn nhân viên</option>
+                            {if $obj_info.user_id}
+                                {section name=qi loop=$obj_list_user}
+                                    {if $obj_list_user[qi]->user_id eq $obj_info.user_id}
+                                        <option value="{$obj_list_user[qi]->user_id}" selected="selected">-&nbsp;{$obj_list_user[qi]->user_name}</option>
+                                    {/if}
+                                {/section}
+                            {/if}
+                        </select>
                     </div>
-                    <div style="float:left; width:30%; line-height:25px; text-align:left">Ngày ký <font color="#FF0000">*</font>:</div>
-                    <div style="float:left; width:70%; line-height:25px; text-align:left">
-                    	<input type="text" name="doc_signed" id="doc_signed" class="text_time_callender" value="{$obj_info.doc_signed|date_format:'%d/%m/%Y'}" tabindex="4" onfocus="hide_message_Doc();"/>&nbsp;<img src="../images/admin/img.gif"  align="absmiddle" id="date_doc_signed" style="cursor: pointer; border: 0" title="Chọn ngày trên lịch"/>
+
+                    <div style="float:left; width:40%; line-height:25px; text-align:left">Tình trạng HĐ <font color="#FF0000">*</font>:</div>
+                    <div style="float:left; width:45%; line-height:25px; text-align:left">
+                        <select name="hdmua_tinhtrang" id="hdmua_tinhtrang" class="select_middle" tabindex="12">
+                            <option value="1" {if $obj_info.hdmua_tinhtrang eq 1}selected="selected"{/if}>-&nbsp;Hợp đồng mới</option>
+                            <option value="2" {if $obj_info.hdmua_tinhtrang eq 2}selected="selected"{/if}>-&nbsp;Đang thực hiện</option>
+                            <option value="3" {if $obj_info.hdmua_tinhtrang eq 3}selected="selected"{/if}>-&nbsp;Đã hoàn thành</option>
+                            <option value="4" {if $obj_info.hdmua_tinhtrang eq 4}selected="selected"{/if}>-&nbsp;Đã hủy</option>
+                        </select>
+                    </div>
+
+                    <div style="float:left; width:40%; line-height:25px; text-align:left">
+                    	&nbsp;<b>(Người nhập: {$access_user_name})</b>
+                    </div>
+                    <div style="float:left; width:60%; line-height:25px; text-align:left">
+                        <input type="button" name="btnSub_Hdmua" id="btnSub_Hdmua" value="Ghi lại" class="button" tabindex="14"/>
+                        <input type="hidden" name="hdmua_id" id="hdmua_id" value="{$obj_info.hdmua_id}">
+                        <input type="hidden" name="hdmua_file" id="hdmua_file" value="{$obj_info.hdmua_file}">
+                        <input type="reset" name="Reset" value="Hủy bỏ" class="button" tabindex="15"/>
                         {literal}
-						<script type="text/javascript">
-                            Calendar.setup({
-                                inputField   :   "doc_signed",
-                                ifFormat     :   "%d/%m/%Y",
-                                button       :   "date_doc_signed",
-                                align        :   "Br",  
-                                timeFormat   :   "24",
-                                showsTime    :   true,
-                                singleClick  :   true
-                            });
-                        </script>
+                            <script language="javascript">
+                                function hide_message_Hdmua(){
+                                    $('#lblMessage_Hdmua').hide();
+                                    $('#lblError_Hdmua').hide();
+                                    $('#mess_doc').hide();
+                                }
+
+                                $(function() {
+                                    $('.error').hide();
+                                    $('#lblMessage_Hdmua').hide();
+
+                                    $("#btnSub_Hdmua").click(function() {
+
+                                        $('.error').hide();
+
+                                        var $form = $("#frmList_Hdmua");
+
+                                        var hdmua_sohd = $form.find('input#hdmua_sohd').val();
+                                        var hdmua_ngayhd = $form.find('input#hdmua_ngayhd').val();
+                                        var hdmua_hieuluc = $form.find('input#hdmua_hieuluc').val();
+                                        var hdmua_noidung = $form.find('textarea#hdmua_noidung').val();
+                                        var hdmua_tgth = $form.find('input#hdmua_tgth').val();
+                                        var hdmua_kieu_tgth = $form.find('input#hdmua_kieu_tgth').val();
+                                        var hdmua_giatri = $form.find('input#hdmua_giatri').val();
+                                        var hdmua_giatri_quydoi = $form.find('input#hdmua_giatri_quydoi').val();
+                                        var hdmua_gttt = $form.find('input#hdmua_gttt').val();
+                                        var hdmua_gttt_quydoi = $form.find('input#hdmua_gttt_quydoi').val();
+                                        var hdmua_tl_huybo = $form.find('input#hdmua_tl_huybo').val();
+                                        var hdmua_lydo_huydo = $form.find('input#hdmua_lydo_huydo').val();
+                                        var hdmua_dieukhoankhac = $form.find('textarea#hdmua_dieukhoankhac').val();
+                                        var doitac_id = $form.find('select#doitac_id :selected').val();
+                                        var department_id = $form.find('select#department_id :selected').val();
+                                        var dvtiente_id = $form.find('select#dvtiente_id :selected').val();
+                                        var hdmua_tinhtrang = $form.find('select#hdmua_tinhtrang :selected').val();
+                                        var user_id = $form.find('input#user_id').val();
+                                        var hdmua_id = $form.find('input#hdmua_id').val();
+                                        var hdmua_nguoinhap = $form.find('input#hdmua_nguoinhap').val();
+                                        var hdmua_file = $form.find('input#hdmua_file').val();
+
+
+                                        //begin validate form
+                                        if (hdmua_sohd == "" || hdmua_ngayhd == "" || hdmua_noidung == "" || hdmua_giatri_quydoi == "" || hdmua_gttt_quydoi == "" || doitac_id == "" ){
+                                            $('#lblError_Hdmua').show();
+                                        }
+                                        else{
+                                            $.post('index.php?listHdmua&mod=hdmua&add_edit=1',
+                                                {
+                                                    hdmua_sohd:hdmua_sohd,
+                                                    hdmua_ngayhd:hdmua_ngayhd,
+                                                    hdmua_hieuluc:hdmua_hieuluc,
+                                                    hdmua_noidung:hdmua_noidung,
+                                                    hdmua_tgth:hdmua_tgth,
+                                                    hdmua_kieu_tgth:hdmua_kieu_tgth,
+                                                    hdmua_giatri:hdmua_giatri,
+                                                    hdmua_giatri_quydoi:hdmua_giatri_quydoi,
+                                                    hdmua_tl_huybo:hdmua_tl_huybo,
+                                                    hdmua_lydo_huydo:hdmua_lydo_huydo,
+                                                    hdmua_dieukhoankhac:hdmua_dieukhoankhac,
+                                                    doitac_id:doitac_id,
+                                                    department_id:department_id,
+                                                    dvtiente_id:dvtiente_id,
+                                                    hdmua_tinhtrang:hdmua_tinhtrang,
+                                                    user_id:user_id,
+                                                    hdmua_id:hdmua_id,
+                                                    hdmua_nguoinhap:hdmua_nguoinhap,
+                                                    hdmua_file:hdmua_file,
+                                                },
+                                                function(data){
+                                                    $('#hdmua_content_main').html(data);
+                                                    $("#hdmua_content_main").show();
+                                                }
+                                            );
+                                            return false;
+                                        }
+                                        //end form
+                                    });
+                                });
+                            </script>
                         {/literal}
-                    </div>
-                    <div style="float:left; width:30%; line-height:25px; text-align:left">Loại văn bản <font color="#FF0000">*</font>:</div>
-                    <div style="float:left; width:70%; line-height:25px; text-align:left">
-                    	<input type="text" value="{$obj_info.docCat_id}" id="docCat_id" name="docCat_id" class="text_middle" tabindex="5" onfocus="hide_message_Doc();"/>
-                        {literal}
-						<script type="text/javascript">
-                        $().ready(function() {
-                            $("#docCat_id").autocomplete("B_docCat_auto.php", {
-                                width: 160,
-                                matchContains: true,
-								selectFirst: true
-                            });
-                        });
-                        </script>
-                        {/literal}
-                    </div>
-                    <div style="float:left; width:30%; line-height:25px; text-align:left">Lĩnh vực:</div>
-                    <div style="float:left; width:70%; line-height:25px; text-align:left">
-                    	<input type="text" value="{$obj_info.docField_id}" id="docField_id" name="docField_id" class="text_middle" tabindex="6"/>
-                        {literal}
-						<script type="text/javascript">
-                        $().ready(function() {
-                            $("#docField_id").autocomplete("B_docField_auto.php", {
-                                width: 160,
-                                matchContains: true,
-								selectFirst: true
-                            });
-                        });
-                        </script>
-                        {/literal}
-                    </div>
-                    <div style="float:left; width:30%; line-height:25px; text-align:left">&nbsp;</div>
-                    <div style="float:left; width:70%; line-height:25px; text-align:left">
-                    	&nbsp;<b>(Người nhập văn bản: {$access_user_name})</b>
                     </div>
                 </td>
                 <td align="center" valign="top">
-                	<div style="float:left; width:10%; line-height:25px; text-align:left">Trích yếu <font color="#FF0000">*</font>:</div>
-                    <div style="float:left; width:90%; line-height:25px; text-align:left; height:75px">
-                    	<textarea spellcheck="false" name="doc_desc" id="doc_desc" cols="30" rows="5" class="text_area_long" onfocus="hide_message_Doc()" tabindex="7">{$obj_info.doc_desc}</textarea>
+                	<div style="float:left; width:15%; line-height:25px; text-align:left">Nội dung <font color="#FF0000">*</font>:</div>
+                    <div style="float:left; width:85%; line-height:25px; text-align:left; height:75px">
+                    	<textarea spellcheck="false" name="hdmua_noidung" id="hdmua_noidung" cols="30" rows="5" class="text_area_long" onfocus="hide_message_Hdmua()" tabindex="14">{$obj_info.hdmua_noidung}</textarea>
                     </div>
-                    <div style="float:left; width:10%; line-height:25px; text-align:left">Người ký <font color="#FF0000">*</font>:</div>
-                    <div style="float:left; width:30%; line-height:25px; text-align:left">
-                    	<input type="text" value="{$obj_info.signPer_id}" id="signPer_id" name="signPer_id" class="text_middle" tabindex="8" onfocus="hide_message_Doc();"/>
-                        {literal}
-						<script type="text/javascript">
-                        $().ready(function() {
-							$("#signPer_id").autocomplete("B_signPer_auto.php", {
-								width: 160,
-								matchContains: true,
-								selectFirst: true
-							});
-						});
-                        </script>
-                        {/literal}
-                    </div>
-                    <div style="float:left; width:10%; line-height:25px; text-align:left">Chức vụ <font color="#FF0000">*</font>:</div>
-                    <div style="float:left; width:50%; line-height:25px; text-align:left">
-                    	<input type="text" value="{$obj_info.signObj_id}" id="signObj_id" name="signObj_id" class="text_middle" tabindex="9" onfocus="hide_message_Doc();"/>
-                        {literal}
-						<script type="text/javascript">
-                        $().ready(function() {
-							$("#signObj_id").autocomplete("B_signObj_auto.php", {
-								width: 160,
-								matchContains: true,
-								selectFirst: true
-							});
-						});
-                        </script>
-                        {/literal}
-                    </div>
-                    <div style="float:left; width:10%; line-height:25px; text-align:left">Ngày nhận:</div>
-                    <div style="float:left; width:30%; line-height:25px; text-align:left">
-                    	<input type="text" value="{$smarty.now|date_format:'%d/%m/%Y'}" id="doc_recevied" name="doc_recevied" class="text_time_callender" tabindex="10"/>&nbsp;<img src="../images/admin/img.gif"  align="absmiddle" id="date_doc_recevied" style="cursor: pointer; border: 0" title="Chọn ngày trên lịch"/>
-                        {literal}
-						<script type="text/javascript">
-                            Calendar.setup({
-                                inputField   :   "doc_recevied",
-                                ifFormat     :   "%d/%m/%Y",
-                                button       :   "date_doc_recevied",
-                                align        :   "Br",  
-                                timeFormat   :   "24",
-                                showsTime    :   true,
-                                singleClick  :   true
-                            });
-                        </script>
-                        {/literal}
-                    </div>
-                    <div style="float:left; width:10%; line-height:25px; text-align:left">Số đến:</div>
-                    <div style="float:left; width:50%; line-height:25px; text-align:left">
-                        <div id="doc_num_div">
-                            <input type="text" id="doc_num" name="doc_num" class="text_tiny" value="" tabindex="11"/>
-                        </div>
-                    </div>
-                    <div style="float:left; width:10%; line-height:25px; text-align:left">Độ mật:</div>
-                    <div style="float:left; width:30%; line-height:25px; text-align:left">
-                    	<select name="secret_id" id="secret_id" class="select_short" tabindex="12">
-                            {section name=qi loop=$obj_list_secret}
-                            <option value="{$obj_list_secret[qi]->secret_id}" {if $obj_list_secret[qi]->secret_id eq $obj_info.secret_id}selected="selected"{/if}>-&nbsp;{$obj_list_secret[qi]->secret_name}</option>
+
+                    <div style="float:left; width:15%; line-height:25px; text-align:left">Tiền tệ:</div>
+                    <div style="float:left; width:24%; line-height:25px; text-align:left">
+                        <select name="dvtiente_id" id="dvtiente_id" class="select_short" tabindex="7">
+                            <option value="0">Chọn kiểu tiền</option>
+                            {section name=qi loop=$obj_list_dvtiente}
+                                <option value="{$obj_list_dvtiente[qi]->dvtiente_id}" {if $obj_list_dvtiente[qi]->dvtiente_id eq $obj_info.dvtiente_id}selected="selected"{/if}>-&nbsp;{$obj_list_dvtiente[qi]->dvtiente_unit}</option>
                             {/section}
                         </select>
                     </div>
-                    <div style="float:left; width:10%; line-height:25px; text-align:left">Độ khẩn:</div>
-                    <div style="float:left; width:50%; line-height:25px; text-align:left">
-                    	<select name="important_id" id="important_id" class="select_short" tabindex="13">
-                            {section name=qi loop=$obj_list_important}
-                            <option value="{$obj_list_important[qi]->important_id}" {if $obj_list_important[qi]->important_id eq $obj_info.important_id}selected="selected"{/if}>-&nbsp;{$obj_list_important[qi]->important_name}</option>
-                            {/section}
-                        </select>
+                    <div style="float:left; width:6%; line-height:25px; text-align:left">Giá trị:</div>
+                    <div style="float:left; width:23%; line-height:25px; text-align:left">
+                        <input type="text" value="{$obj_info.hdmua_giatri}" id="hdmua_giatri" name="hdmua_giatri" class="text_short" tabindex="8"/>
                     </div>
-                    <div style="float:left; width:100%; line-height:25px; text-align:left">
-                    	<input type="button" name="btnSub_Doc" id="btnSub_Doc" value="Ghi lại" class="button" tabindex="14"/>
-                        <input type="hidden" name="doc_id" id="doc_id" value="{$obj_info.doc_id}">
-                        <input type="hidden" name="doc_note" id="doc_note" value="{$obj_info.doc_note}">
-                        <input type="hidden" name="doc_note_code" id="doc_note_code" value="{$obj_info.doc_note_code}">
-                        <input type="hidden" name="doc_note_sign_date" id="doc_note_sign_date" value="{$obj_info.doc_note_sign_date}">
-                        <input type="hidden" name="doc_note_sign_per" id="doc_note_sign_per" value="{$obj_info.doc_note_sign_per}">
-                        <input type="hidden" name="doc_note_date" id="doc_note_date" value="{$obj_info.doc_note_date}">
-                        <input type="hidden" name="doc_moved" id="doc_moved" value="{$obj_info.doc_moved}">
-                        <input type="hidden" name="doc_date" id="doc_date" value="{$obj_info.doc_date}">
-                        <input type="hidden" name="doc_traned" id="doc_traned" value="{$obj_info.doc_traned}">
-                        <input type="hidden" name="doc_replied" id="doc_replied" value="{$obj_info.doc_replied}">
-                        <input type="hidden" name="doc_active" id="doc_active" value="{$obj_info.doc_active}">
-                        <input type="hidden" name="doc_file" id="doc_file" value="{$obj_info.doc_file}">
-                        <input type="hidden" name="user_id" id="user_id" value="{$obj_info.user_id}">
-                        <input type="hidden" name="input_per" id="input_per" value="{$obj_info.input_per}">
-                        <input type="hidden" name="doc_theodoi" id="doc_theodoi" value="{$obj_info.doc_theodoi}">
-                        <input type="reset" name="Reset" value="Hủy bỏ" class="button" tabindex="15"/>
-                        {literal}
-                        <script language="javascript">
-                            function hide_message_Doc(){
-                                $('#lblMessage_Doc').hide();
-                                $('#lblError_Doc').hide();
-								$('#mess_doc').hide();
-                            }
-                            
-                            $(function() {
-                            $('.error').hide();
-                            $('#lblMessage_Doc').hide();
-                             
-                            $("#btnSub_Doc").click(function() {
-								
-                                $('.error').hide();
-                                 
-                                var $form = $("#frmList_Doc");
-                                var docLevel_id = $form.find('select#docLevel_id :selected').val();
-								var unit_name = $form.find('input#unit_name').val();
-								var doc_code = $form.find('input#doc_code').val();
-								var doc_signed = $form.find('input#doc_signed').val();
-								var docCat_id = $form.find('input#docCat_id').val();
-								var docField_id = $form.find('input#docField_id').val();
-								var doc_desc = $form.find('textarea#doc_desc').val();
-								var signPer_id = $form.find('input#signPer_id').val();
-								var signObj_id = $form.find('input#signObj_id').val();
-								var doc_recevied = $form.find('input#doc_recevied').val();
-								var doc_num = $form.find('input#doc_num').val();
-								var secret_id = $form.find('select#secret_id :selected').val();
-								var important_id = $form.find('select#important_id :selected').val();
-								
-								var doc_id = $form.find('input#doc_id').val();
-                                var doc_note_code = $form.find('input#doc_note_code').val();
-								var doc_note_sign_date = $form.find('input#doc_note_sign_date').val();
-								var doc_note_sign_per = $form.find('input#doc_note_sign_per').val();
-								var doc_note_date = $form.find('input#doc_note_date').val();
-								var doc_moved = $form.find('input#doc_moved').val();
-								var doc_date = $form.find('input#doc_date').val();
-								var doc_traned = $form.find('input#doc_traned').val();
-								var doc_replied = $form.find('input#doc_replied').val();
-								var doc_active = $form.find('input#doc_active').val();
-								var doc_file = $form.find('input#doc_file').val();
-								var user_id = $form.find('input#user_id').val();
-								var input_per = $form.find('input#input_per').val();
-								var doc_theodoi = $form.find('input#doc_theodoi').val();
-								
-                                //begin validate form
-                                if (unit_name == "" || doc_code == "" || doc_signed == "" || docCat_id == "" || doc_desc == "" || signPer_id == "" || signObj_id == ""){
-                                    $('#lblError_Doc').show();
-                                }
-                                else{
-									$.post('index.php?listDoc&mod=docs&add_edit=1',
-										{
-											docLevel_id:docLevel_id,
-											unit_name:unit_name,
-											doc_code:doc_code,
-											doc_signed:doc_signed,
-											docField_id:docField_id,
-											docCat_id:docCat_id,
-											doc_desc:doc_desc,
-											signPer_id:signPer_id,
-											signObj_id:signObj_id,
-											doc_recevied:doc_recevied,
-											doc_num:doc_num,
-											secret_id:secret_id,
-											important_id:important_id,
-											doc_id:doc_id,
-											doc_note_code:doc_note_code,
-											doc_note_sign_date:doc_note_sign_date,
-											doc_note_sign_per:doc_note_sign_per,
-											doc_note_date:doc_note_date,
-											doc_moved:doc_moved,
-											doc_date:doc_date,
-											doc_traned:doc_traned,
-											doc_replied:doc_replied,
-											doc_active:doc_active,
-											doc_file:doc_file,
-											user_id:user_id,
-											input_per:input_per,
-											doc_theodoi:doc_theodoi,
-										},
-										function(data){
-											$('#doc_content_main').html(data);
-											$("#doc_content_main").show();
-										}
-									);
-                                    return false;
-                                }
-                                //end form
-                            });
-                        });
-                        </script>
-                        {/literal}
+                    <div style="float:left; width:16%; line-height:25px; text-align:left" title="Thanh toán hủy hợp đồng">GT quy đổi (VND):</div>
+                    <div style="float:left; width:16%; line-height:25px; text-align:left">
+                        <input type="text" value="{$obj_info.hdmua_giatri_quydoi}" id="hdmua_giatri_quydoi" name="hdmua_giatri_quydoi" class="text_short" tabindex="9"/>
+                    </div>
+
+                    <div style="float:left; width:15%; line-height:25px; text-align:left">GT thanh toán:</div>
+                    <div style="float:left; width:24%; line-height:25px; text-align:left">
+                        <input type="text" value="{$obj_info.hdmua_gttt}" id="hdmua_gttt" name="hdmua_gttt" class="text_short" tabindex="8"/>
+                    </div>
+                    <div style="float:left; width:18%; line-height:25px; text-align:left">GTTT quy đổi (VND):</div>
+                    <div style="float:left; width:40%; line-height:25px; text-align:left">
+                        <input type="text" value="{$obj_info.hdmua_gttt_quydoi}" id="hdmua_gttt_quydoi" name="hdmua_gttt_quydoi" class="text_short" tabindex="9"/>
+                    </div>
+
+
+                    <div style="float:left; width:15%; line-height:25px; text-align:left">Điều khoản khác:</div>
+                    <div style="float:left; width:85%; line-height:25px; text-align:left; height:75px">
+                        <textarea spellcheck="false" name="hdmua_dieukhoankhac" id="hdmua_dieukhoankhac" cols="30" rows="5" class="text_area_long" onfocus="hide_message_Hdmua()" tabindex="14">{$obj_info.hdmua_dieukhoankhac}</textarea>
+                    </div>
+
+                    <div style="float:left; width:15%; line-height:25px; text-align:left">TT hủy HĐ (VND):</div>
+                    <div style="float:left; width:24%; line-height:25px; text-align:left">
+                        <input type="text" value="{$obj_info.hdmua_tl_huybo}" id="hdmua_tl_huybo" name="hdmua_tl_huybo" class="text_short" tabindex="13"/>
+                    </div>
+                    <div style="float:left; width:6%; line-height:25px; text-align:left" title="Lý do hủy hợp đồng">Lý do:</div>
+                    <div style="float:left; width:44%; line-height:25px; text-align:left">
+                        <input type="text" value="{$obj_info.hdmua_giatri_quydoi}" id="hdmua_giatri_quydoi" name="hdmua_giatri_quydoi" class="text_long" tabindex="9"/>
                     </div>
                 </td>
             </tr>
@@ -312,7 +276,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                 <div style="float:left">
                     <div style="float:left; width:60px">- Trích yếu: </div>
                     <div style="float:left; width:300px">
-                    <input type="text" id="doc_desc_fs" name="doc_desc_fs" class="text_seek_long" value="{$vars.doc_desc_fs}"/>
+                    <input type="text" id="hdmua_noidung_fs" name="hdmua_noidung_fs" class="text_seek_long" value="{$vars.hdmua_noidung_fs}"/>
                     </div>
                     <input type="hidden" id="processurl" value="{$processurl}" />
                 </div>
@@ -323,15 +287,15 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                 <div style="float:left; width:100%; height:5px"></div>
                 <div style="float:left; width:60px; margin-bottom:5px">- Ký hiệu: </div>
                 <div style="float:left; width:80px; margin-bottom:5px">
-                <input type="text" id="doc_code_fs" name="doc_code_fs" class="text_seek_tiny" value="{$vars.doc_code_fs}" />
+                <input type="text" id="hdmua_code_fs" name="hdmua_code_fs" class="text_seek_tiny" value="{$vars.hdmua_code_fs}" />
                 </div>
                 <div style="float:left; width:79px; margin-bottom:5px">- Nơi gửi đến: </div>
                 <div style="float:left; width:155px; margin-bottom:5px">
-                <input type="text" value="{$vars.unit_name_fs}" id="unit_name_fs" name="unit_name_fs" class="text_seek_middle" />
+                <input type="text" value="{$vars.hdmua_tgth_fs}" id="hdmua_tgth_fs" name="hdmua_tgth_fs" class="text_seek_middle" />
                 {literal}
                 <script type="text/javascript">
                 $().ready(function() {
-                    $("#unit_name_fs").autocomplete("B_unit_auto.php", {
+                    $("#hdmua_tgth_fs").autocomplete("B_unit_auto.php", {
                         width: 160,
                         matchContains: true,
                         selectFirst: true
@@ -342,7 +306,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                 </div>
                 <div style="float:left; width:60px; margin-bottom:5px">- Số đến: </div>
                 <div style="float:left; width:80px; margin-bottom:5px">
-                <input type="text" id="doc_num_fs" name="doc_num_fs" class="text_seek_tiny" value="{$vars.doc_num_fs}" />
+                <input type="text" id="hdmua_num_fs" name="hdmua_num_fs" class="text_seek_tiny" value="{$vars.hdmua_num_fs}" />
                 </div>
                 <div style="float:left; width:79px; margin-bottom:5px">- Loại văn bản: </div>
                 <div style="float:left; width:155px; margin-bottom:5px">
@@ -362,7 +326,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                 
             </div>
             <div style="width:45px; float:left">
-                <input type="button" name="btnSeek" id="btnSeek" value="Tìm >>" class="button_seek" onclick="search_me_Doc()" />
+                <input type="button" name="btnSeek" id="btnSeek" value="Tìm >>" class="button_seek" onclick="search_me_Hdmua()" />
             </div>
             <!-----------------------------------------KET XUAT--------------------------------------->
             <div style="width:60px; float:left">&nbsp;|&nbsp;Kết xuất:&nbsp;</div>
@@ -410,11 +374,11 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                 
                 <div style="float:left; width:76px; margin-bottom:5px">- Nơi gửi đến: </div>
                 <div style="float:left; width:150px; margin-bottom:5px">
-                <input type="text" value="{$vars.unit_name_fil}" id="unit_name_fil" name="unit_name_fil" class="text_seek_middle" />
+                <input type="text" value="{$vars.hdmua_tgth_fil}" id="hdmua_tgth_fil" name="hdmua_tgth_fil" class="text_seek_middle" />
                 {literal}
                 <script type="text/javascript">
                 $().ready(function() {
-                    $("#unit_name_fil").autocomplete("B_unit_auto.php", {
+                    $("#hdmua_tgth_fil").autocomplete("B_unit_auto.php", {
                         width: 160,
                         matchContains: true,
                         selectFirst: true
@@ -442,11 +406,11 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
 
                 <div style="float:left; width:76px; margin-bottom:5px">- Lĩnh vực </div>
                 <div style="float:left; width:150px; margin-bottom:5px">
-                    <input type="text" value="{$obj_info.docField_id}" id="docField_id_fil" name="docField_id_fil" class="text_middle" tabindex="6"/>
+                    <input type="text" value="{$obj_info.dvtiente_id}" id="dvtiente_id_fil" name="dvtiente_id_fil" class="text_middle" tabindex="6"/>
                     {literal}
                         <script type="text/javascript">
                             $().ready(function() {
-                                $("#docField_id_fil").autocomplete("B_docField_auto.php", {
+                                $("#dvtiente_id_fil").autocomplete("B_docField_auto.php", {
                                     width: 160,
                                     matchContains: true,
                                     selectFirst: true
@@ -488,12 +452,12 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
             <div class="tbl_tit" style="width:40px; text-align:center"><B>File</B></div>
             <div class="tbl_tit" style="width:59px; text-align:center"><B>Chọn</B></div>
             <div class="tbl_tit" style="width:30px; text-align:center">
-            <input type="hidden" name="chon" id="chon_Doc">
-            <input type="checkbox" name="chkall" value="0" onclick="docheck_Doc(document.frmList_Doc.chkall.checked,0);">
+            <input type="hidden" name="chon" id="chon_Hdmua">
+            <input type="checkbox" name="chkall" value="0" onclick="docheck_Hdmua(document.frmList_Hdmua.chkall.checked,0);">
             </div>
         </div>
         <div style="float:left; width:20px; text-align:right">
-        <input type="button" name="del_Items" id='del_Items' value="&nbsp;" onClick="delItems_Doc('{$processurl}');" style="width:17px; font-size:12px; background:url(../images/admin/b_drop.png); cursor:pointer" title="Xóa lựa chọn">
+        <input type="button" name="del_Items" id='del_Items' value="&nbsp;" onClick="delItems_Hdmua('{$processurl}');" style="width:17px; font-size:12px; background:url(../images/admin/b_drop.png); cursor:pointer" title="Xóa lựa chọn">
         </div>
         <div style="float:left; height:190px; width:912px; overflow-y:scroll">
             {section name=pi loop=$obj_list}
@@ -506,14 +470,14 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
             <div style="float:left">
                 <div class="{$class_td}" style="width:40px; text-align:center">{$stt}</div>
                 <div class="{$class_td}" style="width:45px; text-align:right">
-                    &nbsp;{$obj_list[pi]->doc_num}&nbsp;
+                    &nbsp;{$obj_list[pi]->hdmua_num}&nbsp;
                 </div>
-                <div class="{$class_td}" style="width:75px; white-space:nowrap" title="{$obj_list[pi]->doc_code}">
-                    &nbsp;{$obj_list[pi]->doc_code|str_string_cut:"10":"1"}
+                <div class="{$class_td}" style="width:75px; white-space:nowrap" title="{$obj_list[pi]->hdmua_code}">
+                    &nbsp;{$obj_list[pi]->hdmua_code|str_string_cut:"10":"1"}
                 </div>
-                <div class="{$class_td}" style="width:279px" title="{$obj_list[pi]->doc_desc}">
+                <div class="{$class_td}" style="width:279px" title="{$obj_list[pi]->hdmua_noidung}">
                 	{math a=$smarty.section.pi.index b=1 equation="a+b" assign=count}
-                    <div style="float:left; width:254px; white-space:nowrap">&nbsp;<a href="javascript: void(0);" onclick="edit_me_Doc({$obj_list[pi]->doc_id})" >{$obj_list[pi]->doc_desc|str_string_cut:"63":"1"}</a></div>
+                    <div style="float:left; width:254px; white-space:nowrap">&nbsp;<a href="javascript: void(0);" onclick="edit_me_Hdmua({$obj_list[pi]->hdmua_id})" >{$obj_list[pi]->hdmua_noidung|str_string_cut:"63":"1"}</a></div>
                     <div style="float:right; margin:2px; border:1px solid #8ea4c1; height:18px; width:16px; text-align:center; background-color:#dfe8f6" title="Chức năng mở rộng">
                     {if $user_level eq 9 or $user_level eq 1}<a href='javascript: void(0);' onclick="show_list_options({$count},{$total_num_result})">
                     <img src="{$css_path}extra_icon.png" width="14" height="14" border="0" class="img_all"></a>{/if}
@@ -524,7 +488,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                         <div style="float:left; width:140px; padding:0 0 0 3px">
                             {section name=ui loop=$user_list_4}
                             {if $user_list_4[ui]->user_level eq 3}
-                                 <div style="float:left; width:135px">- <a href="javascript: void(0)" onclick="javascript: show_phanloai({$obj_list[pi]->doc_id})">{$user_list_4[ui]->user_fullname}</a></div>
+                                 <div style="float:left; width:135px">- <a href="javascript: void(0)" onclick="javascript: show_phanloai({$obj_list[pi]->hdmua_id})">{$user_list_4[ui]->user_fullname}</a></div>
                             {/if}
                             {/section}
                         </div>
@@ -534,7 +498,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                         <div style="float:left; width:140px; padding:0 0 0 3px">
                             {section name=ui loop=$user_list_4}
                             {if $user_list_4[ui]->user_level neq 3}
-                            <div style="float:left; width:135px">- <a href="javascript: void(0)" onclick="javascript: show_list_reply({$user_list_4[ui]->user_id},{$obj_list[pi]->doc_id})">{$user_list_4[ui]->user_fullname}</a></div>
+                            <div style="float:left; width:135px">- <a href="javascript: void(0)" onclick="javascript: show_list_reply({$user_list_4[ui]->user_id},{$obj_list[pi]->hdmua_id})">{$user_list_4[ui]->user_fullname}</a></div>
                             {/if}
                             {/section}
                         </div>
@@ -545,20 +509,20 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                         </div>
                         {/if}
                         <div style="float:left; width:140px; padding:0 0 0 3px">
-                             - <a href="javascript: void(0)" onclick="javascript: show_thongtin_vanban({$obj_list[pi]->doc_id})">Thông tin văn bản</a>
+                             - <a href="javascript: void(0)" onclick="javascript: show_thongtin_vanban({$obj_list[pi]->hdmua_id})">Thông tin văn bản</a>
                         </div>
                     </div>
                 </div>
-                <div class="{$class_td}" style="width:130px" title="{$obj_list[pi]->unit_name}">
-                    &nbsp;{$obj_list[pi]->unit_name|str_string_cut:"25":"1"}
+                <div class="{$class_td}" style="width:130px" title="{$obj_list[pi]->hdmua_tgth}">
+                    &nbsp;{$obj_list[pi]->hdmua_tgth|str_string_cut:"25":"1"}
                 </div>
                 <div class="{$class_td}" style="width:60px">
-                    &nbsp;{$obj_list[pi]->doc_date|date_format:"%d/%m/%Y"}
+                    &nbsp;{$obj_list[pi]->hdmua_date|date_format:"%d/%m/%Y"}
                 </div>
                 <div class="{$class_td}" style="width:60px">
                     {php}
                         $songayqh = 0;
-                        $sql = "select * from tbl_docreplys where doc_id = ".$this->_tpl_vars['obj_list'][$this->_sections['pi']['index']]->doc_id." order by docReply_id asc limit 1";
+                        $sql = "select * from tbl_docreplys where hdmua_id = ".$this->_tpl_vars['obj_list'][$this->_sections['pi']['index']]->hdmua_id." order by docReply_id asc limit 1";
                         $result = mysql_query($sql) or die($sql);
                         if(mysql_num_rows($result)>0){
                             $row = mysql_fetch_array($result);
@@ -577,40 +541,40 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                     {php}if($songayqh>0) echo $songayqh.' ngày';{/php}&nbsp;
                 </div>
                 <div class="{$class_td}" style="width:40px; text-align:center">
-                    {if $obj_list[pi]->doc_file eq 2}
-                    <a href='javascript: void(0);' onclick="show_list_file({$obj_list[pi]->doc_id})">
+                    {if $obj_list[pi]->hdmua_file eq 2}
+                    <a href='javascript: void(0);' onclick="show_list_file({$obj_list[pi]->hdmua_id})">
                     <img src="../images/admin/empty_icon.png" width="14" height="14" border="0"></a>
                     {else}
-                    <a href='javascript: void(0);' onclick="show_list_file({$obj_list[pi]->doc_id})">
+                    <a href='javascript: void(0);' onclick="show_list_file({$obj_list[pi]->hdmua_id})">
                     <img src="../images/admin/folder_icon.png" width="14" height="14" border="0"></a>
                     {/if}
                 </div>
                 <div class="{$class_td}" style="width:29px; text-align:center">
-                    <a href='javascript: void(0);' onclick="edit_me_Doc({$obj_list[pi]->doc_id})">
+                    <a href='javascript: void(0);' onclick="edit_me_Hdmua({$obj_list[pi]->hdmua_id})">
                     <img src="../images/admin/b_edit.png" width="11" height="11" border="0" title="Sửa"></a>
                 </div>
                 <div class="{$class_td}" style="width:29px; text-align:center">
-                    <a href='javascript: void(0)' onClick="delItems_Doc('{$processurl}', {$obj_list[pi]->doc_id});">
+                    <a href='javascript: void(0)' onClick="delItems_Hdmua('{$processurl}', {$obj_list[pi]->hdmua_id});">
                     <img src="../images/admin/b_drop.png" width="11" height="11" border="0" title="Xóa"></a>
                 </div>
                 <div class="{$class_td}" style="width:30px; text-align:center">
-                    <input type="checkbox" name="chkid" value="{$obj_list[pi]->doc_id}" onclick="docheckone_Doc();">
+                    <input type="checkbox" name="chkid" value="{$obj_list[pi]->hdmua_id}" onclick="docheckone_Hdmua();">
                 </div>
             </div>
             {/section}
         </div>
-        <input type="hidden" id="curpage_Doc" name="curpage" value="{$vars.curpage}" />
+        <input type="hidden" id="curpage_Hdmua" name="curpage" value="{$vars.curpage}" />
         <input type="hidden" name="arg" id="arg" value="{$vars.arg}">
         <input type="hidden" name="arg_doc" id="arg_doc" value="{$vars.arg_doc}">
     </fieldset>
     </form>
 </div>
 <!------------------------------------------------- Tool bar --------------------------------------------->
-<div id="doc_clear_txt"></div>
-<div id="doc_tool_bar">
+<div id="hdmua_clear_txt"></div>
+<div id="hdmua_tool_bar">
 
-    <div id="doc_search_area">
-    <select name="order" id = "order_Doc" style="width:120px; font-size:12px; border:1px solid #99bbe8; margin-left:1px" onchange="reloadPage_Doc('{$processurl}');">
+    <div id="hdmua_search_area">
+    <select name="order" id = "order_Hdmua" style="width:120px; font-size:12px; border:1px solid #99bbe8; margin-left:1px" onchange="reloadPage_Hdmua('{$processurl}');">
     {section name=sli loop=$order_arr}
         <option value="{$smarty.section.sli.index}" {if $smarty.section.sli.index eq $vars.order}selected{/if} >
         {$order_arr[sli]}
@@ -620,15 +584,15 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
     </div>
     
     <div style="float:left; width:12px; background-image:url({$css_path}gach_doc.png)">&nbsp;</div>
-    <div id="doc_page_area">
+    <div id="hdmua_page_area">
     {if $vars.curpage eq 1}
     	<img src="{$css_path}icon_first_page.png" class="img_all">
     	<img src="{$css_path}icon_pre_page.png" class="img_all">
     {else}
-    <a href="javascript: void(0)" id="first_page" onclick="gotoPage_Doc('{$processurl}',parseInt(1));" title="Trang đầu">
+    <a href="javascript: void(0)" id="first_page" onclick="gotoPage_Hdmua('{$processurl}',parseInt(1));" title="Trang đầu">
     	<img src="{$css_path}icon_first_page.png" class="img_all">
     </a>
-    <a href="javascript: void(0)" id="pre_page" onclick="gotoPage_Doc('{$processurl}',parseInt(document.getElementById('page_Doc').value)-parseInt(1));" title="Trang trước">
+    <a href="javascript: void(0)" id="pre_page" onclick="gotoPage_Hdmua('{$processurl}',parseInt(document.getElementById('page_Hdmua').value)-parseInt(1));" title="Trang trước">
     	<img src="{$css_path}icon_pre_page.png" class="img_all">
     </a>
     {/if}
@@ -636,19 +600,19 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
     <div style="float:left; line-height:19px">
         <div style="float:left; width:35px">Trang</div> 
         <div style="float:left; width:35px">
-        <input type="text" value="{$vars.curpage}" name="page" id="page_Doc" onblur=" gotoPage_Doc('{$processurl}',this.value);" style="width:30px; font-size:12px; height:15px; border:1px solid #99bbe8">
+        <input type="text" value="{$vars.curpage}" name="page" id="page_Hdmua" onblur=" gotoPage_Hdmua('{$processurl}',this.value);" style="width:30px; font-size:12px; height:15px; border:1px solid #99bbe8">
         </div>
         <div style="float:left; width:42px"> / {$num_page}</div>
     </div>
-    <div id="doc_page_area">
+    <div id="hdmua_page_area">
     {if $vars.curpage eq $num_page}
     	<img src="{$css_path}icon_next_page.png" class="img_all">
         <img src="{$css_path}icon_last_page.png" class="img_all">
     {else}
-    <a href="javascript: void(0)" id="next_page" onclick="gotoPage_Doc('{$processurl}',parseInt(document.getElementById('page_Doc').value)+parseInt(1));" title="Trang tiếp">
+    <a href="javascript: void(0)" id="next_page" onclick="gotoPage_Hdmua('{$processurl}',parseInt(document.getElementById('page_Hdmua').value)+parseInt(1));" title="Trang tiếp">
     	<img src="{$css_path}icon_next_page.png" class="img_all">
     </a>
-    <a href="javascript: void(0)" id="last_page" onclick="gotoPage_Doc('{$processurl}',parseInt({$num_page}));" title="Trang cuối">
+    <a href="javascript: void(0)" id="last_page" onclick="gotoPage_Hdmua('{$processurl}',parseInt({$num_page}));" title="Trang cuối">
     	<img src="{$css_path}icon_last_page.png" class="img_all">
     </a>
     {/if}
@@ -656,14 +620,14 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
     
     <div style="float:left; width:12px; background-image:url({$css_path}gach_doc.png)">&nbsp;</div>
     <div style="float:left; width:15px">
-    <a href="javascript: void(0)" id="a_ref_Doc" title="Tải lại"><img src="{$css_path}icon_refresh.png" class="img_all"></a>
+    <a href="javascript: void(0)" id="a_ref_Hdmua" title="Tải lại"><img src="{$css_path}icon_refresh.png" class="img_all"></a>
     </div>
     
     <div style="float:left; width:12px; background-image:url({$css_path}gach_doc.png)">&nbsp;</div>
     <div style="float:right; line-height:19px; margin-right:2px">
         <div style="float:left; width:40px">Xem</div>
         <div style="float:left; width:52px">
-            <select name="numresult" id="numresult_Doc" style="width:50px; font-size:12px; border:1px solid #99bbe8" onchange="reloadPage_Doc('{$processurl}');">
+            <select name="numresult" id="numresult_Hdmua" style="width:50px; font-size:12px; border:1px solid #99bbe8" onchange="reloadPage_Hdmua('{$processurl}');">
                 {section name=sli loop=$nrs_arr}
                 <option value="{$nrs_arr[sli]}" {if $nrs_arr[sli] eq $vars.numresult}selected{/if}>{$nrs_arr[sli]} </option>
                 {/section}
@@ -699,53 +663,53 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
 		else document.getElementById('div_filter').style.display='none';
 	}
 	
-	function docheck_Doc(status,from_){
-		var alen=document.frmList_Doc.elements.length;
-		alen=(alen>5)?document.frmList_Doc.chkid.length:0;
+	function docheck_Hdmua(status,from_){
+		var alen=document.frmList_Hdmua.elements.length;
+		alen=(alen>5)?document.frmList_Hdmua.chkid.length:0;
 		if (alen>0){
 			for(var i=0;i<alen;i++)
-			document.frmList_Doc.chkid[i].checked=status;
+			document.frmList_Hdmua.chkid[i].checked=status;
 		}
 		else{
-			document.frmList_Doc.chkid.checked=status;
+			document.frmList_Hdmua.chkid.checked=status;
 		}
-		if(from_>0) document.frmList_Doc.chkall.checked=status;
+		if(from_>0) document.frmList_Hdmua.chkall.checked=status;
 	}
 		
-	function docheckone_Doc(){
-		var alen=document.frmList_Doc.elements.length;
+	function docheckone_Hdmua(){
+		var alen=document.frmList_Hdmua.elements.length;
 		var isChecked=true;
-		alen=(alen>4)?document.frmList_Doc.chkid.length:0;
+		alen=(alen>4)?document.frmList_Hdmua.chkid.length:0;
 		if (alen>0){
 			for(var i=0;i<alen;i++)
-				if(document.frmList_Doc.chkid[i].checked==false)
+				if(document.frmList_Hdmua.chkid[i].checked==false)
 					isChecked=false;
 		}else{
-			if(document.frmList_Doc.chkid.checked==false)
+			if(document.frmList_Hdmua.chkid.checked==false)
 				isChecked=false;
 		}				
-		document.frmList_Doc.chkall.checked=isChecked;
+		document.frmList_Hdmua.chkall.checked=isChecked;
 	}
 	
-	function calculatechon_Doc(){			
+	function calculatechon_Hdmua(){			
 		var strchon="";
-		var alen=document.frmList_Doc.elements.length;				
-		alen=(alen>2)?document.frmList_Doc.chkid.length:0;
+		var alen=document.frmList_Hdmua.elements.length;				
+		alen=(alen>2)?document.frmList_Hdmua.chkid.length:0;
 		if (alen>0){
 			for(var i=0;i<alen;i++)
-				if(document.frmList_Doc.chkid[i].checked==true)
-					strchon+=document.frmList_Doc.chkid[i].value+",";
+				if(document.frmList_Hdmua.chkid[i].checked==true)
+					strchon+=document.frmList_Hdmua.chkid[i].value+",";
 		}else{
-			if(document.frmList_Doc.chkid.checked==true)
-				strchon=document.frmList_Doc.chkid.value;
+			if(document.frmList_Hdmua.chkid.checked==true)
+				strchon=document.frmList_Hdmua.chkid.value;
 		}
-		document.frmList_Doc.chon_Doc.value=strchon;
+		document.frmList_Hdmua.chon_Hdmua.value=strchon;
 	}
 	
-	function delItems_Doc(processurl,delStr){
+	function delItems_Hdmua(processurl,delStr){
 		if (delStr == undefined){
-			calculatechon_Doc();
-			delStr = document.getElementById("chon_Doc").value;
+			calculatechon_Hdmua();
+			delStr = document.getElementById("chon_Hdmua").value;
 		}
 		if (delStr == ""){
 			return false;
@@ -754,10 +718,10 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
 			return false;
 		}	
 		
-		var numresult_Doc,order_Doc,curpage_Doc;
-		numresult = $("#numresult_Doc").val();
-		order = $("#order_Doc").val();
-		curpage = $("#curpage_Doc").val();
+		var numresult_Hdmua,order_Hdmua,curpage_Hdmua;
+		numresult = $("#numresult_Hdmua").val();
+		order = $("#order_Hdmua").val();
+		curpage = $("#curpage_Hdmua").val();
 		
 		var dataString  = "numresult=" + numresult;
 			dataString += "&order=" + order;
@@ -769,80 +733,80 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
 			url: processurl,
 			data: dataString,
 			success: function(data) {
-				$('#doc_content_main').fadeOut('fast').load(processurl+"&numresult="+numresult+"&order="+order+"&curpage="+curpage).fadeIn("fast");
+				$('#hdmua_content_main').fadeOut('fast').load(processurl+"&numresult="+numresult+"&order="+order+"&curpage="+curpage).fadeIn("fast");
 			}
 		});
 	}
 	
-	function reloadPage_Doc(processurl){
-		var numresult_Doc,order_Doc,cur_pos;
-		numresult = $("#numresult_Doc").val();
-		order = $("#order_Doc").val();
+	function reloadPage_Hdmua(processurl){
+		var numresult_Hdmua,order_Hdmua,cur_pos;
+		numresult = $("#numresult_Hdmua").val();
+		order = $("#order_Hdmua").val();
 		cur_pos = 0;
-		$("#doc_content_main").load(processurl+"&numresult="+numresult+"&order="+order+"&cur_pos="+cur_pos);
+		$("#hdmua_content_main").load(processurl+"&numresult="+numresult+"&order="+order+"&cur_pos="+cur_pos);
 	}
 	
-	function show_list_file(doc_id){
+	function show_list_file(hdmua_id){
 		var arg_doc = document.getElementById('arg_doc').value;
 		document.getElementById('list_file').style.display='block';
-		$("#list_file_cont").load("?listDocFile&mod=docs"+arg_doc+"&doc_id="+doc_id);
+		$("#list_file_cont").load("?listHdmuaFile&mod=hdmua"+arg_doc+"&hdmua_id="+hdmua_id);
 	}
 	
-	function show_list_reply(user_id,doc_id){
+	function show_list_reply(user_id,hdmua_id){
 		document.getElementById('list_reply').style.display='block';
 		var arg = document.getElementById('arg').value;
-		$("#list_reply_cont").load("?listDocReply"+arg+"&doc_id="+doc_id+"&user_id="+user_id);
+		$("#list_reply_cont").load("?listHdmuaReply"+arg+"&hdmua_id="+hdmua_id+"&user_id="+user_id);
 	}
 	
-	function show_phanloai(doc_id){
+	function show_phanloai(hdmua_id){
 		document.getElementById('list_phanloai').style.display='block';
 		var arg = document.getElementById('arg').value;
-		$("#list_phanloai_cont").load("?Phanloai&"+arg+"&doc_id="+doc_id);
+		$("#list_phanloai_cont").load("?Phanloai&"+arg+"&hdmua_id="+hdmua_id);
 	}
 	
-	function show_thongtin_vanban(doc_id){
+	function show_thongtin_vanban(hdmua_id){
 		document.getElementById('div_view_doc').style.display='block';
-		$("#list_view_doc_cont").load("?viewDoc&mod=docs&doc_id="+doc_id);
+		$("#list_view_hdmua_cont").load("?viewHdmua&mod=hdmua&hdmua_id="+hdmua_id);
 	}
 		
-	function gotoPage_Doc(processurl,page){
-		var numresult_Doc,order_Doc,cur_pos;
-		numresult = $("#numresult_Doc").val();
-		order = $("#order_Doc").val();
+	function gotoPage_Hdmua(processurl,page){
+		var numresult_Hdmua,order_Hdmua,cur_pos;
+		numresult = $("#numresult_Hdmua").val();
+		order = $("#order_Hdmua").val();
 		//alert(processurl+'-'+page+'-'+numresult+'-'+order);
-		$("#doc_content_main").load(processurl+"&numresult="+numresult+"&order="+order+"&curpage="+page);
+		$("#hdmua_content_main").load(processurl+"&numresult="+numresult+"&order="+order+"&curpage="+page);
 	}
 	
-	function uncheck_fns_Doc(field,val,id){
-		$("#doc_content_main").load("?listDoc&mod=docs&checkUncheck="+val+"&setfield="+field+"&checkUncheckID="+id);
+	function uncheck_fns_Hdmua(field,val,id){
+		$("#hdmua_content_main").load("?listHdmua&mod=hdmua&checkUncheck="+val+"&setfield="+field+"&checkUncheckID="+id);
 	}
 	
-	function sort_me_Doc(id,val){
-		$("#doc_content_main").load("?listDoc&mod=docs&sort_me=1&doc_id="+id+"&val="+val);
+	function sort_me_Hdmua(id,val){
+		$("#hdmua_content_main").load("?listHdmua&mod=hdmua&sort_me=1&hdmua_id="+id+"&val="+val);
 	}
 	
-	function search_me_Doc(){
-		var doc_desc_fs 	= document.getElementById('doc_desc_fs').value;
-		var doc_code_fs 	= document.getElementById('doc_code_fs').value;
-		var doc_num_fs 		= document.getElementById('doc_num_fs').value;
-		var unit_name_fs 	= document.getElementById('unit_name_fs').value;
+	function search_me_Hdmua(){
+		var hdmua_noidung_fs 	= document.getElementById('hdmua_noidung_fs').value;
+		var hdmua_code_fs 	= document.getElementById('hdmua_code_fs').value;
+		var hdmua_num_fs 		= document.getElementById('hdmua_num_fs').value;
+		var hdmua_tgth_fs 	= document.getElementById('hdmua_tgth_fs').value;
 		var docCat_id_fs 	= document.getElementById('docCat_id_fs').value;
 		
-		if (doc_desc_fs == "" && doc_code_fs == "" && doc_num_fs == "" && unit_name_fs == "" && docCat_id_fs == ""){
+		if (hdmua_noidung_fs == "" && hdmua_code_fs == "" && hdmua_num_fs == "" && hdmua_tgth_fs == "" && docCat_id_fs == ""){
 			return false;
 		}
 		
-		$.post('?listDoc&mod=docs&search_me=1',
+		$.post('?listHdmua&mod=hdmua&search_me=1',
 			{
-				doc_desc_fs:doc_desc_fs,
-				doc_code_fs:doc_code_fs,
-				doc_num_fs:doc_num_fs,
-				unit_name_fs:unit_name_fs,
+				hdmua_noidung_fs:hdmua_noidung_fs,
+				hdmua_code_fs:hdmua_code_fs,
+				hdmua_num_fs:hdmua_num_fs,
+				hdmua_tgth_fs:hdmua_tgth_fs,
 				docCat_id_fs:docCat_id_fs
 			},
 			function(data){
-				$('#doc_content_main').html(data);
-				$("#doc_content_main").show();
+				$('#hdmua_content_main').html(data);
+				$("#hdmua_content_main").show();
 			}
 		);
 	}
@@ -860,9 +824,9 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
 		var soden_tu 	= document.getElementById('soden_tu').value;
 		var soden_den 	= document.getElementById('soden_den').value;
 		
-		var unit_name_fil 	= document.getElementById('unit_name_fil').value;
+		var hdmua_tgth_fil 	= document.getElementById('hdmua_tgth_fil').value;
 		var docCat_id_fil 	= document.getElementById('docCat_id_fil').value;
-        var docField_id_fil = document.getElementById('docField_id_fil').value;
+        var dvtiente_id_fil = document.getElementById('dvtiente_id_fil').value;
 		var department_fil 	= document.getElementById('department_fil').value;
         var tinhtrang_fil 	= document.getElementById('tinhtrang_fil').value;
 		
@@ -874,40 +838,40 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
 		}
 		
 		if(exptype==3){
-			document.getElementById('div_doc_report').style.display='block';
-			$.post('?expDocReport&mod=docs&exptype='+exptype,
+			document.getElementById('div_hdmua_report').style.display='block';
+			$.post('?expHdmuaReport&mod=hdmua&exptype='+exptype,
 				{
 					tungay:tungay,
 					denngay:denngay,
 					soden_tu:soden_tu,
 					soden_den:soden_den,
-					unit_name_fil:unit_name_fil,
+					hdmua_tgth_fil:hdmua_tgth_fil,
 					docCat_id_fil:docCat_id_fil,
-                    docField_id_fil:docField_id_fil,
+                    dvtiente_id_fil:dvtiente_id_fil,
                     tinhtrang_fil:tinhtrang_fil
 
 				},
 				function(data){
-					$('#doc_report_content_main').html(data);
-					$("#doc_report_content_main").show();
+					$('#hdmua_report_content_main').html(data);
+					$("#hdmua_report_content_main").show();
 				}
 			);
 			
-			$('#doc_content_main').hide();
-			$('#doc_content_main').fadeOut('fast').load('index.php?listDoc&mod=docs').fadeIn("fast");
-			//$('#doc_report_content_main').load("?expDocReport&mod=docs&exptype="+exptype+"&tungay="+tungay+"&denngay="+denngay);
+			$('#hdmua_content_main').hide();
+			$('#hdmua_content_main').fadeOut('fast').load('index.php?listHdmua&mod=hdmua').fadeIn("fast");
+			//$('#hdmua_report_content_main').load("?expHdmuaReport&mod=hdmua&exptype="+exptype+"&tungay="+tungay+"&denngay="+denngay);
 		}else{
-			window.location="?expDocReport&mod=docs&exptype="+exptype+"&tungay="+tungay+"&denngay="+denngay;
+			window.location="?expHdmuaReport&mod=hdmua&exptype="+exptype+"&tungay="+tungay+"&denngay="+denngay;
 		}
 	}
 	
-	function edit_me_Doc(id){
-		$("#doc_content_main").load("?listDoc&mod=docs&edit_me=1&doc_id="+id);
+	function edit_me_Hdmua(id){
+		$("#hdmua_content_main").load("?listHdmua&mod=hdmua&edit_me=1&hdmua_id="+id);
 	}
 		
-	$("#a_ref_Doc").click( function () { 
-			$('#doc_content_main').hide();
-			$('#doc_content_main').fadeOut('fast').load('index.php?listDoc&mod=docs').fadeIn("fast");
+	$("#a_ref_Hdmua").click( function () { 
+			$('#hdmua_content_main').hide();
+			$('#hdmua_content_main').fadeOut('fast').load('index.php?listHdmua&mod=hdmua').fadeIn("fast");
 		});
 </script>
 {/literal}

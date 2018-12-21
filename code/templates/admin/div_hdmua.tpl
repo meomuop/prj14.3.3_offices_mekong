@@ -179,9 +179,11 @@ function change_style_hdmua(obj){
                 <a href="javascript: void(0)" onclick="change_style_hdmua(1)" id="a_menu_hdmua_1">
                     <div class="c_menu_hdmua" id="c_menu_hdmua_1" style="width:95px; border-left:1px solid #99bbe8; border-bottom:1px solid #dfe8f6; background-color:#dfe8f6; height:25px; margin-top:0px">Họp đồng mua</div></a>
                 <a href="javascript: void(0)" onclick="change_style_hdmua(2)" id="a_menu_hdmua_2">
-                    <div class="c_menu_hdmua" id="c_menu_hdmua_2" style="width:70px;">Chứng từ</div></a>
-                <a href="javascript: void(0)" onclick="change_style_hdmua(10)" id="a_menu_hdmua_3">
-                    <div class="c_menu_hdmua" id="c_menu_hdmua_10" style="width:70px;">Tồn kho</div></a>
+                    <div class="c_menu_hdmua" id="c_menu_hdmua_2" style="width:65px;">Chứng từ</div></a>
+                <a href="javascript: void(0)" onclick="change_style_hdmua(3)" id="a_menu_hdmua_3">
+                    <div class="c_menu_hdmua" id="c_menu_hdmua_3" style="width:60px;">Tồn kho</div></a>
+                <a href="javascript: void(0)" onclick="change_style_hdmua(4)" id="a_menu_hdmua_4">
+                    <div class="c_menu_hdmua" id="c_menu_hdmua_4" style="width:90px;">Nhà cung cấp</div></a>
             {/if}
         </div>
         <div style="float:left; height:26px; width:100%"></div>
@@ -298,7 +300,7 @@ function change_style_hdmua(obj){
 		}
 		
 		document.getElementById('hdmua_content_main').style.display='block';
-        $("#hdmua_content_main").load("index.php?listDocOut&mod=docs");
+        $("#hdmua_content_main").load("index.php?listHoadon&mod=hdmua");
 		//var user_level_txt 	= document.getElementById('user_level_txt').value;
 
 	});
@@ -308,16 +310,26 @@ function change_style_hdmua(obj){
         }
 
         document.getElementById('hdmua_content_main').style.display='block';
-        $("#hdmua_content_main").load("index.php?listDocDT&mod=docs");
+        $("#hdmua_content_main").load("index.php?listHanghoa&mod=hdmua");
+        //var user_level_txt 	= document.getElementById('user_level_txt').value;
+
+    });
+    $("#a_menu_hdmua_4").click( function () {
+        for(i=0;i<div_arr.length;i++){
+            document.getElementById(div_arr[i]).style.display='none';
+        }
+
+        document.getElementById('hdmua_content_main').style.display='block';
+        $("#hdmua_content_main").load("index.php?listDoitac&mod=hdmua");
         //var user_level_txt 	= document.getElementById('user_level_txt').value;
 
     });
 	
 	function close_all_window_hdmua(){
-		document.getElementById('div_hdmua').style.display='none';
-		for(i=0;i<div_arr.length;i++){
-			document.getElementById(div_arr[i]).style.display='none';
-		}
+	    document.getElementById('div_hdmua').style.display='none';
+	    // for(i=0;i<div_arr.length;i++){
+	 	// 	document.getElementById(div_arr[i]).style.display='none';
+	    // }
 	}
 </script>
 {/literal}

@@ -24,6 +24,7 @@ class hdmua_class extends dbBasic {
     var $hdmua_tl_huybo;
     var $hdmua_lydo_huydo;
     var $hdmua_dieukhoankhac;
+    var $hdmua_file;
     var $hdmua_nguoinhap;
     var $hdmua_date;
 
@@ -47,6 +48,7 @@ class hdmua_class extends dbBasic {
         'hdmua_tl_huybo',
         'hdmua_lydo_huydo',
         'hdmua_dieukhoankhac',
+        'hdmua_file',
         'hdmua_nguoinhap',
         'hdmua_date'
     ); //table private fields
@@ -97,6 +99,18 @@ class hdmua_class extends dbBasic {
         global $dbconn;
         // ---- Get sql query
         $sql = " SELECT count(hdmua_id) FROM $this->tablename ".$where;
+        // ---- Execute SQL
+        $result = $dbconn->Execute($sql);
+        return $result->fields[0];
+    }
+
+    function checkTrunghop($hdmuc_sohd, $hdmuc_id = 0){
+        global $dbconn;
+        // ---- Get sql query
+        $where = " AND hdmuc_sohd = '".$hdmuc_sohd."'";
+        if($hdmuc_id!=0) $where.=" AND hdmuc_id != ".$hdmuc_id;
+        $sql = " SELECT count(hdmuc_id) FROM $this->tablename WHERE 1 = 1".$where;
+
         // ---- Execute SQL
         $result = $dbconn->Execute($sql);
         return $result->fields[0];

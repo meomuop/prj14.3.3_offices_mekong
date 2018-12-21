@@ -58,7 +58,7 @@ function create_width(){
 
 // --- xac dinh div focus
 function change_Zindex(obj){
-	var div_arr_zindex 	= ['div_user','div_config','div_thuoctinh','div_tthd','div_vttb','div_plan','div_doc','div_transport','div_cv_cat','div_msg','div_kdl','div_chatol','div_danhba'];
+	var div_arr_zindex 	= ['div_user','div_config','div_thuoctinh','div_tthd','div_hdmua','div_vttb','div_plan','div_doc','div_transport','div_cv_cat','div_msg','div_kdl','div_chatol','div_danhba'];
 	var div_doc_arr = ['list_file','list_reply','list_phanloai','div_view_doc','div_doc_report','div_huongdan'];
 	var div_tnvb_arr = ['div_view_transport','list_truyenvb'];	
 	var div_kdl_arr = ['add_edit_kdl','add_edit_dl','dl_file'];
@@ -66,7 +66,7 @@ function change_Zindex(obj){
 	
 	for(i=0;i<=div_arr_zindex.length;i++){
 		if(div_arr_zindex[i] == obj){
-			document.getElementById(obj).style.zIndex='2000';
+            document.getElementById(obj).style.zIndex='2000';
 			if(obj=='div_doc'){
 				for(j=0;j<=div_doc_arr.length;j++){
 						document.getElementById(div_doc_arr[j]).style.zIndex='2001';
@@ -127,7 +127,9 @@ function change_Zindex(obj){
 				}
 			}
 		}else{
-			document.getElementById(div_arr_zindex[i]).style.zIndex='100';
+		    if(document.getElementById(div_arr_zindex[i])){
+                document.getElementById(div_arr_zindex[i]).style.zIndex='100';
+            }
 		}
 	}
 }
