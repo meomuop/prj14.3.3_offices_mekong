@@ -58,7 +58,7 @@ function create_width(){
 
 // --- xac dinh div focus
 function change_Zindex(obj){
-	var div_arr_zindex 	= ['div_user','div_config','div_thuoctinh','div_tthd','div_vttb','div_plan','div_doc','div_transport','div_cv_cat','div_msg','div_kdl','div_chatol','div_danhba'];
+	var div_arr_zindex 	= ['div_user','div_config','div_thuoctinh','div_tthd','div_hdmua','div_vttb','div_plan','div_doc','div_transport','div_cv_cat','div_msg','div_kdl','div_chatol','div_danhba'];
 	var div_doc_arr = ['list_file','list_reply','list_phanloai','div_view_doc','div_doc_report','div_huongdan'];
 	var div_tnvb_arr = ['div_view_transport','list_truyenvb'];	
 	var div_kdl_arr = ['add_edit_kdl','add_edit_dl','dl_file'];
@@ -66,7 +66,7 @@ function change_Zindex(obj){
 	
 	for(i=0;i<=div_arr_zindex.length;i++){
 		if(div_arr_zindex[i] == obj){
-			document.getElementById(obj).style.zIndex='2000';
+            document.getElementById(obj).style.zIndex='2000';
 			if(obj=='div_doc'){
 				for(j=0;j<=div_doc_arr.length;j++){
 						document.getElementById(div_doc_arr[j]).style.zIndex='2001';
@@ -127,7 +127,9 @@ function change_Zindex(obj){
 				}
 			}
 		}else{
-			document.getElementById(div_arr_zindex[i]).style.zIndex='100';
+		    if(document.getElementById(div_arr_zindex[i])){
+                document.getElementById(div_arr_zindex[i]).style.zIndex='100';
+            }
 		}
 	}
 }
@@ -144,7 +146,7 @@ function close_div(obj){
     {include file="div_config.tpl"}
     {include file="div_thuoctinh.tpl"}
     {include file="div_thuoctinh_hopdong.tpl"}
-    {include file="div_tthd.tpl"}
+    {include file="div_hdmua.tpl"}
     {include file="div_user.tpl"}
     {include file="div_vttb.tpl"}
     {include file="div_plan.tpl"}
@@ -291,22 +293,31 @@ function close_div(obj){
                                 <!-----------------------chuc nang truyen nhan van ban------------------------->
                                 <li class="outside">
                                 	<ul class="inside">
-                                    	<li><input type="button" class="main_item_icon" style="background: url({$css_btn_bg}contract_btn_blur.png) repeat scroll 0% 0% transparent;" onmouseout="this.style.background='url({$css_btn_bg}contract_btn_blur.png)'" onmouseover="this.style.background='url({$css_btn_bg}contract_btn_focus.png)'" value="" name="iconcontract" id="iconcontract" onClick="javascript: document.getElementById('div_transport').style.display=''"></li>
-                                        <li class="main_btn_caption">Hợp đồng</li>
+                                    	<li><input type="button" class="main_item_icon" style="background: url({$css_btn_bg}contract_btn_blur.png) repeat scroll 0% 0% transparent;" onmouseout="this.style.background='url({$css_btn_bg}contract_btn_blur.png)'" onmouseover="this.style.background='url({$css_btn_bg}contract_btn_focus.png)'" value="" name="iconcontract" id="iconcontract" onClick="javascript: document.getElementById('div_hdban').style.display=''"></li>
+                                        <li class="main_btn_caption">Hợp đồng bán</li>
                                     </ul>
                                     {literal}
                                     <script language="javascript">
 									$("#iconcontract").click( function () {
-										
-										//var user_level_tnvb 	= document.getElementById('user_level_tnvb').value;
-										
 										document.getElementById('contract_content_main').style.display='block';
-										//if(user_level_tnvb==1 || user_level_tnvb==2)
-											$("#contract_content_main").load("index.php?listHopdong&mod=hopdong");
-										//else
-											//$("#contract_content_main").load("index.php?listHopdong&mod=hopdong");
+                                        $("#contract_content_main").load("index.php?listHdban&mod=hdban");
 									});
 									</script>
+                                    {/literal}
+                                </li>
+
+                                <li class="outside">
+                                    <ul class="inside">
+                                        <li><input type="button" class="main_item_icon" style="background: url({$css_btn_bg}contract_btn_blur.png) repeat scroll 0% 0% transparent;" onmouseout="this.style.background='url({$css_btn_bg}contract_btn_blur.png)'" onmouseover="this.style.background='url({$css_btn_bg}contract_btn_focus.png)'" value="" name="btn_hdmua" id="btn_hdmua" onClick="javascript: document.getElementById('div_hdmua').style.display=''"></li>
+                                        <li class="main_btn_caption">Hợp đồng mua</li>
+                                    </ul>
+                                    {literal}
+                                        <script language="javascript">
+                                            $("#btn_hdmua").click( function () {
+                                                document.getElementById('hdmua_content_main').style.display='block';
+                                                $("#hdmua_content_main").load("index.php?listHdmua&mod=hdmua");
+                                            });
+                                        </script>
                                     {/literal}
                                 </li>
                                 

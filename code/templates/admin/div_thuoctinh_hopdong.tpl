@@ -131,7 +131,8 @@ function change_style_tthd(obj){
         <div id="tthd_menu">
             <div style="width:10px; float:left">&nbsp;</div>
             <a href="javascript: void(0)" onclick="change_style_tthd(1)" id="a_menu_tthd_1"><div class="c_menu_tthd" id="c_menu_tthd_1" style="width:70px; border-left:1px solid #99bbe8; border-bottom:1px solid #dfe8f6; background-color:#dfe8f6; height:25px; margin-top:0px">Danh mục</div></a>
-            <a href="javascript: void(0)" onclick="change_style_tthd(2)" id="a_menu_tthd_2"><div class="c_menu_tthd" id="c_menu_tthd_2" style="width:110px;">Hàng hóa</div></a>
+            <a href="javascript: void(0)" onclick="change_style_tthd(2)" id="a_menu_tthd_2"><div class="c_menu_tthd" id="c_menu_tthd_2" style="width:70px;">Hàng hóa</div></a>
+            <a href="javascript: void(0)" onclick="change_style_tthd(3)" id="a_menu_tthd_3"><div class="c_menu_tthd" id="c_menu_tthd_3" style="width:90px;">Đơn vị tiền tệ</div></a>
         </div>
         <div style="float:left; height:26px; width:100%"></div>
         <!-- Content -->
@@ -162,6 +163,11 @@ function change_style_tthd(obj){
             $("#tthd_content_main").load("index.php?nothingPage");
             document.getElementById('tthd_content_main').style.display='block';
             $("#tthd_content_main").load("index.php?listHanghoa&mod=tthopdong");
+        });
+        $("#a_menu_tthd_3").click( function () {
+            $("#tthd_content_main").load("index.php?nothingPage");
+            document.getElementById('tthd_content_main').style.display='block';
+            $("#tthd_content_main").load("index.php?listDvtiente&mod=tthopdong");
         });
     </script>
 {/literal}

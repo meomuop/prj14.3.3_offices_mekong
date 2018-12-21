@@ -163,6 +163,7 @@
 		
 		// Muc 2:
 		case 'listUser': 		include ($MODULE_PATH.$module_name.'B_User_list.php'); exit();
+        case 'listUserSelect': 	include ($MODULE_PATH.$module_name.'B_User_select.php'); exit();
 		case 'listDepartment': 	include ($MODULE_PATH.$module_name.'B_Department_list.php'); exit();
 		case 'listObject': 		include ($MODULE_PATH.$module_name.'B_Object_list.php'); exit();
 		case 'listTrinhdo': 	include ($MODULE_PATH.$module_name.'B_Trinhdo_list.php'); exit();
@@ -353,6 +354,9 @@
         // Muc 1:
         case 'listDanhmuc'		: include ($MODULE_PATH.$module_name.'B_Danhmuc_list.php'); exit();
         case 'listHanghoa'		: include ($MODULE_PATH.$module_name.'B_Hanghoa_list.php'); exit();
+        case 'listDvtiente'		: include ($MODULE_PATH.$module_name.'B_Dvtiente_list.php'); exit();
+        case 'listHdmua'		: include ($MODULE_PATH.$module_name.'B_Hdmua_list.php'); exit();
+        case 'listDoitac'		: include ($MODULE_PATH.$module_name.'B_Doitac_list.php'); exit();
 															
 		/* --------------------------Utilities--------------------------- */
 		// ------- Logout

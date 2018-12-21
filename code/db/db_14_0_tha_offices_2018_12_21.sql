@@ -681,23 +681,25 @@ CREATE TABLE `tbl_feedbacks` (
 DROP TABLE IF EXISTS `tbl_hd_doitac`;
 
 CREATE TABLE `tbl_hd_doitac` (
-  `doctac_id` int(11) NOT NULL AUTO_INCREMENT,
-  `doctac_name` varchar(250) NOT NULL,
-  `doctac_viettat` varchar(100) DEFAULT NULL,
-  `doctac_daidien` varchar(100) DEFAULT NULL,
-  `doctac_mst` varchar(50) DEFAULT NULL,
-  `doctac_truso` varchar(250) DEFAULT NULL,
-  `doctac_vpgd` varchar(250) DEFAULT NULL,
-  `doctac_sdt` varchar(50) DEFAULT NULL,
-  `doctac_fax` varchar(50) DEFAULT NULL,
-  `doctac_email` varchar(150) DEFAULT NULL,
-  `doctac_sort` int(11) DEFAULT NULL,
-  `doctac_active` tinyint(4) DEFAULT NULL,
-  `doctac_date` date DEFAULT NULL,
-  PRIMARY KEY (`doctac_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `doitac_id` int(11) NOT NULL AUTO_INCREMENT,
+  `doitac_name` varchar(250) DEFAULT NULL,
+  `doitac_viettat` varchar(150) DEFAULT NULL,
+  `doitac_daidien` varchar(150) DEFAULT NULL,
+  `doitac_mst` varchar(100) DEFAULT NULL,
+  `doitac_truso` varchar(250) DEFAULT NULL,
+  `doitac_vpgd` varchar(250) DEFAULT NULL,
+  `doitac_sdt` varchar(100) DEFAULT NULL,
+  `doitac_fax` varchar(100) DEFAULT NULL,
+  `doitac_email` varchar(250) DEFAULT NULL,
+  `doitac_sort` int(11) DEFAULT '0',
+  `doitac_active` tinyint(1) DEFAULT NULL,
+  `doitac_date` date DEFAULT NULL,
+  PRIMARY KEY (`doitac_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 /*Data for the table `tbl_hd_doitac` */
+
+insert  into `tbl_hd_doitac`(`doitac_id`,`doitac_name`,`doitac_viettat`,`doitac_daidien`,`doitac_mst`,`doitac_truso`,`doitac_vpgd`,`doitac_sdt`,`doitac_fax`,`doitac_email`,`doitac_sort`,`doitac_active`,`doitac_date`) values (1,'Công ty CP Thép Hòa Phát Hải Dương','Hoa Phat Hai Duong Steel JSC','Nguyễn Việt Thắng','0800384651','KCN Phố Nối A, xã Giai Phạm, huyện Yên Mỹ, tỉnh Hưng Yên, Việt Nam','66 Nguyễn Du – Quận Hai Bà Trưng – TP. Hà Nội.','0243.6282011','0243.9747748','infi@thep.hoaphat.com.vn',NULL,1,'2018-12-21'),(2,'Nhà máy Xi Măng Xuân Thành','XM Xuan Thanh','Nguyễn Xuân Thủy','0700576529','Thôn Bồng Lạng, xã Thanh Nghị, huyện Thanh Liêm, tỉnh Hà Nam','Thôn Bồng Lạng, xã Thanh Nghị, huyện Thanh Liêm, tỉnh Hà Nam','2263 757 666','2263.757.888','info@ximangxuanthanh.vn',0,1,'2018-12-21'),(3,'Công ty thiết bị phụ tùng Hòa Phát','HOA PHAT CO., LTD','Nguyễn Ngọc Quang','0100365371','39 Nguyễn Đình Chiểu - Hai Bà Trưng - Hà Nội','39 Nguyễn Đình Chiểu - Hai Bà Trưng - Hà Nội','0243 6452736','0902588609','thietbihp@hoaphat.com.vn',NULL,1,'2018-12-21');
 
 /*Table structure for table `tbl_hd_duan` */
 
@@ -863,6 +865,7 @@ CREATE TABLE `tbl_hd_hdmua` (
   `hdmua_tl_huybo` int(11) DEFAULT NULL,
   `hdmua_lydo_huydo` varchar(250) DEFAULT NULL,
   `hdmua_dieukhoankhac` text,
+  `hdmua_file` tinyint(4) DEFAULT NULL COMMENT '1. da dinh tep tin, 2. chua dinh tep tin',
   `hdmua_nguoinhap` int(11) DEFAULT NULL,
   `hdmua_date` date DEFAULT NULL,
   PRIMARY KEY (`hdmua_id`)
