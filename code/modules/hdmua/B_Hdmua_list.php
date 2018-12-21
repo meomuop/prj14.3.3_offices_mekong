@@ -60,18 +60,20 @@
 	if($vars['add_edit']==1):
         if (!isset($vars['hdmua_id']) || $vars['hdmua_id'] < 1) {
             $obj = new hdmua_class();
+            $doitac = new doitac_class();
             $obj->readForm();
             if ((is_null($error)) || ($error == "")) {
                 $obj->hdmua_date = date("Y-m-d");
-                $obj->hdmua_ngayhd = date('Y-m-d',strtotime(str_replace('/','-',$vars['hdmua_signed'])));
-                $obj->hdmua_hieuluc = date('Y-m-d',strtotime(str_replace('/','-',$vars['hdmua_recevied'])));
+                $obj->hdmua_ngayhd = date('Y-m-d',strtotime(str_replace('/','-',$vars['hdmua_ngayhd'])));
+                $obj->hdmua_hieuluc = date('Y-m-d',strtotime(str_replace('/','-',$vars['hdmua_hieuluc'])));
                 $obj->hdmua_nguoinhap = $_SESSION['user_id'];
+                $obj->doitac_viettat = $doitac->getViettat($vars['doitac_id']);
 
                 // ---- kiem tra hop dong ton tai
                 $obj_trunghop = new hdmua_class();
                 $isTheSame = $obj_trunghop->checkTrunghop($vars['hdmua_sohd']);
                 if ($isTheSame>0) {
-                    $error = "Văn bản đã tồn tại";
+                    $error = "Hợp đồng đã tồn tại";
                 }else{
                     $obj->insertnew();
                     $complete = "Đã thêm mới hợp đồng có số: ".$vars['hdmua_sohd'];
@@ -84,8 +86,8 @@
             if ((is_null($error)) || ($error == "")) {
                 if ($obj->is_already_used($obj->tablename, "hdmua_id", $obj->hdmua_id))
                 {
-                    $obj->hdmua_ngayhd = date('Y-m-d',strtotime(str_replace('/','-',$vars['hdmua_signed'])));
-                    $obj->hdmua_hieuluc = date('Y-m-d',strtotime(str_replace('/','-',$vars['hdmua_recevied'])));
+                    $obj->hdmua_ngayhd = date('Y-m-d',strtotime(str_replace('/','-',$vars['hdmua_ngayhd'])));
+                    $obj->hdmua_hieuluc = date('Y-m-d',strtotime(str_replace('/','-',$vars['hdmua_hieuluc'])));
                     $obj->hdmua_nguoinhap = $_SESSION['user_id'];
 
                     // ---- kiem tra so den van ban
@@ -100,7 +102,7 @@
                     $obj_docCoincidence = new hdmua_class();
                     $isTheSame = $obj_docCoincidence->checkCoincidence($vars['hdmua_sohd'],date('Y-m-d',strtotime(str_replace('/','-',$vars['hdmua_signed']))),$vars['unit_name'],$vars['doitac_id'],$obj->hdmua_id);
                     if ($isTheSame>0) {
-                        $error = "Văn bản đã tồn tại";
+                        $error = "Hợp đồng đã tồn tại";
                     }else{
                         $obj->update();
                         $complete = "Đã cập nhật thành công!";

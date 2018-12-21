@@ -58,6 +58,15 @@ class doitac_class extends dbBasic {
         return $result->fields[0];
     }
 
+    function getViettat($id){
+        global $dbconn;
+        // ---- Get sql query
+        $sql = " SELECT doitac_viettat FROM $this->tablename where doitac_id=".$id;
+        // ---- Execute SQL
+        $result = $dbconn->Execute($sql);
+        return $result->fields[0];
+    }
+
     // --- sort item by array
     function sortItem($sort,$id){
         global $dbconn;
