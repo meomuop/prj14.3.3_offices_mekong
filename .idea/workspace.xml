@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b8c3f3dc-c879-4987-a3e0-10e5381e58f3" name="Default Changelist" comment="" />
+    <list default="true" id="b8c3f3dc-c879-4987-a3e0-10e5381e58f3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/code/classes/hopdong/clsHanghoa.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/modules/tthopdong/B_Hanghoa_list.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/modules/tthopdong/skin/B_Hanghoa_tbl.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/hopdong/clsDanhmuc.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/hopdong/clsDanhmuc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/modules/tthopdong/B_Danhmuc_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/modules/tthopdong/B_Danhmuc_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/modules/tthopdong/skin/B_Danhmuc_tbl.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/code/modules/tthopdong/skin/B_Danhmuc_tbl.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/templates/admin/admin_home.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/code/templates/admin/admin_home.tpl" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +39,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/code/templates/admin/admin_home.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="864">
-              <caret line="54" column="39" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="39" />
+            <state relative-caret-position="4563">
+              <caret line="454" column="26" lean-forward="true" selection-start-line="454" selection-start-column="26" selection-end-line="454" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -182,6 +191,7 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
+      <find>frmView_Vttb_info</find>
       <find>vttb_id</find>
       <find>show_vttb_info</find>
       <find>div_vttb_info_main_cont</find>
@@ -211,7 +221,6 @@
       <find>$obj_info</find>
       <find>docLevel</find>
       <find>viết</find>
-      <find>config</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;li&gt;&lt;input type=&quot;button&quot; class=&quot;main_item_icon&quot;</replace>
@@ -458,15 +467,16 @@
       <workItem from="1545011214548" duration="24967000" />
       <workItem from="1545096573346" duration="10963000" />
       <workItem from="1545142059391" duration="7131000" />
-      <workItem from="1545149359361" duration="3077000" />
+      <workItem from="1545149359361" duration="2402000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72561000" />
+    <option name="totallyTimeSpent" value="71886000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="748" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" x="3" y="157" width="283" height="630" id="Project" order="0" visible="true" weight="0.21374622" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1077,8 +1087,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/code/templates/admin/admin_home.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="54" column="39" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="39" />
+        <state relative-caret-position="4563">
+          <caret line="454" column="26" lean-forward="true" selection-start-line="454" selection-start-column="26" selection-end-line="454" selection-end-column="26" />
         </state>
       </provider>
     </entry>
