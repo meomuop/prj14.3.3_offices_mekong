@@ -2,16 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8c3f3dc-c879-4987-a3e0-10e5381e58f3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/code/classes/hopdong/clsDvtinh.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/modules/tthopdong/B_Dvtinh_list.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/modules/tthopdong/skin/B_Dvtinh_tbl.tpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/admin/upload_hdmua_hoadon.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/classes/hopdong/clsHdmuaHoadon.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/classes/hopdong/clsHdmuaTonkho.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/modules/hdmua/B_HdmuaHoadon_list.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/modules/hdmua/B_HdmuaTonkho_list.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/modules/hdmua/skin/B_HdmuaHoadon_tbl.tpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/modules/hdmua/skin/B_HdmuaTonkho_tbl.tpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/modules/tthopdong/B_Hanghoa_select.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/modules/tthopdong/skin/B_Hanghoa_select.tpl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/admin/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/classes/hopdong/clsDoitac.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/hopdong/clsDoitac.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/classes/hopdong/clsHdmua.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/hopdong/clsHdmua.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/css/admin/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/code/css/admin/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/modules/hdmua/B_Hdmua_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/modules/hdmua/B_Hdmua_list.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/modules/hdmua/skin/B_Hdmua_tbl.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/code/modules/hdmua/skin/B_Hdmua_tbl.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/templates/admin/div_thuoctinh_hopdong.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/code/templates/admin/div_thuoctinh_hopdong.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/modules/users/B_User_select.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/modules/users/B_User_select.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/modules/users/skin/B_User_select.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/code/modules/users/skin/B_User_select.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/templates/admin/div_hdmua.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/code/templates/admin/div_hdmua.tpl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,19 +46,109 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/modules/hdmua/B_Hdmua_list.php">
+        <entry file="file://$PROJECT_DIR$/code/classes/hopdong/clsHdmuaTonkho.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28">
-              <caret line="57" column="4" lean-forward="true" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
+            <state relative-caret-position="226">
+              <caret line="25" column="16" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/classes/hopdong/clsHdmua.php">
+        <entry file="file://$PROJECT_DIR$/code/modules/hdmua/B_HdmuaTonkho_list.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="54" column="25" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="25" />
+            <state relative-caret-position="228">
+              <caret line="109" column="65" selection-start-line="109" selection-start-column="65" selection-end-line="109" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/modules/hdmua/B_HdmuaHoadon_list.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="356">
+              <caret line="129" column="123" lean-forward="true" selection-start-line="127" selection-start-column="8" selection-end-line="129" selection-end-column="123" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/code/modules/hdmua/skin/B_HdmuaTonkho_tbl.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="531" column="41" selection-start-line="531" selection-start-column="41" selection-end-line="531" selection-end-column="41" />
+              <folding>
+                <element signature="n#style#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#div#2;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#a#0;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" />
+                <element signature="n#div#6;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" />
+                <element signature="n#style#0;n#div#7;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#7;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#7;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#div#7;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#14637#14643#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#div#5;n#div#7;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#15577#15583#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#15657#15663#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#15751#15757#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#15832#15838#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#div#5;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#15912#15918#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#div#6;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#7;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#2;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#17333#17339#0#HTML" expanded="true" />
+                <element signature="e#17368#17374#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#17479#17485#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#17637#17643#0#HTML" expanded="true" />
+                <element signature="e#17674#17680#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#17786#17792#0#HTML" expanded="true" />
+                <element signature="e#17820#17826#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#div#5;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#17931#17937#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#div#6;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#7;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#8;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#select#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#2;n#!!top" expanded="true" />
+                <element signature="e#19957#19963#1#HTML" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#3;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#3;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#1;n#div#3;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#3;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#5;n#div#2;n#!!top" expanded="true" />
+                <element signature="e#21905#21911#1#HTML" expanded="true" />
+                <element signature="n#style#0;n#div#6;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#7;n#div#2;n#!!top" expanded="true" />
+                <element signature="e#22195#22201#1#HTML" expanded="true" />
+                <element signature="n#style#0;n#div#8;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#8;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#8;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#select#0;n#div#1;n#div#8;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#8;n#div#2;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -59,223 +156,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/modules/hdmua/skin/B_Hdmua_tbl.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="481" column="26" selection-start-line="481" selection-start-column="26" selection-end-line="481" selection-end-column="78" />
-              <folding>
-                <element signature="n#style#0;n#legend#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" />
-                <element signature="n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" />
-                <element signature="n#style#0;n#div#0;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#2296#2302#1#HTML" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#3;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#4;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#5;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#3613#3619#1#HTML" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#5;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#6;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#7;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#5083#5089#0#HTML" expanded="true" />
-                <element signature="n#style#0;n#div#8;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#9;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#10;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#5968#5974#0#HTML" expanded="true" />
-                <element signature="e#6095#6101#0#HTML" expanded="true" />
-                <element signature="e#6223#6229#0#HTML" expanded="true" />
-                <element signature="n#style#0;n#div#11;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#12;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#6971#6977#0#HTML" expanded="true" />
-                <element signature="n#style#0;n#div#13;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#14;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#8306#8312#0#HTML" expanded="true" />
-                <element signature="n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" />
-                <element signature="n#style#0;n#div#0;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#10193#10199#0#HTML" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#4;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#5;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#6;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#7;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#8;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#9;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#10;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#11;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#12;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#12;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#13;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#4;n#td#2;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#5;n#td#2;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#12864#12870#0#HTML" expanded="true" />
-                <element signature="e#12999#13005#0#HTML" expanded="true" />
-                <element signature="e#13136#13142#0#HTML" expanded="true" />
-                <element signature="e#13272#13278#0#HTML" expanded="true" />
-                <element signature="n#style#0;n#div#16;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#17;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#18;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#13777#13783#0#HTML" expanded="true" />
-                <element signature="n#style#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" />
-                <element signature="n#style#0;n#div#5;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#4;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#6;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#7;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#8;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#9;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#10;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#3;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#4;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#5;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#5;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="4384">
+              <caret line="274" column="33" selection-start-line="265" selection-start-column="24" selection-end-line="274" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/classes/hopdong/clsDvtinh.php">
+        <entry file="file://$PROJECT_DIR$/code/templates/admin/div_hdmua.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-656">
-              <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/modules/tthopdong/B_Dvtinh_list.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1575">
-              <caret line="103" column="20" selection-start-line="103" selection-start-column="20" selection-end-line="103" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/code/modules/tthopdong/skin/B_Dvtinh_tbl.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="113" column="53" selection-start-line="113" selection-start-column="53" selection-end-line="113" selection-end-column="53" />
-              <folding>
-                <element signature="e#691#711#0#HTML" expanded="true" />
-                <element signature="e#907#985#0#HTML" expanded="true" />
-                <element signature="e#897#6853#0#HTML" />
-                <element signature="e#1058#1064#0#HTML" expanded="true" />
-                <element signature="e#1065#1071#0#HTML" expanded="true" />
-                <element signature="e#1081#1087#0#HTML" expanded="true" />
-                <element signature="e#1273#1296#0#HTML" expanded="true" />
-                <element signature="e#2701#2707#0#HTML" expanded="true" />
-                <element signature="e#2715#2721#0#HTML" expanded="true" />
-                <element signature="e#2721#2727#0#HTML" expanded="true" />
-                <element signature="e#2727#2733#0#HTML" expanded="true" />
-                <element signature="e#2733#2739#0#HTML" expanded="true" />
-                <element signature="e#2898#2904#0#HTML" expanded="true" />
-                <element signature="e#3057#3063#0#HTML" expanded="true" />
-                <element signature="e#3071#3077#0#HTML" expanded="true" />
-                <element signature="e#3077#3083#0#HTML" expanded="true" />
-                <element signature="e#3083#3089#0#HTML" expanded="true" />
-                <element signature="e#3089#3095#0#HTML" expanded="true" />
-                <element signature="e#3196#3202#0#HTML" expanded="true" />
-                <element signature="e#2761#2767#1#HTML" expanded="true" />
-                <element signature="e#6976#7068#0#HTML" expanded="true" />
-                <element signature="e#7132#7163#0#HTML" expanded="true" />
-                <element signature="e#7222#7252#0#HTML" expanded="true" />
-                <element signature="e#7253#7259#0#HTML" expanded="true" />
-                <element signature="e#7260#7266#0#HTML" expanded="true" />
-                <element signature="e#7274#7280#0#HTML" expanded="true" />
-                <element signature="e#7308#7339#0#HTML" expanded="true" />
-                <element signature="e#7578#7608#0#HTML" expanded="true" />
-                <element signature="e#7791#7833#0#HTML" expanded="true" />
-                <element signature="e#6703#6811#0#HTML" expanded="true" />
-                <element signature="e#8005#8042#0#HTML" expanded="true" />
-                <element signature="e#8120#8126#0#HTML" expanded="true" />
-                <element signature="e#7209#7246#0#HTML" expanded="true" />
-                <element signature="e#8358#8395#0#HTML" expanded="true" />
-                <element signature="e#8454#8491#0#HTML" expanded="true" />
-                <element signature="e#8551#8588#0#HTML" expanded="true" />
-                <element signature="e#8644#8681#0#HTML" expanded="true" />
-                <element signature="e#8949#8997#0#HTML" expanded="true" />
-                <element signature="e#9127#9221#0#HTML" expanded="true" />
-                <element signature="e#7951#8015#0#HTML" expanded="true" />
-                <element signature="e#9814#9851#0#HTML" expanded="true" />
-                <element signature="e#9910#9929#0#HTML" expanded="true" />
-                <element signature="e#9955#9961#0#HTML" expanded="true" />
-                <element signature="e#9124#9161#0#HTML" expanded="true" />
-                <element signature="e#10504#10541#0#HTML" expanded="true" />
-                <element signature="e#11189#11226#0#HTML" expanded="true" />
-                <element signature="e#11871#11908#0#HTML" expanded="true" />
-                <element signature="e#12208#12245#0#HTML" expanded="true" />
-                <element signature="e#12563#12600#0#HTML" expanded="true" />
-                <element signature="e#13178#13239#0#HTML" expanded="true" />
-                <element signature="e#13582#13659#0#HTML" expanded="true" />
-                <element signature="e#13660#13666#1#HTML" expanded="true" />
-                <element signature="e#14426#14462#0#HTML" expanded="true" />
-                <element signature="e#14477#14507#0#HTML" expanded="true" />
-                <element signature="e#14533#14563#0#HTML" expanded="true" />
-                <element signature="e#14704#14777#0#HTML" expanded="true" />
-                <element signature="e#14807#14837#0#HTML" expanded="true" />
-                <element signature="e#15642#15719#0#HTML" expanded="true" />
-                <element signature="e#15720#15726#1#HTML" expanded="true" />
-                <element signature="e#15742#15772#0#HTML" expanded="true" />
-                <element signature="e#15927#16004#0#HTML" expanded="true" />
-                <element signature="e#16005#16011#1#HTML" expanded="true" />
-                <element signature="e#16027#16082#0#HTML" expanded="true" />
-                <element signature="e#16097#16127#0#HTML" expanded="true" />
-                <element signature="e#16151#16181#0#HTML" expanded="true" />
-                <element signature="e#16242#16302#0#HTML" expanded="true" />
-                <element signature="e#16606#16624#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/modules/tthopdong/skin/B_Dvtiente_tbl.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="123" column="58" selection-start-line="123" selection-start-column="55" selection-end-line="123" selection-end-column="58" />
-              <folding>
-                <element signature="e#7098#7190#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/templates/admin/div_thuoctinh_hopdong.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="752">
-              <caret line="172" column="25" selection-start-line="172" selection-start-column="25" selection-end-line="172" selection-end-column="25" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#a#1;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/modules/users/skin/B_User_select.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16">
-              <caret line="1" column="4" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="4" selection-end-column="14" />
-              <folding>
-                <element signature="e#279#285#0#HTML" expanded="true" />
-              </folding>
+            <state relative-caret-position="5216">
+              <caret line="326" column="59" selection-start-line="326" selection-start-column="49" selection-end-line="326" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -283,8 +174,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/admin/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="357" column="78" selection-start-line="357" selection-start-column="78" selection-end-line="357" selection-end-column="78" />
+            <state relative-caret-position="323">
+              <caret line="41" column="6" lean-forward="true" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -293,68 +184,68 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>div_hdmua</find>
-      <find>lblMessage_Doitac</find>
-      <find>doctac</find>
-      <find>edit_me_Doitac</find>
-      <find>tthd_content_main</find>
-      <find>hdmua_desc</find>
-      <find>close_all_window_danhba</find>
-      <find>close_all_window_hdmua</find>
-      <find>doitac</find>
-      <find>70%</find>
-      <find>width:65%</find>
-      <find>Doc</find>
-      <find>docs</find>
-      <find>department_id</find>
+      <find>list_chungtu_cont</find>
+      <find>vttb_cost</find>
+      <find>getViettat</find>
+      <find>hoadon_class</find>
+      <find>hdmua</find>
+      <find>hợp đồng</find>
+      <find>edit_me_Hdmua</find>
+      <find>hdmua_noidung</find>
+      <find>getRowNumber</find>
+      <find>dlfile_path</find>
+      <find>mod=hoadon</find>
+      <find>show_chungtu</find>
+      <find>show_hdmua_chungtu</find>
+      <find>show_tonkho</find>
+      <find>tungay</find>
+      <find>hoadon</find>
+      <find>search_me_HdmuaHoadon</find>
+      <find>a_menu_hdmua_3</find>
+      <find>User</find>
       <find>department</find>
-      <find>listHdmua</find>
-      <find>text_sho</find>
-      <find>change_Zindex</find>
-      <find>checkCoincidence</find>
-      <find>doc</find>
-      <find>Văn bản</find>
-      <find>hdmuc_id</find>
-      <find>hdmua_ngayky</find>
-      <find>legend_list_search</find>
-      <find>hdmuc</find>
-      <find>width:60%</find>
-      <find>user_id</find>
-      <find>hdmua_lydo_huydo</find>
-      <find>dvtiente</find>
-      <find>hdmua_lydo_huybo</find>
+      <find>user</find>
+      <find>danhmuc</find>
+      <find>id=&quot;danhmuc_id&quot;</find>
+      <find>btnSub_HdmuaTonkho</find>
+      <find>mathang</find>
+      <find>listHdmuaTonkho</find>
+      <find>hanghoa_name_fs</find>
+      <find>hoadon_sohd_fs</find>
+      <find>ngayxuat</find>
+      <find>search_me_HdmuaTonkho</find>
     </findStrings>
     <replaceStrings>
-      <replace>_hdmua</replace>
-      <replace>thuchien</replace>
-      <replace>;</replace>
-      <replace>var</replace>
-      <replace>var $</replace>
-      <replace>'</replace>
-      <replace>',</replace>
-      <replace>unit</replace>
-      <replace>hdmua_</replace>
-      <replace>doitac_id</replace>
-      <replace>hdmua_sohd</replace>
-      <replace>doitac</replace>
-      <replace>hdmua_content_main</replace>
-      <replace>hdmua_noidung</replace>
-      <replace>department</replace>
-      <replace>65%</replace>
-      <replace>width:60%</replace>
-      <replace>Hdmua</replace>
       <replace>user_id</replace>
       <replace>dvtiente</replace>
       <replace>đối tác</replace>
       <replace>user</replace>
       <replace>hdmuc</replace>
       <replace>hdmua_id</replace>
-      <replace>hdmua</replace>
       <replace>hdmua_ngayhd</replace>
       <replace>Hợp đồng</replace>
       <replace>width:70%</replace>
-      <replace>dvtinh</replace>
       <replace>hdmua_lydo_huybo</replace>
+      <replace>show_chungtu</replace>
+      <replace>hoadon_sohd</replace>
+      <replace>HdmuaHoadon</replace>
+      <replace>hdmuahoadon</replace>
+      <replace>hdmua</replace>
+      <replace>chungtu</replace>
+      <replace>hóa đơn</replace>
+      <replace>hoadon_noidung</replace>
+      <replace>hdmuaHoadon_class</replace>
+      <replace>hoadon</replace>
+      <replace>hoadon_file</replace>
+      <replace>mod=hdmua</replace>
+      <replace>ngayxuat</replace>
+      <replace>tonkho</replace>
+      <replace>Hanghoa</replace>
+      <replace>danhmuc</replace>
+      <replace>dvtinh</replace>
+      <replace>hanghoa</replace>
+      <replace>listTonkho</replace>
+      <replace>ngaynhap</replace>
     </replaceStrings>
     <dirStrings>
       <dir>E:\Projects\wamp64\www\smarty\prj14.3.3_offices_mekong\code\modules</dir>
@@ -370,15 +261,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/code/templates/admin/div_doc.tpl" />
-        <option value="$PROJECT_DIR$/code/templates/admin/login.tpl" />
-        <option value="$PROJECT_DIR$/code/templates/admin/div_danhba.tpl" />
-        <option value="$PROJECT_DIR$/code/modules/users/skin/B_UserPhone_tbl.tpl" />
-        <option value="$PROJECT_DIR$/code/modules/kdls/skin/B_Kdl_chung_tbl.tpl" />
-        <option value="$PROJECT_DIR$/code/modules/kdls/skin/B_Kdl_add_edit.tpl" />
-        <option value="$PROJECT_DIR$/code/templates/admin/div_kdl.tpl" />
-        <option value="$PROJECT_DIR$/code/modules/kdls/skin/B_DlFile_tbl.tpl" />
-        <option value="$PROJECT_DIR$/code/modules/vttbs/skin/B_Vttb_cat_add_edit.tpl" />
         <option value="$PROJECT_DIR$/code/modules/vttbs/skin/B_Vttb_sub_add_edit.tpl" />
         <option value="$PROJECT_DIR$/code/modules/vttbs/skin/B_Vttb_chung_tbl.tpl" />
         <option value="$PROJECT_DIR$/code/modules/vttbs/skin/B_Replace_tbl.tpl" />
@@ -392,7 +274,6 @@
         <option value="$PROJECT_DIR$/code/templates/admin/div_congviec.tpl" />
         <option value="$PROJECT_DIR$/code/modules/congviecs/skin/B_Congviec_tbl.tpl" />
         <option value="$PROJECT_DIR$/code/modules/docs/skin/B_DocCat_tbl.tpl" />
-        <option value="$PROJECT_DIR$/code/css/admin/style.css" />
         <option value="$PROJECT_DIR$/code/modules/hopdong/thuoctinh/danhmuc/skin/B_Danhmuc_tbl.tpl" />
         <option value="$PROJECT_DIR$/code/modules/hopdong/thuoctinh/danhmuc/B_Danhmuc_list.php" />
         <option value="$PROJECT_DIR$/code/includes/config.php" />
@@ -409,18 +290,28 @@
         <option value="$PROJECT_DIR$/code/modules/hdmua/B_Doitac_list.php" />
         <option value="$PROJECT_DIR$/code/templates/admin/admin_home.tpl" />
         <option value="$PROJECT_DIR$/code/modules/hdmua/skin/B_Doitac_tbl.tpl" />
-        <option value="$PROJECT_DIR$/code/templates/admin/div_hdmua.tpl" />
-        <option value="$PROJECT_DIR$/code/modules/users/B_User_select.php" />
         <option value="$PROJECT_DIR$/code/classes/hopdong/clsDoitac.php" />
-        <option value="$PROJECT_DIR$/code/modules/hdmua/B_Hdmua_list.php" />
-        <option value="$PROJECT_DIR$/code/modules/users/skin/B_User_select.tpl" />
         <option value="$PROJECT_DIR$/code/classes/hopdong/clsHdmua.php" />
-        <option value="$PROJECT_DIR$/code/modules/hdmua/skin/B_Hdmua_tbl.tpl" />
         <option value="$PROJECT_DIR$/code/classes/hopdong/clsDvtinh.php" />
         <option value="$PROJECT_DIR$/code/modules/tthopdong/B_Dvtinh_list.php" />
-        <option value="$PROJECT_DIR$/code/admin/index.php" />
         <option value="$PROJECT_DIR$/code/templates/admin/div_thuoctinh_hopdong.tpl" />
         <option value="$PROJECT_DIR$/code/modules/tthopdong/skin/B_Dvtinh_tbl.tpl" />
+        <option value="$PROJECT_DIR$/code/css/admin/style.css" />
+        <option value="$PROJECT_DIR$/code/modules/hdmua/B_Hdmua_list.php" />
+        <option value="$PROJECT_DIR$/code/admin/upload_hoadon.php" />
+        <option value="$PROJECT_DIR$/code/classes/hopdong/clsHdmuaHoadon.php" />
+        <option value="$PROJECT_DIR$/code/templates/admin/div_hdmua.tpl" />
+        <option value="$PROJECT_DIR$/code/modules/hdmua/skin/B_HdmuaHoadon_tbl.tpl" />
+        <option value="$PROJECT_DIR$/code/modules/hdmua/B_HdmuaHoadon_list.php" />
+        <option value="$PROJECT_DIR$/code/modules/users/B_User_select.php" />
+        <option value="$PROJECT_DIR$/code/modules/users/skin/B_User_select.tpl" />
+        <option value="$PROJECT_DIR$/code/modules/hdmua/skin/B_Hdmua_tbl.tpl" />
+        <option value="$PROJECT_DIR$/code/modules/tthopdong/B_Hanghoa_select.php" />
+        <option value="$PROJECT_DIR$/code/modules/tthopdong/skin/B_Hanghoa_select.tpl" />
+        <option value="$PROJECT_DIR$/code/classes/hopdong/clsHdmuaTonkho.php" />
+        <option value="$PROJECT_DIR$/code/admin/index.php" />
+        <option value="$PROJECT_DIR$/code/modules/hdmua/B_HdmuaTonkho_list.php" />
+        <option value="$PROJECT_DIR$/code/modules/hdmua/skin/B_HdmuaTonkho_tbl.tpl" />
       </list>
     </option>
   </component>
@@ -474,6 +365,19 @@
               <item name="prj14.3.3_offices_mekong" type="b2602c69:ProjectViewProjectNode" />
               <item name="prj14.3.3_offices_mekong" type="462c0819:PsiDirectoryNode" />
               <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="prj14.3.3_offices_mekong" type="b2602c69:ProjectViewProjectNode" />
+              <item name="prj14.3.3_offices_mekong" type="462c0819:PsiDirectoryNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="prj14.3.3_offices_mekong" type="b2602c69:ProjectViewProjectNode" />
+              <item name="prj14.3.3_offices_mekong" type="462c0819:PsiDirectoryNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -489,36 +393,6 @@
               <item name="code" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
               <item name="hdmua" type="462c0819:PsiDirectoryNode" />
-              <item name="skin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="prj14.3.3_offices_mekong" type="b2602c69:ProjectViewProjectNode" />
-              <item name="prj14.3.3_offices_mekong" type="462c0819:PsiDirectoryNode" />
-              <item name="code" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="tthopdong" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="prj14.3.3_offices_mekong" type="b2602c69:ProjectViewProjectNode" />
-              <item name="prj14.3.3_offices_mekong" type="462c0819:PsiDirectoryNode" />
-              <item name="code" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="tthopdong" type="462c0819:PsiDirectoryNode" />
-              <item name="skin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="prj14.3.3_offices_mekong" type="b2602c69:ProjectViewProjectNode" />
-              <item name="prj14.3.3_offices_mekong" type="462c0819:PsiDirectoryNode" />
-              <item name="code" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="prj14.3.3_offices_mekong" type="b2602c69:ProjectViewProjectNode" />
-              <item name="prj14.3.3_offices_mekong" type="462c0819:PsiDirectoryNode" />
-              <item name="code" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
               <item name="skin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -543,11 +417,16 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="C:/Program Files/Git/cmd/git.exe" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -559,9 +438,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Works\wamp64\www\smarty\prj14.3.3_offices_mekong\code\modules\tthopdong\skin" />
       <recent name="D:\Works\wamp64\www\smarty\prj14.3.3_offices_mekong\code\modules\tthopdong" />
+      <recent name="D:\Works\wamp64\www\smarty\prj14.3.3_offices_mekong\code\modules\hdmua\skin" />
+      <recent name="D:\Works\wamp64\www\smarty\prj14.3.3_offices_mekong\code\modules\hdmua" />
       <recent name="D:\Works\wamp64\www\smarty\prj14.3.3_offices_mekong\code\classes\hopdong" />
-      <recent name="E:\Projects\wamp64\www\smarty\prj14.3.3_offices_mekong\code\modules\users\skin" />
-      <recent name="E:\Projects\wamp64\www\smarty\prj14.3.3_offices_mekong\code\modules\users" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -596,20 +475,23 @@
       <workItem from="1545194685088" duration="9609000" />
       <workItem from="1545356195482" duration="26791000" />
       <workItem from="1545410329740" duration="9484000" />
+      <workItem from="1545456310483" duration="14054000" />
+      <workItem from="1545548231876" duration="11774000" />
+      <workItem from="1545577882959" duration="5053000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117770000" />
+    <option name="totallyTimeSpent" value="148651000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="748" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" x="3" y="157" width="283" height="630" id="Project" order="0" sideWeight="0.49919486" visible="true" weight="0.22356495" />
+      <window_info active="true" content_ui="combo" x="3" y="157" width="283" height="630" id="Project" order="0" sideWeight="0.49919486" visible="true" weight="0.2326284" />
       <window_info id="Structure" order="1" sideWeight="0.50080514" side_tool="true" weight="0.22012103" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.32930514" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32857144" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -624,8 +506,8 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Remote Host" order="3" />
-      <window_info anchor="right" id="Database" order="4" weight="0.32980332" />
+      <window_info anchor="right" id="Remote Host" order="3" weight="0.32930514" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32930514" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -643,106 +525,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/code/classes/clsAddUsers.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/congviecs/skin/B_CvCat_add_edit.tpl">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/classes/clsModule.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="73" column="14" selection-start-line="73" selection-start-column="14" selection-end-line="73" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/congviecs/skin/B_CvSub_add_edit.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/includes/ad_requires.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/includes/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/admin/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/docs/skin/B_DocCat_tbl.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1691">
-          <caret line="82" column="21" selection-start-line="73" selection-start-column="16" selection-end-line="82" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/congviecs/skin/B_Congviec_tbl.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="87" column="126" selection-start-line="87" selection-start-column="101" selection-end-line="87" selection-end-column="126" />
-          <folding>
-            <element signature="e#12732#12778#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/docs/B_DocCat_list.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/truyennhans/B_DocCat_list.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/tthopdong/skin/B_Danhmuc_list.tpl">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/templates/admin/div_user.tpl">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/tthopdong/skin/B_Hanghoa_tbl.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="30" column="56" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/templates/admin/div_doc.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="307" column="103" selection-start-line="307" selection-start-column="103" selection-end-line="307" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/hdmua/skin/B_Hdmua_list.tpl">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/classes/hopdong/clsHanghoa.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/tthopdong/B_Hanghoa_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="82" column="17" selection-end-line="163" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/templates/admin/div_thuoctinh.tpl">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/modules/tthopdong/B_Danhmuc_list.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -781,9 +563,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/docs/B_Doc_reply.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/templates/admin/div_danhba.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="278">
@@ -806,24 +585,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/users/B_User_select.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="76" column="59" selection-start-line="76" selection-start-column="59" selection-end-line="76" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/modules/docs/skin/B_Doc_tbl.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
           <caret line="38" column="56" selection-start-line="38" selection-start-column="50" selection-end-line="38" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/css/admin/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="207" column="10" selection-start-line="207" selection-start-column="1" selection-end-line="207" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -855,41 +620,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/templates/admin/div_hdmua.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="326" column="4" lean-forward="true" selection-start-line="326" selection-start-column="4" selection-end-line="326" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/classes/hopdong/clsDoitac.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="60" column="23" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/users/skin/B_User_select.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="1" column="4" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="4" selection-end-column="14" />
-          <folding>
-            <element signature="e#279#285#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/classes/hopdong/clsHdmua.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="54" column="25" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/hdmua/B_Hdmua_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="57" column="4" lean-forward="true" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -900,13 +634,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/classes/hopdong/clsDvtinh.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-656">
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/modules/tthopdong/B_Dvtiente_list.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="517">
@@ -914,202 +641,411 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/tthopdong/B_Dvtinh_list.php">
+    <entry file="file://$PROJECT_DIR$/code/modules/tthopdong/skin/B_Dvtiente_tbl.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1575">
-          <caret line="103" column="20" selection-start-line="103" selection-start-column="20" selection-end-line="103" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/admin/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="357" column="78" selection-start-line="357" selection-start-column="78" selection-end-line="357" selection-end-column="78" />
+        <state relative-caret-position="1968">
+          <caret line="123" column="58" selection-start-line="123" selection-start-column="55" selection-end-line="123" selection-end-column="58" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/code/templates/admin/div_thuoctinh_hopdong.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="752">
+        <state relative-caret-position="2752">
           <caret line="172" column="25" selection-start-line="172" selection-start-column="25" selection-end-line="172" selection-end-column="25" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#a#1;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/tthopdong/skin/B_Dvtiente_tbl.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="123" column="58" selection-start-line="123" selection-start-column="55" selection-end-line="123" selection-end-column="58" />
-          <folding>
-            <element signature="e#7098#7190#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/hdmua/skin/B_Hdmua_tbl.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="481" column="26" selection-start-line="481" selection-start-column="26" selection-end-line="481" selection-end-column="78" />
-          <folding>
-            <element signature="n#style#0;n#legend#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" />
-            <element signature="n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" />
-            <element signature="n#style#0;n#div#0;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#2296#2302#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#3;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#3613#3619#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#5;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#6;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#7;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#5083#5089#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#8;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#9;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#10;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#5968#5974#0#HTML" expanded="true" />
-            <element signature="e#6095#6101#0#HTML" expanded="true" />
-            <element signature="e#6223#6229#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#11;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#12;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#6971#6977#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#13;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#14;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#8306#8312#0#HTML" expanded="true" />
-            <element signature="n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" />
-            <element signature="n#style#0;n#div#0;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#10193#10199#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#6;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#7;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#8;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#9;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#10;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#11;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#12;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#12;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#13;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#td#2;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#td#2;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#12864#12870#0#HTML" expanded="true" />
-            <element signature="e#12999#13005#0#HTML" expanded="true" />
-            <element signature="e#13136#13142#0#HTML" expanded="true" />
-            <element signature="e#13272#13278#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#16;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#17;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#18;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#13777#13783#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" />
-            <element signature="n#style#0;n#div#5;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#6;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#7;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#8;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#9;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#10;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#3;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/code/modules/tthopdong/skin/B_Dvtinh_tbl.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
+        <state relative-caret-position="-190">
           <caret line="113" column="53" selection-start-line="113" selection-start-column="53" selection-end-line="113" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/tthopdong/B_Dvtinh_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="103" column="20" selection-start-line="103" selection-start-column="20" selection-end-line="103" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/classes/hopdong/clsDvtinh.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/docs/B_Doc_reply.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2664" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/docs/skin/B_Doc_reply_tbl.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1008" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/docs/skin/B_DocReply_tbl.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="567" column="41" lean-forward="true" selection-end-line="833" selection-end-column="10" />
           <folding>
-            <element signature="e#691#711#0#HTML" expanded="true" />
-            <element signature="e#907#985#0#HTML" expanded="true" />
-            <element signature="e#897#6853#0#HTML" />
-            <element signature="e#1058#1064#0#HTML" expanded="true" />
-            <element signature="e#1065#1071#0#HTML" expanded="true" />
-            <element signature="e#1081#1087#0#HTML" expanded="true" />
-            <element signature="e#1273#1296#0#HTML" expanded="true" />
-            <element signature="e#2701#2707#0#HTML" expanded="true" />
-            <element signature="e#2715#2721#0#HTML" expanded="true" />
-            <element signature="e#2721#2727#0#HTML" expanded="true" />
-            <element signature="e#2727#2733#0#HTML" expanded="true" />
-            <element signature="e#2733#2739#0#HTML" expanded="true" />
-            <element signature="e#2898#2904#0#HTML" expanded="true" />
-            <element signature="e#3057#3063#0#HTML" expanded="true" />
-            <element signature="e#3071#3077#0#HTML" expanded="true" />
-            <element signature="e#3077#3083#0#HTML" expanded="true" />
-            <element signature="e#3083#3089#0#HTML" expanded="true" />
-            <element signature="e#3089#3095#0#HTML" expanded="true" />
-            <element signature="e#3196#3202#0#HTML" expanded="true" />
-            <element signature="e#2761#2767#1#HTML" expanded="true" />
-            <element signature="e#6976#7068#0#HTML" expanded="true" />
-            <element signature="e#7132#7163#0#HTML" expanded="true" />
-            <element signature="e#7222#7252#0#HTML" expanded="true" />
-            <element signature="e#7253#7259#0#HTML" expanded="true" />
-            <element signature="e#7260#7266#0#HTML" expanded="true" />
-            <element signature="e#7274#7280#0#HTML" expanded="true" />
-            <element signature="e#7308#7339#0#HTML" expanded="true" />
-            <element signature="e#7578#7608#0#HTML" expanded="true" />
-            <element signature="e#7791#7833#0#HTML" expanded="true" />
-            <element signature="e#6703#6811#0#HTML" expanded="true" />
-            <element signature="e#8005#8042#0#HTML" expanded="true" />
-            <element signature="e#8120#8126#0#HTML" expanded="true" />
-            <element signature="e#7209#7246#0#HTML" expanded="true" />
-            <element signature="e#8358#8395#0#HTML" expanded="true" />
-            <element signature="e#8454#8491#0#HTML" expanded="true" />
-            <element signature="e#8551#8588#0#HTML" expanded="true" />
-            <element signature="e#8644#8681#0#HTML" expanded="true" />
-            <element signature="e#8949#8997#0#HTML" expanded="true" />
-            <element signature="e#9127#9221#0#HTML" expanded="true" />
-            <element signature="e#7951#8015#0#HTML" expanded="true" />
-            <element signature="e#9814#9851#0#HTML" expanded="true" />
-            <element signature="e#9910#9929#0#HTML" expanded="true" />
-            <element signature="e#9955#9961#0#HTML" expanded="true" />
-            <element signature="e#9124#9161#0#HTML" expanded="true" />
-            <element signature="e#10504#10541#0#HTML" expanded="true" />
-            <element signature="e#11189#11226#0#HTML" expanded="true" />
-            <element signature="e#11871#11908#0#HTML" expanded="true" />
-            <element signature="e#12208#12245#0#HTML" expanded="true" />
-            <element signature="e#12563#12600#0#HTML" expanded="true" />
-            <element signature="e#13178#13239#0#HTML" expanded="true" />
-            <element signature="e#13582#13659#0#HTML" expanded="true" />
-            <element signature="e#13660#13666#1#HTML" expanded="true" />
-            <element signature="e#14426#14462#0#HTML" expanded="true" />
-            <element signature="e#14477#14507#0#HTML" expanded="true" />
-            <element signature="e#14533#14563#0#HTML" expanded="true" />
-            <element signature="e#14704#14777#0#HTML" expanded="true" />
-            <element signature="e#14807#14837#0#HTML" expanded="true" />
-            <element signature="e#15642#15719#0#HTML" expanded="true" />
-            <element signature="e#15720#15726#1#HTML" expanded="true" />
-            <element signature="e#15742#15772#0#HTML" expanded="true" />
-            <element signature="e#15927#16004#0#HTML" expanded="true" />
-            <element signature="e#16005#16011#1#HTML" expanded="true" />
-            <element signature="e#16027#16082#0#HTML" expanded="true" />
-            <element signature="e#16097#16127#0#HTML" expanded="true" />
-            <element signature="e#16151#16181#0#HTML" expanded="true" />
-            <element signature="e#16242#16302#0#HTML" expanded="true" />
-            <element signature="e#16606#16624#0#HTML" expanded="true" />
+            <element signature="e#797#875#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/classes/hopdong/clsHanghoa.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/vttbs/skin/B_Vttb_add_edit.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="331" column="94" selection-start-line="331" selection-start-column="90" selection-end-line="331" selection-end-column="94" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#1;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/css/admin/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="218" column="12" selection-start-line="218" selection-start-column="1" selection-end-line="218" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/admin/upload_kdl.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/admin/upload_hdmua_hoadon.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="149" column="172" selection-start-line="149" selection-start-column="136" selection-end-line="149" selection-end-column="172" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/hdmua/B_Hdmua_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="69" column="80" lean-forward="true" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/vttbs/skin/B_Vttb_view.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="28" column="140" selection-start-line="28" selection-start-column="128" selection-end-line="28" selection-end-column="140" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/thangluongs/skin/B_Thangluong_tbl.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-161">
+          <caret line="172" column="50" selection-start-line="172" selection-start-column="50" selection-end-line="172" selection-end-column="67" />
+          <folding>
+            <element signature="e#792#10247#0#HTML" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/kdls/skin/B_DlFile_tbl.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="137" column="118" lean-forward="true" selection-start-line="136" selection-start-column="20" selection-end-line="137" selection-end-column="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/classes/hopdong/clsHdmua.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="122" column="5" lean-forward="true" selection-start-line="112" selection-start-column="4" selection-end-line="122" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/classes/hopdong/clsHdmuaHoadon.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="68" column="23" lean-forward="true" selection-start-line="68" selection-start-column="23" selection-end-line="68" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/hdmua/skin/B_HdmuaHoadon_tbl.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="666" column="30" selection-start-line="666" selection-start-column="30" selection-end-line="666" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#div#2;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" />
+            <element signature="n#style#0;n#div#4;n#div#3;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#4;n#div#3;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#19461#19467#0#HTML" expanded="true" />
+            <element signature="e#19468#19474#0#HTML" expanded="true" />
+            <element signature="e#19483#19489#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#6;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#div#6;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#div#6;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#1;n#div#6;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#2;n#div#6;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#2;n#div#6;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#7;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#7;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#7;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#7;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#21204#21210#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#7;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#7;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#21857#21863#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#7;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#div#7;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#7;n#div#7;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#8;n#div#7;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#9;n#div#7;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#23927#23933#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#24009#24015#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#24108#24114#0#HTML" expanded="true" />
+            <element signature="e#24121#24127#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#24194#24200#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#24280#24286#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#24360#24366#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#7;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#24442#24448#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#8;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#9;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#10;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#2;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#25952#25958#0#HTML" expanded="true" />
+            <element signature="e#25986#25992#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#26097#26103#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#26279#26285#0#HTML" expanded="true" />
+            <element signature="e#26328#26334#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#26440#26446#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#5;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#26799#26805#1#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#5;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#5;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#5;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#27759#27765#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#div#5;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#5;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#2;n#div#5;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#28473#28479#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#7;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#28744#28750#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#8;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#9;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#10;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#11;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#!!top" expanded="true" />
+            <element signature="e#31069#31075#1#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#3;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#1;n#div#3;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#3;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#2;n#!!top" expanded="true" />
+            <element signature="e#33017#33023#1#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#7;n#div#2;n#!!top" expanded="true" />
+            <element signature="e#33307#33313#1#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#8;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#8;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#8;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#div#1;n#div#8;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#8;n#div#2;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/users/B_User_select.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/users/skin/B_User_select.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="72" selection-start-column="72" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/tthopdong/skin/B_Hanghoa_tbl.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="28" column="133" lean-forward="true" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="133" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/tthopdong/B_Hanghoa_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="13" column="42" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/hdmua/skin/B_Hdmua_tbl.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4384">
+          <caret line="274" column="33" selection-start-line="265" selection-start-column="24" selection-end-line="274" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/templates/admin/div_hdmua.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5216">
+          <caret line="326" column="59" selection-start-line="326" selection-start-column="49" selection-end-line="326" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/tthopdong/B_Hanghoa_select.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="12" column="54" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/tthopdong/skin/B_Hanghoa_select.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="131" lean-forward="true" selection-start-line="2" selection-start-column="131" selection-end-line="2" selection-end-column="131" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/classes/hopdong/clsHdmuaTonkho.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="25" column="16" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/hdmua/B_HdmuaHoadon_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="129" column="123" lean-forward="true" selection-start-line="127" selection-start-column="8" selection-end-line="129" selection-end-column="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/admin/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="41" column="6" lean-forward="true" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/hdmua/B_HdmuaTonkho_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="109" column="65" selection-start-line="109" selection-start-column="65" selection-end-line="109" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/hdmua/skin/B_HdmuaTonkho_tbl.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="531" column="41" selection-start-line="531" selection-start-column="41" selection-end-line="531" selection-end-column="41" />
+          <folding>
+            <element signature="n#style#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#div#2;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#a#0;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" />
+            <element signature="n#div#6;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" />
+            <element signature="n#style#0;n#div#7;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#7;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#7;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#7;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#14637#14643#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#7;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#15577#15583#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#15657#15663#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#15751#15757#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#15832#15838#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#15912#15918#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#7;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#2;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#17333#17339#0#HTML" expanded="true" />
+            <element signature="e#17368#17374#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#17479#17485#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#17637#17643#0#HTML" expanded="true" />
+            <element signature="e#17674#17680#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#17786#17792#0#HTML" expanded="true" />
+            <element signature="e#17820#17826#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#17931#17937#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#7;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#8;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#!!top" expanded="true" />
+            <element signature="e#19957#19963#1#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#3;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#1;n#div#3;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#3;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#2;n#!!top" expanded="true" />
+            <element signature="e#21905#21911#1#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#7;n#div#2;n#!!top" expanded="true" />
+            <element signature="e#22195#22201#1#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#8;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#8;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#8;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#div#1;n#div#8;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#8;n#div#2;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

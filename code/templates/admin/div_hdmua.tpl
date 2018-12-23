@@ -238,6 +238,20 @@ function change_style_hdmua(obj){
     </div>
 </div>
 
+<div id="div_chungtu" onclick="javascript: change_bgcl_hdmua('div_chungtu')" style="width:500px; float:left; font-weight:normal; position:absolute; display:none; margin:120px 0 0 240px; background-color:#ffffff; border:1px solid #99bbe8; z-index:1010; padding: 0px 1px 1px 1px">
+	<div id="chungtu_main_cont">
+		<div id="chungtu_tab_bar_tit">Nhập chứng từ</div>
+		<div id="chungtu_tab_bar_icon">
+			<a href="javascript: void(0);" onClick="javascript: document.getElementById('div_chungtu').style.display='none'" style="text-decoration:none">
+				<img src="{$css_path}icon_dong.png" class="img_all" title="Đóng lại"></a>
+		</div>
+		<div id="chungtu_content_outsign">
+			<div id="list_chungtu_cont">
+			</div>
+		</div>
+	</div>
+</div>
+
 {literal}
 <script language="javascript">	
 	var div_arr = ['list_file','div_view_hdmua','div_thuchien'];
@@ -300,7 +314,7 @@ function change_style_hdmua(obj){
 		}
 		
 		document.getElementById('hdmua_content_main').style.display='block';
-        $("#hdmua_content_main").load("index.php?listHoadon&mod=hdmua");
+        $("#hdmua_content_main").load("index.php?listHdmuaHoadon&mod=hdmua");
 		//var user_level_txt 	= document.getElementById('user_level_txt').value;
 
 	});
@@ -310,7 +324,7 @@ function change_style_hdmua(obj){
         }
 
         document.getElementById('hdmua_content_main').style.display='block';
-        $("#hdmua_content_main").load("index.php?listHanghoa&mod=hdmua");
+        $("#hdmua_content_main").load("index.php?listTonkho&mod=hdmua");
         //var user_level_txt 	= document.getElementById('user_level_txt').value;
 
     });

@@ -1,17 +1,177 @@
 {literal}
-<style type="text/css">
-.error { color:#FF0000;font-weight:bold; margin-left:5px; height:20px; line-height:20px}
-.msg{ color:#00F; font-weight:bold; margin-left:5px; height:20px; line-height:20px}
-.tbl_tit{
-float:left; line-height:25px; border-right:1px solid #99bbe8; 	
-}
-.tbl_cont{
-float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px solid #99bbe8; background:#F2FFEC; font-size:12px
-}
-.tbl_cont2{
-float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px solid #99bbe8; background:#FFF; font-size:12px
-}
-</style>
+    <style type="text/css">
+    .error { color:#FF0000;font-weight:bold; margin-left:5px; height:20px; line-height:20px}
+    .msg{ color:#00F; font-weight:bold; margin-left:5px; height:20px; line-height:20px}
+    .tbl_tit{
+    float:left; line-height:25px; border-right:1px solid #99bbe8;
+    }
+    .tbl_cont{
+    float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px solid #99bbe8; background:#F2FFEC; font-size:12px
+    }
+    .tbl_cont2{
+    float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px solid #99bbe8; background:#FFF; font-size:12px
+    }
+    </style>
+
+    <script type="text/javascript">
+        // --- price format
+        (function($) {
+
+            $.fn.priceFormat = function(options) {
+
+                var defaults = {
+                    //prefix: 'VNĐ ',
+                    centsSeparator: '.',
+                    thousandsSeparator: ',',
+                    limit: false,
+                    centsLimit: 3
+                };
+
+                var options = $.extend(defaults, options);
+
+                return this.each(function() {
+
+                    // pre defined options
+                    var obj = $(this);
+                    var is_number = /[0-9]/;
+
+                    // load the pluggings settings
+                    var prefix = options.prefix;
+                    var centsSeparator = options.centsSeparator;
+                    var thousandsSeparator = options.thousandsSeparator;
+                    var limit = options.limit;
+                    var centsLimit = options.centsLimit;
+
+                    // skip everything that isn't a number
+                    // and also skip the left zeroes
+                    function to_numbers (str) {
+                        var formatted = '';
+                        for (var i=0;i<(str.length);i++) {
+                            char = str.charAt(i);
+                            if (formatted.length==0 && char==0) char = false;
+                            if (char && char.match(is_number)) {
+                                if (limit) {
+                                    if (formatted.length < limit) formatted = formatted+char;
+                                }else{
+                                    formatted = formatted+char;
+                                }
+                            }
+                        }
+                        return formatted;
+                    }
+
+                    // format to fill with zeros to complete cents chars
+                    function fill_with_zeroes (str) {
+                        while (str.length<(centsLimit+1)) str = '0'+str;
+                        return str;
+                    }
+
+                    // format as price
+                    function price_format (str) {
+
+                        // formatting settings
+                        var formatted = fill_with_zeroes(to_numbers(str));
+                        var thousandsFormatted = '';
+                        var thousandsCount = 0;
+
+                        // split integer from cents
+                        var centsVal = formatted.substr(formatted.length-centsLimit,centsLimit);
+                        var integerVal = formatted.substr(0,formatted.length-centsLimit);
+
+                        // apply cents pontuation
+                        formatted = integerVal+centsSeparator+centsVal;
+
+                        // apply thousands pontuation
+                        if (thousandsSeparator) {
+                            for (var j=integerVal.length;j>0;j--) {
+                                char = integerVal.substr(j-1,1);
+                                thousandsCount++;
+                                if (thousandsCount%3==0) char = thousandsSeparator+char;
+                                thousandsFormatted = char+thousandsFormatted;
+                            }
+                            if (thousandsFormatted.substr(0,1)==thousandsSeparator) thousandsFormatted = thousandsFormatted.substring(1,thousandsFormatted.length);
+                            formatted = thousandsFormatted+centsSeparator+centsVal;
+                        }
+
+                        // apply the prefix
+                        if (prefix) formatted = prefix+formatted;
+
+                        return formatted;
+
+                    }
+
+                    // filter what user type (only numbers and functional keys)
+                    function key_check (e) {
+
+                        var code = (e.keyCode ? e.keyCode : e.which);
+                        var typed = String.fromCharCode(code);
+                        var functional = false;
+                        var str = obj.val();
+                        var newValue = price_format(str+typed);
+
+                        // allow keypad numbers, 0 to 9
+                        if(code >= 96 && code <= 105) functional = true;
+
+                        // check Backspace, Tab, Enter, and left/right arrows
+                        if (code ==  8) functional = true;
+                        if (code ==  9) functional = true;
+                        if (code == 13) functional = true;
+                        if (code == 37) functional = true;
+                        if (code == 39) functional = true;
+
+                        if (!functional) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            if (str!=newValue) obj.val(newValue);
+                        }
+
+                    }
+
+                    // inster formatted price as a value of an input field
+                    function price_it () {
+                        var str = obj.val();
+                        var price = price_format(str);
+                        if (str != price) obj.val(price);
+                    }
+
+                    // bind the actions
+                    $(this).bind('keydown', key_check);
+                    $(this).bind('keyup', price_it);
+                    if ($(this).val().length>0) price_it();
+
+                });
+
+            };
+
+        })(jQuery);
+
+        $(function(){
+            $('#hdmua_giatri').priceFormat({
+                centsSeparator: '.',
+                thousandsSeparator: '.'
+            });
+
+            $('#hdmua_giatri_quydoi').priceFormat({
+                centsSeparator: '.',
+                thousandsSeparator: '.'
+            });
+
+            $('#hdmua_gttt').priceFormat({
+                centsSeparator: '.',
+                thousandsSeparator: '.'
+            });
+
+            $('#hdmua_gttt_quydoi').priceFormat({
+                centsSeparator: '.',
+                thousandsSeparator: '.'
+            });
+
+            $('#hdmua_tl_huybo').priceFormat({
+                centsSeparator: '.',
+                thousandsSeparator: '.'
+            });
+        });
+    </script>
 {/literal}
 <div id="hdmua_content_insign">
 	<form method="post" name="frmList_Hdmua" action="?listHdmua{$vars.arg}" id="frmList_Hdmua">
@@ -108,7 +268,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                             {if $obj_info.user_id}
                                 {section name=qi loop=$obj_list_user}
                                     {if $obj_list_user[qi]->user_id eq $obj_info.user_id}
-                                        <option value="{$obj_list_user[qi]->user_id}" selected="selected">-&nbsp;{$obj_list_user[qi]->user_name}</option>
+                                        <option value="{$obj_list_user[qi]->user_id}" selected="selected">-&nbsp;{$obj_list_user[qi]->user_fullname}</option>
                                     {/if}
                                 {/section}
                             {/if}
@@ -128,24 +288,24 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                     </div>
                     <div style="float:left; width:40%; line-height:25px; text-align:left">Giá trị:</div>
                     <div style="float:left; width:60%; line-height:25px; text-align:left">
-                        <input type="text" value="{$obj_info.hdmua_giatri}" id="hdmua_giatri" name="hdmua_giatri" class="text_short" tabindex="10"/>
+                        <input type="text" value="{$obj_info.hdmua_giatri}" id="hdmua_giatri" name="hdmua_giatri" class="text_short text_number" tabindex="10"/>
                     </div>
                     <div style="float:left; width:40%; line-height:25px; text-align:left" title="Thanh toán hủy hợp đồng">Quy đổi (VND):</div>
                     <div style="float:left; width:60%; line-height:25px; text-align:left">
-                        <input type="text" value="{$obj_info.hdmua_giatri_quydoi}" id="hdmua_giatri_quydoi" name="hdmua_giatri_quydoi" class="text_short" tabindex="11"/>
+                        <input type="text" value="{$obj_info.hdmua_giatri_quydoi}" id="hdmua_giatri_quydoi" name="hdmua_giatri_quydoi" class="text_short text_number" tabindex="11"/>
                     </div>
 
                     <div style="float:left; width:40%; line-height:25px; text-align:left">GT thanh toán:</div>
                     <div style="float:left; width:60%; line-height:25px; text-align:left">
-                        <input type="text" value="{$obj_info.hdmua_gttt}" id="hdmua_gttt" name="hdmua_gttt" class="text_short" tabindex="12"/>
+                        <input type="text" value="{$obj_info.hdmua_gttt}" id="hdmua_gttt" name="hdmua_gttt" class="text_short text_number" tabindex="12"/>
                     </div>
                     <div style="float:left; width:40%; line-height:25px; text-align:left">Quy đổi (VND):</div>
                     <div style="float:left; width:60%; line-height:25px; text-align:left">
-                        <input type="text" value="{$obj_info.hdmua_gttt_quydoi}" id="hdmua_gttt_quydoi" name="hdmua_gttt_quydoi" class="text_short" tabindex="13"/>
+                        <input type="text" value="{$obj_info.hdmua_gttt_quydoi}" id="hdmua_gttt_quydoi" name="hdmua_gttt_quydoi" class="text_short text_number" tabindex="13"/>
                     </div>
                     <div style="float:left; width:40%; line-height:25px; text-align:left">TT hủy HĐ (VND):</div>
                     <div style="float:left; width:60%; line-height:25px; text-align:left">
-                        <input type="text" value="{$obj_info.hdmua_tl_huybo}" id="hdmua_tl_huybo" name="hdmua_tl_huybo" class="text_short" tabindex="15"/>
+                        <input type="text" value="{$obj_info.hdmua_tl_huybo}" id="hdmua_tl_huybo" name="hdmua_tl_huybo" class="text_short text_number" tabindex="15"/>
                     </div>
                     <div style="float:left; width:100%; line-height:25px; text-align:left">
                         <input type="button" name="btnSub_Hdmua" id="btnSub_Hdmua" value="Ghi lại" class="button" tabindex="18"/>
@@ -292,43 +452,19 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
             </div>
             <div style="width:380px; float:left; font-weight:normal; position:absolute; display:none; margin:20px 0 0 200px; background-color:#ccd8e7; border:1px solid #99bbe8; border-top:none; z-index:2012" id="seek_more">
                 <div style="float:left; width:100%; height:5px"></div>
-                <div style="float:left; width:60px; margin-bottom:5px">- Ký hiệu: </div>
+                <div style="float:left; width:60px; margin-bottom:5px">- Số hợp đồng: </div>
                 <div style="float:left; width:80px; margin-bottom:5px">
                 <input type="text" id="hdmua_code_fs" name="hdmua_code_fs" class="text_seek_tiny" value="{$vars.hdmua_code_fs}" />
                 </div>
-                <div style="float:left; width:79px; margin-bottom:5px">- Nơi gửi đến: </div>
+
+                <div style="float:left; width:79px; margin-bottom:5px">- Phòng/ban: </div>
                 <div style="float:left; width:155px; margin-bottom:5px">
-                <input type="text" value="{$vars.hdmua_tgth_fs}" id="hdmua_tgth_fs" name="hdmua_tgth_fs" class="text_seek_middle" />
-                {literal}
-                <script type="text/javascript">
-                $().ready(function() {
-                    $("#hdmua_tgth_fs").autocomplete("B_unit_auto.php", {
-                        width: 160,
-                        matchContains: true,
-                        selectFirst: true
-                    });
-                });
-                </script>
-                {/literal}
-                </div>
-                <div style="float:left; width:60px; margin-bottom:5px">- Số đến: </div>
-                <div style="float:left; width:80px; margin-bottom:5px">
-                <input type="text" id="hdmua_num_fs" name="hdmua_num_fs" class="text_seek_tiny" value="{$vars.hdmua_num_fs}" />
-                </div>
-                <div style="float:left; width:79px; margin-bottom:5px">- Loại văn bản: </div>
-                <div style="float:left; width:155px; margin-bottom:5px">
-                <input type="text" value="{$vars.docCat_id_fs}" id="docCat_id_fs" name="docCat_id_fs" class="text_seek_middle" />
-                {literal}
-                <script type="text/javascript">
-                $().ready(function() {
-                    $("#docCat_id_fs").autocomplete("B_docCat_auto.php", {
-                        width: 160,
-                        matchContains: true,
-                        selectFirst: true
-                    });
-                });
-                </script>
-                {/literal}
+                    <select name="department_fil" id="department_fil" class="select_seek">
+                        <option value="0">Chọn phòng ban</option>
+                        {section name=di loop=$obj_list_department}
+                            <option value="{$obj_list_department[di]->department_id}">{$obj_list_department[di]->department_name}</option>
+                        {/section}
+                    </select>
                 </div>
                 
             </div>
@@ -368,64 +504,6 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                 /<input type="text" id="denngay_2" name="denngay_2" class="text_month" value="{$smarty.now|date_format:'%m'}" maxlength="2" />
                 /<input type="text" id="denngay_3" name="denngay_3" class="text_year" value="{$smarty.now|date_format:'%Y'}" maxlength="4" />
                 </div>
-                
-                <div style="float:left; width:56px; margin-bottom:5px">- Số đến:</div>
-                <div style="float:left; width:20px; margin-bottom:5px">Từ&nbsp;</div>
-                <div style="float:left; width:75px; background-color:#FFF; margin-bottom:5px">
-                <input type="text" id="soden_tu" name="soden_tu" class="text_seek_tiny" value="{$vars.soden_tu}" />
-                </div>
-                <div style="float:left; width:24px; margin-bottom:5px; margin-left:5px">đến&nbsp;</div>
-                <div style="float:left; width:75px; margin-bottom:5px; background-color:#FFF">
-                <input type="text" id="soden_den" name="soden_den" class="text_seek_tiny" value="{$vars.soden_den}" />
-                </div>
-                
-                <div style="float:left; width:76px; margin-bottom:5px">- Nơi gửi đến: </div>
-                <div style="float:left; width:150px; margin-bottom:5px">
-                <input type="text" value="{$vars.hdmua_tgth_fil}" id="hdmua_tgth_fil" name="hdmua_tgth_fil" class="text_seek_middle" />
-                {literal}
-                <script type="text/javascript">
-                $().ready(function() {
-                    $("#hdmua_tgth_fil").autocomplete("B_unit_auto.php", {
-                        width: 160,
-                        matchContains: true,
-                        selectFirst: true
-                    });
-                });
-                </script>
-                {/literal}
-                </div>
-                
-                <div style="float:left; width:76px; margin-bottom:5px">- Loại văn bản: </div>
-                <div style="float:left; width:150px; margin-bottom:5px">
-                <input type="text" value="{$vars.docCat_id_fil}" id="docCat_id_fil" name="docCat_id_fil" class="text_seek_middle" />
-                {literal}
-                <script type="text/javascript">
-                $().ready(function() {
-                    $("#docCat_id_fil").autocomplete("B_docCat_auto.php", {
-                        width: 160,
-                        matchContains: true,
-                        selectFirst: true
-                    });
-                });
-                </script>
-                {/literal}
-                </div>
-
-                <div style="float:left; width:76px; margin-bottom:5px">- Lĩnh vực </div>
-                <div style="float:left; width:150px; margin-bottom:5px">
-                    <input type="text" value="{$obj_info.dvtiente_id}" id="dvtiente_id_fil" name="dvtiente_id_fil" class="text_middle" tabindex="6"/>
-                    {literal}
-                        <script type="text/javascript">
-                            $().ready(function() {
-                                $("#dvtiente_id_fil").autocomplete("B_docField_auto.php", {
-                                    width: 160,
-                                    matchContains: true,
-                                    selectFirst: true
-                                });
-                            });
-                        </script>
-                    {/literal}
-                </div>
 
                 <div style="float:left; width:76px; margin-bottom:5px">- Phòng/ban: </div>
                 <div style="float:left; width:150px; margin-bottom:5px">
@@ -439,9 +517,10 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                 <div style="float:left; width:76px; margin-bottom:5px">- Tình trạng: </div>
                 <div style="float:left; width:150px; margin-bottom:5px">
                     <select name="tinhtrang_fil" id="tinhtrang_fil" class="select_seek">
-                        <option value="0">Tất cả</option>
-                        <option value="1">Trong hạn</option>
-                        <option value="2">Quá hạn</option>
+                        <option value="0">Hợp đồng mới</option>
+                        <option value="1">Đang thực hiện</option>
+                        <option value="2">Đã hoàn thành</option>
+                        <option value="3">Đã hủy</option>
                     </select>
                 </div>
             </div>
@@ -475,7 +554,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
             {math x=$vars.curpage-1 y=$vars.numresult z=$smarty.section.pi.index t=1 equation="x*y+z+t" assign=stt}
             <div style="float:left">
                 <div class="{$class_td}" style="width:40px; text-align:center">{$stt}</div>
-                <div class="{$class_td}" style="width:100px; text-align:right">
+                <div class="{$class_td}" style="width:100px; text-align:left">
                     &nbsp;{$obj_list[pi]->hdmua_sohd}&nbsp;
                 </div>
                 <div class="{$class_td}" style="width:70px">
@@ -488,34 +567,19 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                     {if $user_level eq 9 or $user_level eq 1}<a href='javascript: void(0);' onclick="show_list_options({$count},{$total_num_result})">
                     <img src="{$css_path}extra_icon.png" width="14" height="14" border="0" class="img_all"></a>{/if}
                     </div>
-                    <div id="extra_{$count}" style="position:absolute; display:none; height:auto; width:140px; margin:2px 148px; border:1px solid #8ea4c1; border-right:1px solid #8ea4c1; background-color:#dfe8f6">
-                    	{if $order_id eq 0 or $order_id eq 1}
-                        <div style="float:left; width:140px; height:18px; border-right:1px solid #dfe8f6"><b>&nbsp;Phân loại từ:</b></div>
+                    <div id="extra_{$count}" style="position:absolute; display:none; height:auto; width:140px; margin:2px 141px; border:1px solid #8ea4c1; border-right:1px solid #8ea4c1; background-color:#dfe8f6">
+                        <div style="float:left; width:140px; height:18px; border-right:1px solid #dfe8f6"><b>&nbsp;Chọn thao tác:</b></div>
                         <div style="float:left; width:140px; padding:0 0 0 3px">
-                            {section name=ui loop=$user_list_4}
-                            {if $user_list_4[ui]->user_level eq 3}
-                                 <div style="float:left; width:135px">- <a href="javascript: void(0)" onclick="javascript: show_phanloai({$obj_list[pi]->hdmua_id})">{$user_list_4[ui]->user_fullname}</a></div>
-                            {/if}
-                            {/section}
+                            - <a href="javascript: void(0)" onclick="javascript: show_hdmua_chungtu({$obj_list[pi]->hdmua_id})">Quản lý chứng từ</a>
                         </div>
-                        {/if}
-                        {if $order_id eq 1 or $order_id eq 2}
-                        <div style="float:left; width:140px; height:18px; {if $order_id eq 2}border-right:1px solid #dfe8f6{/if}"><b>&nbsp;Chỉ đạo từ:</b></div>
                         <div style="float:left; width:140px; padding:0 0 0 3px">
-                            {section name=ui loop=$user_list_4}
-                            {if $user_list_4[ui]->user_level neq 3}
-                            <div style="float:left; width:135px">- <a href="javascript: void(0)" onclick="javascript: show_list_reply({$user_list_4[ui]->user_id},{$obj_list[pi]->hdmua_id})">{$user_list_4[ui]->user_fullname}</a></div>
-                            {/if}
-                            {/section}
+                             - <a href="javascript: void(0)" onclick="javascript: show_hdmua_vanban({$obj_list[pi]->hdmua_id})">Liên kết văn bản</a>
                         </div>
-                        {/if}
-                        {if $order_id eq 0 or $order_id eq 1 or $order_id eq 2}
-                        <div style="float:left; width:140px; height:3px">
-                        	<hr width="100%" size="1" />
-                        </div>
-                        {/if}
                         <div style="float:left; width:140px; padding:0 0 0 3px">
-                             - <a href="javascript: void(0)" onclick="javascript: show_thongtin_vanban({$obj_list[pi]->hdmua_id})">Thông tin văn bản</a>
+                            - <a href="javascript: void(0)" onclick="javascript: show_hdmua_tientrinh({$obj_list[pi]->hdmua_id})">Tiến trình thực hiện</a>
+                        </div>
+                        <div style="float:left; width:140px; padding:0 0 0 3px">
+                            - <a href="javascript: void(0)" onclick="javascript: show_hdmua_thongtin({$obj_list[pi]->hdmua_id})">Thông tin hợp đồng</a>
                         </div>
                     </div>
                 </div>
@@ -748,20 +812,21 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
 		document.getElementById('list_file').style.display='block';
 		$("#list_file_cont").load("?listHdmuaFile&mod=hdmua"+arg_doc+"&hdmua_id="+hdmua_id);
 	}
-	
+
 	function show_list_reply(user_id,hdmua_id){
 		document.getElementById('list_reply').style.display='block';
 		var arg = document.getElementById('arg').value;
 		$("#list_reply_cont").load("?listHdmuaReply"+arg+"&hdmua_id="+hdmua_id+"&user_id="+user_id);
 	}
 	
-	function show_phanloai(hdmua_id){
-		document.getElementById('list_phanloai').style.display='block';
-		var arg = document.getElementById('arg').value;
-		$("#list_phanloai_cont").load("?Phanloai&"+arg+"&hdmua_id="+hdmua_id);
+	function show_hdmua_chungtu(hdmua_id){
+        change_style_hdmua(2);
+        document.getElementById('hdmua_content_main').style.display='block';
+		//var arg = document.getElementById('arg').value;
+		$("#hdmua_content_main").load("?listHdmuaHoadon&mod=hdmua&hdmua_id="+hdmua_id);
 	}
-	
-	function show_thongtin_vanban(hdmua_id){
+
+	function show_hdmua_thongtin(hdmua_id){
 		document.getElementById('div_view_doc').style.display='block';
 		$("#list_view_hdmua_cont").load("?viewHdmua&mod=hdmua&hdmua_id="+hdmua_id);
 	}
@@ -772,14 +837,6 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
 		order = $("#order_Hdmua").val();
 		//alert(processurl+'-'+page+'-'+numresult+'-'+order);
 		$("#hdmua_content_main").load(processurl+"&numresult="+numresult+"&order="+order+"&curpage="+page);
-	}
-	
-	function uncheck_fns_Hdmua(field,val,id){
-		$("#hdmua_content_main").load("?listHdmua&mod=hdmua&checkUncheck="+val+"&setfield="+field+"&checkUncheckID="+id);
-	}
-	
-	function sort_me_Hdmua(id,val){
-		$("#hdmua_content_main").load("?listHdmua&mod=hdmua&sort_me=1&hdmua_id="+id+"&val="+val);
 	}
 	
 	function search_me_Hdmua(){
@@ -818,12 +875,8 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
 		var denngay_2 	= document.getElementById('denngay_2').value;
 		var denngay_3 	= document.getElementById('denngay_3').value;
 		
-		var soden_tu 	= document.getElementById('soden_tu').value;
-		var soden_den 	= document.getElementById('soden_den').value;
-		
-		var hdmua_tgth_fil 	= document.getElementById('hdmua_tgth_fil').value;
-		var docCat_id_fil 	= document.getElementById('docCat_id_fil').value;
-        var dvtiente_id_fil = document.getElementById('dvtiente_id_fil').value;
+		var hdmua_sohd_fil 	= document.getElementById('hdmua_sohd_fil').value;
+
 		var department_fil 	= document.getElementById('department_fil').value;
         var tinhtrang_fil 	= document.getElementById('tinhtrang_fil').value;
 		
@@ -840,11 +893,8 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
 				{
 					tungay:tungay,
 					denngay:denngay,
-					soden_tu:soden_tu,
-					soden_den:soden_den,
-					hdmua_tgth_fil:hdmua_tgth_fil,
-					docCat_id_fil:docCat_id_fil,
-                    dvtiente_id_fil:dvtiente_id_fil,
+                    hdmua_sohd_fil:hdmua_sohd_fil,
+                    department_fil:department_fil,
                     tinhtrang_fil:tinhtrang_fil
 
 				},
