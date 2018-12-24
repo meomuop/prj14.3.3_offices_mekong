@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b8c3f3dc-c879-4987-a3e0-10e5381e58f3" name="Default Changelist" comment="" />
+    <list default="true" id="b8c3f3dc-c879-4987-a3e0-10e5381e58f3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/code/modules/users/B_User_select.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/modules/users/skin/B_User_select.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/admin/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/hopdong/clsDoitac.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/hopdong/clsDoitac.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/hopdong/clsHdmua.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/hopdong/clsHdmua.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/modules/hdmua/B_Doitac_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/modules/hdmua/B_Doitac_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/modules/hdmua/B_Hdmua_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/modules/hdmua/B_Hdmua_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/modules/hdmua/skin/B_Doitac_tbl.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/code/modules/hdmua/skin/B_Doitac_tbl.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/modules/hdmua/skin/B_Hdmua_tbl.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/code/modules/hdmua/skin/B_Hdmua_tbl.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/templates/admin/admin_home.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/code/templates/admin/admin_home.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/templates/admin/div_hdmua.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/code/templates/admin/div_hdmua.tpl" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -744,15 +757,16 @@
       <workItem from="1545142059391" duration="7131000" />
       <workItem from="1545149359361" duration="2402000" />
       <workItem from="1545194685088" duration="9609000" />
-      <workItem from="1545356195482" duration="27194000" />
+      <workItem from="1545356195482" duration="26791000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108689000" />
+    <option name="totallyTimeSpent" value="108286000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" x="3" y="157" width="283" height="630" id="Project" order="0" sideWeight="0.49919486" visible="true" weight="0.22012103" />
       <window_info id="Structure" order="1" sideWeight="0.50080514" side_tool="true" weight="0.22012103" />
