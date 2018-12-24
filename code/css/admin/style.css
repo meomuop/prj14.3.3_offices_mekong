@@ -215,6 +215,11 @@ blockquote, q {
 	padding-left: 3px;
 	padding-right: 3px;
 }
+
+.text_number{
+	text-align: right;
+}
+
 .text_middle{
 	border:1px solid #99bbe8; width:160px; font-size:12px; height:17px;
 	padding-left: 3px;

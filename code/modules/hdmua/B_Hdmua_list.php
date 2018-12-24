@@ -18,7 +18,7 @@
 	$obj = new hdmua_class();
 
 	// --- Variables is used in this page
-	$order_arr = array(0 => "Hợp đồng mới", 1 => "Đang thực hiện", 2 => "Đã hoàn thành", 2 => "Đã hủy");
+	$order_arr = array(0 => "Hợp đồng mới", 1 => "Đang thực hiện", 2 => "Đã hoàn thành", 3 => "Đã hủy");
 	$nrs_arr = array(5,10, 20, 30, 40, 50, 100, 150, 200);
 	$vars = array_merge($_POST, $_GET);
 	
@@ -60,18 +60,25 @@
 	if($vars['add_edit']==1):
         if (!isset($vars['hdmua_id']) || $vars['hdmua_id'] < 1) {
             $obj = new hdmua_class();
+            $doitac = new doitac_class();
             $obj->readForm();
             if ((is_null($error)) || ($error == "")) {
                 $obj->hdmua_date = date("Y-m-d");
-                $obj->hdmua_ngayhd = date('Y-m-d',strtotime(str_replace('/','-',$vars['hdmua_signed'])));
-                $obj->hdmua_hieuluc = date('Y-m-d',strtotime(str_replace('/','-',$vars['hdmua_recevied'])));
+                $obj->hdmua_ngayhd = date('Y-m-d',strtotime(str_replace('/','-',$vars['hdmua_ngayhd'])));
+                $obj->hdmua_hieuluc = date('Y-m-d',strtotime(str_replace('/','-',$vars['hdmua_hieuluc'])));
                 $obj->hdmua_nguoinhap = $_SESSION['user_id'];
+                $obj->hdmua_giatri = str_replace('.','', $vars['hdmua_giatri']);
+                $obj->hdmua_giatri_quydoi = str_replace('.','', $vars['hdmua_giatri_quydoi']);
+                $obj->hdmua_gttt = str_replace('.','', $vars['hdmua_gttt']);
+                $obj->hdmua_gttt_quydoi = str_replace('.','', $vars['hdmua_gttt_quydoi']);
+                $obj->hdmua_tl_huybo = str_replace('.','', $vars['hdmua_tl_huybo']);
+                $obj->doitac_viettat = $doitac->getViettat($vars['doitac_id']);
 
                 // ---- kiem tra hop dong ton tai
                 $obj_trunghop = new hdmua_class();
                 $isTheSame = $obj_trunghop->checkTrunghop($vars['hdmua_sohd']);
                 if ($isTheSame>0) {
-                    $error = "Văn bản đã tồn tại";
+                    $error = "Hợp đồng đã tồn tại";
                 }else{
                     $obj->insertnew();
                     $complete = "Đã thêm mới hợp đồng có số: ".$vars['hdmua_sohd'];
@@ -80,27 +87,27 @@
             }
         }else{
             $obj = new hdmua_class();
+            $doitac = new doitac_class();
             $obj->readForm();
             if ((is_null($error)) || ($error == "")) {
                 if ($obj->is_already_used($obj->tablename, "hdmua_id", $obj->hdmua_id))
                 {
-                    $obj->hdmua_ngayhd = date('Y-m-d',strtotime(str_replace('/','-',$vars['hdmua_signed'])));
-                    $obj->hdmua_hieuluc = date('Y-m-d',strtotime(str_replace('/','-',$vars['hdmua_recevied'])));
+                    $obj->hdmua_date = date("Y-m-d");
+                    $obj->hdmua_ngayhd = date('Y-m-d',strtotime(str_replace('/','-',$vars['hdmua_ngayhd'])));
+                    $obj->hdmua_hieuluc = date('Y-m-d',strtotime(str_replace('/','-',$vars['hdmua_hieuluc'])));
                     $obj->hdmua_nguoinhap = $_SESSION['user_id'];
+                    $obj->hdmua_giatri = str_replace('.','', $vars['hdmua_giatri']);
+                    $obj->hdmua_giatri_quydoi = str_replace('.','', $vars['hdmua_giatri_quydoi']);
+                    $obj->hdmua_gttt = str_replace('.','', $vars['hdmua_gttt']);
+                    $obj->hdmua_gttt_quydoi = str_replace('.','', $vars['hdmua_gttt_quydoi']);
+                    $obj->hdmua_tl_huybo = str_replace('.','', $vars['hdmua_tl_huybo']);
+                    $obj->doitac_viettat = $doitac->getViettat($vars['doitac_id']);
 
-                    // ---- kiem tra so den van ban
-                    $count_num = $obj->getSameNum($vars['hdmua_num'],$vars['docLevel_id'],$obj->hdmua_id);
-                    if($count_num > 0):
-                        // ---- neu da ton tai: lay so cuoi cong 1
-                        $hdmua_num = $obj->getLastNum($vars['docLevel_id']);
-                        $obj->hdmua_num = $hdmua_num + 1;
-                    endif;
-
-                    // ---- kiem tra van ban ton tai ngoai van ban hien tai
-                    $obj_docCoincidence = new hdmua_class();
-                    $isTheSame = $obj_docCoincidence->checkCoincidence($vars['hdmua_sohd'],date('Y-m-d',strtotime(str_replace('/','-',$vars['hdmua_signed']))),$vars['unit_name'],$vars['doitac_id'],$obj->hdmua_id);
+                    // ---- kiem tra hop dong ton tai ngoai van ban hien tai
+                    $obj_trunghop = new hdmua_class();
+                    $isTheSame = $obj_trunghop->checkTrunghop($vars['hdmua_sohd'], $vars['hdmua_id']);
                     if ($isTheSame>0) {
-                        $error = "Văn bản đã tồn tại";
+                        $error = "Hợp đồng đã tồn tại";
                     }else{
                         $obj->update();
                         $complete = "Đã cập nhật thành công!";
@@ -164,7 +171,7 @@
 		
 	// --- Get user list
 	$obj_user 		= new users_class();
-	$where_user 		= " 1 = 1 and user_active=1 and user_level=2";
+	$where_user 		= " 1 = 1 and user_active=1";
 	$obj_list_user	= $obj_user->getDBList(" $where_user", "user_name", FALSE, "");
 	
 	// ------ Print paging ---------

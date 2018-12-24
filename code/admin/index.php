@@ -354,10 +354,17 @@
         // Muc 1:
         case 'listDanhmuc'		: include ($MODULE_PATH.$module_name.'B_Danhmuc_list.php'); exit();
         case 'listHanghoa'		: include ($MODULE_PATH.$module_name.'B_Hanghoa_list.php'); exit();
+        case 'listHanghoaSelect': include ($MODULE_PATH.$module_name.'B_Hanghoa_select.php'); exit();
         case 'listDvtiente'		: include ($MODULE_PATH.$module_name.'B_Dvtiente_list.php'); exit();
+        case 'listDvtinh'		: include ($MODULE_PATH.$module_name.'B_Dvtinh_list.php'); exit();
+
         case 'listHdmua'		: include ($MODULE_PATH.$module_name.'B_Hdmua_list.php'); exit();
         case 'listDoitac'		: include ($MODULE_PATH.$module_name.'B_Doitac_list.php'); exit();
-															
+        case 'listHdmuaHoadon'	: include ($MODULE_PATH.$module_name.'B_HdmuaHoadon_list.php'); exit();
+        case 'listTonkho'		: include ($MODULE_PATH.$module_name.'B_HdmuaTonkho_list.php'); exit();
+
+
+
 		/* --------------------------Utilities--------------------------- */
 		// ------- Logout
 		case 'logout':

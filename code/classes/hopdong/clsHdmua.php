@@ -18,11 +18,14 @@ class hdmua_class extends dbBasic {
     var $hdmua_gttt;
     var $hdmua_gttt_quydoi;
     var $doitac_id;
+    var $doitac_viettat;
     var $department_id;
+    var $phongban_name;
     var $user_id;
+    var $nguoi_theodoi;
     var $hdmua_tinhtrang;
     var $hdmua_tl_huybo;
-    var $hdmua_lydo_huydo;
+    var $hdmua_lydo_huybo;
     var $hdmua_dieukhoankhac;
     var $hdmua_file;
     var $hdmua_nguoinhap;
@@ -42,11 +45,14 @@ class hdmua_class extends dbBasic {
         'hdmua_gttt',
         'hdmua_gttt_quydoi',
         'doitac_id',
+        'doitac_viettat',
         'department_id',
+        'phongban_name',
         'user_id',
+        'nguoi_theodoi',
         'hdmua_tinhtrang',
         'hdmua_tl_huybo',
-        'hdmua_lydo_huydo',
+        'hdmua_lydo_huybo',
         'hdmua_dieukhoankhac',
         'hdmua_file',
         'hdmua_nguoinhap',
@@ -104,12 +110,12 @@ class hdmua_class extends dbBasic {
         return $result->fields[0];
     }
 
-    function checkTrunghop($hdmuc_sohd, $hdmuc_id = 0){
+    function checkTrunghop($hdmua_sohd, $hdmua_id = 0){
         global $dbconn;
         // ---- Get sql query
-        $where = " AND hdmuc_sohd = '".$hdmuc_sohd."'";
-        if($hdmuc_id!=0) $where.=" AND hdmuc_id != ".$hdmuc_id;
-        $sql = " SELECT count(hdmuc_id) FROM $this->tablename WHERE 1 = 1".$where;
+        $where = " AND hdmua_sohd = '".$hdmua_sohd."'";
+        if($hdmua_id!=0) $where.=" AND hdmua_id != ".$hdmua_id;
+        $sql = " SELECT count(hdmua_id) FROM $this->tablename WHERE 1 = 1".$where;
 
         // ---- Execute SQL
         $result = $dbconn->Execute($sql);
