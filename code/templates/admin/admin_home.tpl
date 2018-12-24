@@ -63,6 +63,7 @@ function change_Zindex(obj){
 	var div_tnvb_arr = ['div_view_transport','list_truyenvb'];	
 	var div_kdl_arr = ['add_edit_kdl','add_edit_dl','dl_file'];
 	var div_msg_arr = ['div_nd_msg'];
+    var div_hdmua_arr = ['div_hdmua_report'];
 	
 	for(i=0;i<=div_arr_zindex.length;i++){
 		if(div_arr_zindex[i] == obj){
@@ -83,9 +84,12 @@ function change_Zindex(obj){
 				for(j=0;j<=div_congviec_arr.length;j++){
 						document.getElementById(div_congviec_arr[j]).style.zIndex='101';
 				}
-				for(j=0;j<=div_vttb_arr.length;j++){
-						document.getElementById(div_vttb_arr[j]).style.zIndex='101';
-				}
+                for(j=0;j<=div_vttb_arr.length;j++){
+                    document.getElementById(div_vttb_arr[j]).style.zIndex='101';
+                }
+                for(j=0;j<=div_hdmua_arr.length;j++){
+                    document.getElementById(div_hdmua_arr[j]).style.zIndex='101';
+                }
 			}else if(obj=='div_transport'){
 				for(j=0;j<=div_doc_arr.length;j++){
 						document.getElementById(div_doc_arr[j]).style.zIndex='101';
@@ -99,6 +103,9 @@ function change_Zindex(obj){
 				for(j=0;j<=div_msg_arr.length;j++){
 						document.getElementById(div_msg_arr[j]).style.zIndex='101';
 				}
+                for(j=0;j<=div_hdmua_arr.length;j++){
+                    document.getElementById(div_hdmua_arr[j]).style.zIndex='101';
+                }
 			}else if(obj=='div_kdl'){
 				for(j=0;j<=div_doc_arr.length;j++){
 						document.getElementById(div_doc_arr[j]).style.zIndex='101';
@@ -112,6 +119,9 @@ function change_Zindex(obj){
 				for(j=0;j<=div_msg_arr.length;j++){
 						document.getElementById(div_msg_arr[j]).style.zIndex='101';
 				}
+                for(j=0;j<=div_hdmua_arr.length;j++){
+                    document.getElementById(div_hdmua_arr[j]).style.zIndex='101';
+                }
 			}else if(obj=='div_msg'){
 				for(j=0;j<=div_doc_arr.length;j++){
 						document.getElementById(div_doc_arr[j]).style.zIndex='101';
@@ -125,7 +135,26 @@ function change_Zindex(obj){
 				for(j=0;j<=div_msg_arr.length;j++){
 						document.getElementById(div_msg_arr[j]).style.zIndex='2001';
 				}
-			}
+                for(j=0;j<=div_hdmua_arr.length;j++){
+                    document.getElementById(div_hdmua_arr[j]).style.zIndex='101';
+                }
+			}else if(obj=='div_hdmua'){
+                for(j=0;j<=div_hdmua_arr.length;j++){
+                    document.getElementById(div_hdmua_arr[j]).style.zIndex='2001';
+                }
+                for(j=0;j<=div_doc_arr.length;j++){
+                    document.getElementById(div_doc_arr[j]).style.zIndex='101';
+                }
+                for(j=0;j<=div_tnvb_arr.length;j++){
+                    document.getElementById(div_tnvb_arr[j]).style.zIndex='101';
+                }
+                for(j=0;j<=div_kdl_arr.length;j++){
+                    document.getElementById(div_kdl_arr[j]).style.zIndex='101';
+                }
+                for(j=0;j<=div_msg_arr.length;j++){
+                    document.getElementById(div_msg_arr[j]).style.zIndex='101';
+                }
+            }
 		}else{
 		    if(document.getElementById(div_arr_zindex[i])){
                 document.getElementById(div_arr_zindex[i]).style.zIndex='100';
@@ -152,6 +181,7 @@ function close_div(obj){
     {include file="div_plan.tpl"}
     {include file="div_doc.tpl"}
     {include file="div_doc_report.tpl"}
+    {include file="div_hdmua_report.tpl"}
     {include file="div_transport.tpl"}
     {include file="div_congviec.tpl"}
     {include file="div_msg.tpl"}

@@ -263,7 +263,7 @@
                 </div>
 
                 <div class="{$class_td}" style="width:29px; text-align:center">
-                    <a href='javascript: void(0);' onclick="edit_me_HdmuaTonkho({$obj_list[pi]->tonkho_id})">
+                    <a href='javascript: void(0);' onclick="edit_me_HdmuaTonkho({$obj_list[pi]->tonkho_id},{$obj_list[pi]->hoadon_id})">
                     <img src="../images/admin/b_edit.png" width="11" height="11" border="0" title="Sửa"></a>
                 </div>
                 <div class="{$class_td}" style="width:29px; text-align:center">
@@ -526,7 +526,7 @@
 		
 		if(exptype==3){
 			document.getElementById('div_hdmua_report').style.display='block';
-			$.post('?expHdmuaTonkhoReport&mod=hdmua&exptype='+exptype,
+			$.post('?expTonkhoReport&mod=hdmua&exptype='+exptype,
 				{
 					nhaptontu:nhaptontu,
 					nhaptonden:nhaptonden
@@ -540,14 +540,14 @@
 			
 			$('#hdmua_content_main').hide();
 			$('#hdmua_content_main').fadeOut('fast').load('index.php?listTonkho&mod=hdmua').fadeIn("fast");
-			//$('#hdmua_report_content_main').load("?expHdmuaTonkhoReport&mod=hdmua&exptype="+exptype+"&nhaptontu="+nhaptontu+"&nhaptonden="+nhaptonden);
+			//$('#hdmua_report_content_main').load("?expTonkhoReport&mod=hdmua&exptype="+exptype+"&nhaptontu="+nhaptontu+"&nhaptonden="+nhaptonden);
 		}else{
-			window.location="?expHdmuaTonkhoReport&mod=hdmua&exptype="+exptype+"&nhaptontu="+nhaptontu+"&nhaptonden="+nhaptonden;
+			window.location="?expTonkhoReport&mod=hdmua&exptype="+exptype+"&nhaptontu="+nhaptontu+"&nhaptonden="+nhaptonden;
 		}
 	}
 	
-	function edit_me_HdmuaTonkho(id){
-		$("#hdmua_content_main").load("?listTonkho&mod=hdmua&edit_me=1&hdmua_id="+id);
+	function edit_me_HdmuaTonkho(id,hoadon_id){
+		$("#hdmua_content_main").load("?listTonkho&mod=hdmua&edit_me=1&hoadon_id="+hoadon_id+"&tonkho_id="+id);
 	}
 		
 	$("#a_ref_HdmuaTonkho").click( function () { 

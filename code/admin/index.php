@@ -359,9 +359,12 @@
         case 'listDvtinh'		: include ($MODULE_PATH.$module_name.'B_Dvtinh_list.php'); exit();
 
         case 'listHdmua'		: include ($MODULE_PATH.$module_name.'B_Hdmua_list.php'); exit();
+        case 'expHdmuaReport'	: include ($MODULE_PATH.$module_name.'B_Hdmua_exp.php'); exit();
         case 'listDoitac'		: include ($MODULE_PATH.$module_name.'B_Doitac_list.php'); exit();
         case 'listHdmuaHoadon'	: include ($MODULE_PATH.$module_name.'B_HdmuaHoadon_list.php'); exit();
+        case 'expHdmuaHDReport'	: include ($MODULE_PATH.$module_name.'B_HdmuaHoadon_exp.php'); exit();
         case 'listTonkho'		: include ($MODULE_PATH.$module_name.'B_HdmuaTonkho_list.php'); exit();
+        case 'expTonkhoReport'	: include ($MODULE_PATH.$module_name.'B_HdmuaTonkho_exp.php'); exit();
 
 
 

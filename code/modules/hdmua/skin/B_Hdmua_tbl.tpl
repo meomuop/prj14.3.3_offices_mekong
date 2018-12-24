@@ -250,7 +250,7 @@
                         <select name="department_id" id="department_id" class="select_middle" tabindex="6">
                             <option value="0">Chọn phòng/ban</option>
                             {section name=qi loop=$obj_list_department}
-                                <option value="{$obj_list_department[qi]->department_id}" {if $obj_list_department[qi]->department_id eq $obj_info.department_id}selected="selected"{/if}>-&nbsp;{$obj_list_department[qi]->department_name}</option>
+                                <option value="{$obj_list_department[qi]->department_id}" {if $obj_list_department[qi]->department_id eq $obj_info.department_id}selected="selected"{/if}>{$obj_list_department[qi]->department_name}</option>
                             {/section}
                         </select>
                         {literal}
@@ -268,7 +268,7 @@
                             {if $obj_info.user_id}
                                 {section name=qi loop=$obj_list_user}
                                     {if $obj_list_user[qi]->user_id eq $obj_info.user_id}
-                                        <option value="{$obj_list_user[qi]->user_id}" selected="selected">-&nbsp;{$obj_list_user[qi]->user_fullname}</option>
+                                        <option value="{$obj_list_user[qi]->user_id}" selected="selected">{$obj_list_user[qi]->user_fullname}</option>
                                     {/if}
                                 {/section}
                             {/if}
@@ -282,7 +282,7 @@
                         <select name="dvtiente_id" id="dvtiente_id" class="select_short" tabindex="9">
                             <option value="0">Chọn kiểu tiền</option>
                             {section name=qi loop=$obj_list_dvtiente}
-                                <option value="{$obj_list_dvtiente[qi]->dvtiente_id}" {if $obj_list_dvtiente[qi]->dvtiente_id eq $obj_info.dvtiente_id}selected="selected"{/if}>-&nbsp;{$obj_list_dvtiente[qi]->dvtiente_unit}</option>
+                                <option value="{$obj_list_dvtiente[qi]->dvtiente_id}" {if $obj_list_dvtiente[qi]->dvtiente_id eq $obj_info.dvtiente_id}selected="selected"{/if}>{$obj_list_dvtiente[qi]->dvtiente_unit}</option>
                             {/section}
                         </select>
                     </div>
@@ -452,7 +452,7 @@
             </div>
             <div style="width:380px; float:left; font-weight:normal; position:absolute; display:none; margin:20px 0 0 200px; background-color:#ccd8e7; border:1px solid #99bbe8; border-top:none; z-index:2012" id="seek_more">
                 <div style="float:left; width:100%; height:5px"></div>
-                <div style="float:left; width:60px; margin-bottom:5px">- Số hợp đồng: </div>
+                <div style="float:left; width:60px; margin-bottom:5px">- Số HĐ: </div>
                 <div style="float:left; width:80px; margin-bottom:5px">
                 <input type="text" id="hdmua_code_fs" name="hdmua_code_fs" class="text_seek_tiny" value="{$vars.hdmua_code_fs}" />
                 </div>
@@ -476,36 +476,36 @@
             <a href="javascript: void(0);" onClick="show_hide_filter()" style="text-decoration:none">
             <div style="float:left; margin-left:10px; width:78px">Lọc dữ liệu</div></a>
             <div style="width:92px; float:left; height:20px; margin-top:1px">
-                <a href="javascript: void(0);" onClick="export_doc(1)" style="text-decoration:none; color:#F00">
+                <a href="javascript: void(0);" onClick="export_hdmua(1)" style="text-decoration:none; color:#F00">
                 <div style="float:left; margin-left:5px; width:26px">
                 <img src="../images/admin/word_icon.png" class="img_all" height="20" title="Kết xuất MS Word"></div>
                 </a>
-                <a href="javascript: void(0);" onClick="export_doc(2)" style="text-decoration:none; color:#F00">
+                <a href="javascript: void(0);" onClick="export_hdmua(2)" style="text-decoration:none; color:#F00">
                 <div style="float:left; margin-left:5px; width:26px">
                 <img src="../images/admin/excel_icon.png" class="img_all" height="20" title="Kết xuất MS Excel"></div>
                 </a>
-                <a href="javascript: void(0);" onClick="export_doc(3)" style="text-decoration:none; color:#F00">
+                <a href="javascript: void(0);" onClick="export_hdmua(3)" style="text-decoration:none; color:#F00">
                 <div style="float:left; margin-left:5px; width:25px">
                 <img src="../images/admin/print_pre_icon.png" class="img_all" height="20" title="Xem trước khi in"></div>
                 </a>
             </div>
-            <div style="width:260px; float:left; font-weight:normal; position:absolute; display:none; margin:20px 0 0 604px; background-color:#ccd8e7; border:1px solid #99bbe8; border-top:none; z-index:2012" id="div_filter">
+            <div style="width:280px; float:left; font-weight:normal; position:absolute; display:none; margin:20px 0 0 604px; background-color:#ccd8e7; border:1px solid #99bbe8; border-top:none; z-index:2012" id="div_filter">
             	<div style="float:left; width:100%; height:5px"></div>
-                <div style="float:left; width:56px; margin-bottom:5px">- Nhận:</div>
+                <div style="float:left; width:46px; margin-bottom:5px">- Nhận:</div>
                 <div style="float:left; width:20px; margin-bottom:5px">Từ&nbsp;</div>
-                <div style="float:left; width:75px; background-color:#FFF; margin-bottom:5px">
+                <div style="float:left; width:90px; background-color:#FFF; margin-bottom:5px">
                 <input type="text" id="tungay_1" name="tungay_1" class="text_date" value="{$smarty.now|date_format:'%d'}" maxlength="2"/>
                 /<input type="text" id="tungay_2" name="tungay_2" class="text_month" value="{$smarty.now|date_format:'%m'}" maxlength="2" />
                 /<input type="text" id="tungay_3" name="tungay_3" class="text_year" value="{$smarty.now|date_format:'%Y'}" maxlength="4" />
                 </div>
                 <div style="float:left; width:24px; margin-bottom:5px; margin-left:5px">đến&nbsp;</div>
-                <div style="float:left; width:75px; margin-bottom:5px; background-color:#FFF">
+                <div style="float:left; width:90px; margin-bottom:5px; background-color:#FFF">
                 <input type="text" id="denngay_1" name="denngay_1" class="text_date" value="{$smarty.now|date_format:'%d'}" maxlength="2" />
                 /<input type="text" id="denngay_2" name="denngay_2" class="text_month" value="{$smarty.now|date_format:'%m'}" maxlength="2" />
                 /<input type="text" id="denngay_3" name="denngay_3" class="text_year" value="{$smarty.now|date_format:'%Y'}" maxlength="4" />
                 </div>
 
-                <div style="float:left; width:76px; margin-bottom:5px">- Phòng/ban: </div>
+                <div style="float:left; width:66px; margin-bottom:5px">- Phg/Ban: </div>
                 <div style="float:left; width:150px; margin-bottom:5px">
                 <select name="department_fil" id="department_fil" class="select_seek">
                     <option value="0">Chọn phòng ban</option>
@@ -514,13 +514,13 @@
                     {/section}
                 </select>
                 </div>
-                <div style="float:left; width:76px; margin-bottom:5px">- Tình trạng: </div>
+                <div style="float:left; width:66px; margin-bottom:5px">- Tình trạng: </div>
                 <div style="float:left; width:150px; margin-bottom:5px">
                     <select name="tinhtrang_fil" id="tinhtrang_fil" class="select_seek">
-                        <option value="0">Hợp đồng mới</option>
-                        <option value="1">Đang thực hiện</option>
-                        <option value="2">Đã hoàn thành</option>
-                        <option value="3">Đã hủy</option>
+                        <option value="1">Hợp đồng mới</option>
+                        <option value="2">Đang thực hiện</option>
+                        <option value="3">Đã hoàn thành</option>
+                        <option value="4">Đã hủy</option>
                     </select>
                 </div>
             </div>
@@ -866,7 +866,7 @@
 	}
 	
 	// ----- ket xuat
-	function export_doc(exptype){
+	function export_hdmua(exptype){
 		var tungay_1 	= document.getElementById('tungay_1').value;
 		var tungay_2 	= document.getElementById('tungay_2').value;
 		var tungay_3 	= document.getElementById('tungay_3').value;
@@ -874,8 +874,6 @@
 		var denngay_1 	= document.getElementById('denngay_1').value;
 		var denngay_2 	= document.getElementById('denngay_2').value;
 		var denngay_3 	= document.getElementById('denngay_3').value;
-		
-		var hdmua_sohd_fil 	= document.getElementById('hdmua_sohd_fil').value;
 
 		var department_fil 	= document.getElementById('department_fil').value;
         var tinhtrang_fil 	= document.getElementById('tinhtrang_fil').value;
@@ -883,7 +881,7 @@
 		var tungay = tungay_3+'-'+tungay_2+'-'+tungay_1;
 		var denngay = denngay_3+'-'+denngay_2+'-'+denngay_1;
 				
-		if ((tungay == "" && denngay == "") && (soden_tu == "" && soden_den == "") ){
+		if (tungay == "" && denngay == ""){
 			return false;
 		}
 		
@@ -893,7 +891,6 @@
 				{
 					tungay:tungay,
 					denngay:denngay,
-                    hdmua_sohd_fil:hdmua_sohd_fil,
                     department_fil:department_fil,
                     tinhtrang_fil:tinhtrang_fil
 

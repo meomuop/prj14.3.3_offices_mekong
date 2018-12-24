@@ -352,38 +352,27 @@
                 <img src="../images/admin/print_pre_icon.png" class="img_all" height="20" title="Xem trước khi in"></div>
                 </a>
             </div>
-            <div style="width:260px; float:left; font-weight:normal; position:absolute; display:none; margin:20px 0 0 604px; background-color:#ccd8e7; border:1px solid #99bbe8; border-top:none; z-index:2012" id="div_filter">
+            <div style="width:280px; float:left; font-weight:normal; position:absolute; display:none; margin:20px 0 0 604px; background-color:#ccd8e7; border:1px solid #99bbe8; border-top:none; z-index:2012" id="div_filter">
             	<div style="float:left; width:100%; height:5px"></div>
-                <div style="float:left; width:56px; margin-bottom:5px">- Nhận:</div>
+                <div style="float:left; width:46px; margin-bottom:5px">- Xuất:</div>
                 <div style="float:left; width:20px; margin-bottom:5px">Từ&nbsp;</div>
-                <div style="float:left; width:75px; background-color:#FFF; margin-bottom:5px">
+                <div style="float:left; width:90px; background-color:#FFF; margin-bottom:5px">
                 <input type="text" id="ngayxuat_1" name="ngayxuat_1" class="text_date" value="{$smarty.now|date_format:'%d'}" maxlength="2"/>
                 /<input type="text" id="ngayxuat_2" name="ngayxuat_2" class="text_month" value="{$smarty.now|date_format:'%m'}" maxlength="2" />
                 /<input type="text" id="ngayxuat_3" name="ngayxuat_3" class="text_year" value="{$smarty.now|date_format:'%Y'}" maxlength="4" />
                 </div>
                 <div style="float:left; width:24px; margin-bottom:5px; margin-left:5px">đến&nbsp;</div>
-                <div style="float:left; width:75px; margin-bottom:5px; background-color:#FFF">
+                <div style="float:left; width:90px; margin-bottom:5px; background-color:#FFF">
                 <input type="text" id="denngay_1" name="denngay_1" class="text_date" value="{$smarty.now|date_format:'%d'}" maxlength="2" />
                 /<input type="text" id="denngay_2" name="denngay_2" class="text_month" value="{$smarty.now|date_format:'%m'}" maxlength="2" />
                 /<input type="text" id="denngay_3" name="denngay_3" class="text_year" value="{$smarty.now|date_format:'%Y'}" maxlength="4" />
                 </div>
 
-                <div style="float:left; width:76px; margin-bottom:5px">- Phòng/ban: </div>
-                <div style="float:left; width:150px; margin-bottom:5px">
-                <select name="department_fil" id="department_fil" class="select_seek">
-                    <option value="0">Chọn phòng ban</option>
-                    {section name=di loop=$obj_list_department}
-                    <option value="{$obj_list_department[di]->department_id}">{$obj_list_department[di]->department_name}</option>
-                    {/section}
-                </select>
-                </div>
-                <div style="float:left; width:76px; margin-bottom:5px">- Tình trạng: </div>
+                <div style="float:left; width:66px; margin-bottom:5px">- Tình trạng: </div>
                 <div style="float:left; width:150px; margin-bottom:5px">
                     <select name="tinhtrang_fil" id="tinhtrang_fil" class="select_seek">
-                        <option value="0">Hợp đồng mới</option>
-                        <option value="1">Đang thực hiện</option>
-                        <option value="2">Đã hoàn thành</option>
-                        <option value="3">Đã hủy</option>
+                        <option value="1">Có hiệu lực</option>
+                        <option value="2">Bị hủy</option>
                     </select>
                 </div>
             </div>
@@ -715,34 +704,22 @@
 		var denngay_1 	= document.getElementById('denngay_1').value;
 		var denngay_2 	= document.getElementById('denngay_2').value;
 		var denngay_3 	= document.getElementById('denngay_3').value;
-		
-		var soden_tu 	= document.getElementById('soden_tu').value;
-		var soden_den 	= document.getElementById('soden_den').value;
-		
-		var hdmua_tgth_fil 	= document.getElementById('hdmua_tgth_fil').value;
-		var docCat_id_fil 	= document.getElementById('docCat_id_fil').value;
-        var dvtiente_id_fil = document.getElementById('dvtiente_id_fil').value;
-		var department_fil 	= document.getElementById('department_fil').value;
+
         var tinhtrang_fil 	= document.getElementById('tinhtrang_fil').value;
 		
 		var ngayxuat = ngayxuat_3+'-'+ngayxuat_2+'-'+ngayxuat_1;
 		var denngay = denngay_3+'-'+denngay_2+'-'+denngay_1;
 				
-		if ((ngayxuat == "" && denngay == "") && (soden_tu == "" && soden_den == "") ){
+		if (ngayxuat == "" && denngay == ""){
 			return false;
 		}
 		
 		if(exptype==3){
 			document.getElementById('div_hdmua_report').style.display='block';
-			$.post('?expHdmuaHoadonReport&mod=hdmua&exptype='+exptype,
+			$.post('?expHdmuaHDReport&mod=hdmua&exptype='+exptype,
 				{
 					ngayxuat:ngayxuat,
 					denngay:denngay,
-					soden_tu:soden_tu,
-					soden_den:soden_den,
-					hdmua_tgth_fil:hdmua_tgth_fil,
-					docCat_id_fil:docCat_id_fil,
-                    dvtiente_id_fil:dvtiente_id_fil,
                     tinhtrang_fil:tinhtrang_fil
 
 				},
@@ -754,9 +731,9 @@
 			
 			$('#hdmua_content_main').hide();
 			$('#hdmua_content_main').fadeOut('fast').load('index.php?listHdmuaHoadon&mod=hdmua').fadeIn("fast");
-			//$('#hdmua_report_content_main').load("?expHdmuaHoadonReport&mod=hdmua&exptype="+exptype+"&ngayxuat="+ngayxuat+"&denngay="+denngay);
+			//$('#hdmua_report_content_main').load("?expHdmuaHDReport&mod=hdmua&exptype="+exptype+"&ngayxuat="+ngayxuat+"&denngay="+denngay);
 		}else{
-			window.location="?expHdmuaHoadonReport&mod=hdmua&exptype="+exptype+"&ngayxuat="+ngayxuat+"&denngay="+denngay;
+			window.location="?expHdmuaHDReport&mod=hdmua&exptype="+exptype+"&ngayxuat="+ngayxuat+"&denngay="+denngay;
 		}
 	}
 	

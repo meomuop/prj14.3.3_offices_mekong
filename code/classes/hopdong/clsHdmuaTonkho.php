@@ -52,6 +52,42 @@ class hdmuaTonkho_class extends dbBasic {
         return $result->fields[0];
     }
 
+    function getTonkhoExport($nhaptontu,$nhaptonden){
+        global $dbconn;
+        // ---- Get sql query
+        $selectfields = array (
+            'tonkho_id',
+            'hanghoa_name',
+            'dvtinh_name',
+            'tonkho_tong_soluong');
+        // --- Condition
+        $where = " 1 = 1";
+        if ($nhaptontu) $where .= " AND tonkho_date >= '".$nhaptontu."'";
+        if ($nhaptonden) $where .= " AND tonkho_date <= '".$nhaptonden."'";
+
+        $sql = " SELECT tonkho_id, hanghoa_name, dvtinh_name, SUM(tonkho_soluong) AS tonkho_tong_soluong FROM $this->tablename WHERE ".$where." GROUP BY hanghoa_id";
+        // ---- Execute SQL
+        $result = $dbconn->Execute($sql);
+
+        $ret = array();
+        if ($result){
+            for (; !$result->EOF; $result->MoveNext()){
+                $i = 0;
+                $temp = $this;
+                foreach($selectfields as $id){
+                    $fname = "temp->$id";
+                    $value = trim($result->fields[$i++]);
+                    $value = stripslashes($value);
+                    $temp->$id=$value;
+                }
+                $ret[] = $temp;
+                unset($this);
+            }
+        }
+
+        return $ret;
+    }
+
     // --- get number of rows
     function getNumresult($where = ""){
         global $dbconn;

@@ -37,34 +37,6 @@
 	$processurl .= $vars['docField_id']?"&docField_id=".$vars['docField_id']:"";
 	$processurl .= $vars['docLevel_id']?"&docLevel_id=".$vars['docLevel_id']:"";
 	
-	// --- Del Product which is selected
-	if ($vars['dlStr']){
-	$obj->removeInList($vars['dlStr']);
-	}
-	
-	// --- Check and uncheck
-	if ($vars['checkUncheck']==1){
-	$obj->checkUncheck($vars['checkUncheckID'],$vars['checkUncheck'],$vars['setfield']);
-	}
-	if ($vars['checkUncheck']==2){
-	$obj->checkUncheck($vars['checkUncheckID'],$vars['checkUncheck'],$vars['setfield']);
-	}
-	
-	// --- Items sort
-	$aa=array();
-	$bb=array();
-	$counta=count($vars['doc_sort']); 	
-	$countb=count($vars['doc_id1']);
-	if ($counta>0 and $countb>0) 
-	{ 
-	for ($i=0;$i<$counta;$i++) 
-	{ 
-		$aa['maxe']=$vars['doc_sort'][$i]; 
-		$bb['maxe1']=$vars['doc_id1'][$i];
-		$obj->sortItem($aa['maxe'],$bb['maxe1']);
-	} 
-	}
-	
 	// --- Condition : The row 71 got trouble in uesed --> can't findout the reason
 	if($order_id == 2):
 	$order_str = "doc_sort ASC";
