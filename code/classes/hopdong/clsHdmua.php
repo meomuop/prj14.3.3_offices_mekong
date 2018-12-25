@@ -92,10 +92,10 @@ class hdmua_class extends dbBasic {
         $dbconn->Execute($sql);
     }
 
-    function update_uutien($id){
+    function updateTinhtrang($id,$value){
         global $dbconn;
         // ---- Get sql query
-        $sql = " UPDATE $this->tablename set hdmua_priority = 1 where hdmua_id=".$id;
+        $sql = " UPDATE $this->tablename set hdmua_tinhtrang = ".$value." where hdmua_id=".$id;
         // ---- Execute SQL
         $dbconn->Execute($sql);
     }

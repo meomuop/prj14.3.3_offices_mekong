@@ -826,6 +826,12 @@
 		$("#hdmua_content_main").load("?listHdmuaHoadon&mod=hdmua&hdmua_id="+hdmua_id);
 	}
 
+    function show_hdmua_tientrinh(hdmua_id){
+        document.getElementById('div_thuchien').style.display='block';
+        $("#list_thuchien_cont").load("?listHdmuaTientrinh&mod=hdmua&hdmua_id="+hdmua_id);
+    }
+
+
 	function show_hdmua_thongtin(hdmua_id){
 		document.getElementById('div_view_doc').style.display='block';
 		$("#list_view_hdmua_cont").load("?viewHdmua&mod=hdmua&hdmua_id="+hdmua_id);
