@@ -812,4 +812,3 @@ function send_mail($emailaddress, $fromaddress, $emailsubject, $body, $attachmen
 		}
 		return $date_str;
 	}
-?>

@@ -10,11 +10,11 @@
 	}
 
 	// ------------------------------
-    include ($CLASSES_PATH.'/hopdong/clsHdmuaTientrinh.php');
+    include ($CLASSES_PATH.'/hopdong/clsHdmuaLkvb.php');
     include ($CLASSES_PATH.'/hopdong/clsHdmua.php');
 
 	// --- Class is used in this page
-	$obj = new hdmuaTientrinh_class();
+	$obj = new hdmuaLkvb_class();
 
 	// --- Variables is used in this page
 	$order_arr = array(0 => "Mới đến cũ", 1 => "Cũ đến mới");
@@ -32,9 +32,9 @@
 	$cur_pos = ($vars['curpage'] - 1) * $vars['numresult'];
 	$order_id = (int)$vars['order'];
 	
-	$processurl = "?listHdmuaTientrinh&mod=hdmua";
+	$processurl = "?listHdmuaLkvb&mod=hdmua";
     $processurl .= trim($vars['hdmua_id'])?"&hdmua_id=".trim($vars['hdmua_id']):"";
-	$processurl .= trim($vars['tientrinh_noidung_fs'])?"&tientrinh_noidung=".trim($vars['tientrinh_noidung_fs']):"";
+	$processurl .= trim($vars['lkvb_noidung_fs'])?"&lkvb_noidung=".trim($vars['lkvb_noidung_fs']):"";
 	
 	// --- Del record which is selected
 	if ($vars['dlStr']){
@@ -51,17 +51,17 @@
 	
 	// --- Items sort
 	if($vars['sort_me']==1){
-		$obj->sortItem($vars['val'],$vars['tientrinh_id']);
+		$obj->sortItem($vars['val'],$vars['lkvb_id']);
 	}
 	
 	// --- Add - Edit
 	if($vars['add_edit']==1):
-        if (!isset($vars['tientrinh_id']) || $vars['tientrinh_id'] < 1) {
-            $obj = new hdmuaTientrinh_class();
+        if (!isset($vars['lkvb_id']) || $vars['lkvb_id'] < 1) {
+            $obj = new hdmuaLkvb_class();
             $hdmua = new hdmua_class();
             $obj->readForm();
             if ((is_null($error)) || ($error == "")) {
-                $obj->tientrinh_date = date("Y-m-d");
+                $obj->lkvb_date = date("Y-m-d");
                 $obj->user_id = $_SESSION['user_id'];
 
                 $obj->insertnew();
@@ -70,13 +70,13 @@
                 $hdmua->updateTinhtrang($vars['hdmua_id'],2);
             }
         }else{
-            $obj = new hdmuaTientrinh_class();
+            $obj = new hdmuaLkvb_class();
             $hdmua = new hdmua_class();
             $obj->readForm();
             if ((is_null($error)) || ($error == "")) {
-                if ($obj->is_already_used($obj->tablename, "tientrinh_id", $obj->tientrinh_id))
+                if ($obj->is_already_used($obj->tablename, "lkvb_id", $obj->lkvb_id))
                 {
-                    $obj->tientrinh_date = date("Y-m-d");
+                    $obj->lkvb_date = date("Y-m-d");
                     $obj->user_id = $_SESSION['user_id'];
 
                     $obj->update();
@@ -89,11 +89,11 @@
 
 	// --- Get record for edit
 	if($vars['edit_me']==1):
-        $obj = new hdmuaTientrinh_class();
-        $obj->getDBbyPkey($vars['tientrinh_id']);
-        if (!$obj->tientrinh_id) redirect("?listHdmuaTientrinh".$arg['arg']);
+        $obj = new hdmuaLkvb_class();
+        $obj->getDBbyPkey($vars['lkvb_id']);
+        if (!$obj->lkvb_id) redirect("?listHdmuaLkvb".$arg['arg']);
         $obj_info = (array)$obj;
-        $tientrinh_num = $obj->tientrinh_num;
+        $lkvb_num = $obj->lkvb_num;
 	endif;
 	
 	// --- Condition
@@ -105,18 +105,18 @@
     endif;
 
 	if ($vars['search_me']==1):
-		if ($vars['tientrinh_ghichu_fs']) 	$where .= " AND tientrinh_ghichu regexp binary '".$vars['tientrinh_ghichu_fs']."'";
+		if ($vars['vanban_trichyeu_fs']) 	$where .= " AND vanban_trichyeu regexp binary '".$vars['vanban_trichyeu_fs']."'";
 	endif;
 	
 	$limit = " LIMIT ".(string)$cur_pos.", ".(int)$vars['numresult'];
 	
 	if($order_id == 0):
-		$orderStr.=" tientrinh_id DESC";
+		$orderStr.=" lkvb_id DESC";
 	else:
-        $orderStr.=" tientrinh_id ASC";
+        $orderStr.=" lkvb_id ASC";
 	endif;
 	
-	$obj = new hdmuaTientrinh_class();
+	$obj = new hdmuaLkvb_class();
 	$obj_list = $obj->getDBList(" $where", $orderStr, FALSE, $limit);
 	$total_num_result = $obj->getRowNumber("$where");
 	$num_page = ceil($total_num_result/$vars['numresult']);
@@ -182,13 +182,13 @@
 	$assign_list['lastNum'] 	= $lastNum;
 	$assign_list['complete'] 	= $complete;
 	
-	$display = dirname(__FILE__)."/skin/B_HdmuaTientrinh_tbl.tpl";
+	$display = dirname(__FILE__)."/skin/B_HdmuaLkvb_tbl.tpl";
 	$assign_list['display'] = $display;
 	
 	$smarty->assign($assign_list);
 	
 	// --- Display template
 	if (isset($vars['activeAjax']))
-	$smarty->display(dirname(__FILE__)."/skin/B_HdmuaTientrinh_tbl.tpl");
+	$smarty->display(dirname(__FILE__)."/skin/B_HdmuaLkvb_tbl.tpl");
 	else
 	$smarty->display(dirname(__FILE__)."/skin/B_Hdmua_list.tpl");

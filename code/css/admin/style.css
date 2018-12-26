@@ -236,6 +236,12 @@ blockquote, q {
 	padding-right: 3px;
 }
 
+.text_super_long{
+	border:1px solid #99bbe8; width:550px; font-size:12px; height:17px;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
 .select_micro{
 	border:1px solid #99bbe8; width:40px; font-size:12px; height:18px;
 }

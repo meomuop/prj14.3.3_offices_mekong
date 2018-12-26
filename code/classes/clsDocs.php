@@ -123,10 +123,14 @@ class doc_class extends dbBasic {
     }
 	
 	// --- get last number
-	function getLastNum($docLevel_id){
+	function getLastNum($docLevel_id = 0){
         global $dbconn;
         // ---- Get sql query
-        $sql = " SELECT doc_num FROM $this->tablename where 1 = 1 and docLevel_id = ".$docLevel_id." order by doc_id desc limit 1";
+        $where = ' 1 = 1 ';
+        if($docLevel_id > 0){
+            $where .= ' and docLevel_id = '.$docLevel_id;
+        }
+        $sql = " SELECT doc_num FROM $this->tablename where ".$where." order by doc_id desc limit 1";
         // ---- Execute SQL
         $result = $dbconn->Execute($sql);
 		return $result->fields[0];

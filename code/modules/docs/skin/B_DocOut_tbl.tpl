@@ -50,7 +50,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
 	<form method="post" name="frmList_DocOut" action="?listDocOut{$vars.arg}" id="frmList_DocOut">
     {if $user_level eq 1 or $user_level eq 2 or $user_level eq 9}
     <!------------------------------------------THEM MOI------------------------------------>
-    <fieldset style="width:912px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px">
+    <fieldset style="width:1012px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px">
         <legend class="legend_list_search">
             Thêm/Chỉnh sửa&nbsp;|&nbsp;Thông báo:&nbsp;
             <span class="msg">{$error}{$complete}</span>
@@ -59,7 +59,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
     	<table width="98%" cellspacing="0" cellpadding="0" border="0" style="margin-left:5px">
         	<tr height="10"><td colspan="2"></td></tr>
             <tr height="30">
-            	<td align="center" width="30%" valign="top">
+            	<td align="center" width="33%" valign="top">
                 	<div style="float:left; width:30%; line-height:25px; text-align:left; color:#F00">Số văn bản <font color="#FF0000">*</font>:</div>
                     <div style="float:left; width:70%; line-height:25px; text-align:left">
                     	<input type="text" id="docOut_num" name="docOut_num" value="{if $obj_info.docOut_num neq ''}{$obj_info.docOut_num}{else}{$obj_info.docOut_num_typical}{/if}"  class="text_short" style="color:#F00" tabindex="1"/>
@@ -162,12 +162,12 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                     </div>
                 </td>
                 <td align="center" valign="top">
-                	<div style="float:left; width:10%; line-height:25px; text-align:left">Trích yếu <font color="#FF0000">*</font>:</div>
-                    <div style="float:left; width:90%; line-height:25px; text-align:left; height:75px">
+                	<div style="float:left; width:13%; line-height:25px; text-align:left">Trích yếu <font color="#FF0000">*</font>:</div>
+                    <div style="float:left; width:87%; line-height:25px; text-align:left; height:75px">
                     	<textarea spellcheck="false" name="docOut_desc" id="docOut_desc" cols="30" rows="5" class="text_area_long" onfocus="hide_message_DocOut()" tabindex="8">{$obj_info.docOut_desc}</textarea>
                     </div>
-                    <div style="float:left; width:10%; line-height:25px; text-align:left">Độ mật:</div>
-                    <div style="float:left; width:20%; line-height:25px; text-align:left">
+                    <div style="float:left; width:13%; line-height:25px; text-align:left">Độ mật:</div>
+                    <div style="float:left; width:19%; line-height:25px; text-align:left">
                     	<select name="secret_id" id="secret_id" class="select_short" tabindex="9">
                             {section name=qi loop=$obj_list_secret}
                             <option value="{$obj_list_secret[qi]->secret_id}" {if $obj_list_secret[qi]->secret_id eq $obj_info.secret_id}selected="selected"{/if}>-&nbsp;{$obj_list_secret[qi]->secret_name}</option>
@@ -175,7 +175,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                         </select>
                     </div>
                     <div style="float:left; width:10%; line-height:25px; text-align:left">Độ khẩn:</div>
-                    <div style="float:left; width:20%; line-height:25px; text-align:left">
+                    <div style="float:left; width:18%; line-height:25px; text-align:left">
                     	<select name="important_id" id="important_id" class="select_short" tabindex="10">
                             {section name=qi loop=$obj_list_important}
                             <option value="{$obj_list_important[qi]->important_id}" {if $obj_list_important[qi]->important_id eq $obj_info.important_id}selected="selected"{/if}>-&nbsp;{$obj_list_important[qi]->important_name}</option>
@@ -192,9 +192,9 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
 
 
                     <!-------------------------------------------------------------------------->
-                    <div style="float:left; width:10%; line-height:25px; text-align:left">Lựa chọn <font color="#FF0000">*</font>:<br>nơi nhận<br>hoặc....</div>
+                    <div style="float:left; width:13%; line-height:25px; text-align:left">Lựa chọn <font color="#FF0000">*</font>:<br>nơi nhận<br>hoặc....</div>
                     {if $obj_info.unit_name neq ''}
-                        <div id="noinhan_chon" style="float:left; width:90%; line-height:25px; text-align:left; height:76px">
+                        <div id="noinhan_chon" style="float:left; width:87%; line-height:25px; text-align:left; height:76px">
                             <div style="float:left; width:246px; margin-top:2px">
                                 <select id="unit_move" size="6" multiple="multiple" class="select_middle" style="width:246px; height:69px" tabindex="13">
                                     {section name=qi loop=$obj_list_unit_notin}
@@ -217,7 +217,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                             </div>
                         </div>
                     {else}
-                        <div id="noinhan_chon" style="float:left; width:90%; line-height:25px; text-align:left; height:76px">
+                        <div id="noinhan_chon" style="float:left; width:87%; line-height:25px; text-align:left; height:76px">
                             <div style="float:left; width:246px; margin-top:2px">
                                 <select id="unit_move" size="6" multiple="multiple" class="select_middle" style="width:246px; height:69px" tabindex="13">
                                     {section name=qi loop=$obj_list_unit}
@@ -239,17 +239,17 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                     <!------------------------------------------------------------------------------------->
 
                     <div style="float: left; width:100%">
-                    <div style="float:left; width:10%; line-height:25px; text-align:left">Nhập tay:</div>
-                    <div style="float:left; width:57.5%; line-height:25px; text-align:left">
+                    <div style="float:left; width:13%; line-height:25px; text-align:left">Nhập tay:</div>
+                    <div style="float:left; width:55%; line-height:25px; text-align:left">
                     	<input type="text" id="unit_name_02" name="unit_name_02" size="10" value="{$obj_info.unit_name_02}" class="text_long" tabindex="12"/>
                     </div>
 
-                    <div style="float:left; width:4.5%; line-height:25px; text-align:left">
+                    <div style="float:left; width:4%; line-height:25px; text-align:left">
                     <a href="javascript: void(0);" onClick="add_more()" style="text-decoration:none; color:#F00">
                 	<div style="float:left; margin-left:3px">
                     <img src="{$css_path}icon_keo_dai.png" class="img_all"></div></a>
                     </div>
-                    <div style="float:left; width:26.5%; line-height:25px; text-align:right">
+                    <div style="float:left; width:25%; line-height:25px; text-align:right">
                     	<input type="button" name="btnSub_DocOut" id="btnSub_DocOut" value="Ghi lại" class="button" tabindex="13"/>
                         <input type="hidden" name="docOut_id" id="docOut_id" value="{$obj_info.docOut_id}">
                         <input type="hidden" name="docOut_file" id="docOut_file" value="{$obj_info.docOut_file}">
@@ -339,9 +339,9 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                         {/literal}
                     </div>
                     </div>
-                    <div style="position:absolute; width:625px; margin:201px 0 0 -5px; height:80px; text-align:left; display:none; background-color:#dfe8f6; border:1px solid #99bbe8; border-top:none; z-index:1005" id="div_add_more">
-                    <div style="float:left; width:10%; line-height:25px; text-align:left; margin-left:4px">Người ký liên ngành:</div>
-                    <div style="float:left; width:89%; line-height:25px; text-align:left; height:55px">
+                    <div style="position:absolute; width:655px; margin:201px 0 0 -5px; height:80px; text-align:left; display:none; background-color:#dfe8f6; border:1px solid #99bbe8; border-top:none; z-index:1005" id="div_add_more">
+                    <div style="float:left; width:13.3%; line-height:25px; text-align:left; margin-left:4px">Người ký liên ngành:</div>
+                    <div style="float:left; width:85%; line-height:25px; text-align:left; height:55px">
                     	{if $obj_info.interdisci_move neq ''}
                         <div style="float:left; width:246px; margin-top:2px">
                         	<select id="interdisci_move" multiple="multiple" class="select_middle" style="width:246px; height:46px">
@@ -382,8 +382,8 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                         </div>
                         {/if}
                     </div>
-                    <div style="float:left; width:10%; line-height:25px; text-align:left; margin-left:4px">Tự nhập:</div>
-                    <div style="float:left; width:57.5%; line-height:25px; text-align:left">
+                    <div style="float:left; width:13.3%; line-height:25px; text-align:left; margin-left:4px">Tự nhập:</div>
+                    <div style="float:left; width:85%; line-height:25px; text-align:left">
                     	<input type="text" id="interdisci_name_02" name="interdisci_name_02" size="10" value="{$interdisci_name_02}" class="text_long"/>
                     </div>
                     </div>
@@ -393,8 +393,8 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
     </fieldset>
     {/if}
     <!------------------------------------DANH SACH---------------------------------------------->
-    <fieldset style="width:912px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px; {if $user_level eq 1 or $user_level eq 2 or $user_level eq 9}height:223px{else}height:462px{/if}">
-        <legend class="legend_list" style="width:865px">
+    <fieldset style="width:1012px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px; {if $user_level eq 1 or $user_level eq 2 or $user_level eq 9}height:223px{else}height:462px{/if}">
+        <legend class="legend_list" style="width:905px">
             <div style="width:130px; float:left">Danh sách: {$total_num_result}</div>
             <div style="width:70px; float:left">&nbsp;|&nbsp;Tìm kiếm:&nbsp;</div>
             <div style="width:380px; float:left; font-weight:normal">
@@ -408,13 +408,13 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                 <a href="javascript: void(0);" onClick="show_hide_seek()" style="text-decoration:none; color:#F00">
                 <div style="float:left; margin-left:3px"><img src="{$css_path}icon_keo_dai.png" class="img_all"></div></a>
             </div>
-            <div style="width:380px; float:left; font-weight:normal; position:absolute; display:none; margin:23px 0 0 200px; background-color:#ccd8e7; border:1px solid #99bbe8; border-top:none" id="seek_more">
+            <div style="width:380px; float:left; font-weight:normal; position:absolute; display:none; margin:20px 0 0 200px; background-color:#ccd8e7; border:1px solid #99bbe8; border-top:none; padding-top: 5px" id="seek_more">
                 <div style="float:left; width:60px; margin-bottom:5px">- Ký hiệu: </div>
-                <div style="float:left; width:80px; margin-bottom:5px">
+                <div style="float:left; width:95px; margin-bottom:5px">
                 <input type="text" id="docOut_code_fs" name="docOut_code_fs" class="text_seek_tiny" value="{$vars.docOut_code_fs}" />
                 </div>
                 <div style="float:left; width:79px; margin-bottom:5px">- ĐV dự thảo: </div>
-                <div style="float:left; width:155px; margin-bottom:6px">
+                <div style="float:left; width:145px; margin-bottom:6px">
                 <select name="department_id_fs" id="department_id_fs" class="text_seek_middle">
                     <option value="0">Chọn đơn vị dự thảo</option>
                     {section name=qi loop=$obj_list_department}
@@ -423,11 +423,11 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                 </select>
                 </div>
                 <div style="float:left; width:60px; margin-bottom:5px">- Số đi: </div>
-                <div style="float:left; width:80px; margin-bottom:5px">
+                <div style="float:left; width:95px; margin-bottom:5px">
                 <input type="text" id="docOut_num_fs" name="docOut_num_fs" class="text_seek_tiny" value="{$vars.docOut_num_fs}" />
                 </div>
-                <div style="float:left; width:79px; margin-bottom:5px">- Loại văn bản: </div>
-                <div style="float:left; width:155px; margin-bottom:6px">
+                <div style="float:left; width:79px; margin-bottom:5px">- Loại VB: </div>
+                <div style="float:left; width:145px; margin-bottom:6px">
                 <select name="docCat_id_fs" id="docCat_id_fs" class="text_seek_middle">
                     <option value="0">Chọn loại văn bản</option>
                     {section name=qi loop=$obj_list_dcat}
@@ -436,15 +436,15 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                 </select>
                 </div>
                 <div style="float:left; width:60px; margin-bottom:5px">- Ngày VB:</div>
-                <div style="float:left; width:80px; margin-bottom:5px">
-                	<div style="float:left; width:60px; background-color:#FFF">
+                <div style="float:left; width:95px; margin-bottom:5px">
+                	<div style="float:left; width:90px; background-color:#FFF">
                     	<input type="text" id="ngay_vb_1" name="ngay_vb_1" class="text_date" value="{$obj_info.ngay_vb|date_format:'%d'}" onfocus="hide_message()" maxlength="2"/>/
                         <input type="text" id="ngay_vb_2" name="ngay_vb_2" class="text_month" value="{$obj_info.ngay_vb|date_format:'%m'}" onfocus="hide_message()" maxlength="2"/>/
-                        <input type="text" id="ngay_vb_3" name="ngay_vb_3" class="text_month" value="{$db_year|date_format:"%y"}" readonly="readonly"/>
+                        <input type="text" id="ngay_vb_3" name="ngay_vb_3" class="text_month" value="{$db_year|date_format:"%Y"}" readonly="readonly"/>
                     </div>
                 </div>
                 <div style="float:left; width:79px; margin-bottom:5px">- Người ký: </div>
-                <div style="float:left; width:155px; margin-bottom:5px">
+                <div style="float:left; width:145px; margin-bottom:5px">
                 <select name="user_id_fs" id="user_id_fs" class="text_seek_middle">
                     <option value="0">Chọn người ký</option>
                     {section name=qi loop=$obj_list_user_bgd}
@@ -458,7 +458,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                 <input type="button" name="btnSeek" id="btnSeek" value="Tìm >>" class="button_seek" onclick="search_me_DocOut()" />
             </div>
             <!-----------------------------------------KET XUAT--------------------------------------->
-            <div style="width:60px; float:left">&nbsp;|&nbsp;Kết xuất:&nbsp;</div>
+            <div style="width:100px; float:left">&nbsp;|&nbsp;Kết xuất:&nbsp;</div>
             <a href="javascript: void(0);" onClick="show_hide_filter()" style="text-decoration:none">
             <div style="float:left; margin-left:10px; width:78px">Lọc dữ liệu</div></a>
             <div style="width:92px; float:left; height:20px; margin-top:1px">
@@ -475,33 +475,33 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                 <img src="../images/admin/print_pre_icon.png" class="img_all" height="20" title="Xem trước khi in"></div>
                 </a>
             </div>
-            <div style="width:260px; float:left; font-weight:normal; position:absolute; display:none; margin:23px 0 0 604px; background-color:#ccd8e7; border:1px solid #99bbe8; border-top:none" id="div_filter">
-                <div style="float:left; width:56px; margin-bottom:5px">- Ban hành:</div>
+            <div style="width:300px; float:left; font-weight:normal; position:absolute; display:none; margin:20px 0 0 604px; background-color:#ccd8e7; border:1px solid #99bbe8; border-top:none; padding-top: 5px" id="div_filter">
+                <div style="float:left; width:65px; margin-bottom:5px">- Ban hành:</div>
                 <div style="float:left; width:20px; margin-bottom:5px">Từ&nbsp;</div>
-                <div style="float:left; width:75px; background-color:#FFF; margin-bottom:5px">
+                <div style="float:left; width:90px; background-color:#FFF; margin-bottom:5px">
                 <input type="text" id="tungay_1" name="tungay_1" class="text_date" value="{$smarty.now|date_format:'%d'}" maxlength="2"/>
                 /<input type="text" id="tungay_2" name="tungay_2" class="text_month" value="{$smarty.now|date_format:'%m'}" maxlength="2" />
                 /<input type="text" id="tungay_3" name="tungay_3" class="text_year" value="{$smarty.now|date_format:'%Y'}" maxlength="4" />
                 </div>
                 <div style="float:left; width:24px; margin-bottom:5px; margin-left:5px">đến&nbsp;</div>
-                <div style="float:left; width:75px; margin-bottom:5px; background-color:#FFF">
+                <div style="float:left; width:90px; margin-bottom:5px; background-color:#FFF">
                 <input type="text" id="denngay_1" name="denngay_1" class="text_date" value="{$smarty.now|date_format:'%d'}" maxlength="2" />
                 /<input type="text" id="denngay_2" name="denngay_2" class="text_month" value="{$smarty.now|date_format:'%m'}" maxlength="2" />
                 /<input type="text" id="denngay_3" name="denngay_3" class="text_year" value="{$smarty.now|date_format:'%Y'}" maxlength="4" />
                 </div>
                 
-                <div style="float:left; width:56px; margin-bottom:5px">- Số đi:</div>
+                <div style="float:left; width:65px; margin-bottom:5px">- Số đi:</div>
                 <div style="float:left; width:20px; margin-bottom:5px">Từ&nbsp;</div>
-                <div style="float:left; width:75px; background-color:#FFF; margin-bottom:5px">
+                <div style="float:left; width:90px; background-color:#FFF; margin-bottom:5px">
                 <input type="text" id="sodi_tu" name="sodi_tu" class="text_seek_tiny" value="{$vars.sodi_tu}" />
                 </div>
                 <div style="float:left; width:24px; margin-bottom:5px; margin-left:5px">đến&nbsp;</div>
-                <div style="float:left; width:75px; margin-bottom:5px; background-color:#FFF">
+                <div style="float:left; width:90px; margin-bottom:5px; background-color:#FFF">
                 <input type="text" id="sodi_den" name="sodi_den" class="text_seek_tiny" value="{$vars.sodi_den}" />
                 </div>
                 
-                <div style="float:left; width:76px; margin-bottom:5px">- Loại văn bản: </div>
-                <div style="float:left; width:150px; margin-bottom:5px">
+                <div style="float:left; width:85px; margin-bottom:5px">- Loại văn bản: </div>
+                <div style="float:left; width:160px; margin-bottom:5px">
                 <select name="docCat_id_fil" id="docCat_id_fil" class="select_seek">
                     <option value="0">Chọn loại văn bản</option>
                     {section name=qi loop=$obj_list_dcat}
@@ -510,8 +510,8 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                 </select>
                 </div>
                 
-                <div style="float:left; width:76px; margin-bottom:5px">- ĐV dự thảo: </div>
-                <div style="float:left; width:150px; margin-bottom:5px">
+                <div style="float:left; width:85px; margin-bottom:5px">- ĐV dự thảo: </div>
+                <div style="float:left; width:160px; margin-bottom:5px">
                 <select name="department_fil" id="department_fil" class="select_seek">
                     <option value="">Chọn phòng ban</option>
                     {section name=di loop=$obj_list_department}
@@ -520,8 +520,8 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                 </select>
                 </div>
                 
-                <div style="float:left; width:76px; margin-bottom:5px">- Loại sổ: </div>
-                <div style="float:left; width:150px; margin-bottom:5px">
+                <div style="float:left; width:85px; margin-bottom:5px">- Loại sổ: </div>
+                <div style="float:left; width:160px; margin-bottom:5px">
                 <select name="docOut_typical" id="docOut_typical" class="select_seek">
                     <option value="0" {if $docOut_typical eq 0} selected="selected"{/if}>Sổ thường</option>
                     <option value="1" {if $docOut_typical eq 1} selected="selected"{/if}>Sổ giấy mời</option>
@@ -530,14 +530,14 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
             </div>
         </legend>
     	<div style="float:left; height:5px; width:100%"></div>
-        <div style="float:left; height:25px; width:890px; border-top:1px solid #99bbe8; border-bottom:1px solid #99bbe8 ">
-            <div class="tbl_tit" style="width:47px; text-align:center"><b>STT</b></div>	
-            <div class="tbl_tit" style="width:95px"><B>&nbsp;Loại văn bản</B></div>
+        <div style="float:left; height:25px; width:990px; border-top:1px solid #99bbe8; border-bottom:1px solid #99bbe8 ">
+            <div class="tbl_tit" style="width:42px; text-align:center"><b>STT</b></div>
+            <div class="tbl_tit" style="width:100px"><B>&nbsp;Loại văn bản</B></div>
             <div class="tbl_tit" style="width:50px; text-align:right"><B>&nbsp;Số đi&nbsp;</B></div>
-            <div class="tbl_tit" style="width:70px"><B>&nbsp;Ký hiệu</B></div>
+            <div class="tbl_tit" style="width:100px"><B>&nbsp;Ký hiệu</B></div>
             <div class="tbl_tit" style="width:70px"><B>&nbsp;Ngày tháng</B></div>
-            <div class="tbl_tit" style="width:259px"><B>&nbsp;Trích yếu</B></div>
-            <div class="tbl_tit" style="width:150px"><B>&nbsp;Nơi nhận</B></div>
+            <div class="tbl_tit" style="width:299px"><B>&nbsp;Trích yếu</B></div>
+            <div class="tbl_tit" style="width:180px"><B>&nbsp;Nơi nhận</B></div>
             <div class="tbl_tit" style="width:50px; text-align:center"><B>Tệp tin</B></div>
             <div class="tbl_tit" style="width:59px; text-align:center"><B>Chọn</B></div>
             <div class="tbl_tit" style="width:30px; text-align:center">
@@ -552,7 +552,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
         <input type="button" name="del_Items" id='del_Items' value="&nbsp;" disabled="disabled" style="width:17px; font-size:12px; background:url(../images/admin/b_drop.png); cursor:pointer" title="Xóa lựa chọn">
         {/if}
         </div>
-        <div style="float:left; {if $user_level eq 1 or $user_level eq 2 or $user_level eq 9}height:166px{else}height:405px{/if}; width:912px; overflow-y:scroll">
+        <div style="float:left; {if $user_level eq 1 or $user_level eq 2 or $user_level eq 9}height:166px{else}height:405px{/if}; width:1012px; overflow-y:scroll">
             {section name=pi loop=$obj_list}
             {if $smarty.section.pi.index is not div by 2} 
             {assign var="class_td" value="tbl_cont"} 
@@ -560,8 +560,8 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
             {assign var="class_td" value="tbl_cont2"} 
             {/if}
             {math x=$vars.curpage-1 y=$vars.numresult z=$smarty.section.pi.index t=1 equation="x*y+z+t" assign=stt}
-            <div class="{$class_td}" style="width:47px; text-align:center">{$stt}</div>
-            <div class="{$class_td}" style="width:95px" title="{$obj_list[pi]->docCat_id}">&nbsp;
+            <div class="{$class_td}" style="width:42px; text-align:center">{$stt}</div>
+            <div class="{$class_td}" style="width:100px" title="{$obj_list[pi]->docCat_id}">&nbsp;
                 {section name=qi loop=$obj_list_dcat}
                     {if $obj_list_dcat[qi]->docCat_id eq $obj_list[pi]->docCat_id}
                     {$obj_list_dcat[qi]->docCat_name}
@@ -581,8 +581,8 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
             $mystr = $this->_tpl_vars['obj_list'][$this->_sections['pi']['index']]->docOut_code;
             $code_str = substr($mystr,strpos($mystr,'/')+1,strlen($mystr) - strpos($mystr,'/')+1);
             {/php}
-            <div class="{$class_td}" style="width:70px; white-space:nowrap" title="{php}echo $code_str{/php}">&nbsp;
-                {php}echo fnsSubstr($code_str,7,1);{/php}
+            <div class="{$class_td}" style="width:100px; white-space:nowrap" title="{php}echo $code_str{/php}">&nbsp;
+                {php}echo fnsSubstr($code_str,15,1);{/php}
             </div>
             <div class="{$class_td}" style="width:70px">
             	&nbsp;{$obj_list[pi]->docOut_date|date_format:"%d-%m-%Y"}
@@ -592,10 +592,10 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                 	{assign var="nguoi_ky" value=$obj_list_user_bgd[qi]->user_fullname}
                 {/if}
             {/section}
-            <div class="{$class_td}" style="width:259px; white-space:nowrap" title="{$obj_list[pi]->docOut_desc}&nbsp;(Người ký: {$nguoi_ky} - {$obj_list[pi]->docOut_obj})">
+            <div class="{$class_td}" style="width:299px; white-space:nowrap" title="{$obj_list[pi]->docOut_desc}&nbsp;(Người ký: {$nguoi_ky} - {$obj_list[pi]->docOut_obj})">
             	&nbsp;
                 {if $per_edit eq 1}
-                <a href="javascript: void(0);" onclick="show_me_DocOut({$obj_list[pi]->docOut_id})" >{$obj_list[pi]->docOut_desc|str_string_cut:"62":"1"}</a>
+                <a href="javascript: void(0);" onclick="show_me_DocOut({$obj_list[pi]->docOut_id})" >{$obj_list[pi]->docOut_desc|str_string_cut:"70":"1"}</a>
                 {else}{$obj_list[pi]->docOut_desc|str_string_cut:"62":"1"}{/if}
             </div>
             {if $obj_list[pi]->unit_name neq ''}
@@ -614,9 +614,9 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                 endwhile;
                 
             {/php}
-            <div class="{$class_td}" style="width:150px; white-space:nowrap" title="{php}echo $unit_name_str{/php}">&nbsp;{php}echo fnsSubstr($unit_name_str,33,1);{/php}</div>
+            <div class="{$class_td}" style="width:180px; white-space:nowrap" title="{php}echo $unit_name_str{/php}">&nbsp;{php}echo fnsSubstr($unit_name_str,35,1);{/php}</div>
             {else}
-            <div class="{$class_td}" style="width:150px; white-space:nowrap" title="{php}echo $unit_name_02{/php}">&nbsp;{$obj_list[pi]->unit_name_02|str_string_cut:"33":"1"}</div>
+            <div class="{$class_td}" style="width:180px; white-space:nowrap" title="{php}echo $unit_name_02{/php}">&nbsp;{$obj_list[pi]->unit_name_02|str_string_cut:"35":"1"}</div>
             {/if}
             <div class="{$class_td}" style="width:50px; text-align:center">
                 {if $obj_list[pi]->docOut_file eq 0 or $obj_list[pi]->docOut_file eq 2}

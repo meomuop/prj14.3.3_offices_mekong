@@ -583,7 +583,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="{$class_td}" style="width:160px" title="{$obj_list[pi]->doitac_viettat}">
+                <div class="{$class_td}" style="width:160px; white-space:nowrap" title="{$obj_list[pi]->doitac_viettat}">
                     &nbsp;{$obj_list[pi]->doitac_viettat|str_string_cut:"25":"1"}
                 </div>
                 <div class="{$class_td}" style="width:110px">
@@ -826,11 +826,15 @@
 		$("#hdmua_content_main").load("?listHdmuaHoadon&mod=hdmua&hdmua_id="+hdmua_id);
 	}
 
+    function show_hdmua_vanban(hdmua_id){
+        document.getElementById('div_hdmua_lkvb').style.display='block';
+        $("#list_hdmua_lkvb_cont").load("?listHdmuaLkvb&mod=hdmua&hdmua_id="+hdmua_id);
+    }
+
     function show_hdmua_tientrinh(hdmua_id){
         document.getElementById('div_thuchien').style.display='block';
         $("#list_thuchien_cont").load("?listHdmuaTientrinh&mod=hdmua&hdmua_id="+hdmua_id);
     }
-
 
 	function show_hdmua_thongtin(hdmua_id){
 		document.getElementById('div_view_doc').style.display='block';

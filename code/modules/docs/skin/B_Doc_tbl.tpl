@@ -25,7 +25,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
     	<table width="98%" cellspacing="0" cellpadding="0" border="0" style="margin-left:5px">
         	<tr height="10"><td colspan="2"></td></tr>
             <tr height="30">
-            	<td align="center" width="30%" valign="top">
+            	<td align="center" width="35%" valign="top">
                 	<div style="float:left; width:30%; line-height:25px; text-align:left">Loại sổ:</div>
                     <div style="float:left; width:70%; line-height:25px; text-align:left">
                         <select name="docLevel_id" id="docLevel_id" class="select_middle" tabindex="1">
@@ -42,41 +42,9 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                             </script>
                         {/literal}
                     </div>
-                    <div style="float:left; width:30%; line-height:25px; text-align:left">Nơi gửi đến <font color="#FF0000">*</font>:</div>
-                    <div style="float:left; width:70%; line-height:25px; text-align:left">
-                    	<input type="text" value="{$obj_info.unit_name}" id="unit_name" name="unit_name" class="text_middle" tabindex="2" onfocus="hide_message_Doc();"/>
-                        {literal}
-						<script type="text/javascript">
-                        $().ready(function() {
-                            $("#unit_name").autocomplete("B_unit_auto.php", {
-                                width: 160,
-                                matchContains: true,
-                                selectFirst: true
-                            });
-                        });
-                        </script>
-                        {/literal}
-                    </div>
                     <div style="float:left; width:30%; line-height:25px; text-align:left">Số ký hiệu <font color="#FF0000">*</font>:</div>
                     <div style="float:left; width:70%; line-height:25px; text-align:left">
                     	<input type="text" id="doc_code" name="doc_code" class="text_middle" value="{$obj_info.doc_code}" tabindex="3" onfocus="hide_message_Doc();"/>
-                    </div>
-                    <div style="float:left; width:30%; line-height:25px; text-align:left">Ngày ký <font color="#FF0000">*</font>:</div>
-                    <div style="float:left; width:70%; line-height:25px; text-align:left">
-                    	<input type="text" name="doc_signed" id="doc_signed" class="text_time_callender" value="{$obj_info.doc_signed|date_format:'%d/%m/%Y'}" tabindex="4" onfocus="hide_message_Doc();"/>&nbsp;<img src="../images/admin/img.gif"  align="absmiddle" id="date_doc_signed" style="cursor: pointer; border: 0" title="Chọn ngày trên lịch"/>
-                        {literal}
-						<script type="text/javascript">
-                            Calendar.setup({
-                                inputField   :   "doc_signed",
-                                ifFormat     :   "%d/%m/%Y",
-                                button       :   "date_doc_signed",
-                                align        :   "Br",  
-                                timeFormat   :   "24",
-                                showsTime    :   true,
-                                singleClick  :   true
-                            });
-                        </script>
-                        {/literal}
                     </div>
                     <div style="float:left; width:30%; line-height:25px; text-align:left">Loại văn bản <font color="#FF0000">*</font>:</div>
                     <div style="float:left; width:70%; line-height:25px; text-align:left">
@@ -108,48 +76,76 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                         </script>
                         {/literal}
                     </div>
-                    <div style="float:left; width:30%; line-height:25px; text-align:left">&nbsp;</div>
+                    <div style="float:left; width:30%; line-height:25px; text-align:left">Người ký <font color="#FF0000">*</font>:</div>
                     <div style="float:left; width:70%; line-height:25px; text-align:left">
-                    	&nbsp;<b>(Người nhập văn bản: {$access_user_name})</b>
+                        <input type="text" value="{$obj_info.signPer_id}" id="signPer_id" name="signPer_id" class="text_middle" tabindex="8" onfocus="hide_message_Doc();"/>
+                        {literal}
+                            <script type="text/javascript">
+                                $().ready(function() {
+                                    $("#signPer_id").autocomplete("B_signPer_auto.php", {
+                                        width: 160,
+                                        matchContains: true,
+                                        selectFirst: true
+                                    });
+                                });
+                            </script>
+                        {/literal}
+                    </div>
+                    <div style="float:left; width:30%; line-height:25px; text-align:left">Chức vụ <font color="#FF0000">*</font>:</div>
+                    <div style="float:left; width:70%; line-height:25px; text-align:left">
+                        <input type="text" value="{$obj_info.signObj_id}" id="signObj_id" name="signObj_id" class="text_middle" tabindex="9" onfocus="hide_message_Doc();"/>
+                        {literal}
+                            <script type="text/javascript">
+                                $().ready(function() {
+                                    $("#signObj_id").autocomplete("B_signObj_auto.php", {
+                                        width: 160,
+                                        matchContains: true,
+                                        selectFirst: true
+                                    });
+                                });
+                            </script>
+                        {/literal}
                     </div>
                 </td>
                 <td align="center" valign="top">
-                	<div style="float:left; width:10%; line-height:25px; text-align:left">Trích yếu <font color="#FF0000">*</font>:</div>
-                    <div style="float:left; width:90%; line-height:25px; text-align:left; height:75px">
-                    	<textarea spellcheck="false" name="doc_desc" id="doc_desc" cols="30" rows="5" class="text_area_long" onfocus="hide_message_Doc()" tabindex="7">{$obj_info.doc_desc}</textarea>
-                    </div>
-                    <div style="float:left; width:10%; line-height:25px; text-align:left">Người ký <font color="#FF0000">*</font>:</div>
-                    <div style="float:left; width:30%; line-height:25px; text-align:left">
-                    	<input type="text" value="{$obj_info.signPer_id}" id="signPer_id" name="signPer_id" class="text_middle" tabindex="8" onfocus="hide_message_Doc();"/>
+                    <div style="float:left; width:12%; line-height:25px; text-align:left">Nơi gửi đến <font color="#FF0000">*</font>:</div>
+                    <div style="float:left; width:88%; line-height:25px; text-align:left">
+                        <input type="text" value="{$obj_info.unit_name}" id="unit_name" name="unit_name" class="text_super_long" tabindex="2" onfocus="hide_message_Doc();"/>
                         {literal}
-						<script type="text/javascript">
-                        $().ready(function() {
-							$("#signPer_id").autocomplete("B_signPer_auto.php", {
-								width: 160,
-								matchContains: true,
-								selectFirst: true
-							});
-						});
-                        </script>
+                            <script type="text/javascript">
+                                $().ready(function() {
+                                    $("#unit_name").autocomplete("B_unit_auto.php", {
+                                        width: 550,
+                                        matchContains: true,
+                                        selectFirst: true
+                                    });
+                                });
+                            </script>
                         {/literal}
                     </div>
-                    <div style="float:left; width:10%; line-height:25px; text-align:left">Chức vụ <font color="#FF0000">*</font>:</div>
-                    <div style="float:left; width:50%; line-height:25px; text-align:left">
-                    	<input type="text" value="{$obj_info.signObj_id}" id="signObj_id" name="signObj_id" class="text_middle" tabindex="9" onfocus="hide_message_Doc();"/>
+                	<div style="float:left; width:12%; line-height:25px; text-align:left">Trích yếu <font color="#FF0000">*</font>:</div>
+                    <div style="float:left; width:88%; line-height:25px; text-align:left; height:75px">
+                    	<textarea spellcheck="false" name="doc_desc" id="doc_desc" cols="30" rows="5" class="text_area_long" onfocus="hide_message_Doc()" tabindex="7">{$obj_info.doc_desc}</textarea>
+                    </div>
+                    <div style="float:left; width:12%; line-height:25px; text-align:left">Ngày ký <font color="#FF0000">*</font>:</div>
+                    <div style="float:left; width:20%; line-height:25px; text-align:left">
+                        <input type="text" name="doc_signed" id="doc_signed" class="text_time_callender" value="{$obj_info.doc_signed|date_format:'%d/%m/%Y'}" tabindex="4" onfocus="hide_message_Doc();"/>&nbsp;<img src="../images/admin/img.gif"  align="absmiddle" id="date_doc_signed" style="cursor: pointer; border: 0" title="Chọn ngày trên lịch"/>
                         {literal}
-						<script type="text/javascript">
-                        $().ready(function() {
-							$("#signObj_id").autocomplete("B_signObj_auto.php", {
-								width: 160,
-								matchContains: true,
-								selectFirst: true
-							});
-						});
-                        </script>
+                            <script type="text/javascript">
+                                Calendar.setup({
+                                    inputField   :   "doc_signed",
+                                    ifFormat     :   "%d/%m/%Y",
+                                    button       :   "date_doc_signed",
+                                    align        :   "Br",
+                                    timeFormat   :   "24",
+                                    showsTime    :   true,
+                                    singleClick  :   true
+                                });
+                            </script>
                         {/literal}
                     </div>
                     <div style="float:left; width:10%; line-height:25px; text-align:left">Ngày nhận:</div>
-                    <div style="float:left; width:30%; line-height:25px; text-align:left">
+                    <div style="float:left; width:20%; line-height:25px; text-align:left">
                     	<input type="text" value="{$smarty.now|date_format:'%d/%m/%Y'}" id="doc_recevied" name="doc_recevied" class="text_time_callender" tabindex="10"/>&nbsp;<img src="../images/admin/img.gif"  align="absmiddle" id="date_doc_recevied" style="cursor: pointer; border: 0" title="Chọn ngày trên lịch"/>
                         {literal}
 						<script type="text/javascript">
@@ -165,14 +161,18 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                         </script>
                         {/literal}
                     </div>
-                    <div style="float:left; width:10%; line-height:25px; text-align:left">Số đến:</div>
-                    <div style="float:left; width:50%; line-height:25px; text-align:left">
+
+                    <div style="float:left; width:8%; line-height:25px; text-align:left">Số đến:</div>
+                    <div style="float:left; width:10%; line-height:25px; text-align:left">
                         <div id="doc_num_div">
-                            <input type="text" id="doc_num" name="doc_num" class="text_tiny" value="" tabindex="11"/>
+                            <input type="text" id="doc_num" name="doc_num" class="text_tiny" value="{$obj_info.doc_num}" tabindex="11"/>
                         </div>
                     </div>
-                    <div style="float:left; width:10%; line-height:25px; text-align:left">Độ mật:</div>
-                    <div style="float:left; width:30%; line-height:25px; text-align:left">
+                    <div style="float:left; width:20%; line-height:25px; text-align:left">
+                        &nbsp;<b>(Người nhập: {$access_user_name})</b>
+                    </div>
+                    <div style="float:left; width:12%; line-height:25px; text-align:left">Độ mật:</div>
+                    <div style="float:left; width:20%; line-height:25px; text-align:left">
                     	<select name="secret_id" id="secret_id" class="select_short" tabindex="12">
                             {section name=qi loop=$obj_list_secret}
                             <option value="{$obj_list_secret[qi]->secret_id}" {if $obj_list_secret[qi]->secret_id eq $obj_info.secret_id}selected="selected"{/if}>-&nbsp;{$obj_list_secret[qi]->secret_name}</option>
@@ -180,14 +180,14 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                         </select>
                     </div>
                     <div style="float:left; width:10%; line-height:25px; text-align:left">Độ khẩn:</div>
-                    <div style="float:left; width:50%; line-height:25px; text-align:left">
+                    <div style="float:left; width:20%; line-height:25px; text-align:left">
                     	<select name="important_id" id="important_id" class="select_short" tabindex="13">
                             {section name=qi loop=$obj_list_important}
                             <option value="{$obj_list_important[qi]->important_id}" {if $obj_list_important[qi]->important_id eq $obj_info.important_id}selected="selected"{/if}>-&nbsp;{$obj_list_important[qi]->important_name}</option>
                             {/section}
                         </select>
                     </div>
-                    <div style="float:left; width:100%; line-height:25px; text-align:left">
+                    <div style="float:left; width:30%; line-height:25px; text-align:left">
                     	<input type="button" name="btnSub_Doc" id="btnSub_Doc" value="Ghi lại" class="button" tabindex="14"/>
                         <input type="hidden" name="doc_id" id="doc_id" value="{$obj_info.doc_id}">
                         <input type="hidden" name="doc_note" id="doc_note" value="{$obj_info.doc_note}">
@@ -304,8 +304,8 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
         </table>
     </fieldset>
     <!------------------------------------DANH SACH---------------------------------------------->
-    <fieldset style="width:1012px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px; height:247px">
-        <legend class="legend_list" style="width:865px">
+    <fieldset style="width:1012px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px; height:274px">
+        <legend class="legend_list" style="width:905px">
             <div style="width:130px; float:left">Danh sách: {$total_num_result}</div>
             <div style="width:70px; float:left">&nbsp;|&nbsp;Tìm kiếm:&nbsp;</div>
             <div style="width:380px; float:left; font-weight:normal">
@@ -344,7 +344,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                 <div style="float:left; width:80px; margin-bottom:5px">
                 <input type="text" id="doc_num_fs" name="doc_num_fs" class="text_seek_tiny" value="{$vars.doc_num_fs}" />
                 </div>
-                <div style="float:left; width:79px; margin-bottom:5px">- Loại văn bản: </div>
+                <div style="float:left; width:79px; margin-bottom:5px">- Loại VB: </div>
                 <div style="float:left; width:155px; margin-bottom:5px">
                 <input type="text" value="{$vars.docCat_id_fs}" id="docCat_id_fs" name="docCat_id_fs" class="text_seek_middle" />
                 {literal}
@@ -365,7 +365,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                 <input type="button" name="btnSeek" id="btnSeek" value="Tìm >>" class="button_seek" onclick="search_me_Doc()" />
             </div>
             <!-----------------------------------------KET XUAT--------------------------------------->
-            <div style="width:60px; float:left">&nbsp;|&nbsp;Kết xuất:&nbsp;</div>
+            <div style="width:100px; float:left">&nbsp;|&nbsp;Kết xuất:&nbsp;</div>
             <a href="javascript: void(0);" onClick="show_hide_filter()" style="text-decoration:none">
             <div style="float:left; margin-left:10px; width:78px">Lọc dữ liệu</div></a>
             <div style="width:92px; float:left; height:20px; margin-top:1px">
@@ -382,34 +382,34 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                 <img src="../images/admin/print_pre_icon.png" class="img_all" height="20" title="Xem trước khi in"></div>
                 </a>
             </div>
-            <div style="width:260px; float:left; font-weight:normal; position:absolute; display:none; margin:20px 0 0 604px; background-color:#ccd8e7; border:1px solid #99bbe8; border-top:none; z-index:2012" id="div_filter">
+            <div style="width:300px; float:left; font-weight:normal; position:absolute; display:none; margin:20px 0 0 604px; background-color:#ccd8e7; border:1px solid #99bbe8; border-top:none; z-index:2012" id="div_filter">
             	<div style="float:left; width:100%; height:5px"></div>
-                <div style="float:left; width:56px; margin-bottom:5px">- Nhận:</div>
+                <div style="float:left; width:66px; margin-bottom:5px">- Nhận:</div>
                 <div style="float:left; width:20px; margin-bottom:5px">Từ&nbsp;</div>
-                <div style="float:left; width:75px; background-color:#FFF; margin-bottom:5px">
+                <div style="float:left; width:90px; background-color:#FFF; margin-bottom:5px">
                 <input type="text" id="tungay_1" name="tungay_1" class="text_date" value="{$smarty.now|date_format:'%d'}" maxlength="2"/>
                 /<input type="text" id="tungay_2" name="tungay_2" class="text_month" value="{$smarty.now|date_format:'%m'}" maxlength="2" />
                 /<input type="text" id="tungay_3" name="tungay_3" class="text_year" value="{$smarty.now|date_format:'%Y'}" maxlength="4" />
                 </div>
                 <div style="float:left; width:24px; margin-bottom:5px; margin-left:5px">đến&nbsp;</div>
-                <div style="float:left; width:75px; margin-bottom:5px; background-color:#FFF">
+                <div style="float:left; width:90px; margin-bottom:5px; background-color:#FFF">
                 <input type="text" id="denngay_1" name="denngay_1" class="text_date" value="{$smarty.now|date_format:'%d'}" maxlength="2" />
                 /<input type="text" id="denngay_2" name="denngay_2" class="text_month" value="{$smarty.now|date_format:'%m'}" maxlength="2" />
                 /<input type="text" id="denngay_3" name="denngay_3" class="text_year" value="{$smarty.now|date_format:'%Y'}" maxlength="4" />
                 </div>
                 
-                <div style="float:left; width:56px; margin-bottom:5px">- Số đến:</div>
+                <div style="float:left; width:66px; margin-bottom:5px">- Số đến:</div>
                 <div style="float:left; width:20px; margin-bottom:5px">Từ&nbsp;</div>
-                <div style="float:left; width:75px; background-color:#FFF; margin-bottom:5px">
+                <div style="float:left; width:90px; background-color:#FFF; margin-bottom:5px">
                 <input type="text" id="soden_tu" name="soden_tu" class="text_seek_tiny" value="{$vars.soden_tu}" />
                 </div>
                 <div style="float:left; width:24px; margin-bottom:5px; margin-left:5px">đến&nbsp;</div>
-                <div style="float:left; width:75px; margin-bottom:5px; background-color:#FFF">
+                <div style="float:left; width:90px; margin-bottom:5px; background-color:#FFF">
                 <input type="text" id="soden_den" name="soden_den" class="text_seek_tiny" value="{$vars.soden_den}" />
                 </div>
                 
-                <div style="float:left; width:76px; margin-bottom:5px">- Nơi gửi đến: </div>
-                <div style="float:left; width:150px; margin-bottom:5px">
+                <div style="float:left; width:86px; margin-bottom:5px">- Nơi gửi đến: </div>
+                <div style="float:left; width:170px; margin-bottom:5px">
                 <input type="text" value="{$vars.unit_name_fil}" id="unit_name_fil" name="unit_name_fil" class="text_seek_middle" />
                 {literal}
                 <script type="text/javascript">
@@ -424,8 +424,8 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                 {/literal}
                 </div>
                 
-                <div style="float:left; width:76px; margin-bottom:5px">- Loại văn bản: </div>
-                <div style="float:left; width:150px; margin-bottom:5px">
+                <div style="float:left; width:86px; margin-bottom:5px">- Loại văn bản: </div>
+                <div style="float:left; width:170px; margin-bottom:5px">
                 <input type="text" value="{$vars.docCat_id_fil}" id="docCat_id_fil" name="docCat_id_fil" class="text_seek_middle" />
                 {literal}
                 <script type="text/javascript">
@@ -440,9 +440,9 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                 {/literal}
                 </div>
 
-                <div style="float:left; width:76px; margin-bottom:5px">- Lĩnh vực </div>
-                <div style="float:left; width:150px; margin-bottom:5px">
-                    <input type="text" value="{$obj_info.docField_id}" id="docField_id_fil" name="docField_id_fil" class="text_middle" tabindex="6"/>
+                <div style="float:left; width:86px; margin-bottom:5px">- Lĩnh vực </div>
+                <div style="float:left; width:170px; margin-bottom:5px">
+                    <input type="text" value="{$obj_info.docField_id}" id="docField_id_fil" name="docField_id_fil" class="text_seek_middle" tabindex="6"/>
                     {literal}
                         <script type="text/javascript">
                             $().ready(function() {
@@ -456,8 +456,8 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                     {/literal}
                 </div>
 
-                <div style="float:left; width:76px; margin-bottom:5px">- Phòng/ban: </div>
-                <div style="float:left; width:150px; margin-bottom:5px">
+                <div style="float:left; width:86px; margin-bottom:5px">- Phòng/ban: </div>
+                <div style="float:left; width:170px; margin-bottom:5px">
                 <select name="department_fil" id="department_fil" class="select_seek">
                     <option value="0">Chọn phòng ban</option>
                     {section name=di loop=$obj_list_department}
@@ -465,8 +465,8 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                     {/section}
                 </select>
                 </div>
-                <div style="float:left; width:76px; margin-bottom:5px">- Tình trạng: </div>
-                <div style="float:left; width:150px; margin-bottom:5px">
+                <div style="float:left; width:86px; margin-bottom:5px">- Tình trạng: </div>
+                <div style="float:left; width:170px; margin-bottom:5px">
                     <select name="tinhtrang_fil" id="tinhtrang_fil" class="select_seek">
                         <option value="0">Tất cả</option>
                         <option value="1">Trong hạn</option>
@@ -476,15 +476,15 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
             </div>
         </legend>
     	<div style="float:left; height:5px; width:100%"></div>
-        <div style="float:left; height:25px; width:890px; border-top:1px solid #99bbe8; border-bottom:1px solid #99bbe8 ">
+        <div style="float:left; height:25px; width:990px; border-top:1px solid #99bbe8; border-bottom:1px solid #99bbe8 ">
             <div class="tbl_tit" style="width:40px; text-align:center"><b>STT</b></div>
             <div class="tbl_tit" style="width:45px; text-align:right"><B>&nbsp;Số đến&nbsp;</B></div>
-            <div class="tbl_tit" style="width:75px"><B>&nbsp;Ký hiệu</B></div>
-            <div class="tbl_tit" style="width:279px"><B>&nbsp;Trích yếu</B></div>
-            <div class="tbl_tit" style="width:130px"><B>&nbsp;Nơi gửi</B></div>
-            <div class="tbl_tit" style="width:60px"><B>&nbsp;Ngày nhập</B></div>
-            <div class="tbl_tit" style="width:60px"><B>&nbsp;Hạn xử lý</B></div>
-            <div class="tbl_tit" style="width:60px"><B>&nbsp;Quá hạn</B></div>
+            <div class="tbl_tit" style="width:85px"><B>&nbsp;Ký hiệu</B></div>
+            <div class="tbl_tit" style="width:300px"><B>&nbsp;Trích yếu</B></div>
+            <div class="tbl_tit" style="width:170px"><B>&nbsp;Nơi gửi</B></div>
+            <div class="tbl_tit" style="width:70px"><B>&nbsp;Ngày nhập</B></div>
+            <div class="tbl_tit" style="width:70px"><B>&nbsp;Hạn xử lý</B></div>
+            <div class="tbl_tit" style="width:70px"><B>&nbsp;Quá hạn</B></div>
             <div class="tbl_tit" style="width:40px; text-align:center"><B>File</B></div>
             <div class="tbl_tit" style="width:59px; text-align:center"><B>Chọn</B></div>
             <div class="tbl_tit" style="width:30px; text-align:center">
@@ -495,7 +495,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
         <div style="float:left; width:20px; text-align:right">
         <input type="button" name="del_Items" id='del_Items' value="&nbsp;" onClick="delItems_Doc('{$processurl}');" style="width:17px; font-size:12px; background:url(../images/admin/b_drop.png); cursor:pointer" title="Xóa lựa chọn">
         </div>
-        <div style="float:left; height:190px; width:912px; overflow-y:scroll">
+        <div style="float:left; height:217px; width:1012px; overflow-y:scroll">
             {section name=pi loop=$obj_list}
             {if $smarty.section.pi.index is not div by 2} 
             {assign var="class_td" value="tbl_cont"} 
@@ -508,17 +508,17 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                 <div class="{$class_td}" style="width:45px; text-align:right">
                     &nbsp;{$obj_list[pi]->doc_num}&nbsp;
                 </div>
-                <div class="{$class_td}" style="width:75px; white-space:nowrap" title="{$obj_list[pi]->doc_code}">
-                    &nbsp;{$obj_list[pi]->doc_code|str_string_cut:"10":"1"}
+                <div class="{$class_td}" style="width:85px; white-space:nowrap" title="{$obj_list[pi]->doc_code}">
+                    &nbsp;{$obj_list[pi]->doc_code|str_string_cut:"15":"1"}
                 </div>
-                <div class="{$class_td}" style="width:279px" title="{$obj_list[pi]->doc_desc}">
+                <div class="{$class_td}" style="width:300px" title="{$obj_list[pi]->doc_desc}">
                 	{math a=$smarty.section.pi.index b=1 equation="a+b" assign=count}
-                    <div style="float:left; width:254px; white-space:nowrap">&nbsp;<a href="javascript: void(0);" onclick="edit_me_Doc({$obj_list[pi]->doc_id})" >{$obj_list[pi]->doc_desc|str_string_cut:"63":"1"}</a></div>
+                    <div style="float:left; width:254px; white-space:nowrap">&nbsp;<a href="javascript: void(0);" onclick="edit_me_Doc({$obj_list[pi]->doc_id})" >{$obj_list[pi]->doc_desc|str_string_cut:"50":"1"}</a></div>
                     <div style="float:right; margin:2px; border:1px solid #8ea4c1; height:18px; width:16px; text-align:center; background-color:#dfe8f6" title="Chức năng mở rộng">
                     {if $user_level eq 9 or $user_level eq 1}<a href='javascript: void(0);' onclick="show_list_options({$count},{$total_num_result})">
                     <img src="{$css_path}extra_icon.png" width="14" height="14" border="0" class="img_all"></a>{/if}
                     </div>
-                    <div id="extra_{$count}" style="position:absolute; display:none; height:auto; width:140px; margin:2px 118px; border:1px solid #8ea4c1; border-right:1px solid #8ea4c1; background-color:#dfe8f6">
+                    <div id="extra_{$count}" style="position:absolute; display:none; height:auto; width:140px; margin:2px 140px; border:1px solid #8ea4c1; border-right:1px solid #8ea4c1; background-color:#dfe8f6">
                     	{if $order_id eq 0 or $order_id eq 1}
                         <div style="float:left; width:140px; height:18px; border-right:1px solid #dfe8f6"><b>&nbsp;Phân loại từ:</b></div>
                         <div style="float:left; width:140px; padding:0 0 0 3px">
@@ -549,13 +549,13 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                         </div>
                     </div>
                 </div>
-                <div class="{$class_td}" style="width:130px" title="{$obj_list[pi]->unit_name}">
-                    &nbsp;{$obj_list[pi]->unit_name|str_string_cut:"25":"1"}
+                <div class="{$class_td}" style="width:170px; white-space:nowrap" title="{$obj_list[pi]->unit_name}">
+                    &nbsp;{$obj_list[pi]->unit_name|str_string_cut:"35":"1"}
                 </div>
-                <div class="{$class_td}" style="width:60px">
+                <div class="{$class_td}" style="width:70px">
                     &nbsp;{$obj_list[pi]->doc_date|date_format:"%d/%m/%Y"}
                 </div>
-                <div class="{$class_td}" style="width:60px">
+                <div class="{$class_td}" style="width:70px">
                     {php}
                         $songayqh = 0;
                         $sql = "select * from tbl_docreplys where doc_id = ".$this->_tpl_vars['obj_list'][$this->_sections['pi']['index']]->doc_id." order by docReply_id asc limit 1";
@@ -573,7 +573,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                         }
                     {/php}
                 </div>
-                <div class="{$class_td}" style="width:60px; text-align:right; color: #FF0000">
+                <div class="{$class_td}" style="width:70px; text-align:right; color: #FF0000">
                     {php}if($songayqh>0) echo $songayqh.' ngày';{/php}&nbsp;
                 </div>
                 <div class="{$class_td}" style="width:40px; text-align:center">

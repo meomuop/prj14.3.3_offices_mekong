@@ -68,6 +68,20 @@
 #thuchien_menu{ float:left; width:99.8%; height:25px; padding-left:8px; position:absolute; margin-top:21px}
 /*----------------------end thuchien div---------------------*/
 
+/*----------------------hdmua_lkvb div---------------------*/
+#hdmua_lkvb_main_cont{ float:left; width:100%; height:400px; background-color:#ccd8e7}
+#hdmua_lkvb_tab_bar_tit{ float:left; font-weight:bold; text-transform:uppercase; line-height:20px; padding-left:8px; width:80%;cursor:move; color:#15428b;}
+#hdmua_lkvb_tab_bar_icon{ float:right; width:10%; text-align:right; padding-top:2px; padding-right:6px}
+#hdmua_lkvb_content_outsign{ float:left; width:96.9%; height:372px; background-color:#ffffff; margin-left:8px; border:1px solid #99bbe8}
+#hdmua_lkvb_content_insign{ float:left; width:99.8%; height:347px; background-color:#dfe8f6; margin-left:1px;}
+#list_hdmua_lkvb_cont{ float:left; width:99.7%; height:371px; background-color:#dfe8f6; margin-left:1px;}
+#hdmua_lkvb_clear_txt{ float:left; width:100%; height:1px}
+#hdmua_lkvb_tool_bar{ float:left; width:99.8%; height:20px; background-color:#dfe8f6; margin-left:1px}
+#hdmua_lkvb_search_area{ float:left; width:120px; height:20px; padding-left:2px}
+#hdmua_lkvb_page_area{ float:left; width:40px; height:20px; padding-left:2px}
+#hdmua_lkvb_menu{ float:left; width:99.8%; height:25px; padding-left:8px; position:absolute; margin-top:21px}
+/*----------------------end hdmua_lkvb div---------------------*/
+
 .c_menu_hdmua{float:left; border-right:1px solid #99bbe8; line-height:21px; height:21px; padding-left:2px; border-top:1px solid #99bbe8; margin-top:4px}
 .legend{margin-left:20px; border:1px solid #99bbe8; width:100px; font-weight:bold; padding-left:2px; line-height:20px; background-color:#ccd8e7}
 
@@ -79,6 +93,7 @@ $(function() {
 	$( "#div_hdmua" ).draggable();
 	$( "#list_file" ).draggable();
 	$( "#div_thuchien" ).draggable();
+	$( "#div_hdmua_lkvb" ).draggable();
 	$( "#list_view_hdmua" ).draggable();
 });
 function min_size_hdmua(){
@@ -238,9 +253,23 @@ function change_style_hdmua(obj){
     </div>
 </div>
 
+<div id="div_hdmua_lkvb" onclick="javascript: change_bgcl_hdmua('div_thuchien')" style="width:550px; float:left; font-weight:normal; position:absolute; display:none; margin:120px 0 0 240px; background-color:#ffffff; border:1px solid #99bbe8; z-index:1010; padding: 0px 1px 1px 1px">
+	<div id="hdmua_lkvb_main_cont">
+		<div id="hdmua_lkvb_tab_bar_tit">Liên kết văn bản</div>
+		<div id="hdmua_lkvb_tab_bar_icon">
+			<a href="javascript: void(0);" onClick="javascript: document.getElementById('div_hdmua_lkvb').style.display='none'" style="text-decoration:none">
+				<img src="{$css_path}icon_dong.png" class="img_all" title="Đóng lại"></a>
+		</div>
+		<div id="hdmua_lkvb_content_outsign">
+			<div id="list_hdmua_lkvb_cont">
+			</div>
+		</div>
+	</div>
+</div>
+
 {literal}
 <script language="javascript">	
-	var div_arr = ['list_file','div_view_hdmua','div_thuchien'];
+	var div_arr = ['list_file','div_view_hdmua','div_thuchien','div_hdmua_lkvb'];
 
 	function change_bgcl_hdmua(obj){
 		for(i=0;i<=div_arr.length;i++){
