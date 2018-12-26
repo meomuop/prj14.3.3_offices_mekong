@@ -807,7 +807,7 @@
 		$("#hdmua_content_main").load(processurl+"&numresult="+numresult+"&order="+order+"&cur_pos="+cur_pos);
 	}
 	
-	function show_list_file(hdmua_id){
+	function show_list_file_hdmua(hdmua_id){
 		var arg_doc = document.getElementById('arg_doc').value;
 		document.getElementById('list_file').style.display='block';
 		$("#list_file_cont").load("?listHdmuaFile&mod=hdmua"+arg_doc+"&hdmua_id="+hdmua_id);

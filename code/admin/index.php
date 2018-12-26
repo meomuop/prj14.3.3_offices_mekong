@@ -296,17 +296,17 @@
 		case 'editReceive': include ($MODULE_PATH.$module_name.'B_Receive_edit.php'); exit();
 		case 'addReceive': include ($MODULE_PATH.$module_name.'B_Receive_add.php'); exit();
 		case 'addReceiveOut': include ($MODULE_PATH.$module_name.'B_ReceiveOut_add.php'); exit();
-		
-		/*  -----------------------------------------------------------------------------------------------
-			Module: DANH MUC CHUC NANG
-			Cac chuc nang khac:
-				1. Cong viec
-				2. Tin nhan - Tin nhan SMS
-				3. Thu tin
-				4. Kho du lieu
-				5. Chat truc tuyen - khong thong qua index.php
-				6. Danh ba
-		*/	
+
+        /*  -----------------------------------------------------------------------------------------------
+            Module: DANH MUC CHUC NANG
+            Cac chuc nang khac:
+                1. Cong viec
+                2. Tin nhan - Tin nhan SMS
+                3. Thu tin
+                4. Kho du lieu
+                5. Chat truc tuyen - khong thong qua index.php
+                6. Danh ba
+        */
 		
 		// Muc 1:
 		case 'listCvCat'		: include ($MODULE_PATH.$module_name.'B_Congviec_list.php'); exit();

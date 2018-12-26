@@ -16,7 +16,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
 <div id="file_content_insign">
 	<form method="post" name="frmList_DocFile" action="?listDocFile{$vars.arg}" id="frmList_DocFile">
     <!------------------------------------------THEM MOI------------------------------------>
-    <fieldset style="width:248px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px">
+    <fieldset style="width:288px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px">
         <legend class="legend">Thêm/Chỉnh sửa</legend>
         {section name=qi loop=$obj_list_doc}
         {if $obj_list_doc[qi]->doc_id eq $doc_id} 
@@ -121,16 +121,16 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
         </table>
     </fieldset>
     <!------------------------------------DANH SACH---------------------------------------------->
-    <fieldset style="width:248px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px; height:147px">
+    <fieldset style="width:288px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px; height:147px">
         <legend class="legend"><div style="width:130px; float:left">Danh sách: {$total_num_result}</div></legend>
     	<div style="float:left; height:5px; width:100%"></div>
-        <div style="float:left; height:25px; width:233px; border-top:1px solid #99bbe8; border-bottom:1px solid #99bbe8 ">
+        <div style="float:left; height:25px; width:273px; border-top:1px solid #99bbe8; border-bottom:1px solid #99bbe8 ">
             <div class="tbl_tit" style="width:30px; text-align:center"><b>STT</b></div>	
-            <div class="tbl_tit" style="width:110px"><B>&nbsp;Tên tệp tin</B></div>
+            <div class="tbl_tit" style="width:150px"><B>&nbsp;Tên tệp tin</B></div>
             <div class="tbl_tit" style="width:90px; text-align:center"><B>Chọn</B></div>
         </div>
         <div style="float:left; width:18px; height:25px">&nbsp;</div>
-        <div style="float:left; height:90px; width:251px; overflow-y:scroll">
+        <div style="float:left; height:90px; width:291px; overflow-y:scroll">
             {section name=pi loop=$obj_list}
             {if $smarty.section.pi.index is not div by 2} 
             {assign var="class_td" value="tbl_cont"} 
@@ -140,7 +140,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
             {math x=$vars.curpage-1 y=$vars.numresult z=$smarty.section.pi.index t=1 equation="x*y+z+t" assign=stt}
             <div style="float:left">
                 <div class="{$class_td}" style="width:30px; text-align:center">{$stt}</div>
-                <div class="{$class_td}" style="width:110px; white-space:nowrap" title="{$obj_list[pi]->docFile_name}">
+                <div class="{$class_td}" style="width:150px; white-space:nowrap" title="{$obj_list[pi]->docFile_name}">
                 	{if $obj_list[pi]->user_id eq $access_user_id}
                     &nbsp;<a href='javascript: void(0);' onclick="edit_me_DocFile({$obj_list[pi]->docFile_id})">{$obj_list[pi]->docFile_name|str_string_cut:"25":"1"}</a>
                     {else}{$obj_list[pi]->docFile_name}{/if}

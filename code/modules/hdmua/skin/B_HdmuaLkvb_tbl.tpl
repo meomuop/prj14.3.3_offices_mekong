@@ -32,26 +32,55 @@
                     <div style="float:left; width:15%; line-height:25px; text-align:left">Kiểu văn bản:</div>
                     <div style="float:left; width:25%; line-height:25px; text-align:left">
                         <select name="lkvb_type" id="lkvb_type" class="select_short" tabindex="1">
-                            <option value="1" {if $obj_info.lkvb_type eq 1}selected="selected"{/if}>-&nbsp;Văn bản đến</option>
-                            <option value="2" {if $obj_info.lkvb_type eq 2}selected="selected"{/if}>-&nbsp;Văn bản đi</option>
+                            <option value="0">Chọn kiểu</option>
+                            <option value="1" {if $obj_info.lkvb_type eq 1}selected="selected"{/if}>Văn bản đến</option>
+                            <option value="2" {if $obj_info.lkvb_type eq 2}selected="selected"{/if}>Văn bản đi</option>
                         </select>
+                        {literal}
+                            <script type="text/javascript">
+                                $("#lkvb_type").change(function(){
+                                    if($("#lkvb_type").val() == 1){
+                                        $("#vanban_skh").autocomplete("B_skhVbden_auto.php", {
+                                            width: 100,
+                                            matchContains: true,
+                                            selectFirst: true
+                                        });
+
+                                        $("#vanban_skh").blur(function(){
+                                            $("#div_hdmua_klvb_file").load("getVbdenFile.php?doc_code="+$("#vanban_skh").val());
+                                        });
+                                        $("#vanban_skh").blur(function(){
+                                            $("#div_hdmua_klvb_trichyeu").load("getVbdenTrichyeu.php?doc_code="+$("#vanban_skh").val());
+                                        });
+
+                                    }else{
+                                        $("#vanban_skh").autocomplete("B_skhVbdi_auto.php", {
+                                            width: 100,
+                                            matchContains: true,
+                                            selectFirst: true
+                                        });
+                                    }
+                                });
+                            </script>
+                        {/literal}
                     </div>
                     <div style="float:left; width:15%; line-height:25px; text-align:left">Số ký hiệu:</div>
                     <div style="float:left; width:45%; line-height:25px; text-align:left">
                         <input type="text" class="text_short" name="vanban_skh" id="vanban_skh" value="{$obj_info.vanban_skh}" onfocus="hide_message_HdmuaLkvb();" tabindex="2">
                     </div>
                     <div style="float:left; width:15%; line-height:25px; text-align:left">Tệp tin:</div>
-                    <div style="float:left; width:25%; line-height:25px; text-align:left">
+                    <div style="float:left; width:25%; line-height:25px; text-align:left" id="div_hdmua_klvb_file">
                         <input type="text" class="text_short" name="vanban_file" id="vanban_file" value="{$obj_info.vanban_file}" onfocus="hide_message_HdmuaLkvb();" tabindex="4">
                     </div>
                     <div style="float:left; width:15%; line-height:25px; text-align:left">Trích yếu <font color="#FF0000">*</font>:</div>
-                    <div style="float:left; width:85%; line-height:25px; text-align:left; height:50px">
-                        <textarea spellcheck="false" name="vanban_trichyeu" id="vanban_trichyeu" cols="30" rows="5" class="text_area_small" onfocus="hide_message_Hdmua()" tabindex="3">{$obj_info.vanban_trichyeu}</textarea>
+                    <div style="float:left; width:85%; line-height:25px; text-align:left; height:50px" id="div_hdmua_klvb_trichyeu">
+                        <textarea spellcheck="false" name="vanban_trichyeu" id="vanban_trichyeu" cols="30" rows="5" class="text_area_small" onfocus="hide_message_Hdmua()" style="width:406px" tabindex="3">{$obj_info.vanban_trichyeu}</textarea>
                     </div>
                     <div style="float:left; width:15%; line-height:25px; text-align:left">&nbsp;</div>
                     <div style="float:left; width:45%; line-height:25px; text-align:left">
                         <input type="button" name="btnSub_HdmuaLkvb" id="btnSub_HdmuaLkvb" value="Ghi lại" class="button" tabindex="18"/>
                         <input type="hidden" name="lkvb_id" id="lkvb_id" value="{$obj_info.lkvb_id}">
+                        <input type="hidden" name="vanban_id" id="vanban_id" value="{$obj_info.vanban_id}">
                         <input type="hidden" name="hdmua_id" id="hdmua_id" value="{$hdmua_id}">
                         <input type="hidden" name="hdmua_sohd" id="hdmua_sohd" value="{$hdmua_info.hdmua_sohd}">
                         <input type="reset" name="Reset" value="Hủy bỏ" class="button" tabindex="19"/>

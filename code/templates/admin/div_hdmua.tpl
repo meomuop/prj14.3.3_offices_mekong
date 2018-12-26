@@ -18,17 +18,17 @@
 #hdmua_menu{ float:left; width:99.7%; height:25px; padding-left:8px; position:absolute; margin-top:21px}
 
 /*----------------------file div---------------------*/
-#file_main_cont{ float:left; width:100%; height:350px; background-color:#ccd8e7}
-#file_tab_bar_tit{ float:left; font-weight:bold; text-transform:uppercase; line-height:20px; padding-left:8px; width:80%;cursor:move; color:#15428b;}
-#file_tab_bar_icon{ float:right; width:10%; text-align:right; padding-top:2px; padding-right:6px}
-#file_content_outsign{ float:left; width:93%; height:320px; background-color:#ffffff; margin-left:8px; border:1px solid #99bbe8}
-#file_content_insign{ float:left; width:99.7%; height:297px; background-color:#dfe8f6; margin-left:1px;}
-#list_file_cont{ float:left; width:99.5%; height:319px; background-color:#dfe8f6; margin-left:1px;}
-#file_clear_txt{ float:left; width:100%; height:1px}
-#file_tool_bar{ float:left; width:99.7%; height:20px; background-color:#dfe8f6; margin-left:1px}
-#file_search_area{ float:left; width:120px; height:20px; padding-left:2px}
-#file_page_area{ float:left; width:40px; height:20px; padding-left:2px}
-#file_menu{ float:left; width:99.7%; height:25px; padding-left:8px; position:absolute; margin-top:21px}
+#file_hdmua_main_cont{ float:left; width:100%; height:350px; background-color:#ccd8e7}
+#file_hdmua_tab_bar_tit{ float:left; font-weight:bold; text-transform:uppercase; line-height:20px; padding-left:8px; width:80%;cursor:move; color:#15428b;}
+#file_hdmua_tab_bar_icon{ float:right; width:10%; text-align:right; padding-top:2px; padding-right:6px}
+#file_hdmua_content_outsign{ float:left; width:93%; height:320px; background-color:#ffffff; margin-left:8px; border:1px solid #99bbe8}
+#file_hdmua_content_insign{ float:left; width:99.7%; height:297px; background-color:#dfe8f6; margin-left:1px;}
+#list_file_hdmua_cont{ float:left; width:99.5%; height:319px; background-color:#dfe8f6; margin-left:1px;}
+#file_hdmua_clear_txt{ float:left; width:100%; height:1px}
+#file_hdmua_tool_bar{ float:left; width:99.7%; height:20px; background-color:#dfe8f6; margin-left:1px}
+#file_hdmua_search_area{ float:left; width:120px; height:20px; padding-left:2px}
+#file_hdmua_page_area{ float:left; width:40px; height:20px; padding-left:2px}
+#file_hdmua_menu{ float:left; width:99.7%; height:25px; padding-left:8px; position:absolute; margin-top:21px}
 /*----------------------end file div---------------------*/
 
 /*----------------------thanhcong div---------------------*/
@@ -211,15 +211,15 @@ function change_style_hdmua(obj){
     </div>
 </div>
 
-<div id="list_file" onclick="javascript: change_bgcl_hdmua('list_file')" style="width:280px; float:left; font-weight:normal; position:absolute; display:none; margin:90px 0 0 690px; background-color:#ffffff; border:1px solid #99bbe8; z-index:1010; padding: 0px 1px 1px 1px">
-	<div id="file_main_cont">
-        <div id="file_tab_bar_tit">Tệp tin hợp đồng</div>
-        <div id="file_tab_bar_icon">
-            <a href="javascript: void(0);" onClick="javascript: document.getElementById('list_file').style.display='none'" style="text-decoration:none">
+<div id="list_file_hdmua" onclick="javascript: change_bgcl_hdmua('list_file_hdmua')" style="width:280px; float:left; font-weight:normal; position:absolute; display:none; margin:90px 0 0 690px; background-color:#ffffff; border:1px solid #99bbe8; z-index:1010; padding: 0px 1px 1px 1px">
+	<div id="file_hdmua_main_cont">
+        <div id="file_hdmua_tab_bar_tit">Tệp tin hợp đồng</div>
+        <div id="file_hdmua_tab_bar_icon">
+            <a href="javascript: void(0);" onClick="javascript: document.getElementById('list_file_hdmua').style.display='none'" style="text-decoration:none">
             <img src="{$css_path}icon_dong.png" class="img_all" title="Đóng lại"></a>
         </div>
-        <div id="file_content_outsign">
-        	<div id="list_file_cont">
+        <div id="file_hdmua_content_outsign">
+        	<div id="list_hdmua_file_cont">
             </div>
         </div>
     </div>
