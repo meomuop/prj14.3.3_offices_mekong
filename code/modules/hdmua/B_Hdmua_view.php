@@ -13,6 +13,7 @@
     include ($CLASSES_PATH.'/hopdong/clsHdmuaLkvb.php');
     include ($CLASSES_PATH.'/hopdong/clsHdmua.php');
     include ($CLASSES_PATH.'/hopdong/clsHdmuaTientrinh.php');
+    include ($CLASSES_PATH.'/hopdong/clsHdmuaHoadon.php');
 
 	// --- Variables is used in this page
 	$order_arr = array(0 => "Mới đến cũ", 1 => "Cũ đến mới");
@@ -38,6 +39,10 @@
     $obj_tt = new hdmuaTientrinh_class();
     $obj_list_tt = $obj_tt->getDBList(" $where", " tientrinh_id ASC", FALSE, '');
     $total_row_tt = $obj_tt->getRowNumber("$where");
+
+    $obj_hd = new hdmuaHoadon_class();
+    $obj_list_hd = $obj_hd->getDBList(" $where", " hoadon_id ASC", FALSE, '');
+    $total_row_hd = $obj_hd->getRowNumber("$where");
 
     // --- Get hdmua list
     $obj_hdmua = new hdmua_class();
@@ -76,6 +81,8 @@
     $assign_list['total_row_lkvb']  = $total_row_lkvb;
     $assign_list['obj_list_tt'] 	= $obj_list_tt;
     $assign_list['total_row_tt']    = $total_row_tt;
+    $assign_list['obj_list_hd'] 	= $obj_list_hd;
+    $assign_list['total_row_hd']    = $total_row_hd;
 	
 	$assign_list['hdmua_id'] 		= $vars['hdmua_id'];
     $assign_list['hdmua_info'] 		= $hdmua_info;

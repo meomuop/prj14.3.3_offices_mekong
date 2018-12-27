@@ -368,7 +368,7 @@
                                 var hdmua_hieuluc = $form.find('input#hdmua_hieuluc').val();
                                 var hdmua_noidung = $form.find('textarea#hdmua_noidung').val();
                                 var hdmua_tgth = $form.find('input#hdmua_tgth').val();
-                                var hdmua_kieu_tgth = $form.find('input#hdmua_kieu_tgth').val();
+                                var hdmua_kieu_tgth = $form.find('select#hdmua_kieu_tgth :selected').val();
                                 var hdmua_giatri = $form.find('input#hdmua_giatri').val();
                                 var hdmua_giatri_quydoi = $form.find('input#hdmua_giatri_quydoi').val();
                                 var hdmua_gttt = $form.find('input#hdmua_gttt').val();
@@ -603,10 +603,10 @@
 
                 <div class="{$class_td}" style="width:40px; text-align:center">
                     {if $obj_list[pi]->hdmua_file eq 2}
-                    <a href='javascript: void(0);' onclick="show_list_file({$obj_list[pi]->hdmua_id})">
+                    <a href='javascript: void(0);' onclick="show_list_file_hdmua({$obj_list[pi]->hdmua_id})">
                     <img src="../images/admin/empty_icon.png" width="14" height="14" border="0"></a>
                     {else}
-                    <a href='javascript: void(0);' onclick="show_list_file({$obj_list[pi]->hdmua_id})">
+                    <a href='javascript: void(0);' onclick="show_list_file_hdmua({$obj_list[pi]->hdmua_id})">
                     <img src="../images/admin/folder_icon.png" width="14" height="14" border="0"></a>
                     {/if}
                 </div>
@@ -809,8 +809,8 @@
 	
 	function show_list_file_hdmua(hdmua_id){
 		var arg_doc = document.getElementById('arg_doc').value;
-		document.getElementById('list_file').style.display='block';
-		$("#list_file_cont").load("?listHdmuaFile&mod=hdmua"+arg_doc+"&hdmua_id="+hdmua_id);
+		document.getElementById('list_file_hdmua').style.display='block';
+		$("#list_hdmua_file_cont").load("?listHdmuaFile&mod=hdmua"+arg_doc+"&hdmua_id="+hdmua_id);
 	}
 
 	function show_list_reply(user_id,hdmua_id){

@@ -895,7 +895,7 @@ CREATE TABLE `tbl_hd_hdmua` (
 
 /*Data for the table `tbl_hd_hdmua` */
 
-insert  into `tbl_hd_hdmua`(`hdmua_id`,`hdmua_sohd`,`hdmua_ngayhd`,`hdmua_hieuluc`,`hdmua_noidung`,`hdmua_tgth`,`hdmua_kieu_tgth`,`dvtiente_id`,`hdmua_giatri`,`hdmua_giatri_quydoi`,`hdmua_gttt`,`hdmua_gttt_quydoi`,`doitac_id`,`doitac_viettat`,`department_id`,`phongban_name`,`user_id`,`nguoi_theodoi`,`hdmua_tinhtrang`,`hdmua_tl_huybo`,`hdmua_lydo_huybo`,`hdmua_dieukhoankhac`,`hdmua_file`,`hdmua_nguoinhap`,`hdmua_date`) values (1,'01/HĐKT-THP','2018-01-21','2019-01-21','Cung cấp 15 tấn thép phi 12, 15 tấn thép phi 15.',20,NULL,1,3300000000,3300000000,3300000000,3300000000,1,'Hoa Phat Hai Duong Steel JSC',16,'Phòng Tài chính kế toán',53,'Nguyễn Thu Trang',2,NULL,NULL,'Chậm 1 ngày phạt 1% giá trị hợp đồng (VND).',2,1,'2018-12-26'),(2,'02/HĐKT-THP','2018-12-22','2019-01-22','Cung cấp 1000 mét thép trơn phi 10, 300 cây thép phi 12',25,NULL,1,2000000000,2000000000,2000000000,2000000000,3,'HOA PHAT CO., LTD',16,'Phòng Tài chính kế toán',0,'Nguyễn Thu Trang',1,NULL,NULL,'Chậm giao hàng trừ 1% gái trị (VNĐ) mỗi ngày.',2,1,'2018-12-24'),(3,'03/HĐKT-XT','2018-12-22','2018-12-28','Cung cấp 24 tấn xi măng',12,NULL,1,1200000000,1200000000,1200000000,1200000000,2,'XM Xuan Thanh',16,'Phòng Tài chính kế toán',53,'Nguyễn Thu Trang',1,0,NULL,NULL,2,1,'2018-12-22'),(4,'03/HĐKT-THP','2018-12-22','2018-12-22','Cung cấp 2000 cây thép phi 20',12,NULL,1,1200000000,1200000000,1200000000,1200000000,1,'Hoa Phat Hai Duong Steel JSC',16,'Phòng Tài chính kế toán',53,'Nguyễn Thu Trang',4,120000000,'Không còn nhu cầu nhập hàng','Phạt 10% giá trị (VNĐ) nếu hủy hợp đồng',2,1,'2018-12-22');
+insert  into `tbl_hd_hdmua`(`hdmua_id`,`hdmua_sohd`,`hdmua_ngayhd`,`hdmua_hieuluc`,`hdmua_noidung`,`hdmua_tgth`,`hdmua_kieu_tgth`,`dvtiente_id`,`hdmua_giatri`,`hdmua_giatri_quydoi`,`hdmua_gttt`,`hdmua_gttt_quydoi`,`doitac_id`,`doitac_viettat`,`department_id`,`phongban_name`,`user_id`,`nguoi_theodoi`,`hdmua_tinhtrang`,`hdmua_tl_huybo`,`hdmua_lydo_huybo`,`hdmua_dieukhoankhac`,`hdmua_file`,`hdmua_nguoinhap`,`hdmua_date`) values (1,'01/HĐKT-THP','2018-01-21','2019-01-21','Cung cấp 15 tấn thép phi 12, 15 tấn thép phi 15.',20,1,1,3300000000,3300000000,3300000000,3300000000,1,'Hoa Phat Hai Duong Steel JSC',16,'Phòng Tài chính kế toán',53,'Nguyễn Thu Trang',2,NULL,NULL,'Chậm 1 ngày phạt 1% giá trị hợp đồng (VND).',1,1,'2018-12-27'),(2,'02/HĐKT-THP','2018-12-22','2019-01-22','Cung cấp 1000 mét thép trơn phi 10, 300 cây thép phi 12',25,1,1,2000000000,2000000000,2000000000,2000000000,3,'HOA PHAT CO., LTD',16,'Phòng Tài chính kế toán',0,'Nguyễn Thu Trang',1,NULL,NULL,'Chậm giao hàng trừ 1% gái trị (VNĐ) mỗi ngày.',2,1,'2018-12-24'),(3,'03/HĐKT-XT','2018-12-22','2018-12-28','Cung cấp 24 tấn xi măng',12,1,1,1200000000,1200000000,1200000000,1200000000,2,'XM Xuan Thanh',16,'Phòng Tài chính kế toán',53,'Nguyễn Thu Trang',1,0,NULL,NULL,2,1,'2018-12-22'),(4,'03/HĐKT-THP','2018-12-22','2018-12-22','Cung cấp 2000 cây thép phi 20',12,1,1,1200000000,1200000000,1200000000,1200000000,1,'Hoa Phat Hai Duong Steel JSC',16,'Phòng Tài chính kế toán',53,'Nguyễn Thu Trang',4,120000000,'Không còn nhu cầu nhập hàng','Phạt 10% giá trị (VNĐ) nếu hủy hợp đồng',2,1,'2018-12-22');
 
 /*Table structure for table `tbl_hd_hdmua_chiphi` */
 
@@ -917,6 +917,26 @@ CREATE TABLE `tbl_hd_hdmua_chiphi` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 /*Data for the table `tbl_hd_hdmua_chiphi` */
+
+/*Table structure for table `tbl_hd_hdmua_file` */
+
+DROP TABLE IF EXISTS `tbl_hd_hdmua_file`;
+
+CREATE TABLE `tbl_hd_hdmua_file` (
+  `hdfile_id` int(11) NOT NULL AUTO_INCREMENT,
+  `hdmua_id` int(11) DEFAULT NULL,
+  `hdmua_sohd` varchar(150) DEFAULT NULL,
+  `hdfile_name` varchar(250) DEFAULT NULL,
+  `hdfile_path` varchar(250) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `hdfile_date` date DEFAULT NULL,
+  `hdfile_active` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`hdfile_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+/*Data for the table `tbl_hd_hdmua_file` */
+
+insert  into `tbl_hd_hdmua_file`(`hdfile_id`,`hdmua_id`,`hdmua_sohd`,`hdfile_name`,`hdfile_path`,`user_id`,`hdfile_date`,`hdfile_active`) values (1,1,'01/HĐKT-THP','Hợp đồng','../doc_uploads_2018/ef56a3cd41c2b0d47de92561b210be9b.jpg',1,'2018-12-27',NULL),(2,1,'01/HĐKT-THP','Phụ lục HĐ','../doc_uploads_2018/55bd3391e1d689ce9e23cf4cb93bbb37.jpg',1,'2018-12-27',NULL);
 
 /*Table structure for table `tbl_hd_hdmua_hoadon` */
 

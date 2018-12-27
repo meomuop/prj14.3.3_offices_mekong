@@ -100,6 +100,14 @@ class hdmua_class extends dbBasic {
         $dbconn->Execute($sql);
     }
 
+    function changeHdmuaFile($id,$value){
+        global $dbconn;
+        // ---- Get sql query
+        $sql = " UPDATE $this->tablename set hdmua_file = ".$value." where hdmua_id=".$id;
+        // ---- Execute SQL
+        $dbconn->Execute($sql);
+    }
+
     // --- get number of rows
     function getNumresult($where = ""){
         global $dbconn;

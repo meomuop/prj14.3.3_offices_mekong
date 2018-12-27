@@ -4,36 +4,31 @@
 - Created by Le Anh Van - anhvan3103@gmail.com
 --------------------------------------------*/
 
-class hdmuaLkvb_class extends dbBasic {
-    var  $lkvb_id;
+class hdmuaFile_class extends dbBasic {
+    var  $hdfile_id;
     var  $hdmua_id;
     var  $hdmua_sohd;
-    var  $vanban_id;
-    var  $vanban_skh;
-    var  $vanban_trichyeu;
-    var  $vanban_file;
-    var  $lkvb_type;
+    var  $hdfile_name;
+    var  $hdfile_path;
     var  $user_id;
-    var  $lkvb_date;
-    var  $lkvb_active;
+    var  $hdfile_date;
+    var  $hdfile_active;
 
     var $pfields = array (
-        'lkvb_id',
+        'hdfile_id',
         'hdmua_id',
         'hdmua_sohd',
-        'vanban_skh',
-        'vanban_trichyeu',
-        'vanban_file',
-        'lkvb_type',
+        'hdfile_name',
+        'hdfile_path',
         'user_id',
-        'lkvb_date',
-        'lkvb_active'); //table private fields
+        'hdfile_date',
+        'hdfile_active'); //table private fields
 
-    var $pkeys = array ('lkvb_id'); //key fields
+    var $pkeys = array ('hdfile_id'); //key fields
 
-    function hdmuaLkvb_class(){
+    function hdmuaFile_class(){
         $this->dbBasic();
-        $this->tablename = "tbl_hd_hdmua_lkvb";
+        $this->tablename = "tbl_hd_hdmua_file";
     }
 
     function readform(){
@@ -47,7 +42,7 @@ class hdmuaLkvb_class extends dbBasic {
     function getTitle($id){
         global $dbconn;
         // ---- Get sql query
-        $sql = " SELECT lkvb_sohd FROM $this->tablename where lkvb_id=".$id;
+        $sql = " SELECT hdfile_name FROM $this->tablename where hdfile_id=".$id;
         // ---- Execute SQL
         $result = $dbconn->Execute($sql);
         return $result->fields[0];
@@ -57,7 +52,7 @@ class hdmuaLkvb_class extends dbBasic {
     function getNumresult($where = ""){
         global $dbconn;
         // ---- Get sql query
-        $sql = " SELECT count(lkvb_id) FROM $this->tablename ".$where;
+        $sql = " SELECT count(hdfile_id) FROM $this->tablename ".$where;
         // ---- Execute SQL
         $result = $dbconn->Execute($sql);
         return $result->fields[0];
@@ -65,8 +60,8 @@ class hdmuaLkvb_class extends dbBasic {
 
     // --- get top 1 news
     function getTopRows(){
-        $where = " 1 = 1 and lkvb_active = 1";
-        $rows = $this->getDBList($where," lkvb_id DESC",true," Limit 1");
+        $where = " 1 = 1 and hdfile_active = 1";
+        $rows = $this->getDBList($where," hdfile_id DESC",true," Limit 1");
         return $rows;
     }
 }

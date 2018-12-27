@@ -368,6 +368,7 @@
         case 'expTonkhoReport'	: include ($MODULE_PATH.$module_name.'B_HdmuaTonkho_exp.php'); exit();
         case 'listHdmuaTientrinh'	: include ($MODULE_PATH.$module_name.'B_HdmuaTientrinh_list.php'); exit();
         case 'listHdmuaLkvb'	: include ($MODULE_PATH.$module_name.'B_HdmuaLkvb_list.php'); exit();
+        case 'listHdmuaFile'	: include ($MODULE_PATH.$module_name.'B_HdmuaFile_list.php'); exit();
 
 
 
