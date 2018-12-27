@@ -59,6 +59,13 @@
                                             matchContains: true,
                                             selectFirst: true
                                         });
+
+                                        $("#vanban_skh").blur(function(){
+                                            $("#div_hdmua_klvb_file").load("getVbdiFile.php?doc_code="+$("#vanban_skh").val());
+                                        });
+                                        $("#vanban_skh").blur(function(){
+                                            $("#div_hdmua_klvb_trichyeu").load("getVbdiTrichyeu.php?doc_code="+$("#vanban_skh").val());
+                                        });
                                     }
                                 });
                             </script>
@@ -107,28 +114,36 @@
 
                                 var $form = $("#frmList_HdmuaLkvb");
 
-                                var lkvb_ghichu = $form.find('textarea#lkvb_ghichu').val();
+
                                 var lkvb_id = $form.find('input#lkvb_id').val();
-                                var lkvb_file = $form.find('input#lkvb_file').val();
                                 var hdmua_id = $form.find('input#hdmua_id').val();
                                 var hdmua_sohd = $form.find('input#hdmua_sohd').val();
+                                var vanban_id = $form.find('input#vanban_id').val();
+                                var vanban_skh = $form.find('input#vanban_skh').val();
+                                var vanban_file = $form.find('input#vanban_file').val();
+                                var vanban_trichyeu = $form.find('textarea#vanban_trichyeu').val();
+                                var lkvb_type = $form.find('select#lkvb_type :selected').val();
 
                                 //begin validate form
-                                if (lkvb_ghichu == "" || hdmua_id == "" || hdmua_sohd == "" ){
+                                if (vanban_skh == "" || hdmua_id == "" || hdmua_sohd == "" ){
                                     $('#lblError_HdmuaLkvb').show();
                                 }
                                 else{
                                     $.post('index.php?listHdmuaLkvb&mod=hdmua&add_edit=1',
                                         {
-                                            lkvb_ghichu:lkvb_ghichu,
+
                                             lkvb_id:lkvb_id,
-                                            lkvb_file:lkvb_file,
                                             hdmua_id:hdmua_id,
-                                            hdmua_sohd:hdmua_sohd
+                                            hdmua_sohd:hdmua_sohd,
+                                            vanban_id:vanban_id,
+                                            vanban_skh:vanban_skh,
+                                            vanban_file:vanban_file,
+                                            vanban_trichyeu:vanban_trichyeu,
+                                            lkvb_type:lkvb_type
                                         },
                                         function(data){
-                                            $('#list_thuchien_cont').html(data);
-                                            $("#list_thuchien_cont").show();
+                                            $('#list_hdmua_lkvb_cont').html(data);
+                                            $("#list_hdmua_lkvb_cont").show();
                                         }
                                     );
                                     return false;
@@ -185,18 +200,18 @@
             {math x=$vars.curpage-1 y=$vars.numresult z=$smarty.section.pi.index t=1 equation="x*y+z+t" assign=stt}
             <div style="float:left">
                 <div class="{$class_td}" style="width:40px; text-align:center">{$stt}</div>
-                <div class="{$class_td}" style="width:255px; white-space:nowrap; text-align:left" title="{$obj_list[pi]->lkvb_ghichu}">
-                    &nbsp;{$obj_list[pi]->lkvb_ghichu|str_string_cut:"55":"1"}
+                <div class="{$class_td}" style="width:255px; white-space:nowrap; text-align:left" title="{$obj_list[pi]->vanban_trichyeu}">
+                    &nbsp;{$obj_list[pi]->vanban_skh} - {$obj_list[pi]->vanban_trichyeu|str_string_cut:"35":"1"}
                 </div>
                 <div class="{$class_td}" style="width:70px">
                     &nbsp;{$obj_list[pi]->lkvb_date|date_format:"%d/%m/%Y"}
                 </div>
                 <div class="{$class_td}" style="width:40px; text-align:center">
-                    <a href='{$obj_list[pi]->lkvb_file}' target="new">
+                    <a href='{$obj_list[pi]->vanban_file}' target="new">
                         <img src="../images/admin/download_icon.png" width="16" height="16" border="0" title="Tải về"></a>
                 </div>
                 <div class="{$class_td}" style="width:29px; text-align:center">
-                    <a href='javascript: void(0);' onclick="edit_me_HdmuaLkvb({$obj_list[pi]->lkvb_id})">
+                    <a href='javascript: void(0);' onclick="edit_me_HdmuaLkvb({$obj_list[pi]->lkvb_id},{$obj_list[pi]->hdmua_id})">
                     <img src="../images/admin/b_edit.png" width="11" height="11" border="0" title="Sửa"></a>
                 </div>
                 <div class="{$class_td}" style="width:29px; text-align:center">
@@ -211,7 +226,7 @@
         </div>
         <input type="hidden" id="curpage_HdmuaLkvb" name="curpage" value="{$vars.curpage}" />
         <input type="hidden" name="arg" id="arg" value="{$vars.arg}">
-        <input type="hidden" name="arg_doc" id="arg_doc" value="{$vars.arg_doc}">
+        <input type="hidden" name="hdmua_HdmuaLkvb" id="hdmua_HdmuaLkvb" value="{$hdmua_id}">
     </fieldset>
     </form>
 </div>
@@ -284,7 +299,7 @@
     
 </div>
 {literal}
-<script language="javascript">	
+<script type="text/javascript">
 	function show_list_options(count,total){
 		for(i=1;i<=total;i++){
 			if(i==count){
@@ -302,13 +317,13 @@
 			document.getElementById('seek_more').style.display='';
 		else document.getElementById('seek_more').style.display='none';
 	}
-	
+
 	function show_hide_filter(){
 		if(document.getElementById('div_filter').style.display=='none')
 			document.getElementById('div_filter').style.display='';
 		else document.getElementById('div_filter').style.display='none';
 	}
-	
+
 	function docheck_HdmuaLkvb(status,from_){
 		var alen=document.frmList_HdmuaLkvb.elements.length;
 		alen=(alen>5)?document.frmList_HdmuaLkvb.chkid.length:0;
@@ -321,7 +336,7 @@
 		}
 		if(from_>0) document.frmList_HdmuaLkvb.chkall.checked=status;
 	}
-		
+
 	function docheckone_HdmuaLkvb(){
 		var alen=document.frmList_HdmuaLkvb.elements.length;
 		var isChecked=true;
@@ -333,13 +348,13 @@
 		}else{
 			if(document.frmList_HdmuaLkvb.chkid.checked==false)
 				isChecked=false;
-		}				
+		}
 		document.frmList_HdmuaLkvb.chkall.checked=isChecked;
 	}
-	
-	function calculatechon_HdmuaLkvb(){			
+
+	function calculatechon_HdmuaLkvb(){
 		var strchon="";
-		var alen=document.frmList_HdmuaLkvb.elements.length;				
+		var alen=document.frmList_HdmuaLkvb.elements.length;
 		alen=(alen>2)?document.frmList_HdmuaLkvb.chkid.length:0;
 		if (alen>0){
 			for(var i=0;i<alen;i++)
@@ -351,7 +366,7 @@
 		}
 		document.frmList_HdmuaLkvb.chon_HdmuaLkvb.value=strchon;
 	}
-	
+
 	function delItems_HdmuaLkvb(processurl,delStr){
 		if (delStr == undefined){
 			calculatechon_HdmuaLkvb();
@@ -362,13 +377,13 @@
 		}
 		if(!confirm("THÔNG BÁO: \n\tBẠN CÓ CHẮC CHẮN MUỐN XÓA?")){
 			return false;
-		}	
-		
+		}
+
 		var numresult_HdmuaLkvb,order_HdmuaLkvb,curpage_HdmuaLkvb;
 		numresult = $("#numresult_HdmuaLkvb").val();
 		order = $("#order_HdmuaLkvb").val();
 		curpage = $("#curpage_HdmuaLkvb").val();
-		
+
 		var dataString  = "numresult=" + numresult;
 			dataString += "&order=" + order;
 			dataString += "&curpage=" + curpage;
@@ -379,26 +394,26 @@
 			url: processurl,
 			data: dataString,
 			success: function(data) {
-				$('#list_thuchien_cont').fadeOut('fast').load(processurl+"&numresult="+numresult+"&order="+order+"&curpage="+curpage).fadeIn("fast");
+				$('#list_hdmua_lkvb_cont').fadeOut('fast').load(processurl+"&numresult="+numresult+"&order="+order+"&curpage="+curpage).fadeIn("fast");
 			}
 		});
 	}
-	
+
 	function reloadPage_HdmuaLkvb(processurl){
 		var numresult_HdmuaLkvb,order_HdmuaLkvb,cur_pos;
 		numresult = $("#numresult_HdmuaLkvb").val();
 		order = $("#order_HdmuaLkvb").val();
 		cur_pos = 0;
-		alert(processurl);
-		$("#list_thuchien_cont").load(processurl+"&numresult="+numresult+"&order="+order+"&cur_pos="+cur_pos);
+		//alert(processurl);
+		$("#list_hdmua_lkvb_cont").load(processurl+"&numresult="+numresult+"&order="+order+"&cur_pos="+cur_pos);
 	}
-		
+
 	function gotoPage_HdmuaLkvb(processurl,page){
 		var numresult_HdmuaLkvb,order_HdmuaLkvb,cur_pos;
 		numresult = $("#numresult_HdmuaLkvb").val();
 		order = $("#order_HdmuaLkvb").val();
 		//alert(processurl+'-'+page+'-'+numresult+'-'+order);
-		$("#list_thuchien_cont").load(processurl+"&numresult="+numresult+"&order="+order+"&curpage="+page);
+		$("#list_hdmua_lkvb_cont").load(processurl+"&numresult="+numresult+"&order="+order+"&curpage="+page);
 	}
 
 	function search_me_HdmuaLkvb(){
@@ -407,11 +422,11 @@
 		var ngayxuat_1 		= document.getElementById('ngayxuat_1').value;
 		var ngayxuat_2 	= document.getElementById('ngayxuat_2').value;
 		var ngayxuat_3 	= document.getElementById('ngayxuat_3').value;
-		
+
 		if (lkvb_ghichu_fs == "" && lkvb_sohd_fs == "" && ngayxuat_1 == "" && ngayxuat_2 == "" && ngayxuat_3 == ""){
 			return false;
 		}
-		
+
 		$.post('?listHdmuaLkvb&mod=hdmua&search_me=1',
 			{
 				lkvb_ghichu_fs:lkvb_ghichu_fs,
@@ -421,20 +436,19 @@
                 ngayxuat_3:ngayxuat_3
 			},
 			function(data){
-				$('#list_thuchien_cont').html(data);
-				$("#list_thuchien_cont").show();
+				$('#list_hdmua_lkvb_cont').html(data);
+				$("#list_hdmua_lkvb_cont").show();
 			}
 		);
 	}
-	
-	function edit_me_HdmuaLkvb(id){
-		$("#list_thuchien_cont").load("?listHdmuaLkvb&mod=hdmua&edit_me=1&hdmua_id="+id);
+
+	function edit_me_HdmuaLkvb(id,hdmua_id){
+		$("#list_hdmua_lkvb_cont").load("?listHdmuaLkvb&mod=hdmua&edit_me=1&lkvb_id="+id+"&hdmua_id="+hdmua_id);
 	}
-		
+
 	$("#a_ref_HdmuaLkvb").click( function () {
-			alert($('#processurl').val());
-			$('#list_thuchien_cont').hide();
-			$('#list_thuchien_cont').fadeOut('fast').load('index.php?listHdmuaLkvb&mod=hdmua&hdmua_id='+id).fadeIn("fast");
+			$('#list_hdmua_lkvb_cont').hide();
+			$('#list_hdmua_lkvb_cont').fadeOut('fast').load('index.php?listHdmuaLkvb'+$("#arg").val()+"&hdmua_id="+$("#hdmua_HdmuaLkvb").val()).fadeIn("fast");
 		});
 </script>
 {/literal}

@@ -837,7 +837,7 @@
     }
 
 	function show_hdmua_thongtin(hdmua_id){
-		document.getElementById('div_view_doc').style.display='block';
+		document.getElementById('div_view_hdmua').style.display='block';
 		$("#list_view_hdmua_cont").load("?viewHdmua&mod=hdmua&hdmua_id="+hdmua_id);
 	}
 		

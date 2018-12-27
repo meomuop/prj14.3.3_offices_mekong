@@ -16,7 +16,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
 <div id="file_content_insign">
 	<form method="post" name="frmList_DocOutFile" action="?listDocOutFile{$vars.arg}" id="frmList_DocOutFile">
     <!------------------------------------------THEM MOI------------------------------------>
-    <fieldset style="width:248px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px">
+    <fieldset style="width:288px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px">
         <legend class="legend">Thêm/Chỉnh sửa</legend>
         {section name=qi loop=$obj_list_doc}
         {if $obj_list_doc[qi]->docOut_id eq $docOut_id} 
@@ -32,7 +32,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
             		<span id="lblError_DocOutFile" class="error">(*) là các mục bắt buộc!</span>
                 </td>
             </tr>
-            <tr>
+            <tr height="20">
             <td colspan="2">Số ký hiệu văn bản: {$so_ky_hieu} - Số đi: {if $so_di neq '' or $so_di neq 0}{$so_di}{else}{$so_di_db}{/if}
             </td>
             </tr>
@@ -105,16 +105,16 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
         </table>
     </fieldset>
     <!------------------------------------DANH SACH---------------------------------------------->
-    <fieldset style="width:248px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px; height:147px">
+    <fieldset style="width:288px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px; height:147px">
         <legend class="legend">Danh sách: {$total_num_result}</legend>
     	<div style="float:left; height:5px; width:100%"></div>
-        <div style="float:left; height:25px; width:228px; border-top:1px solid #99bbe8; border-bottom:1px solid #99bbe8 ">
+        <div style="float:left; height:25px; width:268px; border-top:1px solid #99bbe8; border-bottom:1px solid #99bbe8 ">
             <div class="tbl_tit" style="width:30px; text-align:center"><b>STT</b></div>	
-            <div class="tbl_tit" style="width:105px"><B>&nbsp;Tên tệp tin</B></div>
+            <div class="tbl_tit" style="width:145px"><B>&nbsp;Tên tệp tin</B></div>
             <div class="tbl_tit" style="width:90px; text-align:center"><B>Chọn</B></div>
         </div>
         <div style="float:left; width:18px; height:25px">&nbsp;</div>
-        <div style="float:left; height:90px; width:248px; overflow-y:scroll">
+        <div style="float:left; height:90px; width:288px; overflow-y:scroll">
             {section name=pi loop=$obj_list}
             {if $smarty.section.pi.index is not div by 2} 
             {assign var="class_td" value="tbl_cont"} 
@@ -123,7 +123,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
             {/if}
             {math x=$vars.curpage-1 y=$vars.numresult z=$smarty.section.pi.index t=1 equation="x*y+z+t" assign=stt}
             <div class="{$class_td}" style="width:30px; text-align:center">{$stt}</div>
-            <div class="{$class_td}" style="width:105px; white-space:nowrap" title="{$obj_list[pi]->docOutFile_name}">
+            <div class="{$class_td}" style="width:145px; white-space:nowrap" title="{$obj_list[pi]->docOutFile_name}">
             	&nbsp;<a href='javascript: void(0);' onclick="edit_me_DocOutFile({$obj_list[pi]->docOutFile_id})">{$obj_list[pi]->docOutFile_name|str_string_cut:"25":"1"}</a>
             </div>
             <div class="{$class_td}" style="width:30px; text-align:center">

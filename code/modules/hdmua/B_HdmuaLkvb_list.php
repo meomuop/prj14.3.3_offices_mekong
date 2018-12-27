@@ -12,6 +12,8 @@
 	// ------------------------------
     include ($CLASSES_PATH.'/hopdong/clsHdmuaLkvb.php');
     include ($CLASSES_PATH.'/hopdong/clsHdmua.php');
+    include ($CLASSES_PATH.'/clsDocs.php');
+    include ($CLASSES_PATH.'/clsDocouts.php');
 
 	// --- Class is used in this page
 	$obj = new hdmuaLkvb_class();
@@ -58,26 +60,38 @@
 	if($vars['add_edit']==1):
         if (!isset($vars['lkvb_id']) || $vars['lkvb_id'] < 1) {
             $obj = new hdmuaLkvb_class();
-            $hdmua = new hdmua_class();
             $obj->readForm();
             if ((is_null($error)) || ($error == "")) {
                 $obj->lkvb_date = date("Y-m-d");
                 $obj->user_id = $_SESSION['user_id'];
+                if($vars['lkvb_type'] == 1){
+                    $doc = new doc_class();
+                    $obj->vanban_id = $doc->getIdBySkh($vars['vanban_skh']);
+                }else{
+                    $doc = new docOut_class();
+                    $obj->vanban_id = $doc->getIdBySkh($vars['vanban_skh']);
+                }
 
                 $obj->insertnew();
                 $complete = "Đã thêm mới thành công!";
                 unset($obj);
-                $hdmua->updateTinhtrang($vars['hdmua_id'],2);
             }
         }else{
             $obj = new hdmuaLkvb_class();
-            $hdmua = new hdmua_class();
             $obj->readForm();
             if ((is_null($error)) || ($error == "")) {
                 if ($obj->is_already_used($obj->tablename, "lkvb_id", $obj->lkvb_id))
                 {
                     $obj->lkvb_date = date("Y-m-d");
                     $obj->user_id = $_SESSION['user_id'];
+
+                    if($vars['lkvb_type'] == 1 && $vars['vanban_id'] < 1){
+                        $doc = new doc_class();
+                        $obj->vanban_id = $doc->getIdBySkh($vars['vanban_skh']);
+                    }else{
+                        $doc = new docOut_class();
+                        $obj->vanban_id = $doc->getIdBySkh($vars['vanban_skh']);
+                    }
 
                     $obj->update();
                     $complete = "Đã cập nhật thành công!";
@@ -138,15 +152,8 @@
 	$vars['arg'] .= $vars['curpage']?"&curpage=".$vars['curpage']:"";
 	$vars['arg'] .= $vars['order']?"&order=".$vars['order']:"";
 	$vars['arg'] .= $vars['mod']?("&mod=".$vars['mod']):"";
-    $vars['arg'] .= $vars['hdmua_id']?("&mod=".$vars['hdmua_id']):"";
-	
-	// --- tao duong dan cho thao tac tren cac div khac
-	$vars['arg_doc'] = "";
-	$vars['arg_doc'] .= $vars['numresult']?"&numresult_doc=".$vars['numresult']:"";
-	$vars['arg_doc'] .= $vars['curpage']?"&curpage_doc=".$vars['curpage']:"";
-	$vars['arg_doc'] .= $vars['order']?"&order_doc=".$vars['order']:"";
-	$vars['arg_doc'] .= $vars['mod']?("&mod=".$vars['mod']):"";
-	
+    $vars['arg'] .= $vars['hdmua_id']?("&hdmua_id=".$vars['hdmua_id']):"";
+
 	// permissions
 	$per_add 	= 1;
 	$per_edit 	= 1;

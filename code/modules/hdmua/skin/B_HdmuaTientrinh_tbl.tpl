@@ -156,7 +156,7 @@
                         <img src="../images/admin/download_icon.png" width="16" height="16" border="0" title="Tải về"></a>
                 </div>
                 <div class="{$class_td}" style="width:29px; text-align:center">
-                    <a href='javascript: void(0);' onclick="edit_me_HdmuaTientrinh({$obj_list[pi]->tientrinh_id})">
+                    <a href='javascript: void(0);' onclick="edit_me_HdmuaTientrinh({$obj_list[pi]->tientrinh_id},{$obj_list[pi]->hdmua_id})">
                     <img src="../images/admin/b_edit.png" width="11" height="11" border="0" title="Sửa"></a>
                 </div>
                 <div class="{$class_td}" style="width:29px; text-align:center">
@@ -171,7 +171,7 @@
         </div>
         <input type="hidden" id="curpage_HdmuaTientrinh" name="curpage" value="{$vars.curpage}" />
         <input type="hidden" name="arg" id="arg" value="{$vars.arg}">
-        <input type="hidden" name="arg_doc" id="arg_doc" value="{$vars.arg_doc}">
+        <input type="hidden" name="hdmua_HdmuaTientrinh" id="hdmua_HdmuaTientrinh" value="{$hdmua_id}">
     </fieldset>
     </form>
 </div>
@@ -387,14 +387,14 @@
 		);
 	}
 	
-	function edit_me_HdmuaTientrinh(id){
-		$("#list_thuchien_cont").load("?listHdmuaTientrinh&mod=hdmua&edit_me=1&hdmua_id="+id);
+	function edit_me_HdmuaTientrinh(id,hdmua_id){
+	    //alert("?listHdmuaTientrinh&mod=hdmua&edit_me=1&hdmua_id="+hdmua_id);
+		$("#list_thuchien_cont").load("?listHdmuaTientrinh&mod=hdmua&edit_me=1&tientrinh_id="+id+"&hdmua_id="+hdmua_id);
 	}
 		
 	$("#a_ref_HdmuaTientrinh").click( function () {
-			alert($('#processurl').val());
 			$('#list_thuchien_cont').hide();
-			$('#list_thuchien_cont').fadeOut('fast').load('index.php?listHdmuaTientrinh&mod=hdmua&hdmua_id='+id).fadeIn("fast");
+			$('#list_thuchien_cont').fadeOut('fast').load('index.php?listHdmuaTientrinh'+$("#arg").val()+"&hdmua_id="+$("#hdmua_HdmuaTientrinh").val()).fadeIn("fast");
 		});
 </script>
 {/literal}

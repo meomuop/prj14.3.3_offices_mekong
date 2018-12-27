@@ -91,6 +91,16 @@ class docOut_class extends dbBasic {
         $result = $dbconn->Execute($sql);
 		return $result->fields[0];
     }
+
+    // --- get id by skh
+    function getIdBySkh($skh = ''){
+        global $dbconn;
+        // ---- Get sql query
+        $sql = " SELECT docOut_id FROM $this->tablename where 1 = 1 and docOut_code = '".$skh."'";
+        // ---- Execute SQL
+        $result = $dbconn->Execute($sql);
+        return $result->fields[0];
+    }
 	
 	function getLastNumbyInputPer($user_id,$docCat_typical){
 		global $dbconn;

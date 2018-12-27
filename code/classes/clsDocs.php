@@ -82,46 +82,6 @@ class doc_class extends dbBasic {
 		dbBasic::writeForm();
   	}
 	
-	/****************************
-	 * function getNewsList
-	 * return $ret --- array of product list
-	 *************************/
-    function getNewsList($where = "", $order = "", $limit = ""){
-        global $dbconn;
-        // ---- Get sql query
-        $sql = " SELECT * FROM $this->tablename ";
-        $sql .= $where;
-        $sql .= $order;
-        $sql .= $limit;
-		// ---- Execute SQL
-        $result = $dbconn->Execute($sql);
-        // ---- Define an array ---> result of function
-        $ret = array();
-        // --- recordset ---> array() ---
-		if ($result) {	
-			for (; !$result->EOF; $result->MoveNext()){
-				$i = 0;
-				$temp = new stdClass();
-				foreach ($array_fields as $id) {
-					// $temp->$id = $result->fields[$i++];
-					$fname = "temp->$id";
-					$value = trim($result->fields[$i++]);
-					$value = stripslashes($value);
-					//$value = mb_convert_encoding($value, "UTF-8", "auto");
-					if(get_magic_quotes_gpc()) {
-						$value = stripslashes($value);
-					}
-					$temp->$id=$value;
-				}
-				$ret[] = $temp;
-				unset($temp);
-			}
-		}	
-        // return $ret ---> array of product list
-        // print_r($ret);
-        return $ret;
-    }
-	
 	// --- get last number
 	function getLastNum($docLevel_id = 0){
         global $dbconn;
@@ -148,6 +108,16 @@ class doc_class extends dbBasic {
         // ---- Execute SQL
         $result = $dbconn->Execute($sql);
 		return $result->fields[0];
+    }
+
+    // --- get id by skh
+    function getIdBySkh($skh = ''){
+        global $dbconn;
+        // ---- Get sql query
+        $sql = " SELECT doc_id FROM $this->tablename where 1 = 1 and doc_code = '".$skh."'";
+        // ---- Execute SQL
+        $result = $dbconn->Execute($sql);
+        return $result->fields[0];
     }
 	
 	// --- get theo doi

@@ -63,7 +63,7 @@ function change_Zindex(obj){
 	var div_tnvb_arr = ['div_view_transport','list_truyenvb'];	
 	var div_kdl_arr = ['add_edit_kdl','add_edit_dl','dl_file'];
 	var div_msg_arr = ['div_nd_msg'];
-    var div_hdmua_arr = ['div_hdmua_report','div_thuchien','div_hdmua_lkvb'];
+    var div_hdmua_arr = ['div_hdmua_report','div_thuchien','div_hdmua_lkvb','div_view_hdmua','list_file_hdmua'];
 	
 	for(i=0;i<=div_arr_zindex.length;i++){
 		if(div_arr_zindex[i] == obj){

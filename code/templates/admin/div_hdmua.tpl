@@ -44,7 +44,7 @@
 #view_hdmua_main_cont{ float:left; width:100%; height:420px; background-color:#ccd8e7}
 #view_hdmua_tab_bar_tit{ float:left; font-weight:bold; text-transform:uppercase; line-height:20px; padding-left:8px; width:80%;cursor:move; color:#15428b;}
 #view_hdmua_tab_bar_icon{ float:right; width:10%; text-align:right; padding-top:2px; padding-right:6px}
-#view_hdmua_content_outsign{ float:left; width:96.4%; height:390px; background-color:#ffffff; margin-left:8px; border:1px solid #99bbe8}
+#view_hdmua_content_outsign{ float:left; width:97.7%; height:390px; background-color:#ffffff; margin-left:8px; border:1px solid #99bbe8}
 #view_hdmua_content_insign{ float:left; width:99.8%; height:377px; background-color:#dfe8f6; margin-left:1px;}
 #list_view_hdmua_cont{ float:left; width:99.7%; height:389px; background-color:#dfe8f6; margin-left:1px;}
 #view_hdmua_clear_txt{ float:left; width:100%; height:1px}
@@ -91,7 +91,7 @@
 <script>
 $(function() {
 	$( "#div_hdmua" ).draggable();
-	$( "#list_file" ).draggable();
+	$( "#list_file_hdmua" ).draggable();
 	$( "#div_thuchien" ).draggable();
 	$( "#div_hdmua_lkvb" ).draggable();
 	$( "#list_view_hdmua" ).draggable();
@@ -225,7 +225,7 @@ function change_style_hdmua(obj){
     </div>
 </div>
 
-<div id="div_view_hdmua" onclick="javascript: change_bgcl_hdmua('div_view_hdmua')" style="width:556px; float:left; font-weight:normal; position:absolute; display:none; margin:90px 0 0 237px; background-color:#ffffff; border:1px solid #99bbe8; z-index:1010; padding: 0px 1px 1px 1px">
+<div id="div_view_hdmua" onclick="javascript: change_bgcl_hdmua('div_view_hdmua')" style="width:900px; float:left; font-weight:normal; position:absolute; display:none; margin:90px 0 0 237px; background-color:#ffffff; border:1px solid #99bbe8; z-index:1010; padding: 0px 1px 1px 1px">
 	<div id="view_hdmua_main_cont">
         <div id="view_hdmua_tab_bar_tit">Thông tin hợp đồng</div>
         <div id="view_hdmua_tab_bar_icon">
@@ -253,7 +253,7 @@ function change_style_hdmua(obj){
     </div>
 </div>
 
-<div id="div_hdmua_lkvb" onclick="javascript: change_bgcl_hdmua('div_thuchien')" style="width:550px; float:left; font-weight:normal; position:absolute; display:none; margin:120px 0 0 240px; background-color:#ffffff; border:1px solid #99bbe8; z-index:1010; padding: 0px 1px 1px 1px">
+<div id="div_hdmua_lkvb" onclick="javascript: change_bgcl_hdmua('div_hdmua_lkvb')" style="width:550px; float:left; font-weight:normal; position:absolute; display:none; margin:120px 0 0 240px; background-color:#ffffff; border:1px solid #99bbe8; z-index:1010; padding: 0px 1px 1px 1px">
 	<div id="hdmua_lkvb_main_cont">
 		<div id="hdmua_lkvb_tab_bar_tit">Liên kết văn bản</div>
 		<div id="hdmua_lkvb_tab_bar_icon">
@@ -269,17 +269,21 @@ function change_style_hdmua(obj){
 
 {literal}
 <script language="javascript">	
-	var div_arr = ['list_file','div_view_hdmua','div_thuchien','div_hdmua_lkvb'];
+	var div_arr_hdmua = ['list_file_hdmua','div_view_hdmua','div_thuchien','div_hdmua_lkvb'];
 
 	function change_bgcl_hdmua(obj){
-		for(i=0;i<=div_arr.length;i++){
-			if(div_arr[i] == obj){
+		for(i=0;i<=div_arr_hdmua.length;i++){
+			if(div_arr_hdmua[i] == obj){
 				document.getElementById('div_hdmua').style.zIndex='2000';
 				document.getElementById(obj).style.zIndex = '2001'; 
 				document.getElementById(obj).style.borderColor='#F00';
 			}else{
-				document.getElementById(div_arr[i]).style.zIndex='2000';
-				document.getElementById(div_arr[i]).style.borderColor='#99bbe8';
+				var element =  document.getElementById(div_arr_hdmua[i]);
+				if (typeof(element) != 'undefined' && element != null)
+				{
+					element.style.zIndex='2000';
+					element.style.borderColor='#99bbe8';
+				}
 			}
 		}
 	}
@@ -314,8 +318,8 @@ function change_style_hdmua(obj){
 	});
 	
 	$("#a_menu_hdmua_1").click( function () { 
-		for(i=0;i<div_arr.length;i++){
-			document.getElementById(div_arr[i]).style.display='none';
+		for(i=0;i<div_arr_hdmua.length;i++){
+			document.getElementById(div_arr_hdmua[i]).style.display='none';
 		}
 		
 		document.getElementById('hdmua_content_main').style.display='block';
@@ -324,8 +328,8 @@ function change_style_hdmua(obj){
 
 	});
 	$("#a_menu_hdmua_2").click( function () { 
-		for(i=0;i<div_arr.length;i++){
-			document.getElementById(div_arr[i]).style.display='none';
+		for(i=0;i<div_arr_hdmua.length;i++){
+			document.getElementById(div_arr_hdmua[i]).style.display='none';
 		}
 		
 		document.getElementById('hdmua_content_main').style.display='block';
@@ -334,8 +338,8 @@ function change_style_hdmua(obj){
 
 	});
     $("#a_menu_hdmua_3").click( function () {
-        for(i=0;i<div_arr.length;i++){
-            document.getElementById(div_arr[i]).style.display='none';
+        for(i=0;i<div_arr_hdmua.length;i++){
+            document.getElementById(div_arr_hdmua[i]).style.display='none';
         }
 
         document.getElementById('hdmua_content_main').style.display='block';
@@ -344,8 +348,8 @@ function change_style_hdmua(obj){
 
     });
     $("#a_menu_hdmua_4").click( function () {
-        for(i=0;i<div_arr.length;i++){
-            document.getElementById(div_arr[i]).style.display='none';
+        for(i=0;i<div_arr_hdmua.length;i++){
+            document.getElementById(div_arr_hdmua[i]).style.display='none';
         }
 
         document.getElementById('hdmua_content_main').style.display='block';
@@ -356,9 +360,13 @@ function change_style_hdmua(obj){
 	
 	function close_all_window_hdmua(){
 	    document.getElementById('div_hdmua').style.display='none';
-	    // for(i=0;i<div_arr.length;i++){
-	 	// 	document.getElementById(div_arr[i]).style.display='none';
-	    // }
+		for(i=0;i<div_arr_hdmua.length;i++){
+			var element =  document.getElementById(div_arr_hdmua[i]);
+			if (typeof(element) != 'undefined' && element != null)
+			{
+				element.style.display='none';
+			}
+		}
 	}
 </script>
 {/literal}

@@ -140,13 +140,6 @@
 	$vars['arg'] .= $vars['mod']?("&mod=".$vars['mod']):"";
     $vars['arg'] .= $vars['hdmua_id']?("&mod=".$vars['hdmua_id']):"";
 	
-	// --- tao duong dan cho thao tac tren cac div khac
-	$vars['arg_doc'] = "";
-	$vars['arg_doc'] .= $vars['numresult']?"&numresult_doc=".$vars['numresult']:"";
-	$vars['arg_doc'] .= $vars['curpage']?"&curpage_doc=".$vars['curpage']:"";
-	$vars['arg_doc'] .= $vars['order']?"&order_doc=".$vars['order']:"";
-	$vars['arg_doc'] .= $vars['mod']?("&mod=".$vars['mod']):"";
-	
 	// permissions
 	$per_add 	= 1;
 	$per_edit 	= 1;
