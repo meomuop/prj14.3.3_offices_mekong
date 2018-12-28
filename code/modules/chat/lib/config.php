@@ -24,11 +24,11 @@ $config['dbConnection']['host'] = 'localhost';
 // Database username:
 $config['dbConnection']['user'] = 'root';
 // Database password:
-$config['dbConnection']['pass'] = '';
+$config['dbConnection']['pass'] = '123456789';
 // Database name:
 if(isset($_POST['db_year'])) $_SESSION['db_year'] = $_POST['db_year'];
 elseif(!isset($_POST['db_year']) && !isset($_SESSION['db_year'])) $_SESSION['db_year'] = date('Y');
-$config['dbConnection']['name'] = 'db14_0_tha_offices_'.$_SESSION['db_year'];
+$config['dbConnection']['name'] = 'db14_3_3_offices_mekong_'.$_SESSION['db_year'];
 // Database type:
 $config['dbConnection']['type'] = null;
 // Database link:

@@ -110,7 +110,8 @@
                                 <b>CT {$stt}</b>. Số: {$obj_list_hd[pi]->hoadon_sohd} (Xuất: {$obj_list_hd[pi]->hoadon_ngayhd|date_format:"%d/%m/%Y"})<br>
                                 <u>Giá trị</u>: {$obj_list_hd[pi]->hoadon_giatri|price_format} (VNĐ)
                                 ({if $obj_list_hd[pi]->hoadon_pttt eq 1}Tiền mặt{else}Chuyển khoản{/if})<br>
-                                <u>Nội dung</u>: {$obj_list_hd[pi]->hoadon_noidung}
+                                <u>Nội dung</u>: {$obj_list_hd[pi]->hoadon_noidung}<br>
+                                <u>Tệp tin</u>: <a href='{$obj_list_hd[pi]->hoadon_file}' target="new">[Xem file]</a>
                             </div>
                         {/section}
                     </div>

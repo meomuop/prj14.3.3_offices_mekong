@@ -184,6 +184,7 @@ function close_div(obj){
     {include file="div_hdmua_report.tpl"}
     {include file="div_transport.tpl"}
     {include file="div_congviec.tpl"}
+    {include file="div_tinhluong.tpl"}
     {include file="div_msg.tpl"}
     {include file="div_chatol.tpl"}
     {include file="div_kdl.tpl"}
@@ -208,7 +209,7 @@ function close_div(obj){
                                 <li class="outside">
                                 	<ul class="inside">
                                     	<li><input type="button" class="main_item_icon" style="background: url({$css_btn_bg}config_btn_blur.png) repeat scroll 0% 0% transparent;" onmouseout="this.style.background='url({$css_btn_bg}config_btn_blur.png)'" onmouseover="this.style.background='url({$css_btn_bg}config_btn_focus.png)'" value="" name="config" id="config" onClick="javascript: document.getElementById('div_config').style.display='block'" {if $user_level neq 1} disabled{/if}></li>
-                                        <li class="main_btn_caption">Cấu hình</li>
+                                        <li class="main_btn_caption">Cấu hình hệ thống</li>
                                     </ul>
                                     {literal}
                                     <script language="javascript">
@@ -221,7 +222,7 @@ function close_div(obj){
                                 <li class="outside">
                                     <ul class="inside">
                                         <li><input type="button" class="main_item_icon" style="background: url({$css_btn_bg}doc_config_btn_blur.png) repeat scroll 0% 0% transparent;" onmouseout="this.style.background='url({$css_btn_bg}doc_config_btn_blur.png)'" onmouseover="this.style.background='url({$css_btn_bg}doc_config_btn_focus.png)'" value="" name="thuoctinh" id="thuoctinh" onClick="javascript: document.getElementById('div_thuoctinh').style.display='block'" {if $user_level neq 1} disabled{/if}></li>
-                                        <li class="main_btn_caption">Thuộc tính văn bản</li>
+                                        <li class="main_btn_caption">Cấu hình văn bản</li>
                                     </ul>
                                     {literal}
                                         <script language="javascript">
@@ -235,7 +236,7 @@ function close_div(obj){
                                 <li class="outside">
                                     <ul class="inside">
                                         <li><input type="button" class="main_item_icon" style="background: url({$css_btn_bg}contract_config_btn_blur.png) repeat scroll 0% 0% transparent;" onmouseout="this.style.background='url({$css_btn_bg}contract_config_btn_blur.png)'" onmouseover="this.style.background='url({$css_btn_bg}contract_config_btn_focus.png)'" value="" name="tthd" id="tthd" onClick="javascript: document.getElementById('div_tthd').style.display='block'" {if $user_level neq 1} disabled{/if}></li>
-                                        <li class="main_btn_caption">Thuộc tính hợp đồng</li>
+                                        <li class="main_btn_caption">Cấu hình hợp đồng</li>
                                     </ul>
                                     {literal}
                                         <script language="javascript">
@@ -320,7 +321,7 @@ function close_div(obj){
                                     {/literal}
                                 </li>
                                 
-                                <!-----------------------chuc nang truyen nhan van ban------------------------->
+                                <!-----------------------chuc nang hop dong ban------------------------->
                                 <li class="outside">
                                 	<ul class="inside">
                                     	<li><input type="button" class="main_item_icon" style="background: url({$css_btn_bg}contract_btn_blur.png) repeat scroll 0% 0% transparent;" onmouseout="this.style.background='url({$css_btn_bg}contract_btn_blur.png)'" onmouseover="this.style.background='url({$css_btn_bg}contract_btn_focus.png)'" value="" name="iconcontract" id="iconcontract" onClick="javascript: document.getElementById('div_hdban').style.display=''"></li>
@@ -369,13 +370,13 @@ function close_div(obj){
                                 <li class="outside">
                                     <ul class="inside">
                                         <li><input type="button" class="main_item_icon" style="background: url({$css_btn_bg}salary_btn_blur.png) repeat scroll 0% 0% transparent;" onmouseout="this.style.background='url({$css_btn_bg}salary_btn_blur.png)'" onmouseover="this.style.background='url({$css_btn_bg}salary_btn_focus.png)'" value="" name="iconcv" id="iconcv" onClick="javascript: document.getElementById('div_cv_cat').style.display=''"></li>
-                                        <li class="main_btn_caption">Chấm công - Lương</li>
+                                        <li class="main_btn_caption">Chấm công/Lương</li>
                                     </ul>
                                     {literal}
                                         <script language="javascript">
                                             $("#iconcv").click( function () {
-                                                document.getElementById('cv_cat_content_main').style.display='block';
-                                                $("#cv_cat_content_main").load("index.php?listCvCat&mod=congviecs");
+                                                document.getElementById('tinhluong_main_cont').style.display='block';
+                                                $("#tinhluong_main_cont").load("index.php?listChamcong&mod=tinhluong");
                                             });
                                         </script>
                                     {/literal}
@@ -447,19 +448,19 @@ function close_div(obj){
                                     {/literal}
                                 </li>
                                 
-                                {*<li class="outside">*}
-                                	{*<ul class="inside">*}
-                                    	{*<li><input type="button" class="main_item_icon" style="background: url({$css_btn_bg}chat_icon.png) repeat scroll 0% 0% transparent;" onmouseout="this.style.background='url({$css_btn_bg}chat_icon.png)'" onmouseover="this.style.background='url({$css_btn_bg}chat_icon_02.png)'" value="" name="iconchatol" id="iconchatol" onClick="javascript: document.getElementById('div_chatol').style.display=''"></li>*}
-                                        {*<li>Chat trực tuyến</li>*}
-                                    {*</ul>*}
-                                    {*{literal}*}
-                                    {*<script language="javascript">*}
-									{*$("#iconchatol").click( function () {*}
-										{*document.getElementById('chatol_content_main').style.display='block';*}
-									{*});*}
-									{*</script>*}
-                                    {*{/literal}*}
-                                {*</li>*}
+                                <li class="outside">
+                                	<ul class="inside">
+                                    	<li><input type="button" class="main_item_icon" style="background: url({$css_btn_bg}chat_btn_blur.png) repeat scroll 0% 0% transparent;" onmouseout="this.style.background='url({$css_btn_bg}chat_btn_blur.png)'" onmouseover="this.style.background='url({$css_btn_bg}chat_btn_focus.png)'" value="" name="iconchatol" id="iconchatol" onClick="javascript: document.getElementById('div_chatol').style.display=''"></li>
+                                        <li>Chat trực tuyến</li>
+                                    </ul>
+                                    {literal}
+                                    <script language="javascript">
+									$("#iconchatol").click( function () {
+										document.getElementById('chatol_content_main').style.display='block';
+									});
+									</script>
+                                    {/literal}
+                                </li>
 
                             </ul>
                     	</div>
