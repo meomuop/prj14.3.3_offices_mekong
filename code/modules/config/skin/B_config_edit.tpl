@@ -136,7 +136,7 @@
 
 $(function(){
 
-	$('.site_logo').priceFormat({		
+	$('.luong_coban').priceFormat({		
 		centsSeparator: '.',
 		thousandsSeparator: '.'
 	});
@@ -186,7 +186,7 @@ $(function(){
             <tr height="30">
                 <td align="left">Lương cơ bản:</td>
                 <td align="left">
-                <input type="text" id="site_logo" name="site_logo" class="text_short" value="{$vars.site_logo}"/>&nbsp;(VNĐ)</td>
+                <input type="text" id="luong_coban" name="luong_coban" class="text_short" value="{$vars.luong_coban|price_format}" style="text-align: right"/>&nbsp;(VNĐ)</td>
             </tr>
             <tr height="30">
                 <td align="left">Cổng kết nối 3G:</td>
@@ -202,7 +202,7 @@ $(function(){
             <tr height="30">
                 <td align="left">Ngày mặc định:</td>
                 <td align="left">
-                <input type="text" id="site_banner" name="site_banner" class="text_short" value="{$vars.site_banner}"/>&nbsp;(Sẽ là ngày được dùng khi hạn xử lý bỏ trống)</td>
+                <input type="text" id="ngay_macdinh" name="ngay_macdinh" class="text_short" value="{$vars.ngay_macdinh|date_format:"%d/%m/%Y"}"/>&nbsp;(Sẽ là ngày được dùng khi hạn xử lý bỏ trống)</td>
             </tr>
             <tr height="30">
                 <td align="left">Thử bảy:</td>
@@ -249,9 +249,9 @@ $(function(){
 						var owner_phone = $form.find('input#owner_phone').val();     
 						var owner_fax = $form.find('input#owner_fax').val();
 						var owner_email = $form.find('input#owner_email').val();
-						var site_logo = $form.find('input#site_logo').val();
+						var luong_coban = $form.find('input#luong_coban').val();
 						var site_port = $form.find('select#site_port :selected').val();
-						var site_banner = $form.find('input#site_banner').val();
+						var ngay_macdinh = $form.find('input#ngay_macdinh').val();
 						var sat_ra = $form.find('input#sat_ra:checked').val();
 						var sun_ra = $form.find('input#sun_ra:checked').val();
 						var config_id = $form.find('input#config_id').val();
@@ -264,14 +264,14 @@ $(function(){
 							var dataString  = "owner_name=" + owner_name;
 								dataString += "&owner_url=" + owner_url;
 								dataString += "&owner_add=" + owner_add;
-								dataString += "&owner_phone=" + owner_phone
-								dataString += "&owner_fax=" + owner_fax
-								dataString += "&owner_email=" + owner_email
-								dataString += "&site_logo=" + site_logo
-								dataString += "&site_port=" + site_port
-								dataString += "&site_banner=" + site_banner
-								dataString += "&sat_ra=" + sat_ra
-								dataString += "&sun_ra=" + sun_ra
+								dataString += "&owner_phone=" + owner_phone;
+								dataString += "&owner_fax=" + owner_fax;
+								dataString += "&owner_email=" + owner_email;
+								dataString += "&luong_coban=" + luong_coban;
+								dataString += "&site_port=" + site_port;
+								dataString += "&ngay_macdinh=" + ngay_macdinh;
+								dataString += "&sat_ra=" + sat_ra;
+								dataString += "&sun_ra=" + sun_ra;
 								dataString += "&config_id=" + config_id +"";
 							//alert (dataString);return false;
 							$.ajax({

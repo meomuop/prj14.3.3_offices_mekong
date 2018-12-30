@@ -29,7 +29,7 @@ class thangluong_class extends dbBasic {
   
  	function thangluong_class(){ 
     	$this->dbBasic();  
-    	$this->tablename = "tbl_thangluongs";
+    	$this->tablename = "tbl_luong_tlnn";
   	}
 	
   	function readform(){

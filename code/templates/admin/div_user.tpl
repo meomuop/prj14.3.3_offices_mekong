@@ -63,7 +63,7 @@ function max_size_user(){
 	}
 }
 function change_style_user(obj){
-	for(i=1;i<=5;i++){
+	for(i=1;i<=4;i++){
 		//alert('obj: '+obj+' c_menu_user_'+i);
 		if(i==obj){
 			document.getElementById('c_menu_user_'+i).style.borderLeft = '1px solid #99bbe8';
@@ -115,8 +115,6 @@ function change_style_user(obj){
             <div class="c_menu_user" id="c_menu_user_3" style="width:75px;">Trình độ</div></a>
             <a href="javascript: void(0)" onclick="change_style_user(4)" id="a_menu_user_4">
             <div class="c_menu_user" id="c_menu_user_4" style="width:145px;">Phòng / ban / chi nhánh</div></a>
-            <a href="javascript: void(0)" onclick="change_style_user(5)" id="a_menu_user_5">
-            <div class="c_menu_user" id="c_menu_user_5" style="width:115px;">Thang bảng lương</div></a>
         </div>
         <div style="float:left; height:26px; width:100%"></div>
         <!-- Content -->
@@ -148,9 +146,6 @@ function change_style_user(obj){
 	});
 	$("#a_menu_user_4").click( function () { 
 		$("#user_content_main").load("index.php?listDepartment&mod=departments");
-	});
-	$("#a_menu_user_5").click( function () { 
-		$("#user_content_main").load("index.php?listThangluong&mod=thangluongs");
 	});
 </script>
 {/literal}

@@ -369,14 +369,14 @@ function close_div(obj){
 
                                 <li class="outside">
                                     <ul class="inside">
-                                        <li><input type="button" class="main_item_icon" style="background: url({$css_btn_bg}salary_btn_blur.png) repeat scroll 0% 0% transparent;" onmouseout="this.style.background='url({$css_btn_bg}salary_btn_blur.png)'" onmouseover="this.style.background='url({$css_btn_bg}salary_btn_focus.png)'" value="" name="iconcv" id="iconcv" onClick="javascript: document.getElementById('div_cv_cat').style.display=''"></li>
+                                        <li><input type="button" class="main_item_icon" style="background: url({$css_btn_bg}salary_btn_blur.png) repeat scroll 0% 0% transparent;" onmouseout="this.style.background='url({$css_btn_bg}salary_btn_blur.png)'" onmouseover="this.style.background='url({$css_btn_bg}salary_btn_focus.png)'" value="" name="icon_chamcong" id="icon_chamcong" onClick="javascript: document.getElementById('div_tinhluong').style.display=''"></li>
                                         <li class="main_btn_caption">Chấm công/Lương</li>
                                     </ul>
                                     {literal}
                                         <script language="javascript">
-                                            $("#iconcv").click( function () {
-                                                document.getElementById('tinhluong_main_cont').style.display='block';
-                                                $("#tinhluong_main_cont").load("index.php?listChamcong&mod=tinhluong");
+                                            $("#icon_chamcong").click( function () {
+                                                document.getElementById('tinhluong_content_main').style.display='block';
+                                                $("#tinhluong_content_main").load("index.php?listChamcong&mod=tinhluong");
                                             });
                                         </script>
                                     {/literal}

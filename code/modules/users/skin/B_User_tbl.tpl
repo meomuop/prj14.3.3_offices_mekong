@@ -362,10 +362,10 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
     
     <!------------------------------------DANH SACH---------------------------------------------->
     <fieldset style="width:828px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px; height:180px">
-    <legend class="legend_list" style="width:680px">
+    <legend class="legend_list" style="width:700px">
         <div style="width:130px; float:left">Danh sách: {$total_num_result}</div>
         <div style="width:70px; float:left">&nbsp;|&nbsp;Tìm kiếm&nbsp;</div>
-        <div style="width:430px; float:left">
+        <div style="width:450px; float:left">
         	<input type="text" name="keyword" id="keyword" class="text_seek" value="{$vars.keyword}"/>
             <select name="department_id_fs" id="department_id_fs" class="select_middle">
                 <option value="0">Chọn phòng/ban</option>

@@ -13,9 +13,8 @@ class config_class extends dbBasic {
 	var  $owner_email;
 	var  $owner_reemail;
 	var  $owner_url;
-	var  $site_logo;
-	var  $site_banner;
-	var  $site_border;
+	var  $luong_coban;
+	var  $ngay_macdinh;
 	var  $sat_ra;
 	var  $sun_ra;
 	var  $site_port;
@@ -30,9 +29,8 @@ class config_class extends dbBasic {
 							'owner_email',
 							'owner_reemail',
 							'owner_url',
-							'site_logo',
-							'site_banner',
-							'site_border',
+							'luong_coban',
+							'ngay_macdinh',
 							'sat_ra',
 							'sun_ra',
 							'site_port',

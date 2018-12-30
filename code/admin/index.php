@@ -167,7 +167,6 @@
 		case 'listDepartment': 	include ($MODULE_PATH.$module_name.'B_Department_list.php'); exit();
 		case 'listObject': 		include ($MODULE_PATH.$module_name.'B_Object_list.php'); exit();
 		case 'listTrinhdo': 	include ($MODULE_PATH.$module_name.'B_Trinhdo_list.php'); exit();
-		case 'listThangluong': 	include ($MODULE_PATH.$module_name.'B_Thangluong_list.php'); exit();
 		
 		// Muc 3:
 		case 'listVTTB_Chung': 	include ($MODULE_PATH.$module_name.'B_Vttb_chung_list.php'); exit();
@@ -351,7 +350,7 @@
                 3. Hop dong ban
         */
 
-        // Muc 1:
+        // Muc 7:
         case 'listDanhmuc'		: include ($MODULE_PATH.$module_name.'B_Danhmuc_list.php'); exit();
         case 'listHanghoa'		: include ($MODULE_PATH.$module_name.'B_Hanghoa_list.php'); exit();
         case 'listHanghoaSelect': include ($MODULE_PATH.$module_name.'B_Hanghoa_select.php'); exit();
@@ -371,6 +370,12 @@
         case 'listHdmuaFile'	: include ($MODULE_PATH.$module_name.'B_HdmuaFile_list.php'); exit();
 
 
+        // Muc 8: Cham cong - Tinh luong
+        case 'listChamcong'		: include ($MODULE_PATH.$module_name.'B_Chamcong_list.php'); exit();
+        case 'listTldn'         : include ($MODULE_PATH.$module_name.'B_Tldn_list.php'); exit();
+        case 'listThangluong'   : include ($MODULE_PATH.$module_name.'B_Thangluong_list.php'); exit();
+        case 'listPhucap'       : include ($MODULE_PATH.$module_name.'B_Phucap_list.php'); exit();
+        case 'cauhinhLuong'       : include ($MODULE_PATH.$module_name.'B_Luong_cauhinh.php'); exit();
 
 		/* --------------------------Utilities--------------------------- */
 		// ------- Logout

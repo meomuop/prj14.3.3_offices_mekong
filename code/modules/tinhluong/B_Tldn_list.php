@@ -10,13 +10,12 @@
 	}
 	
 	// ------------------------------
-	require_once ($CLASSES_PATH.'tinhluong/clsChamcong.php');
-
+	require_once ($CLASSES_PATH.'tinhluong/clsTldn.php');
 	// --- Class is used in this page
-	$obj = new cc_class();
+	$obj = new tldn_class();
 	
 	// --- Variables is used in this page
-	$order_arr = array(0 => "Theo chức vụ", 1 => "Theo bậc");
+	$order_arr = array(0 => "Mới đến cũ", 1 => "Cũ đến mới");
 	$nrs_arr = array(5,10, 20, 30, 40, 50, 100);
 	$vars = array_merge($_POST, $_GET);
 	
@@ -29,7 +28,7 @@
 	$cur_pos = ($vars['curpage'] - 1) * $vars['numresult'];
 	$order_id = (int)$vars['order'];
 	
-	$processurl = "?listChamcong&mod=tinhluong";
+	$processurl = "?listTldn&mod=tinhluong";
 	$processurl .= trim($vars['keyword'])?"&keyword=".trim($vars['keyword']):"";
 	
 	// --- Del Product which is selected
@@ -46,25 +45,25 @@
 	
 	// --- Items sort
 	if($vars['sort_me']==1){
-	  $obj->sortItem($vars['val'],$vars['cc_id']);
+	  $obj->sortItem($vars['val'],$vars['tldn_id']);
 	}
 	
 	// --- Add - Edit
 	if($vars['add_edit']==1):
-	   if (!isset($vars['cc_id']) || $vars['cc_id'] < 1) {
-		  $obj = new cc_class();
+	   if (!isset($vars['tldn_id']) || $vars['tldn_id'] < 1) {
+		  $obj = new tldn_class();
 		  $obj->readForm();
 		  if ((is_null($error)) || ($error == "")) {
-			  $obj->cc_date = date("Y-m-d");
+			  $obj->tldn_date = date("Y-m-d");
 			  $obj->insertnew();
 			  unset($obj);
 		  }
 	   }else{
-		  $obj = new cc_class();
+		  $obj = new tldn_class();
 		  $obj->readForm();
 		  if ((is_null($error)) || ($error == "")) {
-			  $obj->cc_date = date("Y-m-d");
-			  if ($obj->is_already_used($obj->tablename, "cc_id", $obj->cc_id))
+			  $obj->tldn_date = date("Y-m-d");
+			  if ($obj->is_already_used($obj->tablename, "tldn_id", $obj->tldn_id))
 			  {
 				  $obj->update();
 				  unset($obj);
@@ -75,41 +74,36 @@
 	
 	// --- Get record for edit
 	if($vars['edit_me']==1):
-	   $obj = new cc_class();
-	   $obj->getDBbyPkey($vars['cc_id']);
-	   if (!$obj->cc_id) redirect("?listChamcong".$arg['arg']);
+	   $obj = new tldn_class();
+	   $obj->getDBbyPkey($vars['tldn_id']);
+	   if (!$obj->tldn_id) redirect("?listTldn".$arg['arg']);
 	   $obj_info = (array)$obj;
 	endif;
 	
 	// --- Condition : The row 71 got trouble in uesed --> can't findout the reason
 	if($order_id == 1):
-	$order_str = "cc_id DESC";
+	$order_str = "tldn_id DESC";
 	else:
-	$order_str = "cc_id ASC";
+	$order_str = "tldn_id ASC";
 	endif;
 	
-	//$order_str = ($order_id == 1)?"cc_name":"cc_id DESC";
+	//$order_str = ($order_id == 1)?"tldn_name":"tldn_id DESC";
 	
 	// --- Condition
 	$where = " 1 = 1";
 	
 	// --- Get data to view in homepage
-	if ($vars['cc_id_seek']) $where .= " AND cc_id = ".$vars['cc_id_seek'];
+	if ($vars['chucvu_ten_seek']) $where .= " AND chucvu_ten like '%".$vars['chucvu_ten_seek']."%'";
 	
 	$limit = " LIMIT ".(string)$cur_pos.", ".(int)$vars['numresult'];
 	
-	$obj = new cc_class();
+	$obj = new tldn_class();
 	$obj_list = $obj->getDBList(" $where", $order_str, FALSE, $limit);
 	$total_num_result = $obj->getRowNumber("$where");
 	$num_page = ceil($total_num_result/$vars['numresult']);
 	
 	// ------ Print paging ---------
 	$pager_str = get_paging_string($processurl, $vars['curpage'], $num_page);
-
-    // --- Get user list
-    $obj_user 		= new users_class();
-    $where_user 		= " 1 = 1 and user_active=1";
-    $obj_list_user	= $obj_user->getDBList(" $where_user", "user_name", FALSE, "");
 	
 	// --- Debug here ----
 	unset($obj);
@@ -136,7 +130,6 @@
 	$assign_list['per_act'] 	= $per_act;
 	
 	$assign_list['obj_list'] 	= $obj_list;
-    $assign_list['obj_list_user'] 	= $obj_list_user;
 	$assign_list['pager_str'] 	= $pager_str;
 	$assign_list["parentArr"] 	= $parentArr; 
 	$assign_list['nrs_arr'] 	= $nrs_arr;
@@ -147,14 +140,14 @@
 	$assign_list['vars'] 		= $vars;
 	$assign_list['obj_info'] 	= $obj_info;
 	
-	$display = dirname(__FILE__)."/skin/B_Chamcong_tbl.tpl";
+	$display = dirname(__FILE__)."/skin/B_Tldn_tbl.tpl";
 	$assign_list['display'] = $display;
 	
 	$smarty->assign($assign_list);
 	
 	// --- Display template
 	if (isset($vars['activeAjax']))
-	  $smarty->display(dirname(__FILE__)."/skin/B_Chamcong_tbl.tpl");
+	  $smarty->display(dirname(__FILE__)."/skin/B_Tldn_tbl.tpl");
 	else
 	  $smarty->display(dirname(__FILE__)."/skin/B_Thangluong_list.tpl");
 ?>

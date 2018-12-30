@@ -1,35 +1,22 @@
 ﻿{literal}
 <style>
-#div_tinhluong{ width: 950px; height: 550px; padding: 0px 1px 1px 1px; border:1px solid #8ea4c1; background-color:#ffffff;
-	position:absolute; margin:40px 200px; z-index:100; font-size:12px
+#div_tinhluong{ width: 1190px; height: 450px; padding: 0px 1px 1px 1px; border:1px solid #8ea4c1; background-color:#ffffff;
+	position:absolute; margin:40px 85px; z-index:100; font-size:12px
 	/*display: none; position: absolute; background-color: white2; overflow: auto;	*/
 }
-#tinhluong_main_cont{ float:left; width:100%; height:550px; background-color:#ccd8e7}
+#tinhluong_main_cont{ float:left; width:100%; height:450px; background-color:#ccd8e7}
 #tinhluong_tab_bar_tit{ float:left; font-weight:bold; text-transform:uppercase; line-height:20px; padding-left:8px; width:80%;cursor:move; color:#15428b;}
 #tinhluong_tab_bar_icon{ float:right; width:10%; text-align:right; padding-top:2px; padding-right:6px}
-#tinhluong_content_outsign{ float:left; width:97.7%; height:494px; background-color:#ffffff; margin-left:8px; border:1px solid #99bbe8}
-#tinhluong_content_insign{ float:left; width:99.7%; height:475px; background-color:#dfe8f6; margin-left:1px;}
-#tinhluong_content_main{ float:left; width:99.8%; height:493px; background-color:#dfe8f6; margin-left:1px;}
+#tinhluong_content_outsign{ float:left; width:98.6%; height:394px; background-color:#ffffff; margin-left:8px; border:1px solid #99bbe8}
+#tinhluong_content_insign{ float:left; width:99.7%; height:375px; background-color:#dfe8f6; margin-left:1px;}
+#thangluong_content_insign{ float:left; width:99.7%; height:371px; background-color:#dfe8f6; margin-left:1px;}
+#tinhluong_content_main{ float:left; width:99.8%; height:393px; background-color:#dfe8f6; margin-left:1px;}
 
 #tinhluong_clear_txt{ float:left; width:100%; height:1px}
 #tinhluong_tool_bar{ float:left; width:99.7%; height:20px; background-color:#dfe8f6; margin-left:1px}
 #tinhluong_search_area{ float:left; width:120px; height:20px; padding-left:2px}
 #tinhluong_page_area{ float:left; width:40px; height:20px; padding-left:2px}
 #tinhluong_menu{ float:left; width:99.7%; height:25px; padding-left:8px; position:absolute; margin-top:21px}
-
-/*----------------------add_edit_tinhluong div---------------------*/
-#add_edit_tinhluong_main_cont{ float:left; width:100%; height:238px; background-color:#ccd8e7}
-#add_edit_tinhluong_tab_bar_tit{ float:left; font-weight:bold; text-transform:uppercase; line-height:20px; padding-left:8px; width:80%;cursor:move; color:#15428b;}
-#add_edit_tinhluong_tab_bar_icon{ float:right; width:10%; text-align:right; padding-top:2px; padding-right:6px}
-#add_edit_tinhluong_content_outsign{ float:left; width:97%; height:208px; background-color:#ffffff; margin-left:8px; border:1px solid #99bbe8}
-#add_edit_tinhluong_content_insign{ float:left; width:99.6%; height:195px; background-color:#dfe8f6; margin-left:1px;}
-#list_add_edit_tinhluong_cont{ float:left; width:99.7%; height:207px; background-color:#dfe8f6; margin-left:1px;}
-#add_edit_tinhluong_clear_txt{ float:left; width:100%; height:1px}
-#add_edit_tinhluong_tool_bar{ float:left; width:99.8%; height:20px; background-color:#dfe8f6; margin-left:1px}
-#add_edit_tinhluong_search_area{ float:left; width:120px; height:20px; padding-left:2px}
-#add_edit_tinhluong_page_area{ float:left; width:40px; height:20px; padding-left:2px}
-#add_edit_tinhluong_menu{ float:left; width:99.8%; height:25px; padding-left:8px; position:absolute; margin-top:21px}
-/*----------------------end add_edit_tinhluong div---------------------*/
 
 /*----------------------report_tinhluong div---------------------*/
 #report_tinhluong_main_cont{ float:left; width:100%; height:450px; background-color:#ccd8e7}
@@ -96,7 +83,7 @@ function max_size_tinhluong(){
 	}
 }
 function change_style_tinhluong(obj){
-	for(i=1;i<=3;i++){
+	for(i=1;i<=5;i++){
 		if(i==obj){
 			document.getElementById('c_menu_tinhluong_'+i).style.borderLeft = '1px solid #99bbe8';
 			document.getElementById('c_menu_tinhluong_'+i).style.borderRight = '1px solid #99bbe8';
@@ -140,11 +127,15 @@ function change_style_tinhluong(obj){
         <div id="tinhluong_menu">
         	<div style="width:10px; float:left">&nbsp;</div>
             <a href="javascript: void(0)" onclick="change_style_tinhluong(1)" id="a_menu_tinhluong_1">
-            <div class="c_menu_tinhluong" id="c_menu_tinhluong_1" style="width:100px; border-left:1px solid #99bbe8; border-bottom:1px solid #dfe8f6; background-color:#dfe8f6; height:25px; margin-top:0px">Chấm công</div></a>
+            <div class="c_menu_tinhluong" id="c_menu_tinhluong_1" style="width:105px; border-left:1px solid #99bbe8; border-bottom:1px solid #dfe8f6; background-color:#dfe8f6; height:25px; margin-top:0px">Bảng chấm công</div></a>
 			<a href="javascript: void(0)" onclick="change_style_tinhluong(2)" id="a_menu_tinhluong_2">
-				<div class="c_menu_hdmua" id="c_menu_tinhluong_2" style="width:65px;">Bảng lương doanh nghiệp</div></a>
+				<div class="c_menu_tinhluong" id="c_menu_tinhluong_2" style="width:155px;">Bảng lương doanh nghiệp</div></a>
 			<a href="javascript: void(0)" onclick="change_style_tinhluong(3)" id="a_menu_tinhluong_3">
-				<div class="c_menu_hdmua" id="c_menu_tinhluong_3" style="width:65px;">Bảng lương nhà nước</div></a>
+				<div class="c_menu_tinhluong" id="c_menu_tinhluong_3" style="width:135px;">Bảng lương nhà nước</div></a>
+			<a href="javascript: void(0)" onclick="change_style_tinhluong(4)" id="a_menu_tinhluong_4">
+				<div class="c_menu_tinhluong" id="c_menu_tinhluong_4" style="width:90px;">Bảng Phụ cấp</div></a>
+			<a href="javascript: void(0)" onclick="change_style_tinhluong(5)" id="a_menu_tinhluong_5">
+				<div class="c_menu_tinhluong" id="c_menu_tinhluong_5" style="width:105px;">Cấu hình lương</div></a>
         </div>
         <div style="float:left; height:26px; width:100%"></div>
         <!-- Content -->
@@ -152,20 +143,6 @@ function change_style_tinhluong(obj){
         	<!-- Main -->
             <div id="tinhluong_content_main" style="display:none"></div>
             <!-------####---------->
-        </div>
-    </div>
-</div>
-
-<div id="add_edit_tinhluong" onclick="javascript: change_bgcl_tinhluong('add_edit_tinhluong')" style="width:426px; float:left; font-weight:normal; position:absolute; display:none; margin:180px 0 0 337px; background-color:#ffffff; border:1px solid #99bbe8; z-index:1010; padding: 0px 1px 1px 1px">
-	<div id="add_edit_tinhluong_main_cont">
-        <div id="add_edit_tinhluong_tab_bar_tit">Quản lý đầu việc</div>
-        <div id="add_edit_tinhluong_tab_bar_icon">
-            <a href="javascript: void(0);" onClick="javascript: document.getElementById('add_edit_tinhluong').style.display='none'" style="text-decoration:none">
-            	<img src="{$css_path}icon_dong.png" class="img_all" title="Đóng lại"></a>
-        </div>
-        <div id="add_edit_tinhluong_content_outsign">
-        	<div id="list_add_edit_tinhluong_cont">
-            </div>
         </div>
     </div>
 </div>
@@ -187,7 +164,7 @@ function change_style_tinhluong(obj){
 </div>
 {literal}
 <script language="javascript">	
-	var div_tinhluong_arr = ['add_edit_tinhluong','report_tinhluong'];
+	var div_tinhluong_arr = ['',''];
 	
 	function change_bgcl_tinhluong(obj){
 		for(i=0;i<=div_tinhluong_arr.length;i++){
@@ -222,20 +199,6 @@ function change_style_tinhluong(obj){
 	$("#add_edit_tinhluong_menu").mouseout( function () { 
 		$( "#div_tinhluong" ).draggable({ disabled: false });
 	});
-
-    $("#add_edit_cv_sub_menu").mouseover( function () {
-        $( "#div_tinhluong" ).draggable({ disabled: true });
-    });
-    $("#add_edit_cv_sub_menu").mouseout( function () {
-        $( "#div_tinhluong" ).draggable({ disabled: false });
-    });
-	
-	$("#report_tinhluong_menu").mouseover( function () { 
-		$( "#report_tinhluong" ).draggable({ disabled: true });
-	});
-	$("#report_tinhluong_menu").mouseout( function () { 
-		$( "#report_tinhluong" ).draggable({ disabled: false });
-	});
 	
 	$("#report_tinhluong_cont").mouseover( function () { 
 		$( "#report_tinhluong" ).draggable({ disabled: true });
@@ -245,13 +208,24 @@ function change_style_tinhluong(obj){
 	});
 				
 	$("#a_menu_tinhluong_1").click( function () { 
-		for(i=0;i<div_tinhluong_arr.length;i++){
-			document.getElementById(div_tinhluong_arr[i]).style.display='none';
-		}
-				
-		document.getElementById('tinhluong_content_main').style.display='block';
 		$("#tinhluong_content_main").load("index.php?listChamcong&mod=tinhluong");
 		
+	});
+
+	$("#a_menu_tinhluong_2").click( function () {
+		$("#tinhluong_content_main").load("index.php?listTldn&mod=tinhluong");
+	});
+
+	$("#a_menu_tinhluong_3").click( function () {
+		$("#tinhluong_content_main").load("index.php?listThangluong&mod=tinhluong");
+	});
+
+	$("#a_menu_tinhluong_4").click( function () {
+		$("#tinhluong_content_main").load("index.php?listPhucap&mod=tinhluong");
+	});
+
+	$("#a_menu_tinhluong_5").click( function () {
+		$("#tinhluong_content_main").load("index.php?cauhinhLuong&mod=tinhluong");
 	});
 	
 	function print_tinhluong_page(){

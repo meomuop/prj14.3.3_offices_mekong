@@ -28,28 +28,15 @@
 		unset($obj);
 	}
 	
-	if (isset($vars['submitDate'])) {
-		if ($vars['holiday_name']=="") {
-			$errorfile = "Bạn chưa nhập mô tả ngày nghỉ!";
-		}else{
-			$obj = new holiday_class();
-			$obj->readForm();
-			if ((is_null($error)) || ($error == "")) {
-				$obj->holiday_date = date("Y-m-d",strtotime(str_replace('/','-',$vars['holiday_date'])));
-				$obj->insertnew();
-				unset($obj);
-				redirect("?editConfig".$vars['arg']);
-			}
-		}
-	}
-	
 	// --- action is process
 	if(isset($vars["config_id"])){
 		$obj = new config_class();
 		// prepare data
 		$obj->readForm();
 		if ($obj->is_already_used($obj->tablename, "config_id", $obj->config_id)){
-			$obj->site_logo	= str_replace('.','',$vars['site_logo']);
+            $obj->ngay_macdinh = date('Y-m-d',strtotime(str_replace('/','-',$vars['ngay_macdinh'])));
+            $obj->luong_coban = str_replace('.','', $vars['luong_coban']);
+			$obj->luong_coban	= str_replace('.','',$vars['luong_coban']);
 			$obj->update();
 			unset($obj);
 		}else{

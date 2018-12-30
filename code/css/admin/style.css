@@ -242,6 +242,11 @@ blockquote, q {
 	padding-right: 3px;
 }
 
+.select_nano{
+	border:none; width:28px; font-size:12px; height:18px;
+	-webkit-appearance: none;  /*Removes default chrome and safari style*/
+	-moz-appearance: none;  /*Removes default style Firefox*/
+}
 .select_micro{
 	border:1px solid #99bbe8; width:40px; font-size:12px; height:18px;
 }

@@ -10,7 +10,7 @@
 	}
 	
 	// ------------------------------
-	require_once ($CLASSES_PATH.'clsThangluongs.php');
+	require_once ($CLASSES_PATH.'tinhluong/clsThangluong.php');
 	require_once ($CLASSES_PATH.'clsObjects.php');
 	// --- Class is used in this page
 	$obj = new thangluong_class();
@@ -29,7 +29,7 @@
 	$cur_pos = ($vars['curpage'] - 1) * $vars['numresult'];
 	$order_id = (int)$vars['order'];
 	
-	$processurl = "?listThangluong&mod=thangluongs";
+	$processurl = "?listThangluong&mod=tinhluong";
 	$processurl .= trim($vars['keyword'])?"&keyword=".trim($vars['keyword']):"";
 	
 	// --- Del Product which is selected

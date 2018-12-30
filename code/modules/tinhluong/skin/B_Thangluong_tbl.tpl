@@ -13,10 +13,10 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
 }
 </style>
 {/literal}
-<div id="user_content_insign">
+<div id="thangluong_content_insign">
 	<form method="post" name="frmList_Thangluong" action="?listThangluong{$vars.arg}" id="frmList_Thangluong">
     <!------------------------------------------THEM MOI------------------------------------>
-    <fieldset style="width:837px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px">
+    <fieldset style="width:1162px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px">
     <legend class="legend_list">
         Thêm/Chỉnh sửa&nbsp;|&nbsp;Thông báo:&nbsp;
         <span id="lblError_Thangluong" class="error">Dấu (*) là các mục bắt buộc!</span>
@@ -25,9 +25,9 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
     	<table width="98%" cellspacing="0" cellpadding="0" border="0" style="margin-left:5px">
         	<tr height="10"><td colspan="4"></td></tr>
             <tr height="30">
-            	<td align="center" width="50%">
-                	<div style="float:left; width:15%; line-height:25px; text-align:left">Chức vụ <font color="#FF0000">*</font>:</div>
-                    <div style="float:left; width:35%; line-height:25px; text-align:left">
+            	<td align="center">
+                	<div style="float:left; width:6%; line-height:25px; text-align:left">Chức vụ <font color="#FF0000">*</font>:</div>
+                    <div style="float:left; width:18%; line-height:25px; text-align:left">
                     <select name="chucvu_id" id="chucvu_id" class="select_middle" onfocus="hide_message_Thangluong()">
                         <option value="0">Chọn chức vụ</option>
                         {section name=qi loop=$obj_list_object}
@@ -35,16 +35,16 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                         {/section}
                     </select>
                     </div>
-                    <div style="float:left; width:15%; line-height:25px; text-align:left">Bậc lương <font color="#FF0000">*</font>:</div>
-                    <div style="float:left; width:35%; line-height:25px; text-align:left">
+                    <div style="float:left; width:6%; line-height:25px; text-align:left">Bậc lương <font color="#FF0000">*</font>:</div>
+                    <div style="float:left; width:8%; line-height:25px; text-align:left">
                     <input type="text" name="thangluong_bac" id="thangluong_bac" class="text_tiny" value="{$obj_info.thangluong_bac}" onfocus="hide_message_Thangluong()"/>
                     </div>
-                    <div style="float:left; width:15%; line-height:25px; text-align:left">Hệ số lương <font color="#FF0000">*</font>:</div>
-                    <div style="float:left; width:85%; line-height:25px; text-align:left">
+                    <div style="float:left; width:8%; line-height:25px; text-align:left">Hệ số lương <font color="#FF0000">*</font>:</div>
+                    <div style="float:left; width:54%; line-height:25px; text-align:left">
                     <input type="text" name="thangluong_heso" id="thangluong_heso" class="text_tiny" value="{$obj_info.thangluong_heso}" onfocus="hide_message_Thangluong()"/>&nbsp;(dùng dấu (.) thay cho dấu (,). Ví dụ: 3,2 viết là 3.2. Lương chính thức = Lương cơ bản x hệ số lương)
                     </div>
-                	<div style="float:left; width:15%; line-height:25px; text-align:left">Loại bậc lương <font color="#FF0000">*</font>:</div>
-                    <div style="float:left; width:35%; line-height:25px; text-align:left">
+                	<div style="float:left; width:6%; line-height:25px; text-align:left">Phân cấp <font color="#FF0000">*</font>:</div>
+                    <div style="float:left; width:18%; line-height:25px; text-align:left">
                     	<table width="100%" border="0" cellspacing="0" cellpadding="0">
                           <tr>
                             {if $obj_info.thangluong_hetbac neq ''}
@@ -61,16 +61,12 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                           </tr>
                         </table>
                     </div>
-                    <div style="float:left; width:15%; line-height:25px; text-align:left">Số năm nâng bậc:</div>
-                    <div style="float:left; width:35%; line-height:25px; text-align:left">
-                    <input type="text" name="thangluong_sonam" id="thangluong_sonam" class="text_tiny" value="{$obj_info.thangluong_sonam}" onfocus="hide_message_Thangluong()"/>&nbsp;(Không nhập nếu là bậc lương cuối)
+                    <div style="float:left; width:6%; line-height:25px; text-align:left">Nâng bậc:</div>
+                    <div style="float:left; width:30%; line-height:25px; text-align:left">
+                    <input type="text" name="thangluong_sonam" id="thangluong_sonam" class="text_tiny" value="{$obj_info.thangluong_sonam}" onfocus="hide_message_Thangluong()"/>&nbsp;Năm (Không nhập nếu là bậc lương cuối)
                     </div>
-                </td>
-            </tr>
-            <tr height="30">
-            	<td align="center">
-                	<div style="float:left; width:15%; line-height:25px; text-align:left">Tình trạng :</div>
-                    <div style="float:left; width:35%; line-height:25px; text-align:left">
+                	<div style="float:left; width:6%; line-height:25px; text-align:left">Tình trạng :</div>
+                    <div style="float:left; width:18%; line-height:25px; text-align:left">
                     	<table width="100%" border="0" cellspacing="0" cellpadding="0">
                           <tr>
                             {if $obj_info.thangluong_active neq ''}
@@ -87,7 +83,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                           </tr>
                         </table>
                     </div>
-                    <div style="float:left; width:50%; line-height:25px; text-align:left">
+                    <div style="float:left; line-height:25px; text-align:left">
                     	<input type="button" name="btnSub_Thangluong" id="btnSub_Thangluong" value="Ghi lại" class="button" />
                         <input type="hidden" name="thangluong_id" id="thangluong_id" value="{$obj_info.thangluong_id}">
                         <input type="reset" name="Reset" value="Hủy bỏ" class="button" />
@@ -128,10 +124,10 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                                         //alert (dataString);return false;
                                     $.ajax({
                                         type: "POST",
-                                        url: "index.php?listThangluong&mod=thangluongs&add_edit=1",
+                                        url: "index.php?listThangluong&mod=tinhluong&add_edit=1",
                                         data: dataString,
                                         success: function(data) {
-                                            $('#user_content_main').fadeOut('fast').load('index.php?listThangluong&mod=thangluongs').fadeIn("fast");
+                                            $('#tinhluong_content_main').fadeOut('fast').load('index.php?listThangluong&mod=tinhluong').fadeIn("fast");
                                             //$('#lblMessage_Thangluong').show();
                                         }
                                     });
@@ -149,7 +145,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
     </fieldset>
     
     <!------------------------------------DANH SACH---------------------------------------------->
-    <fieldset style="width:837px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px; height:260px">
+    <fieldset style="width:1162px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px; height:273px">
     <legend class="legend_list_search">
         <div style="width:130px; float:left">Danh sách: {$total_num_result}</div>
         <div style="width:70px; float:left">&nbsp;|&nbsp;Tìm kiếm&nbsp;</div>
@@ -165,18 +161,19 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
         	<input type="button" name="btnSeek" id="btnSeek" value="Tìm >>" class="button_seek" onclick="search_me_Thangluong()" /></div>
     </legend>
     	<div style="float:left; height:5px; width:100%"></div>
-        <div style="float:left; height:25px; width:817px; border-top:1px solid #99bbe8; border-bottom:1px solid #99bbe8 ">
+        <div style="float:left; height:25px; width:1142px; border-top:1px solid #99bbe8; border-bottom:1px solid #99bbe8 ">
             <div class="tbl_tit" style="width:30px; text-align:center"><b>STT</b></div>	
-            <div class="tbl_tit" style="width:220px"><B>&nbsp;Chức vụ</B></div>
-            <div class="tbl_tit" style="width:60px"><B>&nbsp;Bậc</B></div>
-            <div class="tbl_tit" style="width:60px;text-align:right"><B>&nbsp;Hệ số&nbsp;</B></div>
-            <div class="tbl_tit" style="width:80px;text-align:right"><B>&nbsp;Lương&nbsp;</B></div>
-            <div class="tbl_tit" style="width:60px;text-align:right"><B>&nbsp;Số năm&nbsp;</B></div>
+            <div class="tbl_tit" style="width:350px"><B>&nbsp;Chức vụ</B></div>
+            <div class="tbl_tit" style="width:70px"><B>&nbsp;Bậc</B></div>
+            <div class="tbl_tit" style="width:80px"><B>&nbsp;Phân cấp</B></div>
+            <div class="tbl_tit" style="width:75px;text-align:right"><B>&nbsp;Hệ số&nbsp;</B></div>
+            <div class="tbl_tit" style="width:150px;text-align:right"><B>&nbsp;Lương&nbsp;</B></div>
+            <div class="tbl_tit" style="width:75px;text-align:right"><B>&nbsp;Số năm nâng&nbsp;</B></div>
             <div class="tbl_tit" style="width:80px"><B>&nbsp;Ngày tạo</B></div>
-            <div class="tbl_tit" style="width:59px; text-align:center"><B>Sắp xếp</B></div>
-            <div class="tbl_tit" style="width:59px; text-align:center"><B>Hiển thị</B></div>
-            <div class="tbl_tit" style="width:59px; text-align:center"><B>Chọn</B></div>
-            <div class="tbl_tit" style="width:39px; text-align:center">
+            <div class="tbl_tit" style="width:60px; text-align:center"><B>Sắp xếp</B></div>
+            <div class="tbl_tit" style="width:60px; text-align:center"><B>Hiển thị</B></div>
+            <div class="tbl_tit" style="width:60px; text-align:center"><B>Chọn</B></div>
+            <div class="tbl_tit" style="width:40px; text-align:center">
             <input type="hidden" name="chon" id="chon_Thangluong">
             <input type="checkbox" name="chkall" value="0" onclick="docheck_Thangluong(document.frmList_Thangluong.chkall.checked,0);">
             </div>
@@ -184,7 +181,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
         <div style="float:left; width:20px; text-align:right">
         <input type="button" name="del_Items" id='del_Items' value="&nbsp;" onClick="delItems_Thangluong('{$processurl}');" style="width:17px; font-size:12px; background:url(../images/admin/b_drop.png); cursor:pointer" title="Xóa lựa chọn">
         </div>
-        <div style="float:left; height:205px; width:837px; overflow-y:scroll">
+        <div style="float:left; height:219px; width:1162px; overflow-y:scroll">
             {section name=pi loop=$obj_list}
             {if $smarty.section.pi.index is not div by 2} 
             {assign var="class_td" value="tbl_cont"} 
@@ -193,23 +190,26 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
             {/if}
             {math x=$vars.curpage-1 y=$vars.numresult z=$smarty.section.pi.index t=1 equation="x*y+z+t" assign=stt}
             <div class="{$class_td}" style="width:30px; text-align:center">{$stt}</div>
-            <div class="{$class_td}" style="width:220px">
+            <div class="{$class_td}" style="width:350px">
             	&nbsp;
                 {section name=qi loop=$obj_list_object}
                 {if $obj_list_object[qi]->object_id eq $obj_list[pi]->chucvu_id}{$obj_list_object[qi]->object_name}{/if}
                 {/section}
             </div>
-            <div class="{$class_td}" style="width:60px">
+            <div class="{$class_td}" style="width:70px">
             	&nbsp;{$obj_list[pi]->thangluong_bac|roman_format}
             </div>
-            <div class="{$class_td}" style="width:60px; text-align:right">
+            <div class="{$class_td}" style="width:80px">
+                &nbsp;{if $obj_list[pi]->thangluong_hetbac eq 1}Bậc cuối{else}Còn tiếp{/if}
+            </div>
+            <div class="{$class_td}" style="width:75px; text-align:right">
             	&nbsp;{$obj_list[pi]->thangluong_heso}&nbsp;
             </div>
-            <div class="{$class_td}" style="width:80px; text-align:right">
+            <div class="{$class_td}" style="width:150px; text-align:right">
             	{math x=$obj_list[pi]->thangluong_heso y=$obj_owner[0]->site_logo  equation="x*y" assign=luong}
             	&nbsp;{$luong|price_format}&nbsp;
             </div>
-            <div class="{$class_td}" style="width:60px; text-align:right">
+            <div class="{$class_td}" style="width:75px; text-align:right">
             	{if $obj_list[pi]->thangluong_hetbac eq 1}&nbsp;Hết bậc&nbsp;{else}
             	&nbsp;{$obj_list[pi]->thangluong_sonam}&nbsp;
                 {/if}
@@ -217,7 +217,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
             <div class="{$class_td}" style="width:80px">
             	&nbsp;{$obj_list[pi]->thangluong_date|date_format:"%d/%m/%Y"}
             </div>
-            <div class="{$class_td}" style="width:59px; text-align:center">
+            <div class="{$class_td}" style="width:60px; text-align:center">
                 <select name="thangluong_sort[]" class="select_tiny" onchange="sort_me_Thangluong({$obj_list[pi]->thangluong_id},this.value)">
                 {section name=i loop=$total_num_result}
                     <option value="{$smarty.section.i.index}" {if $smarty.section.i.index eq $obj_list[pi]->thangluong_sort} selected="selected"{/if}>{$smarty.section.i.index}</option>
@@ -225,14 +225,14 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                 </select>
                 <input type="hidden" name="thangluong_id1[]" value="{$obj_list[pi]->thangluong_id}">
             </div>
-            <div class="{$class_td}" style="width:59px; text-align:center">
+            <div class="{$class_td}" style="width:60px; text-align:center">
                 {if $obj_list[pi]->thangluong_active eq 1}
                     <a href='javascript: void(0);' onclick="uncheck_fns_Thangluong('thangluong_active',2,{$obj_list[pi]->thangluong_id})"><img src="../images/admin/tick.png" width="10" height="10" border="0" title="Ẩn"></a>
                 {else}
                     <a href='javascript: void(0);' onclick="uncheck_fns_Thangluong('thangluong_active',1,{$obj_list[pi]->thangluong_id})"><img src="../images/admin/publish_x.png" width="10" height="10" border="0" title="Hiện"></a>
                 {/if}
             </div>
-            <div class="{$class_td}" style="width:29px; text-align:center">
+            <div class="{$class_td}" style="width:30px; text-align:center">
                 <a href='javascript: void(0);' onclick="edit_me_Thangluong({$obj_list[pi]->thangluong_id})">
                 <img src="../images/admin/b_edit.png" width="11" height="11" border="0" title="Sửa"></a>
             </div>
@@ -240,7 +240,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                 <a href='javascript: void(0)' onClick="delItems_Thangluong('{$processurl}', {$obj_list[pi]->thangluong_id});">
                 <img src="../images/admin/b_drop.png" width="11" height="11" border="0" title="Xóa"></a>
             </div>
-            <div class="{$class_td}" style="width:39px; text-align:center">
+            <div class="{$class_td}" style="width:40px; text-align:center">
             	<input type="checkbox" name="chkid" value="{$obj_list[pi]->thangluong_id}" onclick="docheckone_Thangluong();">
             </div>
             {/section}
@@ -389,7 +389,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
 			url: processurl,
 			data: dataString,
 			success: function(data) {
-				$('#user_content_main').fadeOut('fast').load(processurl+"&numresult="+numresult+"&order="+order+"&curpage="+curpage).fadeIn("fast");
+				$('#tinhluong_content_main').fadeOut('fast').load(processurl+"&numresult="+numresult+"&order="+order+"&curpage="+curpage).fadeIn("fast");
 			}
 		});
 	}
@@ -399,7 +399,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
 		numresult = $("#numresult_Thangluong").val();
 		order = $("#order_Thangluong").val();
 		cur_pos = 0;
-		$("#user_content_main").load(processurl+"&numresult="+numresult+"&order="+order+"&cur_pos="+cur_pos);
+		$("#tinhluong_content_main").load(processurl+"&numresult="+numresult+"&order="+order+"&cur_pos="+cur_pos);
 	}
 	
 	function gotoPage_Thangluong(processurl,page){
@@ -407,15 +407,15 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
 		numresult = $("#numresult_Thangluong").val();
 		order = $("#order_Thangluong").val();
 		//alert(processurl+'-'+page+'-'+numresult+'-'+order);
-		$("#user_content_main").load(processurl+"&numresult="+numresult+"&order="+order+"&curpage="+page);
+		$("#tinhluong_content_main").load(processurl+"&numresult="+numresult+"&order="+order+"&curpage="+page);
 	}
 	
 	function uncheck_fns_Thangluong(field,val,id){
-		$("#user_content_main").load("?listThangluong&mod=thangluongs&checkUncheck="+val+"&setfield="+field+"&checkUncheckID="+id);
+		$("#tinhluong_content_main").load("?listThangluong&mod=tinhluong&checkUncheck="+val+"&setfield="+field+"&checkUncheckID="+id);
 	}
 	
 	function sort_me_Thangluong(id,val){
-		$("#user_content_main").load("?listThangluong&mod=thangluongs&sort_me=1&thangluong_id="+id+"&val="+val);
+		$("#tinhluong_content_main").load("?listThangluong&mod=tinhluong&sort_me=1&thangluong_id="+id+"&val="+val);
 	}
 	
 	function search_me_Thangluong(){
@@ -424,22 +424,22 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
 			return false;
 		}
 		
-		$.post('?listThangluong&mod=thangluongs',
+		$.post('?listThangluong&mod=tinhluong',
 			{chucvu_id_seek:chucvu_id_seek},
 			function(data){
-				$('#user_content_main').html(data);
-				$("#user_content_main").show();
+				$('#tinhluong_content_main').html(data);
+				$("#tinhluong_content_main").show();
 			}
 		);
 	}
 	
 	function edit_me_Thangluong(id){
-		$("#user_content_main").load("?listThangluong&mod=thangluongs&edit_me=1&thangluong_id="+id);
+		$("#tinhluong_content_main").load("?listThangluong&mod=tinhluong&edit_me=1&thangluong_id="+id);
 	}
 		
 	$("#a_ref_Thangluong").click( function () { 
-			$('#user_content_main').hide();
-			$('#user_content_main').fadeOut('fast').load('index.php?listThangluong&mod=thangluongs').fadeIn("fast");
+			$('#tinhluong_content_main').hide();
+			$('#tinhluong_content_main').fadeOut('fast').load('index.php?listThangluong&mod=tinhluong').fadeIn("fast");
 		});
 </script>
 {/literal}

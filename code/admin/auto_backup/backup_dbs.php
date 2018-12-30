@@ -1,5 +1,6 @@
 <?php
-backup_database_tables('localhost','root','','db14_0_tha_offices_'.date('Y'), '*');
+ini_set('display_errors',0);
+backup_database_tables('localhost','root','123456789','db14_3_3_offices_mekong_'.date('Y'), '*');
  
 // backup the db function
 function backup_database_tables($host,$user,$pass,$name,$tables)
