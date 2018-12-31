@@ -22,6 +22,8 @@ class users_class extends dbBasic {
 	var  $user_thuong_tru;
 	var  $user_tam_tru;
 	var  $trinhdo_id;
+	var  $user_mucluong;
+	var  $user_phucap;
 	var  $user_cmnd;
 	var  $user_ngay_cap;
 	var  $user_noi_cap;
@@ -58,6 +60,8 @@ class users_class extends dbBasic {
 							'user_thuong_tru',
 							'user_tam_tru',
 							'trinhdo_id',
+							'user_mucluong',
+							'user_phucap',
 							'user_cmnd',
 							'user_ngay_cap',
 							'user_noi_cap',
@@ -240,6 +244,22 @@ class users_class extends dbBasic {
         global $dbconn;
         $sql = " UPDATE $this->tablename SET user_pass = '".md5($pass)."', user_encode_pass = '".$pass."' WHERE user_id=".$user_id;
         $dbconn->Execute($sql);
+    }
+
+    // Update Muc Luong 31/12/2018:
+    function updateMucLuong($arrUser, $arrMucluong, $arrPhucap){
+	    if((count($arrUser) == count($arrMucluong)) && (count($arrUser) == count($arrPhucap)) && count($arrUser) > 0){
+            global $dbconn;
+            $totalUpdate = 0;
+            for($i = 1; $i <= count($arrUser); $i++){
+                $sql = "UPDATE $this->tablename SET user_mucluong = ".$arrMucluong[$i].", user_phucap = ".$arrPhucap[$i]." WHERE user_id = ".$arrUser[$i];
+                if($dbconn->Execute($sql)){
+                    $totalUpdate ++;
+                }
+            }
+            return $totalUpdate;
+        }
+	    return 0;
     }
 	
 	//Lay mat khau cu de so sanh khi doi tai khoan

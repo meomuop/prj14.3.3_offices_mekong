@@ -184,11 +184,6 @@ $(function(){
                 <input type="text" id="owner_email" name="owner_email" class="text_middle" value="{$vars.owner_email}"/></td>
             </tr>
             <tr height="30">
-                <td align="left">Lương cơ bản:</td>
-                <td align="left">
-                <input type="text" id="luong_coban" name="luong_coban" class="text_short" value="{$vars.luong_coban|price_format}" style="text-align: right"/>&nbsp;(VNĐ)</td>
-            </tr>
-            <tr height="30">
                 <td align="left">Cổng kết nối 3G:</td>
                 <td align="left">
                 <select name="site_port" id="site_port" class="select_short">
@@ -232,6 +227,8 @@ $(function(){
                 <input type="button" name="editAct" id="editAct" value="Ghi lại" class="button" />
                 <input type="hidden" name="arg" value="{$vars.arg}"/>
                 <input type="hidden" name="config_id" id="config_id" value="{$vars.config_id}">
+				<input type="hidden" id="luong_coban" name="luong_coban" value="{$vars.luong_coban}"/>
+				<input type="hidden" id="luong_apdung" name="luong_apdung" value="{$vars.luong_apdung}"/>
                 <input type="reset" name="Reset" value="Hủy bỏ" class="button" />
                 {literal}
 				<script language="javascript">
@@ -250,6 +247,7 @@ $(function(){
 						var owner_fax = $form.find('input#owner_fax').val();
 						var owner_email = $form.find('input#owner_email').val();
 						var luong_coban = $form.find('input#luong_coban').val();
+						var luong_apdung = $form.find('input#luong_apdung').val();
 						var site_port = $form.find('select#site_port :selected').val();
 						var ngay_macdinh = $form.find('input#ngay_macdinh').val();
 						var sat_ra = $form.find('input#sat_ra:checked').val();
@@ -268,6 +266,7 @@ $(function(){
 								dataString += "&owner_fax=" + owner_fax;
 								dataString += "&owner_email=" + owner_email;
 								dataString += "&luong_coban=" + luong_coban;
+								dataString += "&luong_apdung=" + luong_apdung;
 								dataString += "&site_port=" + site_port;
 								dataString += "&ngay_macdinh=" + ngay_macdinh;
 								dataString += "&sat_ra=" + sat_ra;

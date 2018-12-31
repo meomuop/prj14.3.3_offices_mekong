@@ -2,6 +2,15 @@
     <style type="text/css">
         .error { color:#FF0000;font-weight:bold; }
         .msg{ color:#00F; font-weight:bold; margin-left:5px; height:20px; line-height:20px}
+        .tbl_tit{
+            float:left; line-height:25px; border-right:1px solid #99bbe8;
+        }
+        .tbl_cont{
+            float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px solid #99bbe8; background:#F2FFEC
+        }
+        .tbl_cont2{
+            float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px solid #99bbe8; background:#FFF
+        }
     </style>
     <script language="javascript">
         (function($) {
@@ -143,36 +152,34 @@
         });
     </script>
 {/literal}
-<form enctype="multipart/form-data" action="?editConfig{$vars.arg}" method="post" name="frEdit" id="frEdit">
-    <div id="config_content_insign">
-        <fieldset style="width:98%; border:1px solid #99bbe8; margin-left:3px; margin-top:5px">
-            <legend class="legend">Chỉnh sửa</legend>
+<form action="?cauhinhLuong{$vars.arg}" method="post" name="frCauhinhLuong" id="frCauhinhLuong">
+    <div id="cauhinhluong_content_insign">
+        <fieldset style="width:100%; border:1px solid #99bbe8; margin-left:3px; margin-top:5px">
+            <legend class="legend">Cấu hình lương</legend>
             <h4 class="msg">Thông báo:
-                <span id="lblMessage" class="msg">Cập nhật đã thành công!</span>
-                <span id="lblError" class="error">Mời bạn nhập đủ dữ liệu!</span>
+                <span id="lblMessage_Cauhinhluong" class="msg">Cập nhật đã thành công!</span>
+                <span id="lblError_Cauhinhluong" class="error">Mời bạn nhập đủ dữ liệu!</span>
             </h4>
             <table width="98%" cellspacing="0" cellpadding="0" border="0" style="margin-left:5px">
                 <tr height="10"><td></td></tr>
                 <tr height="30">
-                    <td align="left">Lương cơ bản:</td>
+                    <td align="left" width="30%">Lương cơ bản:</td>
                     <td align="left">
                         <input type="text" id="luong_coban" name="luong_coban" class="text_short" value="{$vars.luong_coban|price_format}" style="text-align: right"/>&nbsp;(VNĐ)</td>
                 </tr>
-                <tr height="30">
-                    <td align="left">Thử bảy:</td>
+                <tr height="50">
+                    <td align="left">Áp dụng:</td>
                     <td align="left">
-                        <input type="radio" name="sat_ra" id="sat_ra" value="0" {if $vars.sat_ra eq 0} checked{/if}>
-                        &nbsp;Làm cả ngày&nbsp;&nbsp;
-                        <input type="radio" name="sat_ra" id="sat_ra" value="1" {if $vars.sat_ra eq 1} checked{/if}>
-                        &nbsp;Làm nửa ngày&nbsp;&nbsp;
-                        <input type="radio" name="sat_ra" id="sat_ra" value="2" {if $vars.sat_ra eq 2} checked{/if}>
-                        &nbsp;Nghỉ
+                        <input type="radio" name="luong_apdung" id="luong_apdung" value="1" {if $vars.luong_apdung eq 1} checked{/if}>
+                        &nbsp;Lương doanh nghiệp<br><br><br>
+                        <input type="radio" name="luong_apdung" id="luong_apdung" value="2" {if $vars.luong_apdung eq 2} checked{/if}>
+                        &nbsp;Lương nhà nước
                     </td>
                 </tr>
                 <tr height="30">
                     <td>&nbsp;</td>
                     <td align="left">
-                        <input type="button" name="editAct" id="editAct" value="Ghi lại" class="button" />
+                        <input type="button" name="cauhinhLuong_btn" id="cauhinhLuong_btn" value="Ghi lại" class="button" />
                         <input type="hidden" name="arg" value="{$vars.arg}"/>
                         <input type="hidden" name="config_id" id="config_id" value="{$vars.config_id}">
                         <input type="reset" name="Reset" value="Hủy bỏ" class="button" />
@@ -180,31 +187,31 @@
                             <script language="javascript">
                                 $(function() {
                                     $('.error').hide();
-                                    $('#lblMessage').hide();
+                                    $('#lblMessage_Cauhinhluong').hide();
 
-                                    $("#editAct").click(function() {
+                                    $("#cauhinhLuong_btn").click(function() {
                                         $('.error').hide();
 
-                                        var $form = $("#frEdit");
+                                        var $form = $("#frCauhinhLuong");
                                         var luong_coban = $form.find('input#luong_coban').val();
-                                        var sat_ra = $form.find('input#sat_ra:checked').val();
+                                        var luong_apdung = $form.find('input#luong_apdung:checked').val();
                                         var config_id = $form.find('input#config_id').val();
 
                                         //begin validate form
-                                        if (owner_name == "" || owner_url == ""){
-                                            $('#lblError').show();
+                                        if (luong_coban == ""){
+                                            $('#lblError_Cauhinhluong').show();
                                         }
                                         else{
                                             var dataString = "&luong_coban=" + luong_coban;
-                                            dataString += "&sat_ra=" + sat_ra;
+                                            dataString += "&luong_apdung=" + luong_apdung;
                                             dataString += "&config_id=" + config_id +"";
                                             //alert (dataString);return false;
                                             $.ajax({
                                                 type: "POST",
-                                                url: "index.php?editConfig&mod=config",
+                                                url: "index.php?cauhinhLuong&mod=tinhluong",
                                                 data: dataString,
                                                 success: function(data) {
-                                                    $('#lblMessage').show();
+                                                    $('#lblMessage_Cauhinhluong').show();
                                                 }
                                             });
                                             return false;
@@ -216,12 +223,89 @@
                         {/literal}
                     </td>
                 </tr>
+                <tr>
+                    <td id="div_to_show"></td>
+                </tr>
             </table>
         </fieldset>
     </div>
-    <!-- Tool bar -->
-    <div id="config_clear_txt"></div>
-    <div id="config_tool_bar">
-        &nbsp;
+</form>
+<form action="?cauhinhLuong{$vars.arg}" method="post" name="frLuongNhanvien" id="frLuongNhanvien">
+    <div id="luongnhanvien_content_insign">
+        <fieldset style="width:100%; border:1px solid #99bbe8; margin-top:5px">
+            <legend class="legend_list">
+                <div style="float:left; width: 250px">Xác định lương cán bộ / công - nhân viên</div>
+                <div style="float:left;">
+                    <input type="button" name="luongNhanvien_btn" id="luongNhanvien_btn" value="Ghi lại" class="button_red" />
+                </div>
+            </legend>
+            <div style="float:left; height:5px; width:100%"></div>
+            <div style="float:left; width:802px; border-top:1px solid #99bbe8; border-bottom:1px solid #99bbe8 ">
+                <div class="tbl_tit" style="width:30px; text-align:center;"><b>STT</b></div>
+                <div class="tbl_tit" style="width:150px;"><B>&nbsp;Họ tên</B></div>
+                <div class="tbl_tit" style="width:90px;"><B>&nbsp;Mã NV</B></div>
+                <div class="tbl_tit" style="width:156px;"><B>&nbsp;Chức vụ</B></div>
+                <div class="tbl_tit" style="width:185px;"><B>&nbsp;Mức lương</B></div>
+                <div class="tbl_tit" style="width:185px;"><B>&nbsp;Phụ cấp</B></div>
+            </div>
+            <div style="float:left; height:303px; width:820px; overflow-y:scroll">
+                {section name=pi loop=$obj_list_user}
+                    {if $smarty.section.pi.index is not div by 2}
+                        {assign var="class_td" value="tbl_cont"}
+                    {else}
+                        {assign var="class_td" value="tbl_cont2"}
+                    {/if}
+                    {math z=$smarty.section.pi.index t=1 equation="z+t" assign=stt}
+                    <div class="{$class_td}" style="width:30px; text-align:center;">{$stt}</div>
+                    <div class="{$class_td}" style="width:150px; white-space:nowrap; ">&nbsp;{$obj_list_user[pi]->user_fullname}</div>
+                    <div class="{$class_td}" style="width:90px; white-space:nowrap; ">&nbsp;{$obj_list_user[pi]->user_name}</div>
+                    <div class="{$class_td}" style="width:156px; white-space:nowrap; ">&nbsp;
+                        {section name=qi loop=$obj_list_object}
+                            {if $obj_list_object[qi]->object_id eq $obj_list_user[pi]->object_id}
+                                {$obj_list_object[qi]->object_name}
+                            {/if}
+                        {/section}
+                    </div>
+                    <div class="{$class_td}" style="width:185px; white-space:nowrap; ">&nbsp;
+                        <input type="hidden" name="user_id[{$stt}]" id="user_id" value="{$obj_list_user[pi]->user_id}">
+                        <select name="user_mucluong[{$stt}]" id="user_mucluong" class="select_middle">
+                            {section name=qi loop=$obj_list_tldn}
+                                <option value="{$obj_list_tldn[qi]->tldn_id}" {if $obj_list_tldn[qi]->tldn_id eq $obj_list_user[pi]->user_mucluong}selected="selected"{/if}>-&nbsp;{$obj_list_tldn[qi]->tldn_ten}</option>
+                            {/section}
+                        </select>
+                    </div>
+                    <div class="{$class_td}" style="width:185px; white-space:nowrap; ">&nbsp;
+                        <select name="user_phucap[{$stt}]" id="user_phucap" class="select_middle">
+                            {section name=qi loop=$obj_list_phucap}
+                                <option value="{$obj_list_phucap[qi]->phucap_id}" {if $obj_list_phucap[qi]->phucap_id eq $obj_list_user[pi]->user_phucap}selected="selected"{/if}>-&nbsp;{$obj_list_phucap[qi]->phucap_ten}</option>
+                            {/section}
+                        </select>
+                    </div>
+                {/section}
+            </div>
+            {literal}
+                <script language="javascript">
+                    $(function() {
+                        $("#luongNhanvien_btn").click(function() {
+                            $('.error').hide();
+
+                            var $form = $("#frLuongNhanvien");
+                            var strData = $("#frLuongNhanvien").serialize();
+                            $.ajax({
+                                type: "POST",
+                                url: "index.php?cauhinhLuong&mod=tinhluong&act=2",
+                                data: strData,
+                                success: function(data) {
+                                    $('#div_thanhcong').css({'display':'block','z-index':'2010'})
+                                    tat_thongbao();diemnguoc(2);
+                                }
+                            });
+                            return false;
+                            //end form
+                        });
+                    });
+                </script>
+            {/literal}
+        </fieldset>
     </div>
 </form>

@@ -10,6 +10,8 @@
 #tinhluong_content_outsign{ float:left; width:98.6%; height:394px; background-color:#ffffff; margin-left:8px; border:1px solid #99bbe8}
 #tinhluong_content_insign{ float:left; width:99.7%; height:375px; background-color:#dfe8f6; margin-left:1px;}
 #thangluong_content_insign{ float:left; width:99.7%; height:371px; background-color:#dfe8f6; margin-left:1px;}
+#cauhinhluong_content_insign{ float:left; width:28%; height:371px; background-color:#dfe8f6; margin-left:1px; margin-right: 15px}
+#luongnhanvien_content_insign{ float:left; width:70%; height:371px; background-color:#dfe8f6; margin-left:1px;}
 #tinhluong_content_main{ float:left; width:99.8%; height:393px; background-color:#dfe8f6; margin-left:1px;}
 
 #tinhluong_clear_txt{ float:left; width:100%; height:1px}

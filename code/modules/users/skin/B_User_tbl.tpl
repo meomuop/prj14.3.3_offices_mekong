@@ -52,6 +52,8 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                 <div style="float:left; width:100%; line-height:25px; text-align:center">
                 	<input type="button" name="btnSub" id="btnSub" value="Ghi lại" class="button_red" style="margin:0 0 0 12px" />
                     <input type="hidden" name="user_id" id="user_id" value="{$obj_info.user_id}">
+                    <input type="hidden" name="user_mucluong" id="user_mucluong" value="{$obj_info.user_mucluong}">
+                    <input type="hidden" name="user_phucap" id="user_phucap" value="{$obj_info.user_phucap}">
                	</div>
             </div>
             <div style="float:left; width:275px">
@@ -305,6 +307,8 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
 					var user_level = $form.find('select#user_level :selected').val();
 					var user_level_tnvb = $form.find('select#user_level_tnvb :selected').val();
 					var user_level_soft = $form.find('select#user_level_soft :selected').val();
+                    var user_mucluong = $form.find('input#user_mucluong').val();
+                    var user_phucap = $form.find('input#user_phucap').val();
                     var user_id = $form.find('input#user_id').val();
                      
                     //begin validate form
@@ -340,6 +344,8 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
 							dataString += "&user_level_tnvb=" + user_level_tnvb;
 							dataString += "&user_level_soft=" + user_level_soft;
                             dataString += "&user_active=" + user_active;
+                            dataString += "&user_mucluong=" + user_mucluong +"";
+                            dataString += "&user_phucap=" + user_phucap +"";
                             dataString += "&user_id=" + user_id +"";
                             //alert (dataString);return false;
                         $.ajax({

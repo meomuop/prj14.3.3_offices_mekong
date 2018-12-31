@@ -14,6 +14,7 @@ class config_class extends dbBasic {
 	var  $owner_reemail;
 	var  $owner_url;
 	var  $luong_coban;
+	var  $luong_apdung;
 	var  $ngay_macdinh;
 	var  $sat_ra;
 	var  $sun_ra;
@@ -30,6 +31,7 @@ class config_class extends dbBasic {
 							'owner_reemail',
 							'owner_url',
 							'luong_coban',
+							'luong_apdung',
 							'ngay_macdinh',
 							'sat_ra',
 							'sun_ra',
@@ -68,6 +70,15 @@ class config_class extends dbBasic {
 		
 		return $result->fields[0];
     }
+
+    function updateLuong($id, $luong, $apdung){
+        global $dbconn;
+ 	    $sql = "UPDATE $this->tablename SET luong_coban = ".$luong.", luong_apdung = ".$apdung." WHERE config_id = ".$id;
+        if($dbconn->Execute($sql)){
+            return true;
+        }
+        return false;
+    }
 	
 /***********************
  * function checkForm
@@ -79,4 +90,3 @@ class config_class extends dbBasic {
 		// empty
 	}
 }
-?>
