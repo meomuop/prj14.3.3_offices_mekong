@@ -85,7 +85,7 @@ function max_size_tinhluong(){
 	}
 }
 function change_style_tinhluong(obj){
-	for(i=1;i<=5;i++){
+	for(i=1;i<=4;i++){
 		if(i==obj){
 			document.getElementById('c_menu_tinhluong_'+i).style.borderLeft = '1px solid #99bbe8';
 			document.getElementById('c_menu_tinhluong_'+i).style.borderRight = '1px solid #99bbe8';
@@ -133,11 +133,9 @@ function change_style_tinhluong(obj){
 			<a href="javascript: void(0)" onclick="change_style_tinhluong(2)" id="a_menu_tinhluong_2">
 				<div class="c_menu_tinhluong" id="c_menu_tinhluong_2" style="width:155px;">Bảng lương doanh nghiệp</div></a>
 			<a href="javascript: void(0)" onclick="change_style_tinhluong(3)" id="a_menu_tinhluong_3">
-				<div class="c_menu_tinhluong" id="c_menu_tinhluong_3" style="width:135px;">Bảng lương nhà nước</div></a>
+				<div class="c_menu_tinhluong" id="c_menu_tinhluong_3" style="width:90px;">Bảng Phụ cấp</div></a>
 			<a href="javascript: void(0)" onclick="change_style_tinhluong(4)" id="a_menu_tinhluong_4">
-				<div class="c_menu_tinhluong" id="c_menu_tinhluong_4" style="width:90px;">Bảng Phụ cấp</div></a>
-			<a href="javascript: void(0)" onclick="change_style_tinhluong(5)" id="a_menu_tinhluong_5">
-				<div class="c_menu_tinhluong" id="c_menu_tinhluong_5" style="width:105px;">Cấu hình lương</div></a>
+				<div class="c_menu_tinhluong" id="c_menu_tinhluong_4" style="width:105px;">Cấu hình lương</div></a>
         </div>
         <div style="float:left; height:26px; width:100%"></div>
         <!-- Content -->
@@ -218,15 +216,15 @@ function change_style_tinhluong(obj){
 		$("#tinhluong_content_main").load("index.php?listTldn&mod=tinhluong");
 	});
 
-	$("#a_menu_tinhluong_3").click( function () {
-		$("#tinhluong_content_main").load("index.php?listThangluong&mod=tinhluong");
-	});
+	// $("#a_menu_tinhluong_3").click( function () {
+	// 	$("#tinhluong_content_main").load("index.php?listThangluong&mod=tinhluong");
+	// });
 
-	$("#a_menu_tinhluong_4").click( function () {
+	$("#a_menu_tinhluong_3").click( function () {
 		$("#tinhluong_content_main").load("index.php?listPhucap&mod=tinhluong");
 	});
 
-	$("#a_menu_tinhluong_5").click( function () {
+	$("#a_menu_tinhluong_4").click( function () {
 		$("#tinhluong_content_main").load("index.php?cauhinhLuong&mod=tinhluong");
 	});
 	

@@ -167,15 +167,6 @@
                     <td align="left">
                         <input type="text" id="luong_coban" name="luong_coban" class="text_short" value="{$vars.luong_coban|price_format}" style="text-align: right"/>&nbsp;(VNĐ)</td>
                 </tr>
-                <tr height="50">
-                    <td align="left">Áp dụng:</td>
-                    <td align="left">
-                        <input type="radio" name="luong_apdung" id="luong_apdung" value="1" {if $vars.luong_apdung eq 1} checked{/if}>
-                        &nbsp;Lương doanh nghiệp<br><br><br>
-                        <input type="radio" name="luong_apdung" id="luong_apdung" value="2" {if $vars.luong_apdung eq 2} checked{/if}>
-                        &nbsp;Lương nhà nước
-                    </td>
-                </tr>
                 <tr height="30">
                     <td>&nbsp;</td>
                     <td align="left">
@@ -194,7 +185,6 @@
 
                                         var $form = $("#frCauhinhLuong");
                                         var luong_coban = $form.find('input#luong_coban').val();
-                                        var luong_apdung = $form.find('input#luong_apdung:checked').val();
                                         var config_id = $form.find('input#config_id').val();
 
                                         //begin validate form
@@ -203,7 +193,6 @@
                                         }
                                         else{
                                             var dataString = "&luong_coban=" + luong_coban;
-                                            dataString += "&luong_apdung=" + luong_apdung;
                                             dataString += "&config_id=" + config_id +"";
                                             //alert (dataString);return false;
                                             $.ajax({

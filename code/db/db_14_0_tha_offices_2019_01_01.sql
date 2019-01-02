@@ -1,6 +1,6 @@
 /*
 SQLyog Ultimate v8.6 Beta2
-MySQL - 5.7.14 : Database - db14_3_3_offices_mekong_2018
+MySQL - 5.7.14 : Database - db14_3_3_offices_mekong_2019
 *********************************************************************
 */
 
@@ -12,9 +12,9 @@ MySQL - 5.7.14 : Database - db14_3_3_offices_mekong_2018
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-CREATE DATABASE /*!32312 IF NOT EXISTS*/`db14_3_3_offices_mekong_2018` /*!40100 DEFAULT CHARACTER SET utf8 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`db14_3_3_offices_mekong_2019` /*!40100 DEFAULT CHARACTER SET utf8 */;
 
-USE `db14_3_3_offices_mekong_2018`;
+USE `db14_3_3_offices_mekong_2019`;
 
 /*Table structure for table `ajax_chat_bans` */
 
@@ -1167,7 +1167,10 @@ CREATE TABLE `tbl_luong_chamcong` (
   `user_id` int(11) DEFAULT NULL,
   `cc_thang` int(11) DEFAULT NULL,
   `cc_nam` int(11) DEFAULT NULL,
-  `cc_luong` int(11) DEFAULT NULL COMMENT 'muc luong / thang',
+  `cc_luong` bigint(20) DEFAULT NULL COMMENT 'muc luong / thang',
+  `cc_luongngay` int(11) DEFAULT NULL COMMENT 'luong thang chia so ngay cong trong thang',
+  `cc_luongthang` bigint(20) DEFAULT NULL COMMENT 'luong ngay * so ngay cong di lam',
+  `cc_phucap` bigint(20) DEFAULT NULL COMMENT 'gia tri phu cap',
   `cc_1` tinyint(4) DEFAULT NULL COMMENT '1. lam ca ngay, 2. lam nua ngay, 3. nghi co luong, 4. nghi ko luong',
   `cc_2` tinyint(4) DEFAULT NULL,
   `cc_3` tinyint(4) DEFAULT NULL,

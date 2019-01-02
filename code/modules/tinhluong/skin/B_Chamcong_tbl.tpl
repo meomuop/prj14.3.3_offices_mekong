@@ -17,21 +17,42 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
 	<form method="post" name="frmList_Chamcong" action="?listChamcong{$vars.arg}" id="frmList_Chamcong">
     <!------------------------------------DANH SACH---------------------------------------------->
     <fieldset style="width:1162px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px; height:382px">
-        <legend class="legend_list_search" style="width: 950px">
-            <div style="float:left; width:6%; text-align:left">Tháng:</div>
+        <legend class="legend_list_search" style="width: 1050px">
+            <div style="float:left; width:5%; text-align:left">Tháng:</div>
             <div style="float:left; width:4%; text-align:left">
                 <input type="text" name="cc_thang" id="cc_thang" class="text_month" value="{$smarty.now|date_format:"%m"}" onfocus="hide_message_Chamcong()" readonly="readonly"/>
             </div>
-            <div style="float:left; width:5%; text-align:left">Năm:</div>
-            <div style="float:left; width:9%; text-align:left">
+            <div style="float:left; width:4%; text-align:left">Năm:</div>
+            <div style="float:left; width:5%; text-align:left">
                 <input type="text" name="cc_nam" id="cc_nam" class="text_year" value="{$smarty.now|date_format:"%Y"}" onfocus="hide_message_Chamcong()" readonly="readonly"/>
             </div>
-            <div style="float:left; width:54%; text-align:left">
+            <div style="float:left; width:12%">
+				|&nbsp;&nbsp;&nbsp;
+				<input type="button" name="luongNhanvien_btn" id="luongNhanvien_btn" value="Ghi lại" class="button_red" />
+            </div>
+			<div style="float:left; width:21%">
+				|&nbsp;&nbsp;&nbsp;
+				Tháng: <select name="in_luongthang" id="in_luongthang" class="select_tiny">
+					<option value="0">Chọn</option>
+					<option value="1">01</option>
+					<option value="2">02</option>
+					<option value="3">03</option>
+					<option value="4">04</option>
+					<option value="5">05</option>
+					<option value="6">06</option>
+					<option value="7">07</option>
+					<option value="8">08</option>
+					<option value="9">09</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+				</select>
+				<input type="button" name="luongNhanvien_btn" id="luongNhanvien_btn" value="In bảng lương" class="button_red" />
+			</div>
+            <div style="float:left; width:45%; text-align:left">
                 |&nbsp;&nbsp;&nbsp;
                 Chú thích: 1: Cả ngày; 1/2: Nửa ngày; NCL: Nghỉ có lương; NKL: Nghỉ không lương
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
             </div>
-            <div style="float:left;"><span id="lblError_Chamcong" class="error">Dấu (*) là các mục bắt buộc!</span></div>
         </legend>
     	<div style="float:left; height:5px; width:100%"></div>
         <div style="float:left; height:50px; width:1145px; border-top:1px solid #99bbe8; border-bottom:1px solid #99bbe8 ">
@@ -62,23 +83,74 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
             {assign var="class_td" value="tbl_cont2"} 
             {/if}
             {math x=$vars.curpage-1 y=$vars.numresult z=$smarty.section.pi.index t=1 equation="x*y+z+t" assign=stt}
-            <div class="{$class_td}" style="width:30px; text-align:center;font-size: 11px">{$stt}</div>
+            <div class="{$class_td}" style="width:30px; text-align:center;font-size: 11px">
+				{$stt}
+				<input type="hidden" name="user_id[{$stt}]" id="user_id" value="{$obj_list_user[pi]->user_id}">
+			</div>
             <div class="{$class_td}" style="width:152px; white-space:nowrap; font-size: 11px">&nbsp;{$obj_list_user[pi]->user_fullname}</div>
             <div class="{$class_td}" style="width:61px; white-space:nowrap; font-size: 11px">&nbsp;{$obj_list_user[pi]->user_name}</div>
             {php}
                 for($i = 1; $i <= $num_of_days; $i++){
-                echo '<div class="tbl_cont" style="width:28px;font-size: 11px">';
-                echo '<select name="chucvu_id" id="chucvu_id" style="font-size: 11px" class="select_nano" onfocus="hide_message_Thangluong()">';
-                echo '<option value="1">1</option>';
-                echo '<option value="2">1/2</option>';
-                echo '<option value="3">NCL</option>';
-                echo '<option value="4">NKL</option>';
-                echo '</select>';
-                echo '</div>';
-                }
-            {/php}
+					$day = getdate(strtotime(date('Y-m-'.$i)));
+			{/php}
+				<div class="tbl_cont" style="width:28px;font-size: 11px">
+					{php} if($day['wday'] == 6):{/php}
+					<select name="ngaycong[{$stt}][{php}echo $i;{/php}]" id="ngaycong" style="font-size: 11px" class="select_nano">
+						<option value="1" {if $thubay eq 0}selected="selected"{/if}>1</option>
+						<option value="2" {if $thubay eq 1}selected="selected"{/if}>1/2</option>
+						{if $thubay neq 2}
+							<option value="3">NCL</option>
+							<option value="4">NKL</option>
+						{/if}
+						<option value="5" {if $thubay eq 2}selected="selected"{/if}>WK</option>
+					</select>
+					{php} elseif($day['wday'] == 0):{/php}
+					<select name="ngaycong[{$stt}][{php}echo $i;{/php}]" id="ngaycong" style="font-size: 11px" class="select_nano">
+						<option value="1" {if $chunhat eq 0}selected="selected"{/if}>1</option>
+						<option value="2" {if $chunhat eq 1}selected="selected"{/if}>1/2</option>
+						{if $chunhat neq 2}
+							<option value="3">NCL</option>
+							<option value="4">NKL</option>
+						{/if}
+						<option value="5" {if $thubay eq 2}selected="selected"{/if}>WK</option>
+					</select>
+					{php}else:{/php}
+					<select name="ngaycong[{$stt}][{php}echo $i;{/php}]" id="ngaycong" style="font-size: 11px" class="select_nano">
+						<option value="1">1</option>
+						<option value="2">1/2</option>
+						<option value="3">NCL</option>
+						<option value="4">NKL</option>
+                	</select>
+					{php}endif;{/php}
+				</div>
+			{php}
+				}
+			{/php}
             {/section}
         </div>
+		{literal}
+			<script language="javascript">
+				$(function() {
+					$("#luongNhanvien_btn").click(function() {
+						$('.error').hide();
+
+						var $form = $("#frmList_Chamcong");
+						var strData = $("#frmList_Chamcong").serialize();
+						$.ajax({
+							type: "POST",
+							url: "index.php?listChamcong&mod=tinhluong&act=1",
+							data: strData,
+							success: function(data) {
+								$('#div_thanhcong').css({'display':'block','z-index':'2010'})
+								tat_thongbao();diemnguoc(2);
+							}
+						});
+						return false;
+						//end form
+					});
+				});
+			</script>
+		{/literal}
     </fieldset>
     </form>
 </div>

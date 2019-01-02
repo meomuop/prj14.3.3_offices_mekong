@@ -37,7 +37,7 @@ if(isset($vars["config_id"])){
     $obj->readForm();
     if ($obj->is_already_used($obj->tablename, "config_id", $obj->config_id)){
         $luong_coban = str_replace('.','', $vars['luong_coban']);
-        $obj->updateLuong($vars["config_id"],$luong_coban,$vars['luong_apdung']);
+        $obj->updateLuong($vars["config_id"],$luong_coban,1);
         unset($obj);
     }else{
         $assign_list['error'] = $obj->error;

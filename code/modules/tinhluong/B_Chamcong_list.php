@@ -11,6 +11,8 @@
 	
 	// ------------------------------
 	require_once ($CLASSES_PATH.'tinhluong/clsChamcong.php');
+    require_once ($CLASSES_PATH.'tinhluong/clsTldn.php');
+    require_once ($CLASSES_PATH.'tinhluong/clsPhucap.php');
 
 	// --- Class is used in this page
 	$obj = new cc_class();
@@ -31,54 +33,53 @@
 	
 	$processurl = "?listChamcong&mod=tinhluong";
 	$processurl .= trim($vars['keyword'])?"&keyword=".trim($vars['keyword']):"";
-	
-	// --- Del Product which is selected
-	if ($vars['dlStr']){
-	  $obj->removeInList($vars['dlStr']);
-	}
-	// --- Check and uncheck
-	if ($vars['checkUncheck']==1){
-	  $obj->checkUncheck($vars['checkUncheckID'],$vars['checkUncheck'],$vars['setfield']);
-	}
-	if ($vars['checkUncheck']==2){
-	  $obj->checkUncheck($vars['checkUncheckID'],$vars['checkUncheck'],$vars['setfield']);
-	}
-	
-	// --- Items sort
-	if($vars['sort_me']==1){
-	  $obj->sortItem($vars['val'],$vars['cc_id']);
-	}
-	
-	// --- Add - Edit
-	if($vars['add_edit']==1):
-	   if (!isset($vars['cc_id']) || $vars['cc_id'] < 1) {
-		  $obj = new cc_class();
-		  $obj->readForm();
-		  if ((is_null($error)) || ($error == "")) {
-			  $obj->cc_date = date("Y-m-d");
-			  $obj->insertnew();
-			  unset($obj);
-		  }
-	   }else{
-		  $obj = new cc_class();
-		  $obj->readForm();
-		  if ((is_null($error)) || ($error == "")) {
-			  $obj->cc_date = date("Y-m-d");
-			  if ($obj->is_already_used($obj->tablename, "cc_id", $obj->cc_id))
-			  {
-				  $obj->update();
-				  unset($obj);
-			  }
-		  }
-	   }
-	endif;
+
+    $obj_config = new config_class();
+    $obj_config->getDBbyPkey(1);
+
+    $thubay     = $obj_config->sat_ra;
+    $chunhat    = $obj_config->sun_ra;
 	
 	// --- Get record for edit
-	if($vars['edit_me']==1):
-	   $obj = new cc_class();
-	   $obj->getDBbyPkey($vars['cc_id']);
-	   if (!$obj->cc_id) redirect("?listChamcong".$arg['arg']);
-	   $obj_info = (array)$obj;
+	if(isset($vars["act"]) && $vars["act"] == 1):
+        if(isset($vars['user_id']) && isset($vars['ngaycong'])){
+            $obj_cc = new cc_class();
+            $obj_config->getDBbyPkey(1);
+            $user_mucluong  = 0;
+            $user_phucap    = 0;
+            $cc_thang       = date('m');
+            $cc_nam         = date('Y');
+
+            $obj_user = new users_class();
+            for($i = 1; $i <= count($vars['user_id']); $i++){
+                // get luong co ban
+                $user_mucluong = $obj_config->luong_coban;
+                $obj_user->getDBbyPkey($vars['user_id'][$i]);
+                if($obj_user){
+                    // get he so luong va tinh luong chinh thuc
+                    //echo $obj_user->user_mucluong;
+                    $obj_tldn = new tldn_class();
+                    $obj_tldn->getDBbyPkey($obj_user->user_mucluong);
+                    //rsprint($obj_tldn);
+                    $user_mucluong = $user_mucluong*$obj_tldn->tldn_heso;
+                    //echo $user_mucluong;
+                    // get phu cap
+                    $obj_phucap = new phucap_class();
+                    $obj_phucap->getDBbyPkey($obj_user->user_phucap);
+                    $user_phucap = $obj_phucap->phucap_giatri;
+                }
+
+                $obj_cc->insertChamcong($obj_user->user_id,$vars['ngaycong'][$i],$cc_thang,$cc_nam,$user_mucluong,$user_phucap);
+
+                unset($user_phucap);
+                unset($user_mucluong);
+                unset($obj_tldn);
+                unset($obj_phucap);
+            }
+            unset($obj_user);
+            unset($obj_cc);
+
+        }
 	endif;
 	
 	// --- Condition : The row 71 got trouble in uesed --> can't findout the reason
@@ -126,7 +127,7 @@
 	$per_edit 	= 1;
 	$per_del 	= 1;
 	$per_act 	= 1;
-	
+
 	// --- Assign data to template
 	$assign_list = array();
 	
@@ -137,6 +138,10 @@
 	
 	$assign_list['obj_list'] 	= $obj_list;
     $assign_list['obj_list_user'] 	= $obj_list_user;
+    $assign_list['thubay']  	= $thubay;
+    $assign_list['chunhat'] 	= $chunhat;
+
+
 	$assign_list['pager_str'] 	= $pager_str;
 	$assign_list["parentArr"] 	= $parentArr; 
 	$assign_list['nrs_arr'] 	= $nrs_arr;
