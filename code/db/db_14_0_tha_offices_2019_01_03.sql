@@ -800,7 +800,7 @@ CREATE TABLE `tbl_hd_hdban_chiphi` (
   `chiphi_nguoinhan` int(11) DEFAULT NULL,
   `chiphi_ghichu` varchar(250) DEFAULT NULL,
   `chiphi_nguoinhap` int(11) DEFAULT NULL,
-  `chiphi_tinhtrang` tinyint(1) DEFAULT NULL,
+  `chiphi_tinhtrang` tinyint(4) DEFAULT NULL,
   `chiphi_date` date DEFAULT NULL,
   PRIMARY KEY (`chiphi_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -814,34 +814,88 @@ DROP TABLE IF EXISTS `tbl_hd_hdban_hoadon`;
 CREATE TABLE `tbl_hd_hdban_hoadon` (
   `hoadon_id` int(11) NOT NULL AUTO_INCREMENT,
   `hoadon_sohd` varchar(100) DEFAULT NULL,
-  `hoadon_noidung` varchar(250) DEFAULT NULL,
   `hdban_id` int(11) DEFAULT NULL,
-  `hoadon_giatri` int(11) DEFAULT NULL,
+  `hdban_sohd` varchar(150) DEFAULT NULL,
+  `hoadon_giatri` bigint(20) DEFAULT NULL,
+  `hoadon_pttt` tinyint(4) DEFAULT NULL COMMENT '1. tien mat, 2. chuyen khoan',
   `hoadon_ngayhd` date DEFAULT NULL,
-  `hoadon_tinhtrang` tinyint(4) DEFAULT NULL COMMENT '1. chua xuat, 2.da xuat, 3. bi huy',
+  `hoadon_noidung` varchar(250) DEFAULT NULL,
+  `hoadon_nguoinhap` int(11) DEFAULT NULL,
+  `hoadon_file` varchar(250) DEFAULT NULL,
   `hoadon_date` date DEFAULT NULL,
+  `hoadon_active` tinyint(4) DEFAULT NULL COMMENT '1. co hieu luc, 2. bi huy',
   PRIMARY KEY (`hoadon_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 /*Data for the table `tbl_hd_hdban_hoadon` */
 
-/*Table structure for table `tbl_hd_hdban_thuchien` */
+insert  into `tbl_hd_hdban_hoadon`(`hoadon_id`,`hoadon_sohd`,`hdban_id`,`hdban_sohd`,`hoadon_giatri`,`hoadon_pttt`,`hoadon_ngayhd`,`hoadon_noidung`,`hoadon_nguoinhap`,`hoadon_file`,`hoadon_date`,`hoadon_active`) values (1,'01GTKT3/001',3,'03/HĐKT-XT',1200000000,2,'2018-12-23','Xuất hóa đơn theo hợp đồng',1,'../hoadonmua_uploads_2018/291164692bc40ccb99eb366e48a54bec.png','2018-12-23',1),(2,'01GTKT3/010',1,'01/HĐKT-THP',3300000000,2,'2018-12-23','Xuất theo hợp đồng',1,'../hoadonmua_uploads_2018/291164692bc40ccb99eb366e48a54bec.png','2018-12-23',1),(3,'01GTKT3/080',2,'02/HĐKT-THP',2000000000,2,'2018-12-24','Xuất theo hợp đồng',1,'../hoadonmua_uploads_2018/463bfcd287b2e1585dcefb1cb9c55190.jpg','2018-12-24',1);
 
-DROP TABLE IF EXISTS `tbl_hd_hdban_thuchien`;
+/*Table structure for table `tbl_hd_hdban_khachhang` */
 
-CREATE TABLE `tbl_hd_hdban_thuchien` (
-  `thuchien_id` int(11) NOT NULL AUTO_INCREMENT,
+DROP TABLE IF EXISTS `tbl_hd_hdban_khachhang`;
+
+CREATE TABLE `tbl_hd_hdban_khachhang` (
+  `khachhang_id` int(11) NOT NULL AUTO_INCREMENT,
+  `khachhang_name` varchar(250) NOT NULL,
+  `khachhang_viettat` varchar(100) DEFAULT NULL,
+  `khachhang_daidien` varchar(100) DEFAULT NULL,
+  `khachhang_mst` varchar(50) DEFAULT NULL,
+  `khachhang_truso` varchar(250) DEFAULT NULL,
+  `khachhang_vpgd` varchar(250) DEFAULT NULL,
+  `khachhang_sdt` varchar(50) DEFAULT NULL,
+  `khachhang_fax` varchar(50) DEFAULT NULL,
+  `khachhang_email` varchar(150) DEFAULT NULL,
+  `khachhang_sort` int(11) DEFAULT NULL,
+  `khachhang_active` tinyint(4) DEFAULT NULL,
+  `khachhang_date` date DEFAULT NULL,
+  PRIMARY KEY (`khachhang_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+/*Data for the table `tbl_hd_hdban_khachhang` */
+
+/*Table structure for table `tbl_hd_hdban_lkvb` */
+
+DROP TABLE IF EXISTS `tbl_hd_hdban_lkvb`;
+
+CREATE TABLE `tbl_hd_hdban_lkvb` (
+  `lkvb_id` int(11) NOT NULL AUTO_INCREMENT,
   `hdban_id` int(11) DEFAULT NULL,
-  `thuchien_noidung` text,
-  `thuchien_batdau` date DEFAULT NULL,
-  `thuchien_ketthuc` date DEFAULT NULL,
+  `hdban_sohd` varchar(150) DEFAULT NULL,
+  `vanban_id` int(11) DEFAULT NULL,
+  `vanban_skh` varchar(150) DEFAULT NULL,
+  `vanban_trichyeu` varchar(250) DEFAULT NULL,
+  `vanban_file` varchar(250) DEFAULT NULL,
+  `lkvb_type` int(11) DEFAULT NULL COMMENT '1. vbden, 2. vbdi',
   `user_id` int(11) DEFAULT NULL,
-  `thuchien_tinhtrang` tinyint(1) DEFAULT NULL,
-  `thuchien_date` date DEFAULT NULL,
-  PRIMARY KEY (`thuchien_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `lkvb_date` date DEFAULT NULL,
+  `lkvb_active` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`lkvb_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
-/*Data for the table `tbl_hd_hdban_thuchien` */
+/*Data for the table `tbl_hd_hdban_lkvb` */
+
+insert  into `tbl_hd_hdban_lkvb`(`lkvb_id`,`hdban_id`,`hdban_sohd`,`vanban_id`,`vanban_skh`,`vanban_trichyeu`,`vanban_file`,`lkvb_type`,`user_id`,`lkvb_date`,`lkvb_active`) values (1,1,'01/HĐKT-THP',NULL,'01/CV-THP','V/v thông báo chuyển lô hàng đầu tiên 500 cây thép D12.','../doc_uploads_2018/291164692bc40ccb99eb366e48a54bec.png',1,1,'2018-12-27',NULL),(2,1,'01/HĐKT-THP',NULL,'1/CV-Hacinco','V/v đề nghị cung cấp mặt bằng kho bãi chứa vật liệu cho giai đoạn 1 công trình trường cao đẳng nghề Nhổn - Bắc Từ Liêm','../doc_uploads_2018/d9c0132684aa750f8b9d2cb87f9327f2.jpg',2,1,'2018-12-27',NULL);
+
+/*Table structure for table `tbl_hd_hdban_tientrinh` */
+
+DROP TABLE IF EXISTS `tbl_hd_hdban_tientrinh`;
+
+CREATE TABLE `tbl_hd_hdban_tientrinh` (
+  `tientrinh_id` int(11) NOT NULL AUTO_INCREMENT,
+  `tientrinh_ghichu` varchar(250) DEFAULT NULL,
+  `tientrinh_file` varchar(250) DEFAULT NULL,
+  `hdban_id` int(11) DEFAULT NULL,
+  `hdban_sohd` varchar(150) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `tientrinh_date` date DEFAULT NULL,
+  `tientrinh_active` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`tientrinh_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+/*Data for the table `tbl_hd_hdban_tientrinh` */
+
+insert  into `tbl_hd_hdban_tientrinh`(`tientrinh_id`,`tientrinh_ghichu`,`tientrinh_file`,`hdban_id`,`hdban_sohd`,`user_id`,`tientrinh_date`,`tientrinh_active`) values (1,'Đã chuyển lô hang đầu tiên gồm 500 cây thép D12','../hdmua_tientrinh_uploads_2018/463bfcd287b2e1585dcefb1cb9c55190.jpg',1,'01/HĐKT-THP',1,'2018-12-26',NULL);
 
 /*Table structure for table `tbl_hd_hdban_xuatkho` */
 
@@ -1006,29 +1060,6 @@ CREATE TABLE `tbl_hd_hdmua_tonkho` (
 
 insert  into `tbl_hd_hdmua_tonkho`(`tonkho_id`,`hoadon_id`,`hoadon_sohd`,`dvtinh_id`,`dvtinh_name`,`hanghoa_id`,`hanghoa_name`,`tonkho_soluong`,`tonkho_nguoinhap`,`tonkho_date`) values (1,2,'01GTKT3/010',2,'Cây',2,'Thép phi 12',500,1,'2018-12-23'),(2,2,'01GTKT3/010',2,'Cây',3,'Thép phi 15',500,1,'2018-12-23'),(3,3,'01GTKT3/080',2,'Cây',2,'Thép phi 12',300,1,'2018-12-24'),(4,3,'01GTKT3/080',12,'Mét',4,'Thép cuộn phi 10',1000,1,'2018-12-24');
 
-/*Table structure for table `tbl_hd_khachhang` */
-
-DROP TABLE IF EXISTS `tbl_hd_khachhang`;
-
-CREATE TABLE `tbl_hd_khachhang` (
-  `khachhang_id` int(11) NOT NULL AUTO_INCREMENT,
-  `khachhang_name` varchar(250) NOT NULL,
-  `khachhang_viettat` varchar(100) DEFAULT NULL,
-  `khachhang_daidien` varchar(100) DEFAULT NULL,
-  `khachhang_mst` varchar(50) DEFAULT NULL,
-  `khachhang_truso` varchar(250) DEFAULT NULL,
-  `khachhang_vpgd` varchar(250) DEFAULT NULL,
-  `khachhang_sdt` varchar(50) DEFAULT NULL,
-  `khachhang_fax` varchar(50) DEFAULT NULL,
-  `khachhang_email` varchar(150) DEFAULT NULL,
-  `khachhang_sort` int(11) DEFAULT NULL,
-  `khachhang_active` tinyint(4) DEFAULT NULL,
-  `khachhang_date` date DEFAULT NULL,
-  PRIMARY KEY (`khachhang_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
-/*Data for the table `tbl_hd_khachhang` */
-
 /*Table structure for table `tbl_hdmua_danhmuc` */
 
 DROP TABLE IF EXISTS `tbl_hdmua_danhmuc`;
@@ -1173,8 +1204,8 @@ CREATE TABLE `tbl_luong_chamcong` (
   `cc_luongngay` int(11) DEFAULT NULL COMMENT 'luong thang chia so ngay cong trong thang',
   `cc_luongthang` bigint(20) DEFAULT NULL COMMENT 'luong ngay * so ngay cong di lam',
   `cc_phucap` bigint(20) DEFAULT NULL COMMENT 'gia tri phu cap',
-  `cc_songaycong` int(11) DEFAULT NULL,
-  `cc_songaydilam` int(11) DEFAULT NULL,
+  `cc_songaycong` float DEFAULT NULL,
+  `cc_songaydilam` float DEFAULT NULL,
   `cc_1` tinyint(4) DEFAULT NULL COMMENT '1. lam ca ngay, 2. lam nua ngay, 3. nghi co luong, 4. nghi ko luong',
   `cc_2` tinyint(4) DEFAULT NULL,
   `cc_3` tinyint(4) DEFAULT NULL,
@@ -1211,7 +1242,7 @@ CREATE TABLE `tbl_luong_chamcong` (
 
 /*Data for the table `tbl_luong_chamcong` */
 
-insert  into `tbl_luong_chamcong`(`cc_id`,`user_id`,`user_fullname`,`user_name`,`cc_thang`,`cc_nam`,`cc_luong`,`cc_luongngay`,`cc_luongthang`,`cc_phucap`,`cc_songaycong`,`cc_songaydilam`,`cc_1`,`cc_2`,`cc_3`,`cc_4`,`cc_5`,`cc_6`,`cc_7`,`cc_8`,`cc_9`,`cc_10`,`cc_11`,`cc_12`,`cc_13`,`cc_14`,`cc_15`,`cc_16`,`cc_17`,`cc_18`,`cc_19`,`cc_20`,`cc_21`,`cc_22`,`cc_23`,`cc_24`,`cc_25`,`cc_26`,`cc_27`,`cc_28`,`cc_29`,`cc_30`,`cc_31`) values (1,1,'Quản trị','admin',1,2019,4000000,173913,3652174,1000000,23,21,1,1,1,2,5,5,1,1,1,1,3,5,5,1,1,1,1,2,5,5,1,1,1,1,4,5,5,1,1,1,1),(2,50,'CV - KHKT','cv_khkt',1,2019,3000000,130435,3000000,1000000,23,23,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1),(3,51,'Lê Thùy Dung','dunglt',1,2019,3000000,130435,2869565,1000000,23,22,1,1,1,2,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,2,1,1,1,5,5,1,1,1,1),(4,47,'GĐXNDV Hacinco','gdhacinco',1,2019,12000000,521739,10956522,2200000,23,21,1,1,1,2,5,5,1,1,1,3,1,5,5,1,1,1,4,1,5,5,1,1,1,1,1,5,5,1,2,1,1),(5,46,'Nhân viên Hacinco','hacinco',1,2019,3000000,130435,3000000,1000000,23,23,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1),(6,54,'Nguyễn Thu Hường','huongnt',1,2019,3000000,130435,3000000,1000000,23,23,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1),(7,55,'Thiều Hồng Liên','lienth',1,2019,3000000,130435,3000000,1000000,23,23,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1),(8,52,'Đàm Thùy Linh','linhdt',1,2019,3000000,130435,3000000,1000000,23,23,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1),(9,38,'Nguyễn Thăng Long','longnt',1,2019,10000000,434783,10000000,2200000,23,23,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1),(10,48,'Nhân viên HCQT','nvhcqt',1,2019,3000000,130435,3000000,1000000,23,23,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1),(11,44,'Trưởng ban QLDA1','tbqlda1',1,2019,6000000,260870,5478261,1800000,23,21,1,1,1,2,5,5,1,1,1,3,1,5,5,1,1,1,1,1,5,5,1,4,1,1,1,5,5,1,1,2,1),(12,45,'Trưởng ban QLDA2','tbqlda2',1,2019,6000000,260870,6000000,1800000,23,23,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1),(13,31,'Nguyễn Văn Thanh','thanhnv',1,2019,3000000,130435,3000000,1000000,23,23,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1),(14,39,'Vũ Đức Tòng','tongvd',1,2019,10000000,434783,10000000,2200000,23,23,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1),(15,42,'Trưởng phòng HC','tphc',1,2019,6000000,260870,6000000,1800000,23,23,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1),(16,43,'Trưởng phòng KHKT','tpkhkt',1,2019,6000000,260870,6000000,1800000,23,23,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1),(17,53,'Nguyễn Thu Trang','trangnt',1,2019,3000000,130435,3000000,1000000,23,23,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1),(18,41,'Trợ lý','troly',1,2019,3000000,130435,3000000,1000000,23,23,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1),(19,37,'Nguyễn Bá Vân','vannb',1,2019,10000000,434783,10000000,2200000,23,23,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1),(20,40,'Văn thư','vanthu',1,2019,3000000,130435,3000000,1000000,23,23,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1),(21,49,'VT - KHKT','vt_khkt',1,2019,3000000,130435,3000000,1000000,23,23,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1);
+insert  into `tbl_luong_chamcong`(`cc_id`,`user_id`,`user_fullname`,`user_name`,`cc_thang`,`cc_nam`,`cc_luong`,`cc_luongngay`,`cc_luongthang`,`cc_phucap`,`cc_songaycong`,`cc_songaydilam`,`cc_1`,`cc_2`,`cc_3`,`cc_4`,`cc_5`,`cc_6`,`cc_7`,`cc_8`,`cc_9`,`cc_10`,`cc_11`,`cc_12`,`cc_13`,`cc_14`,`cc_15`,`cc_16`,`cc_17`,`cc_18`,`cc_19`,`cc_20`,`cc_21`,`cc_22`,`cc_23`,`cc_24`,`cc_25`,`cc_26`,`cc_27`,`cc_28`,`cc_29`,`cc_30`,`cc_31`) values (1,1,'Quản trị','admin',1,2019,4000000,173913,3652174,1000000,23,21,1,1,1,2,5,5,1,1,1,1,3,5,5,1,1,1,1,2,5,5,1,1,1,1,4,5,5,1,1,1,1),(2,50,'CV - KHKT','cv_khkt',1,2019,3000000,130435,3000000,1000000,23,23,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1),(3,51,'Lê Thùy Dung','dunglt',1,2019,3000000,130435,2869565,1000000,23,22,1,1,1,2,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,2,1,1,1,5,5,1,1,1,1),(4,47,'GĐXNDV Hacinco','gdhacinco',1,2019,12000000,521739,10956522,2200000,23,21,1,1,1,2,5,5,1,1,1,3,1,5,5,1,1,1,4,1,5,5,1,1,1,1,1,5,5,1,2,1,1),(5,46,'Nhân viên Hacinco','hacinco',1,2019,3000000,130435,3000000,1000000,23,23,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1),(6,54,'Nguyễn Thu Hường','huongnt',1,2019,3000000,130435,3000000,1000000,23,23,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1),(7,55,'Thiều Hồng Liên','lienth',1,2019,3000000,130435,3000000,1000000,23,23,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1),(8,52,'Đàm Thùy Linh','linhdt',1,2019,3000000,130435,3000000,1000000,23,23,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1),(9,38,'Nguyễn Thăng Long','longnt',1,2019,10000000,434783,10000000,2200000,23,23,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1),(10,48,'Nhân viên HCQT','nvhcqt',1,2019,3000000,130435,3000000,1000000,23,23,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1),(11,44,'Trưởng ban QLDA1','tbqlda1',1,2019,6000000,260870,5478261,1800000,23,21,1,1,1,2,5,5,1,1,1,3,1,5,5,1,1,1,1,1,5,5,1,4,1,1,1,5,5,1,1,2,1),(12,45,'Trưởng ban QLDA2','tbqlda2',1,2019,6000000,260870,6000000,1800000,23,23,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1),(13,31,'Nguyễn Văn Thanh','thanhnv',1,2019,3000000,130435,3000000,1000000,23,23,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1),(14,39,'Vũ Đức Tòng','tongvd',1,2019,10000000,434783,10000000,2200000,23,23,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1),(15,42,'Trưởng phòng HC','tphc',1,2019,6000000,260870,6000000,1800000,23,23,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1),(16,43,'Trưởng phòng KHKT','tpkhkt',1,2019,6000000,260870,5869565,1800000,23,22.5,1,1,1,2,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1),(17,53,'Nguyễn Thu Trang','trangnt',1,2019,3000000,130435,3000000,1000000,23,23,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1),(18,41,'Trợ lý','troly',1,2019,3000000,130435,3000000,1000000,23,23,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1),(19,37,'Nguyễn Bá Vân','vannb',1,2019,10000000,434783,10000000,2200000,23,23,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1),(20,40,'Văn thư','vanthu',1,2019,3000000,130435,3000000,1000000,23,23,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1),(21,49,'VT - KHKT','vt_khkt',1,2019,3000000,130435,3000000,1000000,23,23,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1,1,5,5,1,1,1,1);
 
 /*Table structure for table `tbl_luong_phucap` */
 

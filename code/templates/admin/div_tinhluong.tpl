@@ -25,7 +25,7 @@
 #report_tinhluong_tab_bar_tit{ float:left; font-weight:bold; text-transform:uppercase; line-height:20px; padding-left:8px; width:80%;cursor:move; color:#15428b;}
 #report_tinhluong_tab_bar_icon{ float:right; width:10%; text-align:right; padding-top:2px; padding-right:6px}
 #report_tinhluong_content_outsign{ float:left; width:98%; height:420px; background-color:#ffffff; margin-left:8px; border:1px solid #99bbe8}
-#report_tinhluong_content_insign{ float:left; width:100%; height:419px; background-color:#dfe8f6; margin-left:1px;}
+#report_tinhluong_content_insign{ float:left; width:99.7%; height:auto; background-color:#dfe8f6; margin-left:1px;}
 #report_tinhluong_cont{ float:left; width:99.8%; height:419px; background-color:#dfe8f6; margin-left:1px;}
 #report_tinhluong_clear_txt{ float:left; width:100%; height:1px}
 #report_tinhluong_tool_bar{ float:left; width:100%; height:20px; background-color:#dfe8f6; margin-left:1px}

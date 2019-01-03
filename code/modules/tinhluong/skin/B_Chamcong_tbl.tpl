@@ -90,9 +90,25 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
             <div class="{$class_td}" style="width:152px; white-space:nowrap; font-size: 11px">&nbsp;{$obj_list_user[pi]->user_fullname}</div>
             <div class="{$class_td}" style="width:61px; white-space:nowrap; font-size: 11px">&nbsp;{$obj_list_user[pi]->user_name}</div>
             {php}
-                for($i = 1; $i <= $num_of_days; $i++){
+                for($i = 1; $i <= $num_of_days; $i++):
 					$day = getdate(strtotime(date('Y-m-'.$i)));
+                    $userID = $this->_tpl_vars['obj_list_user'][$this->_sections['pi']['index']]->user_id;
+                    $sql = "select * from tbl_luong_chamcong where user_id = ".$userID." and cc_thang = ".date('m')." and cc_nam = ".date('Y');
+                    $result = mysql_query($sql) or die($sql);
+                    if($result):
+                    $row = mysql_fetch_array($result);
+                    //rsprint($row);
 			{/php}
+                <div class="{$class_td}" style="width:28px;font-size: 11px">
+                    <select name="ngaycong[{$stt}][{php}echo $i;{/php}]" id="ngaycong" style="font-size: 11px" class="select_nano">
+                        <option value="1" {php}if($row['cc_'.$i] == 1):{/php}selected="selected"{php}endif;{/php}>1</option>
+                        <option value="2" {php}if($row['cc_'.$i] == 2):{/php}selected="selected"{php}endif;{/php}>1/2</option>
+                        <option value="3" {php}if($row['cc_'.$i] == 3):{/php}selected="selected"{php}endif;{/php}>NCL</option>
+                        <option value="4" {php}if($row['cc_'.$i] == 4):{/php}selected="selected"{php}endif;{/php}>NKL</option>
+                        <option value="5" {php}if($row['cc_'.$i] == 5):{/php}selected="selected"{php}endif;{/php}>WK</option>
+                    </select>
+                </div>
+            {php}else:{/php}
 				<div class="{$class_td}" style="width:28px;font-size: 11px">
 					{php} if($day['wday'] == 6):{/php}
 					<select name="ngaycong[{$stt}][{php}echo $i;{/php}]" id="ngaycong" style="font-size: 11px" class="select_nano">
@@ -124,7 +140,8 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
 					{php}endif;{/php}
 				</div>
 			{php}
-				}
+                endif;
+				endfor;
 			{/php}
             {/section}
         </div>
