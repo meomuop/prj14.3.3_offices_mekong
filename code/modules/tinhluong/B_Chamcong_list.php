@@ -42,8 +42,8 @@
 	
 	// --- Get record for edit
 	if(isset($vars["act"]) && $vars["act"] == 1):
+        $obj_cc = new cc_class();
         if(isset($vars['user_id']) && isset($vars['ngaycong'])){
-            $obj_cc = new cc_class();
             $obj_config->getDBbyPkey(1);
             $user_mucluong  = 0;
             $user_phucap    = 0;
@@ -67,9 +67,17 @@
                     $obj_phucap = new phucap_class();
                     $obj_phucap->getDBbyPkey($obj_user->user_phucap);
                     $user_phucap = $obj_phucap->phucap_giatri;
-                }
 
-                $obj_cc->insertChamcong($obj_user->user_id,$vars['ngaycong'][$i],$cc_thang,$cc_nam,$user_mucluong,$user_phucap);
+                    $obj_cc->insertChamcong(
+                        $obj_user->user_id,
+                        $obj_user->user_fullname,
+                        $obj_user->user_name,
+                        $vars['ngaycong'][$i],
+                        $cc_thang,$cc_nam,
+                        $user_mucluong,
+                        $user_phucap
+                    );
+                }
 
                 unset($user_phucap);
                 unset($user_mucluong);
@@ -77,9 +85,8 @@
                 unset($obj_phucap);
             }
             unset($obj_user);
-            unset($obj_cc);
-
         }
+        unset($obj_cc);
 	endif;
 	
 	// --- Condition : The row 71 got trouble in uesed --> can't findout the reason

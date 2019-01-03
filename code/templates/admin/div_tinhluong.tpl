@@ -24,9 +24,9 @@
 #report_tinhluong_main_cont{ float:left; width:100%; height:450px; background-color:#ccd8e7}
 #report_tinhluong_tab_bar_tit{ float:left; font-weight:bold; text-transform:uppercase; line-height:20px; padding-left:8px; width:80%;cursor:move; color:#15428b;}
 #report_tinhluong_tab_bar_icon{ float:right; width:10%; text-align:right; padding-top:2px; padding-right:6px}
-#report_tinhluong_content_outsign{ float:left; width:97.5%; height:420px; background-color:#ffffff; margin-left:8px; border:1px solid #99bbe8}
+#report_tinhluong_content_outsign{ float:left; width:98%; height:420px; background-color:#ffffff; margin-left:8px; border:1px solid #99bbe8}
 #report_tinhluong_content_insign{ float:left; width:100%; height:419px; background-color:#dfe8f6; margin-left:1px;}
-#report_tinhluong_cont{ float:left; width:99.6%; height:419px; background-color:#dfe8f6; margin-left:1px;}
+#report_tinhluong_cont{ float:left; width:99.8%; height:419px; background-color:#dfe8f6; margin-left:1px;}
 #report_tinhluong_clear_txt{ float:left; width:100%; height:1px}
 #report_tinhluong_tool_bar{ float:left; width:100%; height:20px; background-color:#dfe8f6; margin-left:1px}
 #report_tinhluong_search_area{ float:left; width:120px; height:20px; padding-left:2px}
@@ -147,9 +147,9 @@ function change_style_tinhluong(obj){
     </div>
 </div>
 
-<div id="report_tinhluong" onclick="javascript: change_bgcl_transport('report_tinhluong')" style="width:760px; float:left; font-weight:normal; position:absolute; display:none; margin:120px 0 0 320px; background-color:#ffffff; border:1px solid #99bbe8; z-index:1010; padding: 0px 1px 1px 1px">
+<div id="report_tinhluong" onclick="javascript: change_bgcl_transport('report_tinhluong')" style="width:943px; float:left; font-weight:normal; position:absolute; display:none; margin:120px 0 0 320px; background-color:#ffffff; border:1px solid #99bbe8; z-index:1010; padding: 0px 1px 1px 1px">
 	<div id="report_tinhluong_main_cont">
-        <div id="report_tinhluong_tab_bar_tit">Biểu đồ luồng công việc</div>
+        <div id="report_tinhluong_tab_bar_tit">In bảng lương tháng</div>
         <div id="report_tinhluong_tab_bar_icon">
         	<a href="javascript: void(0);" onClick="print_tinhluong_page();" style="text-decoration:none">
             <img src="../images/admin/printer_icon.png" class="img_all" height="16" title="In"></a>
@@ -157,7 +157,7 @@ function change_style_tinhluong(obj){
             <img src="{$css_path}icon_dong.png" class="img_all" title="Đóng lại"></a>
         </div>
         <div id="report_tinhluong_content_outsign">
-        	<div id="report_tinhluong_cont">
+        	<div id="report_tinhluong_cont" style="overflow-y:scroll">
             </div>
         </div>
     </div>
@@ -229,9 +229,9 @@ function change_style_tinhluong(obj){
 	});
 	
 	function print_tinhluong_page(){
-        var tinhluong_id = document.getElementById('tinhluong_id').value;
+        var thangluong = document.getElementById('thangluong').value;
 		var w;
-		w=window.open('index.php?ChamcongPrint&mod=tinhluong&tinhluong_id='+tinhluong_id);
+		w=window.open('index.php?InBangluong&mod=tinhluong&thangluong='+thangluong);
 		//w.document.write($('#div_cont_print').load().html());
 		w.print();
 		w.close();
