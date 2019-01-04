@@ -176,12 +176,14 @@ function close_div(obj){
     {include file="div_thuoctinh.tpl"}
     {include file="div_thuoctinh_hopdong.tpl"}
     {include file="div_hdmua.tpl"}
+    {include file="div_hdmua_report.tpl"}
+    {include file="div_hdban.tpl"}
+    {include file="div_hdban_report.tpl"}
     {include file="div_user.tpl"}
     {include file="div_vttb.tpl"}
     {include file="div_plan.tpl"}
     {include file="div_doc.tpl"}
     {include file="div_doc_report.tpl"}
-    {include file="div_hdmua_report.tpl"}
     {include file="div_transport.tpl"}
     {include file="div_congviec.tpl"}
     {include file="div_tinhluong.tpl"}
@@ -330,8 +332,8 @@ function close_div(obj){
                                     {literal}
                                     <script language="javascript">
 									$("#iconcontract").click( function () {
-										document.getElementById('contract_content_main').style.display='block';
-                                        $("#contract_content_main").load("index.php?listHdban&mod=hdban");
+										document.getElementById('hdban_content_main').style.display='block';
+                                        $("#hdban_content_main").load("index.php?listHdban&mod=hdban");
 									});
 									</script>
                                     {/literal}

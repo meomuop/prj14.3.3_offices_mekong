@@ -369,14 +369,25 @@
         case 'listHdmuaLkvb'	: include ($MODULE_PATH.$module_name.'B_HdmuaLkvb_list.php'); exit();
         case 'listHdmuaFile'	: include ($MODULE_PATH.$module_name.'B_HdmuaFile_list.php'); exit();
 
+        case 'listHdban'		: include ($MODULE_PATH.$module_name.'B_Hdban_list.php'); exit();
+        case 'viewHdban'		: include ($MODULE_PATH.$module_name.'B_Hdban_view.php'); exit();
+        case 'expHdbanReport'	: include ($MODULE_PATH.$module_name.'B_Hdban_exp.php'); exit();
+        case 'listKhachhang'	: include ($MODULE_PATH.$module_name.'B_Khachhang_list.php'); exit();
+        case 'listHdbanHoadon'	: include ($MODULE_PATH.$module_name.'B_HdbanHoadon_list.php'); exit();
+        case 'expHdbanHDReport'	: include ($MODULE_PATH.$module_name.'B_HdbanHoadon_exp.php'); exit();
+        case 'listXuatkho'		: include ($MODULE_PATH.$module_name.'B_HdbanXuatkho_list.php'); exit();
+        case 'expXuatkhoReport'	: include ($MODULE_PATH.$module_name.'B_HdbanXuatkho_exp.php'); exit();
+        case 'listHdbanTientrinh'	: include ($MODULE_PATH.$module_name.'B_HdbanTientrinh_list.php'); exit();
+        case 'listHdbanLkvb'	: include ($MODULE_PATH.$module_name.'B_HdbanLkvb_list.php'); exit();
+        case 'listHdbanFile'	: include ($MODULE_PATH.$module_name.'B_HdbanFile_list.php'); exit();
+        case 'listDuan'	        : include ($MODULE_PATH.$module_name.'B_Duan_list.php'); exit();
 
         // Muc 8: Cham cong - Tinh luong
         case 'listChamcong'		: include ($MODULE_PATH.$module_name.'B_Chamcong_list.php'); exit();
         case 'listTldn'         : include ($MODULE_PATH.$module_name.'B_Tldn_list.php'); exit();
-        case 'listThangluong'   : include ($MODULE_PATH.$module_name.'B_Thangluong_list.php'); exit();
+        //case 'listThangluong'   : include ($MODULE_PATH.$module_name.'B_Thangluong_list.php'); exit();
         case 'listPhucap'       : include ($MODULE_PATH.$module_name.'B_Phucap_list.php'); exit();
-        case 'cauhinhLuong'       : include ($MODULE_PATH.$module_name.'B_Luong_cauhinh.php'); exit();
-        case 'InBangluong'       : include ($MODULE_PATH.$module_name.'B_Bangluong_in.php'); exit();
+        case 'cauhinhLuong'     : include ($MODULE_PATH.$module_name.'B_Luong_cauhinh.php'); exit();
 
 		/* --------------------------Utilities--------------------------- */
 		// ------- Logout

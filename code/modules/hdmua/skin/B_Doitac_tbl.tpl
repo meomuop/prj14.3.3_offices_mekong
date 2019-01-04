@@ -38,7 +38,7 @@
                     <td align="left">
                         <input type="text" name="doitac_truso" id="doitac_truso" class="text_long" value="{$obj_info.doitac_truso}"/>
                     </td>
-                    <td align="left">Mã số thuê:</td>
+                    <td align="left">Mã số thuế:</td>
                     <td align="left">
                         <input type="text" id="doitac_mst" name="doitac_mst" class="text_short" value="{$obj_info.doitac_mst}"/>
                     </td>
@@ -70,7 +70,7 @@
                     </td>
                 </tr>
                 <tr height="30">
-                    <td align="left">Mã số thuê :</td>
+                    <td align="left">Tình trạng :</td>
                     <td align="left">
                         {if $obj_info.doitac_active neq ''}
                             <input type="radio" id="doitac_active" name="doitac_active" value="1" {if $obj_info.doitac_active eq 1} checked="checked" {/if} />&nbsp;Hiển thị&nbsp;&nbsp;&nbsp;&nbsp;
