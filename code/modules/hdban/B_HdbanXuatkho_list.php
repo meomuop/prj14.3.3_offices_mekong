@@ -11,7 +11,7 @@
 
 	// ------------------------------
     include ($CLASSES_PATH.'/hopdong/clsHdbanXuatkho.php');
-    include ($CLASSES_PATH.'/hopdong/clsHdmuaHoadon.php');
+    include ($CLASSES_PATH.'/hopdong/clsHdbanHoadon.php');
     include ($CLASSES_PATH.'/hopdong/clsDanhmuc.php');
     include ($CLASSES_PATH.'/hopdong/clsHanghoa.php');
     include ($CLASSES_PATH.'/hopdong/clsDvtinh.php');
@@ -200,10 +200,10 @@
 	$assign_list['order_id'] 	= $order_id;
 	$assign_list['processurl'] 	= $processurl;
 	$assign_list['vars'] 		= $vars;
-	$assign_list['obj_info'] 	= $obj_info;
-	$assign_list['error'] 		= $error;
-	$assign_list['lastNum'] 	= $lastNum;
-	$assign_list['complete'] 	= $complete;
+	$assign_list['obj_info'] 	= isset($obj_info) ? $obj_info : "";
+	$assign_list['error'] 		= isset($error) ? $error : "";
+	$assign_list['lastNum'] 	= isset($lastNum) ? $lastNum : "";
+	$assign_list['complete'] 	= isset($complete) ? $complete : "";
 	
 	$display = dirname(__FILE__)."/skin/B_HdbanXuatkho_tbl.tpl";
 	$assign_list['display'] = $display;

@@ -429,10 +429,10 @@
                     <div id="extra_{$count}" style="position:absolute; display:none; height:auto; width:140px; margin:2px 111px; border:1px solid #8ea4c1; border-right:1px solid #8ea4c1; background-color:#dfe8f6">
                         <div style="float:left; width:140px; height:18px; border-right:1px solid #dfe8f6"><b>&nbsp;Thao tác:</b></div>
                         <div style="float:left; width:140px; padding:0 0 0 3px">
-                            <div style="float:left; width:135px">- <a href="javascript: void(0)" onclick="javascript: show_tonkho({$obj_list[pi]->hoadon_id})">Quản lý tồn</a></div>
+                            <div style="float:left; width:135px">- <a href="javascript: void(0)" onclick="javascript: show_xuatkho({$obj_list[pi]->hoadon_id})">Quản lý xuất</a></div>
                         </div>
                         <div style="float:left; width:140px; padding:0 0 0 3px">
-                             - <a href="javascript: void(0)" onclick="javascript: show_hdban_hopdong({$obj_list[pi]->hdban_id})">Thông tin hợp đồng</a>
+                             - <a href="javascript: void(0)" onclick="javascript: show_hdban_thongtin({$obj_list[pi]->hdban_id})">Thông tin hợp đồng</a>
                         </div>
                     </div>
                 </div>
@@ -649,16 +649,16 @@
 	}
 
 	
-	function show_tonkho(hoadon_id){
+	function show_xuatkho(hoadon_id){
         change_style_hdban(3);
 		document.getElementById('hdban_content_main').style.display='block';
 		//var arg = document.getElementById('arg').value;
-		$("#hdban_content_main").load("?listTonkho&mod=hdban&hoadon_id="+hoadon_id);
+		$("#hdban_content_main").load("?listXuatkho&mod=hdban&hoadon_id="+hoadon_id);
 	}
 
-	function show_hdban_hopdong(hoadon_id){
-		document.getElementById('div_view_doc').style.display='block';
-		$("#list_view_hoadon_cont").load("?viewHdbanHoadon&mod=hdban&hoadon_id="+hoadon_id);
+	function show_hdban_thongtin(hdban_id){
+        document.getElementById('div_view_hdban').style.display='block';
+        $("#list_view_hdban_cont").load("?viewHdban&mod=hdban&hdban_id="+hdban_id);
 	}
 		
 	function gotoPage_HdbanHoadon(processurl,page){

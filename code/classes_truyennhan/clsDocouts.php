@@ -1,6 +1,6 @@
 <?php
 /*-------------------------------------------
-- PHP Frame work Informa
+- PHP Smarty Template Engine
 - Created by Le Anh Van - anhvan3103@gmail.com
 --------------------------------------------*/
 

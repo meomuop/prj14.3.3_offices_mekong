@@ -14,7 +14,7 @@
     </style>
 
 {/literal}
-<div id="thuchien_content_insign">
+<div id="thuchien_hdban_content_insign">
 	<form method="post" name="frmList_HdbanTientrinh" action="?listHdbanTientrinh{$vars.arg}" id="frmList_HdbanTientrinh">
     <!------------------------------------------THEM MOI------------------------------------>
     <fieldset style="width:520px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px">
@@ -87,8 +87,8 @@
                                             hdban_sohd:hdban_sohd
                                         },
                                         function(data){
-                                            $('#list_thuchien_cont').html(data);
-                                            $("#list_thuchien_cont").show();
+                                            $('#list_thuchien_hdban_cont').html(data);
+                                            $("#list_thuchien_hdban_cont").show();
                                         }
                                     );
                                     return false;
@@ -339,7 +339,7 @@
 			url: processurl,
 			data: dataString,
 			success: function(data) {
-				$('#list_thuchien_cont').fadeOut('fast').load(processurl+"&numresult="+numresult+"&order="+order+"&curpage="+curpage).fadeIn("fast");
+				$('#list_thuchien_hdban_cont').fadeOut('fast').load(processurl+"&numresult="+numresult+"&order="+order+"&curpage="+curpage).fadeIn("fast");
 			}
 		});
 	}
@@ -350,7 +350,7 @@
 		order = $("#order_HdbanTientrinh").val();
 		cur_pos = 0;
 		alert(processurl);
-		$("#list_thuchien_cont").load(processurl+"&numresult="+numresult+"&order="+order+"&cur_pos="+cur_pos);
+		$("#list_thuchien_hdban_cont").load(processurl+"&numresult="+numresult+"&order="+order+"&cur_pos="+cur_pos);
 	}
 		
 	function gotoPage_HdbanTientrinh(processurl,page){
@@ -358,7 +358,7 @@
 		numresult = $("#numresult_HdbanTientrinh").val();
 		order = $("#order_HdbanTientrinh").val();
 		//alert(processurl+'-'+page+'-'+numresult+'-'+order);
-		$("#list_thuchien_cont").load(processurl+"&numresult="+numresult+"&order="+order+"&curpage="+page);
+		$("#list_thuchien_hdban_cont").load(processurl+"&numresult="+numresult+"&order="+order+"&curpage="+page);
 	}
 
 	function search_me_HdbanTientrinh(){
@@ -381,20 +381,20 @@
                 ngayxuat_3:ngayxuat_3
 			},
 			function(data){
-				$('#list_thuchien_cont').html(data);
-				$("#list_thuchien_cont").show();
+				$('#list_thuchien_hdban_cont').html(data);
+				$("#list_thuchien_hdban_cont").show();
 			}
 		);
 	}
 	
 	function edit_me_HdbanTientrinh(id,hdban_id){
 	    //alert("?listHdbanTientrinh&mod=hdban&edit_me=1&hdban_id="+hdban_id);
-		$("#list_thuchien_cont").load("?listHdbanTientrinh&mod=hdban&edit_me=1&tientrinh_id="+id+"&hdban_id="+hdban_id);
+		$("#list_thuchien_hdban_cont").load("?listHdbanTientrinh&mod=hdban&edit_me=1&tientrinh_id="+id+"&hdban_id="+hdban_id);
 	}
 		
 	$("#a_ref_HdbanTientrinh").click( function () {
-			$('#list_thuchien_cont').hide();
-			$('#list_thuchien_cont').fadeOut('fast').load('index.php?listHdbanTientrinh'+$("#arg").val()+"&hdban_id="+$("#hdban_HdbanTientrinh").val()).fadeIn("fast");
+			$('#list_thuchien_hdban_cont').hide();
+			$('#list_thuchien_hdban_cont').fadeOut('fast').load('index.php?listHdbanTientrinh'+$("#arg").val()+"&hdban_id="+$("#hdban_HdbanTientrinh").val()).fadeIn("fast");
 		});
 </script>
 {/literal}

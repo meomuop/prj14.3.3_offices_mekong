@@ -2,45 +2,144 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8c3f3dc-c879-4987-a3e0-10e5381e58f3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/code/classes/hopdong/clsDuan.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/classes/hopdong/clsHdban.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/classes/hopdong/clsHdbanFile.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/classes/hopdong/clsHdbanHoadon.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/classes/hopdong/clsHdbanLkvb.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/classes/hopdong/clsHdbanTientrinh.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/classes/hopdong/clsHdbanXuatkho.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/classes/hopdong/clsKhachhang.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/modules/hdban/B_Duan_list.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/modules/hdban/B_HdbanFile_list.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/modules/hdban/B_HdbanHoadon_exp.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/modules/hdban/B_HdbanHoadon_list.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/modules/hdban/B_HdbanLkvb_list.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/modules/hdban/B_HdbanTientrinh_list.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/modules/hdban/B_HdbanXuatkho_exp.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/modules/hdban/B_HdbanXuatkho_list.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/modules/hdban/B_Hdban_exp.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/modules/hdban/B_Hdban_list.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/modules/hdban/B_Hdban_view.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/modules/hdban/B_Khachhang_list.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/modules/hdban/skin/B_Duan_tbl.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/modules/hdban/skin/B_HdbanFile_tbl.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/modules/hdban/skin/B_HdbanHoadon_exp.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/modules/hdban/skin/B_HdbanHoadon_tbl.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/modules/hdban/skin/B_HdbanLkvb_tbl.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/modules/hdban/skin/B_HdbanTientrinh_tbl.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/modules/hdban/skin/B_HdbanXuatkho_exp.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/modules/hdban/skin/B_HdbanXuatkho_tbl.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/modules/hdban/skin/B_Hdban_exp.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/modules/hdban/skin/B_Hdban_list.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/modules/hdban/skin/B_Hdban_tbl.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/modules/hdban/skin/B_Hdban_view.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/modules/hdban/skin/B_Khachhang_tbl.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/templates/admin/div_hdban.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/templates/admin/div_hdban_report.tpl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/admin/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/modules/hdmua/skin/B_Doitac_tbl.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/code/modules/hdmua/skin/B_Doitac_tbl.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/templates/admin/admin_home.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/code/templates/admin/admin_home.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsAddUsers.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsAddUsers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsBlock.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsBlock.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsCVFiles.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsCVFiles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsConfig.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsConfig.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsCvCats.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsCvCats.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsCvGiamsat.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsCvGiamsat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsCvIndexs.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsCvIndexs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsCvLogs.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsCvLogs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsCvPhoihop.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsCvPhoihop.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsCvSubs.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsCvSubs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsDepartments.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsDepartments.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsDlFiles.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsDlFiles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsDls.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsDls.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsDocCats.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsDocCats.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsDocDT.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsDocDT.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsDocDTFiles.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsDocDTFiles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsDocFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsDocFields.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsDocFiles.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsDocFiles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsDocLevels.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsDocLevels.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsDocOutFiles.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsDocOutFiles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsDocReplys.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsDocReplys.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsDocUsers.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsDocUsers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsDocdays.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsDocdays.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsDocouts.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsDocouts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsDocs.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsDocs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsDocsDocreplys.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsDocsDocreplys.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsDocsDocsReport.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsDocsDocsReport.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsDocsLateCv.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsDocsLateCv.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsDocsLateReport.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsDocsLateReport.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsHdsds.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsHdsds.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsHolidays.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsHolidays.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsImportants.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsImportants.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsInterdiscis.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsInterdiscis.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsKdls.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsKdls.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsLevels.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsLevels.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsMail.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsMail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsMime.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsMime.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsModule.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsModule.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsMsgUsers.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsMsgUsers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsMsgs.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsMsgs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsObjects.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsObjects.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsPlanDetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsPlanDetails.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsPlancats.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsPlancats.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsPlans.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsPlans.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsPorts.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsPorts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsSecrets.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsSecrets.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsSignObjs.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsSignObjs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsSignPers.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsSignPers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsTrinhdos.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsTrinhdos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsUnits.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsUnits.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsUsers.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsUsers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsVttbCats.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsVttbCats.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsVttbDatlichs.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsVttbDatlichs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsVttbRepares.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsVttbRepares.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsVttbReplaces.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsVttbReplaces.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsVttbSubs.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsVttbSubs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/clsVttbs.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/clsVttbs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/hopdong/clsDanhmuc.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/hopdong/clsDanhmuc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/hopdong/clsDoitac.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/hopdong/clsDoitac.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/hopdong/clsDuan.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/hopdong/clsDuan.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/hopdong/clsDvtiente.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/hopdong/clsDvtiente.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/hopdong/clsDvtinh.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/hopdong/clsDvtinh.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/hopdong/clsHanghoa.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/hopdong/clsHanghoa.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/hopdong/clsHdban.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/hopdong/clsHdban.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/hopdong/clsHdbanFile.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/hopdong/clsHdbanFile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/hopdong/clsHdbanHoadon.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/hopdong/clsHdbanHoadon.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/hopdong/clsHdbanLkvb.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/hopdong/clsHdbanLkvb.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/hopdong/clsHdbanTientrinh.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/hopdong/clsHdbanTientrinh.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/hopdong/clsHdbanXuatkho.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/hopdong/clsHdbanXuatkho.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/hopdong/clsHdmua.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/hopdong/clsHdmua.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/hopdong/clsHdmuaFile.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/hopdong/clsHdmuaFile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/hopdong/clsHdmuaHoadon.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/hopdong/clsHdmuaHoadon.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/hopdong/clsHdmuaLkvb.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/hopdong/clsHdmuaLkvb.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/hopdong/clsHdmuaTientrinh.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/hopdong/clsHdmuaTientrinh.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/hopdong/clsHdmuaTonkho.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/hopdong/clsHdmuaTonkho.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/hopdong/clsKhachhang.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/hopdong/clsKhachhang.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/tinhluong/clsChamcong.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/tinhluong/clsChamcong.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/tinhluong/clsPhucap.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/tinhluong/clsPhucap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/tinhluong/clsThangluong.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/tinhluong/clsThangluong.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes/tinhluong/clsTldn.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/tinhluong/clsTldn.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes_truyennhan/clsAddUsers.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes_truyennhan/clsAddUsers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes_truyennhan/clsBlock.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes_truyennhan/clsBlock.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes_truyennhan/clsConfig.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes_truyennhan/clsConfig.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes_truyennhan/clsDepartments.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes_truyennhan/clsDepartments.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes_truyennhan/clsDocCats.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes_truyennhan/clsDocCats.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes_truyennhan/clsDocFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes_truyennhan/clsDocFields.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes_truyennhan/clsDocFiles.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes_truyennhan/clsDocFiles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes_truyennhan/clsDocLevels.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes_truyennhan/clsDocLevels.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes_truyennhan/clsDocOutFiles.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes_truyennhan/clsDocOutFiles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes_truyennhan/clsDocReceives.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes_truyennhan/clsDocReceives.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes_truyennhan/clsDocReplys.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes_truyennhan/clsDocReplys.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes_truyennhan/clsDocTransports.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes_truyennhan/clsDocTransports.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes_truyennhan/clsDocUsers.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes_truyennhan/clsDocUsers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes_truyennhan/clsDocouts.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes_truyennhan/clsDocouts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes_truyennhan/clsDocreplyfiles.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes_truyennhan/clsDocreplyfiles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes_truyennhan/clsDocs.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes_truyennhan/clsDocs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes_truyennhan/clsDocsDocreplys.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes_truyennhan/clsDocsDocreplys.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes_truyennhan/clsDocsDocsReport.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes_truyennhan/clsDocsDocsReport.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes_truyennhan/clsFeedbacks.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes_truyennhan/clsFeedbacks.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes_truyennhan/clsHolidays.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes_truyennhan/clsHolidays.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes_truyennhan/clsImportants.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes_truyennhan/clsImportants.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes_truyennhan/clsLevels.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes_truyennhan/clsLevels.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes_truyennhan/clsMail.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes_truyennhan/clsMail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes_truyennhan/clsMime.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes_truyennhan/clsMime.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes_truyennhan/clsModule.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes_truyennhan/clsModule.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes_truyennhan/clsMsgUsers.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes_truyennhan/clsMsgUsers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes_truyennhan/clsMsgs.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes_truyennhan/clsMsgs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes_truyennhan/clsObjects.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes_truyennhan/clsObjects.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes_truyennhan/clsReceives.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes_truyennhan/clsReceives.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes_truyennhan/clsRecusers.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes_truyennhan/clsRecusers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes_truyennhan/clsSecrets.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes_truyennhan/clsSecrets.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes_truyennhan/clsSignObjs.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes_truyennhan/clsSignObjs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes_truyennhan/clsSignPers.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes_truyennhan/clsSignPers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes_truyennhan/clsUnits.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes_truyennhan/clsUnits.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/classes_truyennhan/clsUsers.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes_truyennhan/clsUsers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/cv_uploads_2018/911837b47d4a59e28cae4ce2a03e3eeb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/doc_uploads_2018/00e7f67e3bcb8751f03147361532da70.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/doc_uploads_2018/291164692bc40ccb99eb366e48a54bec.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/doc_uploads_2018/55bd3391e1d689ce9e23cf4cb93bbb37.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/doc_uploads_2018/62f948e10ab6dc5f7e1e5de3533d3ce0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/doc_uploads_2018/669bc399eb384dc2a046352df4357b6f.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/doc_uploads_2018/911837b47d4a59e28cae4ce2a03e3eeb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/doc_uploads_2018/d9c0132684aa750f8b9d2cb87f9327f2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/doc_uploads_2018/ef56a3cd41c2b0d47de92561b210be9b.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/hdmua_tientrinh_uploads_2018/291164692bc40ccb99eb366e48a54bec.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/hdmua_tientrinh_uploads_2018/463bfcd287b2e1585dcefb1cb9c55190.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/hoadonmua_uploads_2018/291164692bc40ccb99eb366e48a54bec.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/hoadonmua_uploads_2018/463bfcd287b2e1585dcefb1cb9c55190.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/kdl_uploads_2018/911837b47d4a59e28cae4ce2a03e3eeb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/modules/hdban/B_HdbanXuatkho_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/modules/hdban/B_HdbanXuatkho_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/modules/hdban/skin/B_HdbanHoadon_tbl.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/code/modules/hdban/skin/B_HdbanHoadon_tbl.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/modules/hdban/skin/B_HdbanTientrinh_tbl.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/code/modules/hdban/skin/B_HdbanTientrinh_tbl.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/modules/hdban/skin/B_Hdban_tbl.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/code/modules/hdban/skin/B_Hdban_tbl.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/modules/hdban/skin/B_Hdban_view.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/code/modules/hdban/skin/B_Hdban_view.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/modules/hdmua/skin/B_HdmuaHoadon_tbl.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/code/modules/hdmua/skin/B_HdmuaHoadon_tbl.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/templates/admin/div_hdban.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/code/templates/admin/div_hdban.tpl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,8 +169,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/admin/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="41" column="6" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
+            <state relative-caret-position="96">
+              <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -80,154 +179,120 @@
         <entry file="file://$PROJECT_DIR$/code/templates/admin/admin_home.tpl">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="137">
-              <caret line="335" column="100" selection-start-line="335" selection-start-column="95" selection-end-line="335" selection-end-column="100" />
+              <caret line="337" column="45" selection-start-line="337" selection-start-column="45" selection-end-line="337" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/classes/hopdong/clsDuan.php">
+        <entry file="file://$PROJECT_DIR$/code/modules/hdban/skin/B_Hdban_tbl.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="20" column="23" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="23" />
+            <state relative-caret-position="209">
+              <caret line="840" column="83" selection-start-line="839" selection-start-column="8" selection-end-line="840" selection-end-column="83" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/code/modules/hdban/skin/B_Duan_tbl.tpl">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/modules/hdban/skin/B_HdbanTientrinh_tbl.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="158" column="148" selection-start-line="158" selection-start-column="148" selection-end-line="158" selection-end-column="148" />
+            <state relative-caret-position="5788">
+              <caret line="383" column="58" lean-forward="true" selection-start-line="383" selection-start-column="58" selection-end-line="383" selection-end-column="58" />
               <folding>
-                <element signature="e#901#980#0#HTML" expanded="true" />
-                <element signature="e#1053#1059#0#HTML" expanded="true" />
-                <element signature="e#1060#1066#0#HTML" expanded="true" />
-                <element signature="e#1076#1082#0#HTML" expanded="true" />
-                <element signature="e#1266#1289#0#HTML" expanded="true" />
-                <element signature="e#1437#1501#0#HTML" expanded="true" />
-                <element signature="e#1576#1640#0#HTML" expanded="true" />
-                <element signature="e#1834#1898#0#HTML" expanded="true" />
-                <element signature="e#1986#2050#0#HTML" expanded="true" />
-                <element signature="e#2264#2328#0#HTML" expanded="true" />
-                <element signature="e#2408#2472#0#HTML" expanded="true" />
-                <element signature="e#2264#2328#0#HTML" expanded="true" />
-                <element signature="e#2402#2479#0#HTML" expanded="true" />
-                <element signature="e#2801#2865#0#HTML" expanded="true" />
-                <element signature="e#2943#3007#0#HTML" expanded="true" />
-                <element signature="e#3203#3267#0#HTML" expanded="true" />
-                <element signature="e#3341#3418#0#HTML" expanded="true" />
-                <element signature="e#4676#4741#0#HTML" expanded="true" />
-                <element signature="e#9492#9585#0#HTML" expanded="true" />
-                <element signature="e#9649#9680#0#HTML" expanded="true" />
-                <element signature="e#9739#9769#0#HTML" expanded="true" />
-                <element signature="e#9770#9776#0#HTML" expanded="true" />
-                <element signature="e#9777#9783#0#HTML" expanded="true" />
-                <element signature="e#9791#9797#0#HTML" expanded="true" />
-                <element signature="e#9825#9856#0#HTML" expanded="true" />
-                <element signature="e#10095#10125#0#HTML" expanded="true" />
-                <element signature="e#10306#10348#0#HTML" expanded="true" />
-                <element signature="e#10373#10481#0#HTML" expanded="true" />
-                <element signature="e#10520#10557#0#HTML" expanded="true" />
-                <element signature="e#10612#10631#0#HTML" expanded="true" />
-                <element signature="e#10635#10641#0#HTML" expanded="true" />
-                <element signature="e#10790#10809#0#HTML" expanded="true" />
-                <element signature="e#10813#10819#0#HTML" expanded="true" />
-                <element signature="e#10033#10052#0#HTML" expanded="true" />
-                <element signature="e#10056#10062#0#HTML" expanded="true" />
-                <element signature="e#11053#11090#0#HTML" expanded="true" />
-                <element signature="e#11149#11186#0#HTML" expanded="true" />
-                <element signature="e#11246#11283#0#HTML" expanded="true" />
-                <element signature="e#11339#11376#0#HTML" expanded="true" />
-                <element signature="e#11638#11686#0#HTML" expanded="true" />
-                <element signature="e#11814#11908#0#HTML" expanded="true" />
-                <element signature="e#11967#12032#0#HTML" expanded="true" />
-                <element signature="e#10017#10036#0#HTML" expanded="true" />
-                <element signature="e#10087#10124#0#HTML" expanded="true" />
-                <element signature="e#11719#11759#0#HTML" expanded="true" />
-                <element signature="e#10228#10234#0#HTML" expanded="true" />
-                <element signature="e#11999#12039#0#HTML" expanded="true" />
-                <element signature="e#12069#12075#0#HTML" expanded="true" />
-                <element signature="e#12184#12224#0#HTML" expanded="true" />
-                <element signature="e#12293#12299#0#HTML" expanded="true" />
-                <element signature="e#12434#12471#0#HTML" expanded="true" />
-                <element signature="e#13139#13176#0#HTML" expanded="true" />
-                <element signature="e#13835#13872#0#HTML" expanded="true" />
-                <element signature="e#14184#14221#0#HTML" expanded="true" />
-                <element signature="e#14551#14588#0#HTML" expanded="true" />
-                <element signature="e#15193#15254#0#HTML" expanded="true" />
-                <element signature="e#15595#15672#0#HTML" expanded="true" />
-                <element signature="e#15673#15679#1#HTML" expanded="true" />
-                <element signature="e#16433#16469#0#HTML" expanded="true" />
-                <element signature="e#16484#16514#0#HTML" expanded="true" />
-                <element signature="e#16540#16570#0#HTML" expanded="true" />
-                <element signature="e#16707#16780#0#HTML" expanded="true" />
-                <element signature="e#16810#16840#0#HTML" expanded="true" />
-                <element signature="e#17639#17716#0#HTML" expanded="true" />
-                <element signature="e#17717#17723#1#HTML" expanded="true" />
-                <element signature="e#17739#17769#0#HTML" expanded="true" />
-                <element signature="e#17922#17999#0#HTML" expanded="true" />
-                <element signature="e#18000#18006#1#HTML" expanded="true" />
-                <element signature="e#18022#18077#0#HTML" expanded="true" />
-                <element signature="e#18092#18122#0#HTML" expanded="true" />
-                <element signature="e#18146#18176#0#HTML" expanded="true" />
-                <element signature="e#18235#18295#0#HTML" expanded="true" />
-                <element signature="e#18597#18615#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#2;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/modules/hdban/B_Duan_list.php">
+        <entry file="file://$PROJECT_DIR$/code/modules/hdban/skin/B_Hdban_view.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1168">
-              <caret line="103" column="24" selection-start-line="103" selection-start-column="24" selection-end-line="103" selection-end-column="24" />
+            <state relative-caret-position="226">
+              <caret line="87" column="71" selection-start-line="87" selection-start-column="71" selection-end-line="87" selection-end-column="71" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#legend#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#2;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#3;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#3;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#4;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#4;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#5;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#5;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#5;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#6;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#6;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#6;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#7;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#7;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#7;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#8;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#8;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#8;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#9;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#9;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#9;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/modules/hdban/B_Hdban_view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="549">
+              <caret line="44" column="52" selection-start-line="44" selection-start-column="52" selection-end-line="44" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/classes/hopdong/clsHdbanHoadon.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="64">
+              <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/code/modules/hdban/B_HdbanXuatkho_list.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="216" column="58" selection-start-line="216" selection-start-column="58" selection-end-line="216" selection-end-column="58" />
+            <state relative-caret-position="377">
+              <caret line="203" column="62" selection-start-line="203" selection-start-column="62" selection-end-line="203" selection-end-column="62" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/modules/hdban/B_HdbanXuatkho_exp.php">
+        <entry file="file://$PROJECT_DIR$/code/modules/hdban/skin/B_HdbanHoadon_tbl.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="85" column="58" selection-start-line="85" selection-start-column="58" selection-end-line="85" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/modules/hdban/B_HdbanTientrinh_list.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="186" column="58" selection-start-line="186" selection-start-column="46" selection-end-line="186" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/modules/hdban/B_HdbanLkvb_list.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="174" column="44" selection-start-line="174" selection-start-column="44" selection-end-line="174" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/modules/hdban/B_HdbanHoadon_list.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2811">
-              <caret line="12" column="57" lean-forward="true" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
+            <state relative-caret-position="241">
+              <caret line="655" column="48" selection-start-line="655" selection-start-column="48" selection-end-line="655" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -236,18 +301,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>tldn_giatri</find>
-      <find>tldn_diengiai</find>
-      <find>listThangluong</find>
-      <find>site_logo</find>
-      <find>site_banner</find>
-      <find>editAct</find>
-      <find>object</find>
-      <find>&lt;br&gt;&amp;nbsp;</find>
-      <find>frEdit</find>
-      <find>frCauhinhLuog</find>
-      <find>tldn</find>
-      <find>tldn_id</find>
       <find>phucap_id</find>
       <find>obj_list_user</find>
       <find>font-size: 11px</find>
@@ -257,23 +310,29 @@
       <find>đối tác</find>
       <find>nhapton</find>
       <find>tonkho</find>
-      <find>doitac</find>
       <find>Hopdong_Mua_</find>
       <find>mua</find>
       <find>hdban_content_main</find>
       <find>a_menu_hdban_4</find>
-      <find>hdmua</find>
       <find>Hdmua</find>
       <find>Khachhang</find>
       <find>khachhang</find>
+      <find>hdmua</find>
+      <find>khachhang_id</find>
+      <find>doitac</find>
+      <find>$obj_info</find>
+      <find>PHP Frame work Informa</find>
+      <find>show_hdmua_hopdong</find>
+      <find>show_hdmua_thongtin</find>
+      <find>btnSub_HdbanTientrinh</find>
+      <find>thuchien</find>
+      <find>width: 80%</find>
+      <find>show_hdban_tientrinh</find>
+      <find>show_hdban_hopdong</find>
+      <find>show_hdban_thongtin</find>
+      <find>show_xuatkho</find>
     </findStrings>
     <replaceStrings>
-      <replace>congluong</replace>
-      <replace>Chamcong</replace>
-      <replace>cc</replace>
-      <replace>tinhluong</replace>
-      <replace>phucap_diengiai</replace>
-      <replace>tinhluong_content_main</replace>
       <replace>tldn_heso</replace>
       <replace>tldn_mota</replace>
       <replace>obj_list_user</replace>
@@ -291,19 +350,26 @@
       <replace>banXuat</replace>
       <replace>nhapxuat</replace>
       <replace>xuatkho</replace>
-      <replace>khachhang</replace>
       <replace>Hopdong_Ban_</replace>
       <replace>ban</replace>
-      <replace>Hdban</replace>
       <replace>hdban</replace>
       <replace>Duan</replace>
       <replace>duan</replace>
+      <replace>khachhang</replace>
+      <replace>PHP Smarty Template Engine</replace>
+      <replace>Hdban</replace>
+      <replace>show_hdmua_thongtin</replace>
+      <replace>width: 78%</replace>
+      <replace>show_hdban_thongtin</replace>
+      <replace>thuchien_hdban</replace>
+      <replace>show_xuatkho</replace>
     </replaceStrings>
     <dirStrings>
       <dir>E:\Projects\wamp64\www\smarty\prj14.3.3_offices_mekong\code\modules</dir>
       <dir>E:\Projects\wamp64\www\smarty\prj14.3.3_offices_mekong\code\js</dir>
       <dir>E:\Projects\wamp64\www\smarty\prj14.3.3_offices_mekong\code</dir>
       <dir>E:\Projects\wamp64\www\smarty\prj14.3.3_offices_mekong\code\modules\kdls</dir>
+      <dir>D:\Works\wamp64\www\smarty\prj14.3.3_offices_mekong\code</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -313,10 +379,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/code/classes/clsConfig.php" />
-        <option value="$PROJECT_DIR$/code/modules/config/skin/B_config_edit.tpl" />
-        <option value="$PROJECT_DIR$/code/modules/config/B_config_edit.php" />
-        <option value="$PROJECT_DIR$/code/modules/users/skin/B_User_tbl.tpl" />
         <option value="$PROJECT_DIR$/code/modules/tinhluong/skin/B_Luong_cauhinh.tpl" />
         <option value="$PROJECT_DIR$/code/modules/tinhluong/B_Luong_cauhinh.php" />
         <option value="$PROJECT_DIR$/code/classes/clsUsers.php" />
@@ -335,35 +397,39 @@
         <option value="$PROJECT_DIR$/code/modules/hdban/B_HdbanTientrinh_list.php" />
         <option value="$PROJECT_DIR$/code/modules/hdmua/B_HdmuaTonkho_list.php" />
         <option value="$PROJECT_DIR$/code/modules/hdmua/B_HdmuaTientrinh_list.php" />
-        <option value="$PROJECT_DIR$/code/modules/hdban/skin/B_HdbanTientrinh_tbl.tpl" />
         <option value="$PROJECT_DIR$/code/classes/hopdong/clsHdbanLkvb.php" />
         <option value="$PROJECT_DIR$/code/modules/hdban/B_HdbanLkvb_list.php" />
         <option value="$PROJECT_DIR$/code/modules/hdban/skin/B_HdbanLkvb_tbl.tpl" />
         <option value="$PROJECT_DIR$/code/classes/hopdong/clsHdbanHoadon.php" />
         <option value="$PROJECT_DIR$/code/modules/hdban/B_HdbanHoadon_list.php" />
         <option value="$PROJECT_DIR$/code/modules/hdban/B_HdbanHoadon_exp.php" />
-        <option value="$PROJECT_DIR$/code/modules/hdban/skin/B_HdbanHoadon_tbl.tpl" />
         <option value="$PROJECT_DIR$/code/modules/hdban/skin/B_HdbanHoadon_exp.tpl" />
         <option value="$PROJECT_DIR$/code/classes/hopdong/clsHdbanFile.php" />
         <option value="$PROJECT_DIR$/code/modules/hdban/B_HdbanFile_list.php" />
         <option value="$PROJECT_DIR$/code/modules/hdban/skin/B_HdbanFile_tbl.tpl" />
-        <option value="$PROJECT_DIR$/code/classes/hopdong/clsHdban.php" />
         <option value="$PROJECT_DIR$/code/modules/hdban/B_Hdban_list.php" />
         <option value="$PROJECT_DIR$/code/modules/hdban/B_Hdban_view.php" />
         <option value="$PROJECT_DIR$/code/modules/hdban/B_Hdban_exp.php" />
-        <option value="$PROJECT_DIR$/code/modules/hdban/skin/B_Hdban_tbl.tpl" />
         <option value="$PROJECT_DIR$/code/templates/admin/div_hdban_report.tpl" />
         <option value="$PROJECT_DIR$/code/templates/admin/admin_home.tpl" />
-        <option value="$PROJECT_DIR$/code/templates/admin/div_hdban.tpl" />
         <option value="$PROJECT_DIR$/code/modules/hdban/B_Khachhang_list.php" />
-        <option value="$PROJECT_DIR$/code/modules/hdban/B_HdbanXuatkho_list.php" />
         <option value="$PROJECT_DIR$/code/modules/hdban/B_HdbanXuatkho_exp.php" />
         <option value="$PROJECT_DIR$/code/modules/hdban/B_Duan_list.php" />
         <option value="$PROJECT_DIR$/code/classes/hopdong/clsDuan.php" />
         <option value="$PROJECT_DIR$/code/modules/hdban/skin/B_Khachhang_tbl.tpl" />
         <option value="$PROJECT_DIR$/code/modules/hdmua/skin/B_Doitac_tbl.tpl" />
-        <option value="$PROJECT_DIR$/code/admin/index.php" />
         <option value="$PROJECT_DIR$/code/modules/hdban/skin/B_Duan_tbl.tpl" />
+        <option value="$PROJECT_DIR$/code/classes/hopdong/clsHdban.php" />
+        <option value="$PROJECT_DIR$/code/admin/upload_hdban_hoadon.php" />
+        <option value="$PROJECT_DIR$/code/modules/hdban/B_HdbanXuatkho_list.php" />
+        <option value="$PROJECT_DIR$/code/admin/index.php" />
+        <option value="$PROJECT_DIR$/code/modules/hdmua/skin/B_HdmuaHoadon_tbl.tpl" />
+        <option value="$PROJECT_DIR$/code/templates/admin/div_hdban.tpl" />
+        <option value="$PROJECT_DIR$/code/modules/hdban/skin/B_Hdban_tbl.tpl" />
+        <option value="$PROJECT_DIR$/code/admin/upload_hdban_tientrinh.php" />
+        <option value="$PROJECT_DIR$/code/modules/hdban/skin/B_HdbanTientrinh_tbl.tpl" />
+        <option value="$PROJECT_DIR$/code/modules/hdban/skin/B_Hdban_view.tpl" />
+        <option value="$PROJECT_DIR$/code/modules/hdban/skin/B_HdbanHoadon_tbl.tpl" />
       </list>
     </option>
   </component>
@@ -381,7 +447,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -393,6 +458,12 @@
               <item name="prj14.3.3_offices_mekong" type="b2602c69:ProjectViewProjectNode" />
               <item name="prj14.3.3_offices_mekong" type="462c0819:PsiDirectoryNode" />
               <item name="code" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="prj14.3.3_offices_mekong" type="b2602c69:ProjectViewProjectNode" />
+              <item name="prj14.3.3_offices_mekong" type="462c0819:PsiDirectoryNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="prj14.3.3_offices_mekong" type="b2602c69:ProjectViewProjectNode" />
@@ -482,6 +553,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -499,19 +571,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Works\wamp64\www\smarty\prj14.3.3_offices_mekong\code\admin" />
+      <recent name="E:\Projects\wamp64\www\smarty\prj14.3.3_offices_mekong\code\modules\hdban\skin" />
+      <recent name="E:\Projects\wamp64\www\smarty\prj14.3.3_offices_mekong\code\modules\hdban" />
+      <recent name="E:\Projects\wamp64\www\smarty\prj14.3.3_offices_mekong\code\classes\hopdong" />
+      <recent name="E:\Projects\wamp64\www\smarty\prj14.3.3_offices_mekong\code\templates\admin" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Projects\wamp64\www\smarty\prj14.3.3_offices_mekong\code\classes\tinhluong" />
       <recent name="E:\Projects\wamp64\www\smarty\prj14.3.3_offices_mekong\code\modules" />
       <recent name="E:\Projects\wamp64\www\smarty\prj14.3.3_offices_mekong\code\modules\hopdong\thuoctinh" />
       <recent name="E:\Projects\wamp64\www\smarty\prj14.3.3_offices_mekong\code\modules\docs" />
       <recent name="E:\Projects\wamp64\www\smarty\prj14.3.3_offices_mekong\code\modules\thuoctinh" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Projects\wamp64\www\smarty\prj14.3.3_offices_mekong\code\modules\hdban\skin" />
-      <recent name="E:\Projects\wamp64\www\smarty\prj14.3.3_offices_mekong\code\modules\hdban" />
-      <recent name="E:\Projects\wamp64\www\smarty\prj14.3.3_offices_mekong\code\classes\hopdong" />
-      <recent name="E:\Projects\wamp64\www\smarty\prj14.3.3_offices_mekong\code\templates\admin" />
-      <recent name="E:\Projects\wamp64\www\smarty\prj14.3.3_offices_mekong\code\modules" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -564,16 +636,17 @@
       <workItem from="1546396193087" duration="17998000" />
       <workItem from="1546480126781" duration="12188000" />
       <workItem from="1546528740164" duration="2968000" />
+      <workItem from="1546700097348" duration="4883000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="327145000" />
+    <option name="totallyTimeSpent" value="332028000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="-4" y="-4" width="1374" height="748" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" x="3" y="157" width="283" height="630" id="Project" order="0" sideWeight="0.49919486" visible="true" weight="0.26096824" />
+      <window_info active="true" content_ui="combo" x="3" y="157" width="283" height="630" id="Project" order="0" sideWeight="0.49919486" visible="true" weight="0.26510575" />
       <window_info id="Structure" order="1" sideWeight="0.50080514" side_tool="true" weight="0.22012103" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.32930514" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -616,168 +689,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/code/classes/tinhluong/clsChamcong.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="71" column="14" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/classes/hopdong/clsDoitac.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/hdban/skin/B_HdbanXuatkho_tbl.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="75" column="43" selection-start-line="75" selection-start-column="43" selection-end-line="75" selection-end-column="43" />
-          <folding>
-            <element signature="n#style#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#legend#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#1057#1063#0#HTML" expanded="true" />
-            <element signature="e#1064#1070#0#HTML" expanded="true" />
-            <element signature="e#1080#1086#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#td#2;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#td#2;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#td#2;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#9702#9708#0#HTML" expanded="true" />
-            <element signature="e#9709#9715#0#HTML" expanded="true" />
-            <element signature="e#9724#9730#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#2;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#div#2;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#3;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#3;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#3;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#div#3;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#4;n#div#3;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#12263#12269#0#HTML" expanded="true" />
-            <element signature="e#12270#12276#0#HTML" expanded="true" />
-            <element signature="e#12285#12291#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#6;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#6;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#div#6;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#div#6;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#1;n#div#6;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#2;n#div#6;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#2;n#div#6;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#7;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#7;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#7;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#7;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#14006#14012#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#7;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#div#7;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#14671#14677#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#div#7;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#15617#15623#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#15697#15703#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#15791#15797#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#15872#15878#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#15952#15958#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#6;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#7;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#2;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#17377#17383#0#HTML" expanded="true" />
-            <element signature="e#17412#17418#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#17523#17529#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#17681#17687#0#HTML" expanded="true" />
-            <element signature="e#17719#17725#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#17831#17837#0#HTML" expanded="true" />
-            <element signature="e#17865#17871#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#17976#17982#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#6;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#7;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#8;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#2;n#!!top" expanded="true" />
-            <element signature="e#20039#20045#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#3;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#1;n#div#3;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#3;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#div#2;n#!!top" expanded="true" />
-            <element signature="e#21995#22001#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#6;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#7;n#div#2;n#!!top" expanded="true" />
-            <element signature="e#22286#22292#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#8;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#8;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#8;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#div#1;n#div#8;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#8;n#div#2;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/hdban/skin/B_HdbanXuatkho_exp.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="26" column="73" selection-start-line="26" selection-start-column="73" selection-end-line="26" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/classes/hopdong/clsHdbanXuatkho.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="34" column="48" selection-start-line="34" selection-start-column="48" selection-end-line="34" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/classes/hopdong/clsHdmuaTonkho.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="6" column="41" lean-forward="true" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/hdmua/B_HdmuaTonkho_exp.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="22" column="43" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/modules/hdmua/B_HdmuaTonkho_list.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
@@ -789,86 +700,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="23" column="43" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/hdban/skin/B_HdbanTientrinh_tbl.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="396" column="133" selection-start-line="396" selection-start-column="133" selection-end-line="396" selection-end-column="133" />
-          <folding>
-            <element signature="n#style#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#legend#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#1072#1078#0#HTML" expanded="true" />
-            <element signature="e#1079#1085#0#HTML" expanded="true" />
-            <element signature="e#1095#1101#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#2385#2391#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#6;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#2939#2945#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#7;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#8;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#3762#3768#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#6853#6859#0#HTML" expanded="true" />
-            <element signature="e#6860#6866#0#HTML" expanded="true" />
-            <element signature="e#6875#6881#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#7991#7997#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#8071#8077#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#2;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#9654#9660#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#9822#9828#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#6;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#2;n#!!top" expanded="true" />
-            <element signature="e#12227#12233#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#3;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#1;n#div#3;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#3;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#div#2;n#!!top" expanded="true" />
-            <element signature="e#14199#14205#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#6;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#7;n#div#2;n#!!top" expanded="true" />
-            <element signature="e#14492#14498#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#8;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#8;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#8;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#div#1;n#div#8;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#8;n#div#2;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -907,20 +738,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="376">
           <caret line="92" column="53" selection-start-line="92" selection-start-column="53" selection-end-line="92" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/classes/hopdong/clsHdbanHoadon.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-80">
-          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/classes/hopdong/clsHdmuaHoadon.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -995,20 +812,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/hdban/B_Hdban_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="656">
-          <caret line="44" column="52" lean-forward="true" selection-start-line="44" selection-start-column="52" selection-end-line="44" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/hdban/B_Hdban_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3103">
-          <caret line="216" column="58" selection-start-line="216" selection-start-column="58" selection-end-line="216" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/modules/hdban/skin/B_Hdban_list.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1018,196 +821,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/hdban/skin/B_Hdban_view.tpl">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/modules/hdban/skin/B_Hdban_exp.tpl">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/hdban/skin/B_Hdban_tbl.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16064">
-          <caret line="927" column="88" selection-start-line="927" selection-start-column="88" selection-end-line="927" selection-end-column="88" />
-          <folding>
-            <element signature="n#style#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#legend#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#7229#7235#0#HTML" expanded="true" />
-            <element signature="e#7236#7242#0#HTML" expanded="true" />
-            <element signature="e#7252#7258#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#8533#8539#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#3;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#9850#9856#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#5;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#6;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#7;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#11320#11326#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#8;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#9;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#10;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#12205#12211#0#HTML" expanded="true" />
-            <element signature="e#12332#12338#0#HTML" expanded="true" />
-            <element signature="e#12460#12466#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#11;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#12;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#13;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#14;n#td#0;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#6;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#7;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#8;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#9;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#10;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#11;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#12;n#td#1;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#td#2;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#td#2;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#td#2;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#td#2;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#td#2;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#td#2;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#19623#19629#0#HTML" expanded="true" />
-            <element signature="e#19758#19764#0#HTML" expanded="true" />
-            <element signature="e#19895#19901#0#HTML" expanded="true" />
-            <element signature="e#20031#20037#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#6;n#td#2;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#7;n#td#2;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#8;n#td#2;n#tr#1;n#table#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#20643#20649#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#26816#26822#0#HTML" expanded="true" />
-            <element signature="e#26823#26829#0#HTML" expanded="true" />
-            <element signature="e#26838#26844#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#2;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#div#2;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#3;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#3;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#3;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#div#3;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#29241#29247#0#HTML" expanded="true" />
-            <element signature="e#29248#29254#0#HTML" expanded="true" />
-            <element signature="e#29263#29269#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#6;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#6;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#div#6;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#div#6;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#1;n#div#6;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#2;n#div#6;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#2;n#div#6;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#7;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#7;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#7;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#7;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#30990#30996#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#7;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#div#7;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#31631#31637#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#div#7;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#6;n#div#7;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#7;n#div#7;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#8;n#div#7;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#9;n#div#7;n#legend#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#33699#33705#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#33782#33788#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#33862#33868#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#33943#33949#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#34028#34034#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#6;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#34110#34116#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#7;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#8;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#9;n#div#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#2;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#35596#35602#0#HTML" expanded="true" />
-            <element signature="e#35629#35635#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#35740#35746#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#36083#36089#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#3;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#3;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#37035#37041#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#2;n#div#3;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#2;n#div#3;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#2;n#div#3;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#div#2;n#div#3;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#38311#38317#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#38478#38484#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#6;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#38961#38967#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#7;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#8;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#9;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#10;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#2;n#!!top" expanded="true" />
-            <element signature="e#41582#41588#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#3;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#1;n#div#3;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#3;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#div#2;n#!!top" expanded="true" />
-            <element signature="e#43482#43488#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#6;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#7;n#div#2;n#!!top" expanded="true" />
-            <element signature="e#43766#43772#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#8;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#8;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#8;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#div#1;n#div#8;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#8;n#div#2;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/classes/hopdong/clsHdban.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2051">
-          <caret line="135" column="47" selection-start-line="135" selection-start-column="47" selection-end-line="135" selection-end-column="47" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/code/classes/hopdong/clsHdmua.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -1215,9 +830,6 @@
           <caret line="4" column="46" lean-forward="true" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/templates/admin/div_hdmua.tpl">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/code/templates/admin/div_hdmua_report.tpl">
       <provider selected="true" editor-type-id="text-editor" />
@@ -1236,17 +848,218 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/hdban/B_Khachhang_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1805">
+          <caret line="155" column="62" selection-start-line="155" selection-start-column="50" selection-end-line="155" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/hdmua/skin/B_Doitac_tbl.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="72" column="47" selection-start-line="72" selection-start-column="47" selection-end-line="72" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/hdban/skin/B_Khachhang_tbl.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="80" column="29" lean-forward="true" selection-start-line="74" selection-start-column="24" selection-end-line="80" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/hdban/B_Duan_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1600">
+          <caret line="103" column="24" selection-start-line="103" selection-start-column="24" selection-end-line="103" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/hdban/B_HdbanXuatkho_exp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1312">
+          <caret line="85" column="58" selection-start-line="85" selection-start-column="58" selection-end-line="85" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/hdban/B_HdbanTientrinh_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2928">
+          <caret line="186" column="58" selection-start-line="186" selection-start-column="46" selection-end-line="186" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/hdban/B_HdbanHoadon_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/hdban/skin/B_Duan_tbl.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="158" column="148" selection-start-line="158" selection-start-column="148" selection-end-line="158" selection-end-column="148" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/classes/hopdong/clsDuan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="20" column="23" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/hdban/B_Hdban_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-159">
+          <caret line="74" column="56" selection-start-line="212" selection-start-column="18" selection-end-line="212" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/classes/hopdong/clsKhachhang.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="882">
+          <caret line="60" column="13" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/classes/hopdong/clsHdban.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="46" column="23" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/admin/upload_hdmua_hoadon.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/admin/upload_hdban_hoadon.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="77" column="46" selection-start-line="77" selection-start-column="46" selection-end-line="77" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/classes/hopdong/clsHdmuaHoadon.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/classes/hopdong/clsHdbanHoadon.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/admin/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/classes/clsAddUsers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3">
+          <folding>
+            <element signature="e#6#174#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/hdmua/skin/B_HdmuaHoadon_tbl.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="660" column="83" lean-forward="true" selection-start-line="659" selection-start-column="8" selection-end-line="660" selection-end-column="83" />
+          <folding>
+            <element signature="n#style#0;n#div#6;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#27839#27845#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#7;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#28110#28116#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#8;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#9;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#10;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#11;n#div#0;n#div#3;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#!!top" expanded="true" />
+            <element signature="e#30435#30441#1#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#3;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#1;n#div#3;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#3;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#2;n#!!top" expanded="true" />
+            <element signature="e#32383#32389#1#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#7;n#div#2;n#!!top" expanded="true" />
+            <element signature="e#32673#32679#1#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#8;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#8;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#8;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#div#1;n#div#8;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#8;n#div#2;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/hdmua/skin/B_Hdmua_tbl.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="840" column="83" lean-forward="true" selection-start-line="839" selection-start-column="8" selection-end-line="840" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/templates/admin/admin_home.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="337" column="45" selection-start-line="337" selection-start-column="45" selection-end-line="337" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/hdban/B_Hdban_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="549">
+          <caret line="44" column="52" selection-start-line="44" selection-start-column="52" selection-end-line="44" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/hdban/skin/B_HdbanLkvb_tbl.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6446">
+          <caret line="450" column="130" selection-start-line="450" selection-start-column="130" selection-end-line="450" selection-end-column="130" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/hdban/B_HdbanLkvb_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="823">
+          <caret line="174" column="44" selection-start-line="174" selection-start-column="44" selection-end-line="174" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/templates/admin/div_hdmua.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="94" selection-start-line="94" selection-end-line="95" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/code/templates/admin/div_hdban.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="355" column="62" selection-start-line="355" selection-start-column="49" selection-end-line="355" selection-end-column="62" />
+        <state relative-caret-position="3959">
+          <caret line="273" column="79" selection-start-line="273" selection-start-column="79" selection-end-line="273" selection-end-column="79" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#2;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#12628#12634#1#HTML" expanded="true" />
+            <element signature="e#12712#12718#1#HTML" expanded="true" />
             <element signature="n#style#0;n#div#0;n#a#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#a#1;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#a#2;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -1266,190 +1079,98 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/hdban/B_HdbanXuatkho_list.php">
+    <entry file="file://$PROJECT_DIR$/code/admin/upload_hdban_tientrinh.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="216" column="58" selection-start-line="216" selection-start-column="58" selection-end-line="216" selection-end-column="58" />
+        <state relative-caret-position="295">
+          <caret line="149" column="100" selection-start-line="149" selection-start-column="100" selection-end-line="149" selection-end-column="100" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/hdban/B_HdbanXuatkho_exp.php">
+    <entry file="file://$PROJECT_DIR$/code/admin/upload_hdmua_tientrinh.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modules/hdban/skin/B_HdbanTientrinh_tbl.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="85" column="58" selection-start-line="85" selection-start-column="58" selection-end-line="85" selection-end-column="58" />
+        <state relative-caret-position="5788">
+          <caret line="383" column="58" lean-forward="true" selection-start-line="383" selection-start-column="58" selection-end-line="383" selection-end-column="58" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#div#2;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/hdban/B_HdbanTientrinh_list.php">
+    <entry file="file://$PROJECT_DIR$/code/modules/hdban/skin/B_Hdban_view.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="186" column="58" selection-start-line="186" selection-start-column="46" selection-end-line="186" selection-end-column="58" />
+        <state relative-caret-position="226">
+          <caret line="87" column="71" selection-start-line="87" selection-start-column="71" selection-end-line="87" selection-end-column="71" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#legend#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#3;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#4;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#4;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#5;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#5;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#6;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#6;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#7;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#7;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#7;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#8;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#8;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#8;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#9;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#9;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#9;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/hdban/B_HdbanLkvb_list.php">
+    <entry file="file://$PROJECT_DIR$/code/modules/hdban/skin/B_Hdban_tbl.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="174" column="44" selection-start-line="174" selection-start-column="44" selection-end-line="174" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/hdban/B_HdbanHoadon_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2811">
-          <caret line="12" column="57" lean-forward="true" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/templates/admin/admin_home.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="335" column="100" selection-start-line="335" selection-start-column="95" selection-end-line="335" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/classes/hopdong/clsKhachhang.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1496">
-          <caret line="99" column="51" selection-start-line="99" selection-start-column="51" selection-end-line="99" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/hdban/B_Khachhang_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1805">
-          <caret line="155" column="62" selection-start-line="155" selection-start-column="50" selection-end-line="155" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/hdban/skin/B_HdbanLkvb_tbl.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4900">
-          <caret line="450" column="130" selection-start-line="450" selection-start-column="130" selection-end-line="450" selection-end-column="130" />
+        <state relative-caret-position="209">
+          <caret line="840" column="83" selection-start-line="839" selection-start-column="8" selection-end-line="840" selection-end-column="83" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/code/modules/hdban/skin/B_HdbanHoadon_tbl.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="255" column="97" lean-forward="true" selection-start-line="255" selection-start-column="32" selection-end-line="255" selection-end-column="97" />
+        <state relative-caret-position="241">
+          <caret line="655" column="48" selection-start-line="655" selection-start-column="48" selection-end-line="655" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/hdban/B_Duan_list.php">
+    <entry file="file://$PROJECT_DIR$/code/modules/hdban/B_HdbanXuatkho_list.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1168">
-          <caret line="103" column="24" selection-start-line="103" selection-start-column="24" selection-end-line="103" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/hdmua/skin/B_Doitac_tbl.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="72" column="47" selection-start-line="72" selection-start-column="47" selection-end-line="72" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/hdban/skin/B_Khachhang_tbl.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="80" column="29" lean-forward="true" selection-start-line="74" selection-start-column="24" selection-end-line="80" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/classes/hopdong/clsDuan.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="20" column="23" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/admin/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="41" column="6" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/modules/hdban/skin/B_Duan_tbl.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="158" column="148" selection-start-line="158" selection-start-column="148" selection-end-line="158" selection-end-column="148" />
-          <folding>
-            <element signature="e#901#980#0#HTML" expanded="true" />
-            <element signature="e#1053#1059#0#HTML" expanded="true" />
-            <element signature="e#1060#1066#0#HTML" expanded="true" />
-            <element signature="e#1076#1082#0#HTML" expanded="true" />
-            <element signature="e#1266#1289#0#HTML" expanded="true" />
-            <element signature="e#1437#1501#0#HTML" expanded="true" />
-            <element signature="e#1576#1640#0#HTML" expanded="true" />
-            <element signature="e#1834#1898#0#HTML" expanded="true" />
-            <element signature="e#1986#2050#0#HTML" expanded="true" />
-            <element signature="e#2264#2328#0#HTML" expanded="true" />
-            <element signature="e#2408#2472#0#HTML" expanded="true" />
-            <element signature="e#2264#2328#0#HTML" expanded="true" />
-            <element signature="e#2402#2479#0#HTML" expanded="true" />
-            <element signature="e#2801#2865#0#HTML" expanded="true" />
-            <element signature="e#2943#3007#0#HTML" expanded="true" />
-            <element signature="e#3203#3267#0#HTML" expanded="true" />
-            <element signature="e#3341#3418#0#HTML" expanded="true" />
-            <element signature="e#4676#4741#0#HTML" expanded="true" />
-            <element signature="e#9492#9585#0#HTML" expanded="true" />
-            <element signature="e#9649#9680#0#HTML" expanded="true" />
-            <element signature="e#9739#9769#0#HTML" expanded="true" />
-            <element signature="e#9770#9776#0#HTML" expanded="true" />
-            <element signature="e#9777#9783#0#HTML" expanded="true" />
-            <element signature="e#9791#9797#0#HTML" expanded="true" />
-            <element signature="e#9825#9856#0#HTML" expanded="true" />
-            <element signature="e#10095#10125#0#HTML" expanded="true" />
-            <element signature="e#10306#10348#0#HTML" expanded="true" />
-            <element signature="e#10373#10481#0#HTML" expanded="true" />
-            <element signature="e#10520#10557#0#HTML" expanded="true" />
-            <element signature="e#10612#10631#0#HTML" expanded="true" />
-            <element signature="e#10635#10641#0#HTML" expanded="true" />
-            <element signature="e#10790#10809#0#HTML" expanded="true" />
-            <element signature="e#10813#10819#0#HTML" expanded="true" />
-            <element signature="e#10033#10052#0#HTML" expanded="true" />
-            <element signature="e#10056#10062#0#HTML" expanded="true" />
-            <element signature="e#11053#11090#0#HTML" expanded="true" />
-            <element signature="e#11149#11186#0#HTML" expanded="true" />
-            <element signature="e#11246#11283#0#HTML" expanded="true" />
-            <element signature="e#11339#11376#0#HTML" expanded="true" />
-            <element signature="e#11638#11686#0#HTML" expanded="true" />
-            <element signature="e#11814#11908#0#HTML" expanded="true" />
-            <element signature="e#11967#12032#0#HTML" expanded="true" />
-            <element signature="e#10017#10036#0#HTML" expanded="true" />
-            <element signature="e#10087#10124#0#HTML" expanded="true" />
-            <element signature="e#11719#11759#0#HTML" expanded="true" />
-            <element signature="e#10228#10234#0#HTML" expanded="true" />
-            <element signature="e#11999#12039#0#HTML" expanded="true" />
-            <element signature="e#12069#12075#0#HTML" expanded="true" />
-            <element signature="e#12184#12224#0#HTML" expanded="true" />
-            <element signature="e#12293#12299#0#HTML" expanded="true" />
-            <element signature="e#12434#12471#0#HTML" expanded="true" />
-            <element signature="e#13139#13176#0#HTML" expanded="true" />
-            <element signature="e#13835#13872#0#HTML" expanded="true" />
-            <element signature="e#14184#14221#0#HTML" expanded="true" />
-            <element signature="e#14551#14588#0#HTML" expanded="true" />
-            <element signature="e#15193#15254#0#HTML" expanded="true" />
-            <element signature="e#15595#15672#0#HTML" expanded="true" />
-            <element signature="e#15673#15679#1#HTML" expanded="true" />
-            <element signature="e#16433#16469#0#HTML" expanded="true" />
-            <element signature="e#16484#16514#0#HTML" expanded="true" />
-            <element signature="e#16540#16570#0#HTML" expanded="true" />
-            <element signature="e#16707#16780#0#HTML" expanded="true" />
-            <element signature="e#16810#16840#0#HTML" expanded="true" />
-            <element signature="e#17639#17716#0#HTML" expanded="true" />
-            <element signature="e#17717#17723#1#HTML" expanded="true" />
-            <element signature="e#17739#17769#0#HTML" expanded="true" />
-            <element signature="e#17922#17999#0#HTML" expanded="true" />
-            <element signature="e#18000#18006#1#HTML" expanded="true" />
-            <element signature="e#18022#18077#0#HTML" expanded="true" />
-            <element signature="e#18092#18122#0#HTML" expanded="true" />
-            <element signature="e#18146#18176#0#HTML" expanded="true" />
-            <element signature="e#18235#18295#0#HTML" expanded="true" />
-            <element signature="e#18597#18615#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="377">
+          <caret line="203" column="62" selection-start-line="203" selection-start-column="62" selection-end-line="203" selection-end-column="62" />
         </state>
       </provider>
     </entry>

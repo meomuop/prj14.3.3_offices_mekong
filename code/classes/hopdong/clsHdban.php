@@ -1,6 +1,6 @@
 <?php
 /*-------------------------------------------
-- PHP Frame work Informa
+- PHP Smarty Template Engine
 - Created by Le Anh Van - anhvan3103@gmail.com
 --------------------------------------------*/
 
@@ -17,8 +17,8 @@ class hdban_class extends dbBasic {
     var $hdban_giatri_quydoi;
     var $hdban_gttt;
     var $hdban_gttt_quydoi;
-    var $doitac_id;
-    var $doitac_viettat;
+    var $khachhang_id;
+    var $khachhang_viettat;
     var $department_id;
     var $phongban_name;
     var $user_id;
@@ -44,8 +44,8 @@ class hdban_class extends dbBasic {
         'hdban_giatri_quydoi',
         'hdban_gttt',
         'hdban_gttt_quydoi',
-        'doitac_id',
-        'doitac_viettat',
+        'khachhang_id',
+        'khachhang_viettat',
         'department_id',
         'phongban_name',
         'user_id',

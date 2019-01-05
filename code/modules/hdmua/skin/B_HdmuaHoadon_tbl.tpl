@@ -432,7 +432,7 @@
                             <div style="float:left; width:135px">- <a href="javascript: void(0)" onclick="javascript: show_tonkho({$obj_list[pi]->hoadon_id})">Quản lý tồn</a></div>
                         </div>
                         <div style="float:left; width:140px; padding:0 0 0 3px">
-                             - <a href="javascript: void(0)" onclick="javascript: show_hdmua_hopdong({$obj_list[pi]->hdmua_id})">Thông tin hợp đồng</a>
+                             - <a href="javascript: void(0)" onclick="javascript: show_hdmua_thongtin({$obj_list[pi]->hdmua_id})">Thông tin hợp đồng</a>
                         </div>
                     </div>
                 </div>
@@ -656,9 +656,9 @@
 		$("#hdmua_content_main").load("?listTonkho&mod=hdmua&hoadon_id="+hoadon_id);
 	}
 
-	function show_hdmua_hopdong(hoadon_id){
-		document.getElementById('div_view_doc').style.display='block';
-		$("#list_view_hoadon_cont").load("?viewHdmuaHoadon&mod=hdmua&hoadon_id="+hoadon_id);
+	function show_hdmua_thongtin(hdmua_id){
+        document.getElementById('div_view_hdmua').style.display='block';
+        $("#list_view_hdmua_cont").load("?viewHdmua&mod=hdmua&hdmua_id="+hdmua_id);
 	}
 		
 	function gotoPage_HdmuaHoadon(processurl,page){

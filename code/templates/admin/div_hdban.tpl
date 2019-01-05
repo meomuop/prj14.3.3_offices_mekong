@@ -54,19 +54,19 @@
 #view_hdban_menu{ float:left; width:99.8%; height:25px; padding-left:8px; position:absolute; margin-top:21px}
 /*----------------------end view_hdban div---------------------*/
 
-/*----------------------thuchien div---------------------*/
-#thuchien_main_cont{ float:left; width:100%; height:400px; background-color:#ccd8e7}
-#thuchien_tab_bar_tit{ float:left; font-weight:bold; text-transform:uppercase; line-height:20px; padding-left:8px; width:80%;cursor:move; color:#15428b;}
-#thuchien_tab_bar_icon{ float:right; width:10%; text-align:right; padding-top:2px; padding-right:6px}
-#thuchien_content_outsign{ float:left; width:96.9%; height:372px; background-color:#ffffff; margin-left:8px; border:1px solid #99bbe8}
-#thuchien_content_insign{ float:left; width:99.8%; height:347px; background-color:#dfe8f6; margin-left:1px;}
-#list_thuchien_cont{ float:left; width:99.7%; height:371px; background-color:#dfe8f6; margin-left:1px;}
-#thuchien_clear_txt{ float:left; width:100%; height:1px}
-#thuchien_tool_bar{ float:left; width:99.8%; height:20px; background-color:#dfe8f6; margin-left:1px}
-#thuchien_search_area{ float:left; width:120px; height:20px; padding-left:2px}
-#thuchien_page_area{ float:left; width:40px; height:20px; padding-left:2px}
-#thuchien_menu{ float:left; width:99.8%; height:25px; padding-left:8px; position:absolute; margin-top:21px}
-/*----------------------end thuchien div---------------------*/
+/*----------------------thuchien_hdban div---------------------*/
+#thuchien_hdban_main_cont{ float:left; width:100%; height:400px; background-color:#ccd8e7}
+#thuchien_hdban_tab_bar_tit{ float:left; font-weight:bold; text-transform:uppercase; line-height:20px; padding-left:8px; width:80%;cursor:move; color:#15428b;}
+#thuchien_hdban_tab_bar_icon{ float:right; width:10%; text-align:right; padding-top:2px; padding-right:6px}
+#thuchien_hdban_content_outsign{ float:left; width:96.9%; height:372px; background-color:#ffffff; margin-left:8px; border:1px solid #99bbe8}
+#thuchien_hdban_content_insign{ float:left; width:99.8%; height:347px; background-color:#dfe8f6; margin-left:1px;}
+#list_thuchien_hdban_cont{ float:left; width:99.7%; height:371px; background-color:#dfe8f6; margin-left:1px;}
+#thuchien_hdban_clear_txt{ float:left; width:100%; height:1px}
+#thuchien_hdban_tool_bar{ float:left; width:99.8%; height:20px; background-color:#dfe8f6; margin-left:1px}
+#thuchien_hdban_search_area{ float:left; width:120px; height:20px; padding-left:2px}
+#thuchien_hdban_page_area{ float:left; width:40px; height:20px; padding-left:2px}
+#thuchien_hdban_menu{ float:left; width:99.8%; height:25px; padding-left:8px; position:absolute; margin-top:21px}
+/*----------------------end thuchien_hdban div---------------------*/
 
 /*----------------------hdban_lkvb div---------------------*/
 #hdban_lkvb_main_cont{ float:left; width:100%; height:400px; background-color:#ccd8e7}
@@ -92,7 +92,7 @@
 $(function() {
 	$( "#div_hdban" ).draggable();
 	$( "#list_file_hdban" ).draggable();
-	$( "#div_thuchien" ).draggable();
+	$( "#div_thuchien_hdban" ).draggable();
 	$( "#div_hdban_lkvb" ).draggable();
 	$( "#list_view_hdban" ).draggable();
 });
@@ -241,15 +241,15 @@ function change_style_hdban(obj){
     </div>
 </div>
 
-<div id="div_thuchien" onclick="javascript: change_bgcl_hdban('div_thuchien')" style="width:550px; float:left; font-weight:normal; position:absolute; display:none; margin:120px 0 0 240px; background-color:#ffffff; border:1px solid #99bbe8; z-index:1010; padding: 0px 1px 1px 1px">
-	<div id="thuchien_main_cont">
-        <div id="thuchien_tab_bar_tit">Thực hiện hợp đồng</div>
-        <div id="thuchien_tab_bar_icon">
-            <a href="javascript: void(0);" onClick="javascript: document.getElementById('div_thuchien').style.display='none'" style="text-decoration:none">
+<div id="div_thuchien_hdban" onclick="javascript: change_bgcl_hdban('div_thuchien_hdban')" style="width:550px; float:left; font-weight:normal; position:absolute; display:none; margin:120px 0 0 240px; background-color:#ffffff; border:1px solid #99bbe8; z-index:1010; padding: 0px 1px 1px 1px">
+	<div id="thuchien_hdban_main_cont">
+        <div id="thuchien_hdban_tab_bar_tit">Thực hiện hợp đồng</div>
+        <div id="thuchien_hdban_tab_bar_icon">
+            <a href="javascript: void(0);" onClick="javascript: document.getElementById('div_thuchien_hdban').style.display='none'" style="text-decoration:none">
             	<img src="{$css_path}icon_dong.png" class="img_all" title="Đóng lại"></a>
         </div>
-        <div id="thuchien_content_outsign">
-        	<div id="list_thuchien_cont">
+        <div id="thuchien_hdban_content_outsign">
+        	<div id="list_thuchien_hdban_cont">
             </div>
         </div>
     </div>
@@ -271,7 +271,7 @@ function change_style_hdban(obj){
 
 {literal}
 <script language="javascript">	
-	var div_arr_hdban = ['list_file_hdban','div_view_hdban','div_thuchien','div_hdban_lkvb'];
+	var div_arr_hdban = ['list_file_hdban','div_view_hdban','div_thuchien_hdban','div_hdban_lkvb'];
 
 	function change_bgcl_hdban(obj){
 		for(i=0;i<=div_arr_hdban.length;i++){

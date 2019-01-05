@@ -224,12 +224,12 @@
                             </script>
                         {/literal}
                     </div>
-                	<div style="float:left; width:30%; line-height:25px; text-align:left">Nhà cung cấp:</div>
+                	<div style="float:left; width:30%; line-height:25px; text-align:left">Khách hàng:</div>
                     <div style="float:left; width:70%; line-height:25px; text-align:left">
-                        <select name="doitac_id" id="doitac_id" class="select_middle" tabindex="4">
-                            <option value="0">Chọn đối tác</option>
-                            {section name=qi loop=$obj_list_doitac}
-                            <option value="{$obj_list_doitac[qi]->doitac_id}" {if $obj_list_doitac[qi]->doitac_id eq $obj_info.doitac_id}selected="selected"{/if}>-&nbsp;{$obj_list_doitac[qi]->doitac_name}</option>
+                        <select name="khachhang_id" id="khachhang_id" class="select_middle" tabindex="4">
+                            <option value="0">Chọn khách hàng</option>
+                            {section name=qi loop=$obj_list_khachhang}
+                            <option value="{$obj_list_khachhang[qi]->khachhang_id}" {if $obj_list_khachhang[qi]->khachhang_id eq $obj_info.khachhang_id}selected="selected"{/if}>-&nbsp;{$obj_list_khachhang[qi]->khachhang_name}</option>
                             {/section}
                         </select>
                     </div>
@@ -376,7 +376,7 @@
                                 var hdban_tl_huybo = $form.find('input#hdban_tl_huybo').val();
                                 var hdban_lydo_huybo = $form.find('input#hdban_lydo_huybo').val();
                                 var hdban_dieukhoankhac = $form.find('textarea#hdban_dieukhoankhac').val();
-                                var doitac_id = $form.find('select#doitac_id :selected').val();
+                                var khachhang_id = $form.find('select#khachhang_id :selected').val();
                                 var department_id = $form.find('select#department_id :selected').val();
                                 var phongban_name = $form.find('select#department_id :selected').text();
                                 var dvtiente_id = $form.find('select#dvtiente_id :selected').val();
@@ -389,7 +389,7 @@
 
 
                                 //begin validate form
-                                if (hdban_sohd == "" || hdban_ngayhd == "" || hdban_noidung == "" || hdban_giatri_quydoi == "" || hdban_gttt_quydoi == "" || doitac_id == "" ){
+                                if (hdban_sohd == "" || hdban_ngayhd == "" || hdban_noidung == "" || hdban_giatri_quydoi == "" || hdban_gttt_quydoi == "" || khachhang_id == "" ){
                                     $('#lblError_Hdban').show();
                                 }
                                 else{
@@ -408,7 +408,7 @@
                                             hdban_tl_huybo:hdban_tl_huybo,
                                             hdban_lydo_huybo:hdban_lydo_huybo,
                                             hdban_dieukhoankhac:hdban_dieukhoankhac,
-                                            doitac_id:doitac_id,
+                                            khachhang_id:khachhang_id,
                                             department_id:department_id,
                                             phongban_name:phongban_name,
                                             dvtiente_id:dvtiente_id,
@@ -531,7 +531,7 @@
             <div class="tbl_tit" style="width:100px"><B>&nbsp;Số hợp đồng</B></div>
             <div class="tbl_tit" style="width:70px"><B>&nbsp;Ngày ký</B></div>
             <div class="tbl_tit" style="width:301px"><B>&nbsp;Nội dung</B></div>
-            <div class="tbl_tit" style="width:160px"><B>&nbsp;Nhà cung cấp</B></div>
+            <div class="tbl_tit" style="width:160px"><B>&nbsp;Khách hàng</B></div>
             <div class="tbl_tit" style="width:110px"><B>&nbsp;Tình trạng</B></div>
             <div class="tbl_tit" style="width:70px"><B>&nbsp;Ngày nhập</B></div>
             <div class="tbl_tit" style="width:40px; text-align:center"><B>File</B></div>
@@ -583,8 +583,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="{$class_td}" style="width:160px; white-space:nowrap" title="{$obj_list[pi]->doitac_viettat}">
-                    &nbsp;{$obj_list[pi]->doitac_viettat|str_string_cut:"25":"1"}
+                <div class="{$class_td}" style="width:160px; white-space:nowrap" title="{$obj_list[pi]->khachhang_viettat}">
+                    &nbsp;{$obj_list[pi]->khachhang_viettat|str_string_cut:"25":"1"}
                 </div>
                 <div class="{$class_td}" style="width:110px">
                     &nbsp;{if $obj_list[pi]->hdban_tinhtrang eq 1}
@@ -832,8 +832,8 @@
     }
 
     function show_hdban_tientrinh(hdban_id){
-        document.getElementById('div_thuchien').style.display='block';
-        $("#list_thuchien_cont").load("?listHdbanTientrinh&mod=hdban&hdban_id="+hdban_id);
+        document.getElementById('div_thuchien_hdban').style.display='block';
+        $("#list_thuchien_hdban_cont").load("?listHdbanTientrinh&mod=hdban&hdban_id="+hdban_id);
     }
 
 	function show_hdban_thongtin(hdban_id){
