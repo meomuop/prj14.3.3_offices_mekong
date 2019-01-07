@@ -155,7 +155,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
                         <option value="3" {if $obj_info.user_level_soft eq 3} selected="selected"{/if} selected="selected">Cả hai</option>
                     </select>
                 </div>
-                <div style="float:left; width:100%; line-height:25px; text-align:left">Quyền tại Module Quản lý - điều hành:</div>
+                <div style="float:left; width:100%; line-height:25px; text-align:left">Phân quyền tại Quản lý văn bản, hợp đồng, công việc:</div>
                 <div style="float:left; width:100%; line-height:25px; text-align:left">
                     <select name="user_level" id="user_level" class="select_long">
                         <option value="1" {if $obj_info.user_level eq 1} selected="selected"{/if}>Quản trị&nbsp;<em>(Được thao tác tại mọi chức năng)</em></option>

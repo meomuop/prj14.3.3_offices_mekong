@@ -13,8 +13,8 @@
     }
     </style>
 {/literal}
-<div id="hdmua_content_insign">
-	<form method="post" name="frmList_HdbanXuatkho" action="?listTonkho{$vars.arg}" id="frmList_HdbanXuatkho">
+<div id="hdban_content_insign">
+	<form method="post" name="frmList_HdbanXuatkho" action="?listXuatkho{$vars.arg}" id="frmList_HdbanXuatkho">
     <!------------------------------------------THEM MOI------------------------------------>
     <fieldset style="width:1012px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px">
         <legend class="legend_list_search" style="width: 600px">
@@ -37,7 +37,7 @@
                         {literal}
                             <script type="text/javascript">
                                 $("#danhmuc_hang_id").change(function(){
-                                    $("#div_hdmua_hanghoa_id").load('index.php?listHanghoaSelect&mod=tthopdong&danhmuc_id='+$("#danhmuc_hang_id").val());
+                                    $("#div_hdban_hanghoa_id").load('index.php?listHanghoaSelect&mod=tthopdong&danhmuc_id='+$("#danhmuc_hang_id").val());
                                 });
                             </script>
                         {/literal}
@@ -56,7 +56,7 @@
 
                 <td align="center" width="46%" valign="top">
                     <div style="float:left; width:17%; line-height:25px; text-align:left">Mặt hàng <font color="#FF0000">*</font>:</div>
-                    <div style="float:left; width:83%; line-height:25px; text-align:left" id="div_hdmua_hanghoa_id">
+                    <div style="float:left; width:83%; line-height:25px; text-align:left" id="div_hdban_hanghoa_id">
                         <select name="hanghoa_id" id="hanghoa_id" class="select_long" tabindex="1">
                             <option value="0">Chọn mặt hàng</option>
                             {if $obj_info.hanghoa_id}
@@ -76,14 +76,14 @@
                         <input type="button" name="btnSub_HdbanXuatkho" id="btnSub_HdbanXuatkho" value="Ghi lại" class="button" tabindex="18"/>
                         <input type="hidden" name="xuatkho_id" id="xuatkho_id" value="{$obj_info.xuatkho_id}">
                         <input type="hidden" name="hoadon_id" id="hoadon_id" value="{$hoadon_id}">
-                        <input type="hidden" name="hoadon_sohd" id="hoadon_sohd" value="{$hdmuaHD_info.hoadon_sohd}">
+                        <input type="hidden" name="hoadon_sohd" id="hoadon_sohd" value="{$hdbanHD_info.hoadon_sohd}">
                         <input type="reset" name="Reset" value="Hủy bỏ" class="button" tabindex="19"/>
                     </div>
                 </td>
 
                 <td align="center" valign="top">
                     <div style="float:left; width:25%; line-height:25px; text-align:left">Hóa đơn:</div>
-                    <div style="float:left; width:75%; line-height:25px; text-align:left">{$hdmuaHD_info.hoadon_sohd} ( Ngày: {$hdmuaHD_info.hoadon_ngayhd|date_format:"%d/%m/%Y"})</div>
+                    <div style="float:left; width:75%; line-height:25px; text-align:left">{$hdbanHD_info.hoadon_sohd} ( Ngày: {$hdbanHD_info.hoadon_ngayhd|date_format:"%d/%m/%Y"})</div>
                     <div style="float:left; width:100%; line-height:25px; text-align:left">
                         <b>(Người nhập: {$access_user_name})</b>
                     </div>
@@ -121,7 +121,7 @@
                                     $('#lblError_HdbanXuatkho').show();
                                 }
                                 else{
-                                    $.post('index.php?listTonkho&mod=hdmua&add_edit=1',
+                                    $.post('index.php?listXuatkho&mod=hdban&add_edit=1',
                                         {
                                             hoadon_id:hoadon_id,
                                             hoadon_sohd:hoadon_sohd,
@@ -133,8 +133,8 @@
                                             xuatkho_soluong:xuatkho_soluong
                                         },
                                         function(data){
-                                            $('#hdmua_content_main').html(data);
-                                            $("#hdmua_content_main").show();
+                                            $('#hdban_content_main').html(data);
+                                            $("#hdban_content_main").show();
                                         }
                                     );
                                     return false;
@@ -283,10 +283,10 @@
     </form>
 </div>
 <!------------------------------------------------- Tool bar --------------------------------------------->
-<div id="hdmua_clear_txt"></div>
-<div id="hdmua_tool_bar">
+<div id="hdban_clear_txt"></div>
+<div id="hdban_tool_bar">
 
-    <div id="hdmua_search_area">
+    <div id="hdban_search_area">
     <select name="order" id = "order_HdbanXuatkho" style="width:120px; font-size:12px; border:1px solid #99bbe8; margin-left:1px" onchange="reloadPage_HdbanXuatkho('{$processurl}');">
     {section name=sli loop=$order_arr}
         <option value="{$smarty.section.sli.index}" {if $smarty.section.sli.index eq $vars.order}selected{/if} >
@@ -297,7 +297,7 @@
     </div>
     
     <div style="float:left; width:12px; background-image:url({$css_path}gach_doc.png)">&nbsp;</div>
-    <div id="hdmua_page_area">
+    <div id="hdban_page_area">
     {if $vars.curpage eq 1}
     	<img src="{$css_path}icon_first_page.png" class="img_all">
     	<img src="{$css_path}icon_pre_page.png" class="img_all">
@@ -317,7 +317,7 @@
         </div>
         <div style="float:left; width:42px"> / {$num_page}</div>
     </div>
-    <div id="hdmua_page_area">
+    <div id="hdban_page_area">
     {if $vars.curpage eq $num_page}
     	<img src="{$css_path}icon_next_page.png" class="img_all">
         <img src="{$css_path}icon_last_page.png" class="img_all">
@@ -446,7 +446,7 @@
 			url: processurl,
 			data: dataString,
 			success: function(data) {
-				$('#hdmua_content_main').fadeOut('fast').load(processurl+"&numresult="+numresult+"&order="+order+"&curpage="+curpage).fadeIn("fast");
+				$('#hdban_content_main').fadeOut('fast').load(processurl+"&numresult="+numresult+"&order="+order+"&curpage="+curpage).fadeIn("fast");
 			}
 		});
 	}
@@ -456,28 +456,15 @@
 		numresult = $("#numresult_HdbanXuatkho").val();
 		order = $("#order_HdbanXuatkho").val();
 		cur_pos = 0;
-		$("#hdmua_content_main").load(processurl+"&numresult="+numresult+"&order="+order+"&cur_pos="+cur_pos);
+		$("#hdban_content_main").load(processurl+"&numresult="+numresult+"&order="+order+"&cur_pos="+cur_pos);
 	}
 
-	
-	function show_xuatkho(xuatkho_id){
-        change_style_hdmua(3);
-		document.getElementById('xuatkho_content_main').style.display='block';
-		//var arg = document.getElementById('arg').value;
-		$("#xuatkho_content_main").load("?listTonkho&mod=hdmua&xuatkho_id="+xuatkho_id);
-	}
-
-	function show_hdmua_hopdong(xuatkho_id){
-		document.getElementById('div_view_doc').style.display='block';
-		$("#list_view_xuatkho_cont").load("?viewHdbanXuatkho&mod=hdmua&xuatkho_id="+xuatkho_id);
-	}
-		
 	function gotoPage_HdbanXuatkho(processurl,page){
 		var numresult_HdbanXuatkho,order_HdbanXuatkho,cur_pos;
 		numresult = $("#numresult_HdbanXuatkho").val();
 		order = $("#order_HdbanXuatkho").val();
 		//alert(processurl+'-'+page+'-'+numresult+'-'+order);
-		$("#hdmua_content_main").load(processurl+"&numresult="+numresult+"&order="+order+"&curpage="+page);
+		$("#hdban_content_main").load(processurl+"&numresult="+numresult+"&order="+order+"&curpage="+page);
 	}
 
 	function search_me_HdbanXuatkho(){
@@ -491,7 +478,7 @@
 			return false;
 		}
 		
-		$.post('?listTonkho&mod=hdmua&search_me=1',
+		$.post('?listXuatkho&mod=hdban&search_me=1',
 			{
                 hanghoa_name_fs:hanghoa_name_fs,
                 hoadon_sohd_fs:hoadon_sohd_fs,
@@ -500,8 +487,8 @@
                 ngaynhap_fs_3:ngaynhap_fs_3
 			},
 			function(data){
-				$('#hdmua_content_main').html(data);
-				$("#hdmua_content_main").show();
+				$('#hdban_content_main').html(data);
+				$("#hdban_content_main").show();
 			}
 		);
 	}
@@ -525,34 +512,34 @@
 		}
 		
 		if(exptype==3){
-			document.getElementById('div_hdmua_report').style.display='block';
-			$.post('?expTonkhoReport&mod=hdmua&exptype='+exptype,
+			document.getElementById('div_hdban_report').style.display='block';
+			$.post('?expXuatkhoReport&mod=hdban&exptype='+exptype,
 				{
 					nhapxuattu:nhapxuattu,
 					nhapxuatden:nhapxuatden
 
 				},
 				function(data){
-					$('#hdmua_report_content_main').html(data);
-					$("#hdmua_report_content_main").show();
+					$('#hdban_report_content_main').html(data);
+					$("#hdban_report_content_main").show();
 				}
 			);
 			
-			$('#hdmua_content_main').hide();
-			$('#hdmua_content_main').fadeOut('fast').load('index.php?listTonkho&mod=hdmua').fadeIn("fast");
-			//$('#hdmua_report_content_main').load("?expTonkhoReport&mod=hdmua&exptype="+exptype+"&nhapxuattu="+nhapxuattu+"&nhapxuatden="+nhapxuatden);
+			$('#hdban_content_main').hide();
+			$('#hdban_content_main').fadeOut('fast').load('index.php?listXuatkho&mod=hdban').fadeIn("fast");
+			//$('#hdban_report_content_main').load("?expXuatkhoReport&mod=hdban&exptype="+exptype+"&nhapxuattu="+nhapxuattu+"&nhapxuatden="+nhapxuatden);
 		}else{
-			window.location="?expTonkhoReport&mod=hdmua&exptype="+exptype+"&nhapxuattu="+nhapxuattu+"&nhapxuatden="+nhapxuatden;
+			window.location="?expXuatkhoReport&mod=hdban&exptype="+exptype+"&nhapxuattu="+nhapxuattu+"&nhapxuatden="+nhapxuatden;
 		}
 	}
 	
 	function edit_me_HdbanXuatkho(id,hoadon_id){
-		$("#hdmua_content_main").load("?listTonkho&mod=hdmua&edit_me=1&hoadon_id="+hoadon_id+"&xuatkho_id="+id);
+		$("#hdban_content_main").load("?listXuatkho&mod=hdban&edit_me=1&hoadon_id="+hoadon_id+"&xuatkho_id="+id);
 	}
 		
 	$("#a_ref_HdbanXuatkho").click( function () { 
-			$('#hdmua_content_main').hide();
-			$('#hdmua_content_main').fadeOut('fast').load('index.php?listTonkho&mod=hdmua').fadeIn("fast");
+			$('#hdban_content_main').hide();
+			$('#hdban_content_main').fadeOut('fast').load('index.php?listXuatkho&mod=hdban').fadeIn("fast");
 		});
 </script>
 {/literal}

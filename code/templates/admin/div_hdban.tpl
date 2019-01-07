@@ -136,7 +136,7 @@ function max_size_hdban(){
 
 function change_style_hdban(obj){
 
-	for(i=1;i<=11;i++){
+	for(i=1;i<=6;i++){
 		if(i==parseInt(obj)){
             if(document.getElementById('c_menu_hdban_'+i) === null) {
                 continue;
@@ -190,7 +190,7 @@ function change_style_hdban(obj){
         <!-- Menu -->
         <div id="hdban_menu">
         	<div style="width:10px; float:left">&nbsp;</div>
-            {if $user_level eq 1 or $user_level eq 2 or $user_level eq 9}
+            {if $user_level eq 1 or $user_level eq 2 or $user_level eq 8}
                 <a href="javascript: void(0)" onclick="change_style_hdban(1)" id="a_menu_hdban_1">
                     <div class="c_menu_hdban" id="c_menu_hdban_1" style="width:95px; border-left:1px solid #99bbe8; border-bottom:1px solid #dfe8f6; background-color:#dfe8f6; height:25px; margin-top:0px">Họp đồng bán</div></a>
                 <a href="javascript: void(0)" onclick="change_style_hdban(2)" id="a_menu_hdban_2">
@@ -201,6 +201,8 @@ function change_style_hdban(obj){
                     <div class="c_menu_hdban" id="c_menu_hdban_4" style="width:80px;">Khách hàng</div></a>
 				<a href="javascript: void(0)" onclick="change_style_hdban(5)" id="a_menu_hdban_5">
 					<div class="c_menu_hdban" id="c_menu_hdban_5" style="width:50px;">Dự án</div></a>
+				<a href="javascript: void(0)" onclick="change_style_hdban(6)" id="a_menu_hdban_6">
+					<div class="c_menu_hdban" id="c_menu_hdban_6" style="width:110px; float: right; border-left:1px solid #99bbe8; margin-right: 25px">Dự thảo hợp đồng</div></a>
             {/if}
         </div>
         <div style="float:left; height:26px; width:100%"></div>
@@ -317,6 +319,16 @@ function change_style_hdban(obj){
 	});
 	$("#view_hdban_content_outsign").mouseout( function () { 
 		$( "#div_view_hdban" ).draggable({ disabled: false });
+	});
+
+	$("#a_menu_hdban_6").click( function () {
+		for(i=0;i<div_arr_hdban.length;i++){
+			document.getElementById(div_arr_hdban[i]).style.display='none';
+		}
+
+		document.getElementById('hdban_content_main').style.display='block';
+		$("#hdban_content_main").load("index.php?listHdbandt&mod=hdban");
+
 	});
 	
 	$("#a_menu_hdban_1").click( function () { 

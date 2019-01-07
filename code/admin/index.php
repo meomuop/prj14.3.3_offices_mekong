@@ -369,6 +369,7 @@
         case 'listHdmuaLkvb'	: include ($MODULE_PATH.$module_name.'B_HdmuaLkvb_list.php'); exit();
         case 'listHdmuaFile'	: include ($MODULE_PATH.$module_name.'B_HdmuaFile_list.php'); exit();
 
+        case 'listHdbandt'		: include ($MODULE_PATH.$module_name.'B_Hdbandt_list.php'); exit();
         case 'listHdban'		: include ($MODULE_PATH.$module_name.'B_Hdban_list.php'); exit();
         case 'viewHdban'		: include ($MODULE_PATH.$module_name.'B_Hdban_view.php'); exit();
         case 'expHdbanReport'	: include ($MODULE_PATH.$module_name.'B_Hdban_exp.php'); exit();
