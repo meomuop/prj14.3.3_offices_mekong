@@ -23,16 +23,15 @@ float:left; line-height:40px; border-right:1px solid #99bbe8; border-bottom:1px 
 		</div>
         <div style="float:left; border-left:1px solid #99bbe8">
             <div style="float:left; height:40px; width:889px; border-top:1px solid #99bbe8; border-bottom:1px solid #99bbe8 ">
-                <div class="tbl_tit_inluong" style="width:30px; text-align:center;"><b>STT<br>&nbsp;</b></div>
-                <div class="tbl_tit_inluong" style="width:154px; text-align: center"><B>&nbsp;Họ tên nhân viên<br>&nbsp;</B></div>
-                <div class="tbl_tit_inluong" style="width:85px; text-align: center"><B>&nbsp;Mã nhân viên<br>&nbsp;</B></div>
+                <div class="tbl_tit_inluong" style="width:40px; text-align:center;"><b>STT<br>&nbsp;</b></div>
+                <div class="tbl_tit_inluong" style="width:182px; text-align: center"><B>&nbsp;Họ tên nhân viên<br>&nbsp;</B></div>
+                <div class="tbl_tit_inluong" style="width:105px; text-align: center"><B>&nbsp;Mã nhân viên<br>&nbsp;</B></div>
                 <div class="tbl_tit_inluong" style="width:96px; text-align: center"><B>&nbsp;Lương tháng&nbsp;<br>&nbsp;</B></div>
-                <div class="tbl_tit_inluong" style="width:65px; text-align: center"><B>&nbsp;Số ngày&nbsp;<br>tính</B></div>
                 <div class="tbl_tit_inluong" style="width:65px; text-align: center"><B>&nbsp;Số ngày&nbsp;<br> công</B></div>
                 <div class="tbl_tit_inluong" style="width:96px; text-align: center"><B>&nbsp;Lương tháng&nbsp;<br>&nbsp;</B></div>
                 <div class="tbl_tit_inluong" style="width:96px; text-align: center"><B>&nbsp;Phụ cấp&nbsp;<br>&nbsp;</B></div>
                 <div class="tbl_tit_inluong" style="width:96px; text-align: center"><B>&nbsp;Tổng số&nbsp;<br>được nhận</B></div>
-                <div class="tbl_tit_inluong" style="width:96px; text-align: center"><B>&nbsp;Chữ kỹ&nbsp;<br>&nbsp;</B></div>
+                <div class="tbl_tit_inluong" style="width:104px; text-align: center"><B>&nbsp;Chữ kỹ&nbsp;<br>&nbsp;</B></div>
             </div>
             <div style="float:left; width:889px">
                 {section name=pi loop=$obj_list}
@@ -42,17 +41,16 @@ float:left; line-height:40px; border-right:1px solid #99bbe8; border-bottom:1px 
                         {assign var="class_td" value="tbl_cont2_inluong"}
                     {/if}
                     {math z=$smarty.section.pi.index t=1 equation="z+t" assign=stt}
-                    <div class="{$class_td}" style="width:30px; text-align:center;">{$stt}</div>
-                    <div class="{$class_td}" style="width:154px; white-space:nowrap; ">&nbsp;{$obj_list[pi]->user_fullname}</div>
-                    <div class="{$class_td}" style="width:85px; white-space:nowrap; ">&nbsp;{$obj_list[pi]->user_name}</div>
+                    <div class="{$class_td}" style="width:40px; text-align:center;">{$stt}</div>
+                    <div class="{$class_td}" style="width:182px; white-space:nowrap; ">&nbsp;{$obj_list[pi]->user_fullname}</div>
+                    <div class="{$class_td}" style="width:105px; white-space:nowrap; ">&nbsp;{$obj_list[pi]->user_name}</div>
                     <div class="{$class_td}" style="width:96px; text-align: right">{$obj_list[pi]->cc_luong|price_format}&nbsp;</div>
-                    <div class="{$class_td}" style="width:65px; text-align: center">{$obj_list[pi]->cc_songaycong}&nbsp;</div>
-                    <div class="{$class_td}" style="width:65px; text-align: center">{$obj_list[pi]->cc_songaydilam}&nbsp;</div>
+                    <div class="{$class_td}" style="width:65px; text-align: center">{$obj_list[pi]->cc_songaydilam}/{$obj_list[pi]->cc_songaycong}&nbsp;</div>
                     <div class="{$class_td}" style="width:96px; text-align: right">{$obj_list[pi]->cc_luongthang|price_format}&nbsp;</div>
                     <div class="{$class_td}" style="width:96px; text-align: right">{$obj_list[pi]->cc_phucap|price_format}&nbsp;</div>
                     {math a=$obj_list[pi]->cc_phucap b=$obj_list[pi]->cc_luongthang equation="a+b" assign=tongthunhap}
                     <div class="{$class_td}" style="width:96px; text-align: right">{$tongthunhap|price_format}&nbsp;</div>
-                    <div class="{$class_td}" style="width:96px; text-align: right">&nbsp;</div>
+                    <div class="{$class_td}" style="width:104px; text-align: right">&nbsp;</div>
                 {/section}
             </div>
         </div>

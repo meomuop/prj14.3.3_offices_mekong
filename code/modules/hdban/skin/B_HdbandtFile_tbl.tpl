@@ -14,8 +14,8 @@
     </style>
 
 {/literal}
-<div id="file_hdmua_content_insign">
-	<form method="post" name="frmList_HdmuaFile" action="?listHdmuaFile{$vars.arg}" id="frmList_HdmuaFile">
+<div id="file_hdban_content_insign">
+	<form method="post" name="frmList_HdbanFile" action="?listHdbanFile{$vars.arg}" id="frmList_HdbanFile">
     <!------------------------------------------THEM MOI------------------------------------>
     <fieldset style="width:288px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px">
         <legend class="legend">Thêm/Chỉnh sửa</legend>
@@ -24,64 +24,64 @@
                 <td colspan="2">
                     {if $error or $complete}
                         <span class="msg">Thông báo: <font color="#FF0000">{$error}</font>{$complete}</span>{/if}
-                    <span id="lblError_HdmuaFile" class="error">Thông báo: (*) là các mục bắt buộc!</span>
+                    <span id="lblError_HdbanFile" class="error">Thông báo: (*) là các mục bắt buộc!</span>
                 </td>
             </tr>
-            <tr height="20"><td colspan="2">Hợp đồng: {$hdmua_info.hdmua_sohd}</td></tr>
+            <tr height="20"><td colspan="2">Hợp đồng: {$hdban_info.hdban_sohd}</td></tr>
             <tr>
                 <td align="center" valign="top">
                     <div style="float:left; width:30%; line-height:25px; text-align:left">Tên tệp tin <font color="#FF0000">*</font>:</div>
                     <div style="float:left; width:70%; line-height:25px; text-align:left">
-                        <input type="text" id="hdfile_name" name="hdfile_name" class="text_short" value="{if $obj_info.hdfile_name neq ''}{$obj_info.hdfile_name}{else}{$hdmua_info.hdmua_sohd}{/if}" onfocus="hide_message_HdmuaFile();"/>
+                        <input type="text" id="hdfile_name" name="hdfile_name" class="text_short" value="{if $obj_info.hdfile_name neq ''}{$obj_info.hdfile_name}{else}{$hdban_info.hdban_sohd}{/if}" onfocus="hide_message_HdbanFile();"/>
                     </div>
                     <div style="float:left; width:30%; line-height:25px; text-align:left">Đường dẫn <font color="#FF0000">*</font>:</div>
                     <div style="float:left; width:70%; line-height:25px; text-align:left">
-                        <input type="text" class="text_short" name="hdfile_path" id="hdfile_path" value="{$obj_info.hdfile_path}" onfocus="hide_message_HdmuaFile();">&nbsp;<a href="javascript:void(0)" onclick="javascript:window.open('upload_hdmua_file.php?form_file=frmList_HdmuaFile&field_file=hdfile_path','new_page','width=410,height=225')" >[ Tải lên ]</a>
+                        <input type="text" class="text_short" name="hdfile_path" id="hdfile_path" value="{$obj_info.hdfile_path}" onfocus="hide_message_HdbanFile();">&nbsp;<a href="javascript:void(0)" onclick="javascript:window.open('upload1.php?form_file=frmList_HdbanFile&field_file=hdfile_path','new_page','width=410,height=225')" >[ Tải lên ]</a>
                     </div>
                     <div style="float:left; width:100%; line-height:25px; text-align:left">
-                        <input type="button" name="btnSub_HdmuaFile" id="btnSub_HdmuaFile" value="Ghi lại" class="button" tabindex="14"/>
+                        <input type="button" name="btnSub_HdbanFile" id="btnSub_HdbanFile" value="Ghi lại" class="button" tabindex="14"/>
                         <input type="hidden" name="hdfile_id" id="hdfile_id" value="{$obj_info.hdfile_id}">
-                        <input type="hidden" name="hdmua_sohd" id="hdmua_sohd" value="{$hdmua_info.hdmua_sohd}">
-                        <input type="hidden" name="hdmua_id" id="hdmua_id" value="{if $hdmua_id neq ''}{$hdmua_id}{else}{$hdmua_info.hdmua_id}{/if}">
+                        <input type="hidden" name="hdban_sohd" id="hdban_sohd" value="{$hdban_info.hdban_sohd}">
+                        <input type="hidden" name="hdban_id" id="hdban_id" value="{if $hdban_id neq ''}{$hdban_id}{else}{$hdban_info.hdban_id}{/if}">
                         <input type="reset" name="Reset" value="Hủy bỏ" class="button" tabindex="15"/>
                         {literal}
                             <script language="javascript">
-                                function hide_message_HdmuaFile(){
-                                    $('#lblMessage_HdmuaFile').hide();
-                                    $('#lblError_HdmuaFile').hide();
+                                function hide_message_HdbanFile(){
+                                    $('#lblMessage_HdbanFile').hide();
+                                    $('#lblError_HdbanFile').hide();
                                 }
 
                                 $(function() {
                                     $('.error').hide();
-                                    $('#lblMessage_HdmuaFile').hide();
+                                    $('#lblMessage_HdbanFile').hide();
 
-                                    $("#btnSub_HdmuaFile").click(function() {
+                                    $("#btnSub_HdbanFile").click(function() {
 
                                         $('.error').hide();
 
-                                        var $form 			= $("#frmList_HdmuaFile");
+                                        var $form 			= $("#frmList_HdbanFile");
                                         var hdfile_name 	= $form.find('input#hdfile_name').val();
                                         var hdfile_path 	= $form.find('input#hdfile_path').val();
-                                        var hdmua_id 		= $form.find('input#hdmua_id').val();
-                                        var hdmua_sohd 		= $form.find('input#hdmua_sohd').val();
+                                        var hdban_id 		= $form.find('input#hdban_id').val();
+                                        var hdban_sohd 		= $form.find('input#hdban_sohd').val();
                                         var hdfile_id 		= $form.find('input#hdfile_id').val();
 
                                         //begin validate form
-                                        if (hdfile_name == "" || hdfile_path == "" || hdmua_id == ""){
-                                            $('#lblError_HdmuaFile').show();
+                                        if (hdfile_name == "" || hdfile_path == "" || hdban_id == ""){
+                                            $('#lblError_HdbanFile').show();
                                         }
                                         else{
-                                            $.post('index.php?listHdmuaFile&mod=hdmua&add_edit=1',
+                                            $.post('index.php?listHdbanFile&mod=hdban&add_edit=1',
                                                 {
                                                     hdfile_name:hdfile_name,
                                                     hdfile_path:hdfile_path,
-                                                    hdmua_id:hdmua_id,
-                                                    hdmua_sohd:hdmua_sohd,
+                                                    hdban_id:hdban_id,
+                                                    hdban_sohd:hdban_sohd,
                                                     hdfile_id:hdfile_id,
                                                 },
                                                 function(data){
-                                                    $('#list_hdmua_file_cont').html(data);
-                                                    $("#list_hdmua_file_cont").show();
+                                                    $('#list_hdban_file_cont').html(data);
+                                                    $("#list_hdban_file_cont").show();
                                                 }
                                             );
                                             return false;
@@ -118,7 +118,7 @@
                     <div class="{$class_td}" style="width:30px; text-align:center">{$stt}</div>
                     <div class="{$class_td}" style="width:150px; white-space:nowrap" title="{$obj_list[pi]->hdfile_name}">
                         {if $obj_list[pi]->user_id eq $access_user_id}
-                            &nbsp;<a href='javascript: void(0);' onclick="edit_me_HdmuaFile({$obj_list[pi]->hdfile_id})">{$obj_list[pi]->hdfile_name|str_string_cut:"25":"1"}</a>
+                            &nbsp;<a href='javascript: void(0);' onclick="edit_me_HdbanFile({$obj_list[pi]->hdfile_id})">{$obj_list[pi]->hdfile_name|str_string_cut:"25":"1"}</a>
                         {else}{$obj_list[pi]->hdfile_name}{/if}
                     </div>
                     <div class="{$class_td}" style="width:30px; text-align:center">
@@ -127,34 +127,34 @@
                     </div>
                     <div class="{$class_td}" style="width:29px; text-align:center">
                         {if $obj_list[pi]->user_id eq $access_user_id}
-                            <a href='javascript: void(0);' onclick="edit_me_HdmuaFile({$obj_list[pi]->hdfile_id})">
+                            <a href='javascript: void(0);' onclick="edit_me_HdbanFile({$obj_list[pi]->hdfile_id})">
                                 <img src="../images/admin/b_edit.png" width="11" height="11" border="0" title="Sửa"></a>
                         {else}-{/if}
                     </div>
                     <div class="{$class_td}" style="width:29px; text-align:center">
                         {if $obj_list[pi]->user_id eq $access_user_id}
-                            <a href='javascript: void(0)' onClick="delItems_HdmuaFile('{$processurl}', {$obj_list[pi]->hdfile_id});">
+                            <a href='javascript: void(0)' onClick="delItems_HdbanFile('{$processurl}', {$obj_list[pi]->hdfile_id});">
                                 <img src="../images/admin/b_drop.png" width="11" height="11" border="0" title="Xóa"></a>
                         {else}-{/if}
                     </div>
                 </div>
             {/section}
         </div>
-        <input type="hidden" id="curpage_HdmuaFile" name="curpage" value="{$vars.curpage}" />
+        <input type="hidden" id="curpage_HdbanFile" name="curpage" value="{$vars.curpage}" />
     </fieldset>
     </form>
 </div>
 <!------------------------------------------------- Tool bar --------------------------------------------->
-<div id="file_hdmua_tool_bar">
-    <div id="file_hdmua_page_area">
+<div id="file_hdban_tool_bar">
+    <div id="file_hdban_page_area">
         {if $vars.curpage eq 1}
             <img src="{$css_path}icon_first_page.png" class="img_all">
             <img src="{$css_path}icon_pre_page.png" class="img_all">
         {else}
-            <a href="javascript: void(0)" id="first_page" onclick="gotoPage_HdmuaFile('{$processurl}',parseInt(1));" title="Trang đầu">
+            <a href="javascript: void(0)" id="first_page" onclick="gotoPage_HdbanFile('{$processurl}',parseInt(1));" title="Trang đầu">
                 <img src="{$css_path}icon_first_page.png" class="img_all">
             </a>
-            <a href="javascript: void(0)" id="pre_page" onclick="gotoPage_HdmuaFile('{$processurl}',parseInt(document.getElementById('page_HdmuaFile').value)-parseInt(1));" title="Trang trước">
+            <a href="javascript: void(0)" id="pre_page" onclick="gotoPage_HdbanFile('{$processurl}',parseInt(document.getElementById('page_HdbanFile').value)-parseInt(1));" title="Trang trước">
                 <img src="{$css_path}icon_pre_page.png" class="img_all">
             </a>
         {/if}
@@ -162,7 +162,7 @@
     <div style="float:left; line-height:19px">
         <div style="float:left; width:35px">Trang</div>
         <div style="float:left; width:35px">
-            <input type="text" value="{$vars.curpage}" name="page" id="page_HdmuaFile" onblur=" gotoPage_HdmuaFile('{$processurl}',this.value);" style="width:30px; font-size:12px; height:15px; border:1px solid #99bbe8">
+            <input type="text" value="{$vars.curpage}" name="page" id="page_HdbanFile" onblur=" gotoPage_HdbanFile('{$processurl}',this.value);" style="width:30px; font-size:12px; height:15px; border:1px solid #99bbe8">
         </div>
         <div style="float:left; width:22px"> / {$num_page}</div>
     </div>
@@ -171,10 +171,10 @@
             <img src="{$css_path}icon_next_page.png" class="img_all">
             <img src="{$css_path}icon_last_page.png" class="img_all">
         {else}
-            <a href="javascript: void(0)" id="next_page" onclick="gotoPage_HdmuaFile('{$processurl}',parseInt(document.getElementById('page_HdmuaFile').value)+parseInt(1));" title="Trang tiếp">
+            <a href="javascript: void(0)" id="next_page" onclick="gotoPage_HdbanFile('{$processurl}',parseInt(document.getElementById('page_HdbanFile').value)+parseInt(1));" title="Trang tiếp">
                 <img src="{$css_path}icon_next_page.png" class="img_all">
             </a>
-            <a href="javascript: void(0)" id="last_page" onclick="gotoPage_HdmuaFile('{$processurl}',parseInt({$num_page}));" title="Trang cuối">
+            <a href="javascript: void(0)" id="last_page" onclick="gotoPage_HdbanFile('{$processurl}',parseInt({$num_page}));" title="Trang cuối">
                 <img src="{$css_path}icon_last_page.png" class="img_all">
             </a>
         {/if}
@@ -182,58 +182,58 @@
 
     <div style="float:left; width:12px; background-image:url({$css_path}gach_doc.png)">&nbsp;</div>
     <div style="float:left; width:15px">
-        <a href="javascript: void(0)" id="a_ref_HdmuaFile" title="Tải lại"><img src="{$css_path}icon_refresh.png" class="img_all"></a>
+        <a href="javascript: void(0)" id="a_ref_HdbanFile" title="Tải lại"><img src="{$css_path}icon_refresh.png" class="img_all"></a>
     </div>
 </div>
 {literal}
     <script language="javascript">
-        function docheck_HdmuaFile(status,from_){
-            var alen=document.frmList_HdmuaFile.elements.length;
-            alen=(alen>5)?document.frmList_HdmuaFile.chkid.length:0;
+        function docheck_HdbanFile(status,from_){
+            var alen=document.frmList_HdbanFile.elements.length;
+            alen=(alen>5)?document.frmList_HdbanFile.chkid.length:0;
             if (alen>0){
                 for(var i=0;i<alen;i++)
-                    document.frmList_HdmuaFile.chkid[i].checked=status;
+                    document.frmList_HdbanFile.chkid[i].checked=status;
             }
             else{
-                document.frmList_HdmuaFile.chkid.checked=status;
+                document.frmList_HdbanFile.chkid.checked=status;
             }
-            if(from_>0) document.frmList_HdmuaFile.chkall.checked=status;
+            if(from_>0) document.frmList_HdbanFile.chkall.checked=status;
         }
 
-        function docheckone_HdmuaFile(){
-            var alen=document.frmList_HdmuaFile.elements.length;
+        function docheckone_HdbanFile(){
+            var alen=document.frmList_HdbanFile.elements.length;
             var isChecked=true;
-            alen=(alen>4)?document.frmList_HdmuaFile.chkid.length:0;
+            alen=(alen>4)?document.frmList_HdbanFile.chkid.length:0;
             if (alen>0){
                 for(var i=0;i<alen;i++)
-                    if(document.frmList_HdmuaFile.chkid[i].checked==false)
+                    if(document.frmList_HdbanFile.chkid[i].checked==false)
                         isChecked=false;
             }else{
-                if(document.frmList_HdmuaFile.chkid.checked==false)
+                if(document.frmList_HdbanFile.chkid.checked==false)
                     isChecked=false;
             }
-            document.frmList_HdmuaFile.chkall.checked=isChecked;
+            document.frmList_HdbanFile.chkall.checked=isChecked;
         }
 
-        function calculatechon_HdmuaFile(){
+        function calculatechon_HdbanFile(){
             var strchon="";
-            var alen=document.frmList_HdmuaFile.elements.length;
-            alen=(alen>2)?document.frmList_HdmuaFile.chkid.length:0;
+            var alen=document.frmList_HdbanFile.elements.length;
+            alen=(alen>2)?document.frmList_HdbanFile.chkid.length:0;
             if (alen>0){
                 for(var i=0;i<alen;i++)
-                    if(document.frmList_HdmuaFile.chkid[i].checked==true)
-                        strchon+=document.frmList_HdmuaFile.chkid[i].value+",";
+                    if(document.frmList_HdbanFile.chkid[i].checked==true)
+                        strchon+=document.frmList_HdbanFile.chkid[i].value+",";
             }else{
-                if(document.frmList_HdmuaFile.chkid.checked==true)
-                    strchon=document.frmList_HdmuaFile.chkid.value;
+                if(document.frmList_HdbanFile.chkid.checked==true)
+                    strchon=document.frmList_HdbanFile.chkid.value;
             }
-            document.frmList_HdmuaFile.chon_HdmuaFile.value=strchon;
+            document.frmList_HdbanFile.chon_HdbanFile.value=strchon;
         }
 
-        function delItems_HdmuaFile(processurl,delStr){
+        function delItems_HdbanFile(processurl,delStr){
             if (delStr == undefined){
-                calculatechon_HdmuaFile();
-                delStr = document.getElementById("chon_HdmuaFile").value;
+                calculatechon_HdbanFile();
+                delStr = document.getElementById("chon_HdbanFile").value;
             }
             if (delStr == ""){
                 return false;
@@ -242,10 +242,10 @@
                 return false;
             }
 
-            var numresult_HdmuaFile,order_HdmuaFile,curpage_HdmuaFile;
-            numresult = $("#numresult_HdmuaFile").val();
-            order = $("#order_HdmuaFile").val();
-            curpage = $("#curpage_HdmuaFile").val();
+            var numresult_HdbanFile,order_HdbanFile,curpage_HdbanFile;
+            numresult = $("#numresult_HdbanFile").val();
+            order = $("#order_HdbanFile").val();
+            curpage = $("#curpage_HdbanFile").val();
 
             var dataString  = "numresult=" + numresult;
             dataString += "&order=" + order;
@@ -257,36 +257,36 @@
                 url: processurl,
                 data: dataString,
                 success: function(data) {
-                    $('#list_hdmua_file_cont').fadeOut('fast').load(processurl+"&numresult="+numresult+"&order="+order+"&curpage="+curpage).fadeIn("fast");
+                    $('#list_hdban_file_cont').fadeOut('fast').load(processurl+"&numresult="+numresult+"&order="+order+"&curpage="+curpage).fadeIn("fast");
                 }
             });
         }
 
-        function reloadPage_HdmuaFile(processurl){
-            var numresult_HdmuaFile,order_HdmuaFile,cur_pos;
-            numresult = $("#numresult_HdmuaFile").val();
-            order = $("#order_HdmuaFile").val();
+        function reloadPage_HdbanFile(processurl){
+            var numresult_HdbanFile,order_HdbanFile,cur_pos;
+            numresult = $("#numresult_HdbanFile").val();
+            order = $("#order_HdbanFile").val();
             cur_pos = 0;
-            $("#list_hdmua_file_cont").load(processurl+"&numresult="+numresult+"&order="+order+"&cur_pos="+cur_pos);
+            $("#list_hdban_file_cont").load(processurl+"&numresult="+numresult+"&order="+order+"&cur_pos="+cur_pos);
         }
 
-        function gotoPage_HdmuaFile(processurl,page){
-            var numresult_HdmuaFile,order_HdmuaFile,cur_pos;
-            numresult = $("#numresult_HdmuaFile").val();
-            order = $("#order_HdmuaFile").val();
+        function gotoPage_HdbanFile(processurl,page){
+            var numresult_HdbanFile,order_HdbanFile,cur_pos;
+            numresult = $("#numresult_HdbanFile").val();
+            order = $("#order_HdbanFile").val();
             //alert(processurl+'-'+page+'-'+numresult+'-'+order);
-            $("#list_hdmua_file_cont").load(processurl+"&numresult="+numresult+"&order="+order+"&curpage="+page);
+            $("#list_hdban_file_cont").load(processurl+"&numresult="+numresult+"&order="+order+"&curpage="+page);
         }
 
-        function edit_me_HdmuaFile(id){
-            var hdmua_id = document.frmList_HdmuaFile.hdmua_id.value;
-            $("#list_hdmua_file_cont").load("?listHdmuaFile&mod=hdmua&edit_me=1&hdfile_id="+id+"&hdmua_id="+hdmua_id);
+        function edit_me_HdbanFile(id){
+            var hdban_id = document.frmList_HdbanFile.hdban_id.value;
+            $("#list_hdban_file_cont").load("?listHdbanFile&mod=hdban&edit_me=1&hdfile_id="+id+"&hdban_id="+hdban_id);
         }
 
-        $("#a_ref_HdmuaFile").click( function () {
-            var id = document.frmList_HdmuaFile.hdmua_id.value;
-            $('#list_hdmua_file_cont').hide();
-            $('#list_hdmua_file_cont').fadeOut('fast').load('index.php?listHdmuaFile&mod=hdmua&hdmua_id='+id).fadeIn("fast");
+        $("#a_ref_HdbanFile").click( function () {
+            var id = document.frmList_HdbanFile.hdban_id.value;
+            $('#list_hdban_file_cont').hide();
+            $('#list_hdban_file_cont').fadeOut('fast').load('index.php?listHdbanFile&mod=hdban&hdban_id='+id).fadeIn("fast");
         });
     </script>
 {/literal}

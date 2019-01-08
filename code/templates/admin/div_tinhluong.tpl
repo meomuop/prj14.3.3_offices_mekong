@@ -233,8 +233,8 @@ function change_style_tinhluong(obj){
 		var w;
 		w=window.open('index.php?InBangluong&mod=tinhluong&thangluong='+thangluong);
 		//w.document.write($('#div_cont_print').load().html());
-		w.print();
-		w.close();
+		//w.print();
+		//w.close();
 	}
 	
 	// ----- ket xuat

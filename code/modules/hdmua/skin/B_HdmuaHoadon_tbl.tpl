@@ -738,7 +738,7 @@
 	}
 	
 	function edit_me_HdmuaHoadon(id){
-		$("#hdmua_content_main").load("?listHdmuaHoadon&mod=hdmua&edit_me=1&hdmua_id="+id);
+		$("#hdmua_content_main").load("?listHdmuaHoadon&mod=hdmua&edit_me=1&hoadon_id="+id);
 	}
 		
 	$("#a_ref_HdmuaHoadon").click( function () { 

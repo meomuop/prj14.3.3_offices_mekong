@@ -92,6 +92,7 @@
 $(function() {
 	$( "#div_hdban" ).draggable();
 	$( "#list_file_hdban" ).draggable();
+    $( "#list_file_dthdban" ).draggable();
 	$( "#div_thuchien_hdban" ).draggable();
 	$( "#div_hdban_lkvb" ).draggable();
 	$( "#list_view_hdban" ).draggable();
@@ -147,9 +148,6 @@ function change_style_hdban(obj){
                 document.getElementById('c_menu_hdban_' + i).style.backgroundColor = '#dfe8f6';
                 document.getElementById('c_menu_hdban_' + i).style.height = '25px';
                 document.getElementById('c_menu_hdban_' + i).style.marginTop = '0px';
-                //if(parseInt(obj)==10){
-                  //  document.getElementById('c_menu_hdban_3').style.borderRight = 'none';
-                //}
             }
 		}
 		else{
@@ -168,6 +166,10 @@ function change_style_hdban(obj){
                 document.getElementById('c_menu_hdban_' + i).style.backgroundColor = '#ccd8e7';
                 document.getElementById('c_menu_hdban_' + i).style.height = '20px';
                 document.getElementById('c_menu_hdban_' + i).style.marginTop = '4px';
+            }
+
+            if(parseInt(obj)!=6){
+                document.getElementById('c_menu_hdban_6').style.borderLeft = '1px solid #99bbe8';
             }
 		}
 	}
@@ -215,7 +217,7 @@ function change_style_hdban(obj){
     </div>
 </div>
 
-<div id="list_file_hdban" onclick="javascript: change_bgcl_hdban('list_file_hdban')" style="width:320px; float:left; font-weight:normal; position:absolute; display:none; margin:90px 0 0 690px; background-color:#ffffff; border:1px solid #99bbe8; z-index:1010; padding: 0px 1px 1px 1px">
+<div id="list_file_hdban" onclick="javascript: change_bgcl_hdban('list_file_hdban')" style="width:620px; float:left; font-weight:normal; position:absolute; display:none; margin:90px 0 0 690px; background-color:#ffffff; border:1px solid #99bbe8; z-index:1010; padding: 0px 1px 1px 1px">
 	<div id="file_hdban_main_cont">
         <div id="file_hdban_tab_bar_tit">Tệp tin hợp đồng</div>
         <div id="file_hdban_tab_bar_icon">
@@ -224,6 +226,20 @@ function change_style_hdban(obj){
         </div>
         <div id="file_hdban_content_outsign">
         	<div id="list_hdban_file_cont">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="list_file_dthdban" onclick="javascript: change_bgcl_hdban('list_file_dthdban')" style="width:320px; float:left; font-weight:normal; position:absolute; display:none; margin:90px 0 0 690px; background-color:#ffffff; border:1px solid #99bbe8; z-index:1010; padding: 0px 1px 1px 1px">
+    <div id="file_dthdban_main_cont">
+        <div id="file_dthdban_tab_bar_tit">Tiến trình dự thảo hợp đồng</div>
+        <div id="file_dthdban_tab_bar_icon">
+            <a href="javascript: void(0);" onClick="javascript: document.getElementById('list_file_dthdban').style.display='none'" style="text-decoration:none">
+                <img src="{$css_path}icon_dong.png" class="img_all" title="Đóng lại"></a>
+        </div>
+        <div id="file_dthdban_content_outsign">
+            <div id="list_dthdban_file_cont">
             </div>
         </div>
     </div>
@@ -273,7 +289,7 @@ function change_style_hdban(obj){
 
 {literal}
 <script language="javascript">	
-	var div_arr_hdban = ['list_file_hdban','div_view_hdban','div_thuchien_hdban','div_hdban_lkvb'];
+	var div_arr_hdban = ['list_file_hdban','div_view_hdban','div_thuchien_hdban','div_hdban_lkvb','list_file_dthdban'];
 
 	function change_bgcl_hdban(obj){
 		for(i=0;i<=div_arr_hdban.length;i++){

@@ -26,10 +26,10 @@ class FileUploader {
 	*/
 
  // script để thực hiện quá trình upload	
-	function __construct($fileTypesAllowed = 'jpg, jpeg, png, pdf', $fileSizeMax = 15, $uploadDir = '../hoadonmua_uploads') {
+	function __construct($fileTypesAllowed = 'jpg, jpeg, png, pdf', $fileSizeMax = 15, $uploadDir = '../hopdong_uploads') {
 		$this->fileTypesAllowed = strtolower($fileTypesAllowed);
 		$this->fileSizeMax = $fileSizeMax;
-		$this->uploadDir = $uploadDir.'_'.date('Y').'/';
+		$this->uploadDir = $uploadDir.'_'.date('Y').'/hdmua_hoadon/';
 	}
 	/*
 	Function: Show form upload

@@ -497,31 +497,11 @@
                 <div class="{$class_td}" style="width:100px; text-align:left">
                     &nbsp;{$obj_list[pi]->dthdban_sohd}&nbsp;
                 </div>
-                <div class="{$class_td}" style="width:372px" title="{$obj_list[pi]->dthdban_noidung}">
-                	{math a=$smarty.section.pi.index b=1 equation="a+b" assign=count}
-                    <div style="float:left; width:274px; white-space:nowrap">&nbsp;<a href="javascript: void(0);" onclick="edit_me_Hdbandt({$obj_list[pi]->dthdban_id})" >{$obj_list[pi]->dthdban_noidung|str_string_cut:"63":"1"}</a></div>
-                    <div style="float:right; margin:2px; border:1px solid #8ea4c1; height:18px; width:16px; text-align:center; background-color:#dfe8f6" title="Chức năng mở rộng">
-                    {if $user_level eq 9 or $user_level eq 1}<a href='javascript: void(0);' onclick="show_list_options({$count},{$total_num_result})">
-                    <img src="{$css_path}extra_icon.png" width="14" height="14" border="0" class="img_all"></a>{/if}
-                    </div>
-                    <div id="extra_{$count}" style="position:absolute; display:none; height:auto; width:140px; margin:2px 141px; border:1px solid #8ea4c1; border-right:1px solid #8ea4c1; background-color:#dfe8f6">
-                        <div style="float:left; width:140px; height:18px; border-right:1px solid #dfe8f6"><b>&nbsp;Chọn thao tác:</b></div>
-                        <div style="float:left; width:140px; padding:0 0 0 3px">
-                            - <a href="javascript: void(0)" onclick="javascript: show_dthdban_chungtu({$obj_list[pi]->dthdban_id})">Quản lý chứng từ</a>
-                        </div>
-                        <div style="float:left; width:140px; padding:0 0 0 3px">
-                             - <a href="javascript: void(0)" onclick="javascript: show_dthdban_vanban({$obj_list[pi]->dthdban_id})">Liên kết văn bản</a>
-                        </div>
-                        <div style="float:left; width:140px; padding:0 0 0 3px">
-                            - <a href="javascript: void(0)" onclick="javascript: show_dthdban_tientrinh({$obj_list[pi]->dthdban_id})">Tiến trình thực hiện</a>
-                        </div>
-                        <div style="float:left; width:140px; padding:0 0 0 3px">
-                            - <a href="javascript: void(0)" onclick="javascript: show_dthdban_thongtin({$obj_list[pi]->dthdban_id})">Thông tin hợp đồng</a>
-                        </div>
-                    </div>
+                <div class="{$class_td}" style="width:372px; white-space:nowrap" title="{$obj_list[pi]->dthdban_noidung}">
+                	<a href="javascript: void(0);" onclick="edit_me_Hdbandt({$obj_list[pi]->dthdban_id})" >{$obj_list[pi]->dthdban_noidung|str_string_cut:"80":"1"}</a>
                 </div>
                 <div class="{$class_td}" style="width:160px; white-space:nowrap" title="{$obj_list[pi]->khachhang_viettat}">
-                    &nbsp;{$obj_list[pi]->khachhang_viettat|str_string_cut:"25":"1"}
+                    &nbsp;{$obj_list[pi]->khachhang_viettat|str_string_cut:"30":"1"}
                 </div>
                 <div class="{$class_td}" style="width:110px">
                     &nbsp;{if $obj_list[pi]->dthdban_tinhtrang eq 1}
@@ -745,33 +725,9 @@
 	}
 	
 	function show_list_file_dthdban(dthdban_id){
-		var arg_doc = document.getElementById('arg_doc').value;
 		document.getElementById('list_file_dthdban').style.display='block';
-		$("#list_dthdban_file_cont").load("?listHdbandtFile&mod=hdban"+arg_doc+"&dthdban_id="+dthdban_id);
+		$("#list_dthdban_file_cont").load("?listHdbandtFile&mod=hdban?dthdban_id="+dthdban_id);
 	}
-
-	function show_list_reply(user_id,dthdban_id){
-		document.getElementById('list_reply').style.display='block';
-		var arg = document.getElementById('arg').value;
-		$("#list_reply_cont").load("?listHdbandtReply"+arg+"&dthdban_id="+dthdban_id+"&user_id="+user_id);
-	}
-	
-	function show_dthdban_chungtu(dthdban_id){
-        change_style_dthdban(2);
-        document.getElementById('hdban_content_main').style.display='block';
-		//var arg = document.getElementById('arg').value;
-		$("#hdban_content_main").load("?listHdbandtHoadon&mod=hdban&dthdban_id="+dthdban_id);
-	}
-
-    function show_dthdban_vanban(dthdban_id){
-        document.getElementById('div_dthdban_lkvb').style.display='block';
-        $("#list_dthdban_lkvb_cont").load("?listHdbandtLkvb&mod=hdban&dthdban_id="+dthdban_id);
-    }
-
-    function show_dthdban_tientrinh(dthdban_id){
-        document.getElementById('div_thuchien_dthdban').style.display='block';
-        $("#list_thuchien_dthdban_cont").load("?listHdbandtTientrinh&mod=hdban&dthdban_id="+dthdban_id);
-    }
 
 	function show_dthdban_thongtin(dthdban_id){
 		document.getElementById('div_view_dthdban').style.display='block';
