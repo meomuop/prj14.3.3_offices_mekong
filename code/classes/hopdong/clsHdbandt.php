@@ -88,7 +88,7 @@ class hdbandt_class extends dbBasic {
         $dbconn->Execute($sql);
     }
 
-    function changeHdmuaFile($id,$value){
+    function changeHdbandtFile($id,$value){
         global $dbconn;
         // ---- Get sql query
         $sql = " UPDATE $this->tablename set dthdban_file = ".$value." where dthdban_id=".$id;

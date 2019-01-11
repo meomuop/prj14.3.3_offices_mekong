@@ -10,11 +10,11 @@
 	}
 
 	// ------------------------------
-    include ($CLASSES_PATH.'/hopdong/clsHdbanFile.php');
-    include ($CLASSES_PATH.'/hopdong/clsHdban.php');
+    include ($CLASSES_PATH.'/hopdong/clsHdbandtFile.php');
+    include ($CLASSES_PATH.'/hopdong/clsHdbandt.php');
 
 	// --- Class is used in this page
-	$obj = new hdbanFile_class();
+	$obj = new hdbandtFile_class();
 
 	// --- Variables is used in this page
 	$order_arr = array(0 => "Mới đến cũ", 1 => "Cũ đến mới");
@@ -56,7 +56,7 @@
 	// --- Add - Edit
 	if($vars['add_edit']==1):
         if (!isset($vars['hdfile_id']) || $vars['hdfile_id'] < 1) {
-            $obj = new hdbanFile_class();
+            $obj = new hdbandtFile_class();
             $obj->readForm();
             if ((is_null($error)) || ($error == "")) {
                 $obj->hdfile_date = date("Y-m-d");
@@ -67,7 +67,7 @@
                 unset($obj);
             }
         }else{
-            $obj = new hdbanFile_class();
+            $obj = new hdbandtFile_class();
             $obj->readForm();
             if ((is_null($error)) || ($error == "")) {
                 if ($obj->is_already_used($obj->tablename, "hdfile_id", $obj->hdfile_id))
@@ -85,7 +85,7 @@
 
 	// --- Get record for edit
 	if($vars['edit_me']==1):
-        $obj = new hdbanFile_class();
+        $obj = new hdbandtFile_class();
         $obj->getDBbyPkey($vars['hdfile_id']);
         if (!$obj->hdfile_id) redirect("?listHdbanFile".$arg['arg']);
         $obj_info = (array)$obj;
@@ -95,8 +95,8 @@
 	$where = " 1 = 1";
 	
 	// --- Get data to view in homepage
-    if ($vars['hdban_id']):
-        $where .= " AND hdban_id = ".$vars['hdban_id']."";
+    if ($vars['dthdban_id']):
+        $where .= " AND dthdban_id = ".$vars['dthdban_id']."";
     endif;
 
 	$limit = " LIMIT ".(string)$cur_pos.", ".(int)$vars['numresult'];
@@ -107,22 +107,24 @@
         $orderStr.=" hdfile_id ASC";
 	endif;
 	
-	$obj = new hdbanFile_class();
+	$obj = new hdbandtFile_class();
 	$obj_list = $obj->getDBList(" $where", $orderStr, FALSE, $limit);
 	$total_num_result = $obj->getRowNumber("$where");
 	$num_page = ceil($total_num_result/$vars['numresult']);
 
+	$solan = $total_num_result+1;
+
     // --- Get hdban list
-    $obj_hdban = new hdban_class();
-    $obj_hdban->getDBbyPkey($vars['hdban_id']);
-    $hdban_info = (array)$obj_hdban;
+    $obj_hdbandt = new hdbandt_class();
+    $obj_hdbandt->getDBbyPkey($vars['dthdban_id']);
+    $dthdban_info = (array)$obj_hdbandt;
 
     if($total_num_result>0):
-        $obj_hdban -> changeHdbanFile($vars['hdban_id'],1);
+        $obj_hdbandt -> changeHdbandtFile($vars['dthdban_id'],1);
     else:
-        $obj_hdban -> changeHdbanFile($vars['hdban_id'],2);
+        $obj_hdbandt -> changeHdbandtFile($vars['dthdban_id'],2);
     endif;
-    unset($obj_hdban);
+    unset($obj_hdbandt);
 	
 	// ------ Print paging ---------
 	$pager_str = get_paging_string($processurl, $vars['curpage'], $num_page);
@@ -136,7 +138,7 @@
 	$vars['arg'] .= $vars['curpage']?"&curpage=".$vars['curpage']:"";
 	$vars['arg'] .= $vars['order']?"&order=".$vars['order']:"";
 	$vars['arg'] .= $vars['mod']?("&mod=".$vars['mod']):"";
-    $vars['arg'] .= $vars['hdban_id']?("&mod=".$vars['hdban_id']):"";
+    $vars['arg'] .= $vars['dthdban_id']?("&mod=".$vars['dthdban_id']):"";
 	
 	// permissions
 	$per_add 	= 1;
@@ -153,10 +155,10 @@
 	$assign_list['per_act'] 	= $per_act;
 	
 	$assign_list['obj_list'] 		= $obj_list;
-    $assign_list['obj_list_hdban'] 	= $obj_list_hdban;
 	
-	$assign_list['hdban_id'] 		= $vars['hdban_id'];
-    $assign_list['hdban_info'] 		= $hdban_info;
+	$assign_list['dthdban_id'] 		= $vars['dthdban_id'];
+    $assign_list['dthdban_info'] 	= $dthdban_info;
+    $assign_list['solan'] 	    = $solan;
 
 	
 	$assign_list['pager_str'] 	= $pager_str;
@@ -170,16 +172,15 @@
 	$assign_list['vars'] 		= $vars;
 	$assign_list['obj_info'] 	= $obj_info;
 	$assign_list['error'] 		= $error;
-	$assign_list['lastNum'] 	= $lastNum;
 	$assign_list['complete'] 	= $complete;
 	
-	$display = dirname(__FILE__)."/skin/B_HdbanFile_tbl.tpl";
+	$display = dirname(__FILE__)."/skin/B_HdbandtFile_tbl.tpl";
 	$assign_list['display'] = $display;
 	
 	$smarty->assign($assign_list);
 	
 	// --- Display template
 	if (isset($vars['activeAjax']))
-	$smarty->display(dirname(__FILE__)."/skin/B_HdbanFile_tbl.tpl");
+	$smarty->display(dirname(__FILE__)."/skin/B_HdbandtFile_tbl.tpl");
 	else
 	$smarty->display(dirname(__FILE__)."/skin/B_Hdban_list.tpl");

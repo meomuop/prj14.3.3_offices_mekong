@@ -726,7 +726,7 @@
 	
 	function show_list_file_dthdban(dthdban_id){
 		document.getElementById('list_file_dthdban').style.display='block';
-		$("#list_dthdban_file_cont").load("?listHdbandtFile&mod=hdban?dthdban_id="+dthdban_id);
+		$("#list_dthdban_file_cont").load("?listHdbandtFile&mod=hdban&dthdban_id="+dthdban_id);
 	}
 
 	function show_dthdban_thongtin(dthdban_id){

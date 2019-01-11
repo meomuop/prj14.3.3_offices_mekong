@@ -16,7 +16,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
 <div id="file_content_insign">
 	<form method="post" name="frmList_DocDTFile" action="?listDocDTFile{$vars.arg}" id="frmList_DocDTFile">
     <!------------------------------------------THEM MOI------------------------------------>
-    <fieldset style="width:448px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px">
+    <fieldset style="width:488px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px">
         {section name=qi loop=$obj_list_doc}
             {if $obj_list_doc[qi]->docDT_id eq $docDT_id}
                 {assign var = "so_dt" value = $obj_list_doc[qi]->docDT_num}
@@ -32,16 +32,16 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
             </tr>
             <tr height="30">
             	<td align="center" valign="top">
-                	<div style="float:left; width:15%; line-height:25px; text-align:left">Tên tệp tin <font color="#FF0000">*</font>:</div>
-                    <div style="float:left; width:33%; line-height:25px; text-align:left">
+                	<div style="float:left; width:16%; line-height:25px; text-align:left">Tên tệp tin <font color="#FF0000">*</font>:</div>
+                    <div style="float:left; width:29%; line-height:25px; text-align:left">
                         <input type="text" id="docDTFile_name" name="docDTFile_name" class="text_short" value="{if $obj_info.docDTFile_name neq ''}{$obj_info.docDTFile_name}{else}DT-{$so_dt}{/if}" onfocus="hide_message_DocDTFile();"/>
                     </div>
                     <div style="float:left; width:17%; line-height:25px; text-align:left">Đường dẫn <font color="#FF0000">*</font>:</div>
-                    <div style="float:left; width:35%; line-height:25px; text-align:left">
+                    <div style="float:left; width:37%; line-height:25px; text-align:left">
                     	<input type="text" class="text_short" name="docDTFile_path" id="docDTFile_path" value="{$obj_info.docDTFile_path}" onfocus="hide_message_DocDTFile();">&nbsp;<a href="javascript:void(0)" onclick="javascript:window.open('upload1.php?form_file=frmList_DocDTFile&field_file=docDTFile_path','new_page','width=410,height=225')" >[ Tải lên ]</a>
                     </div>
-                    <div style="float:left; width:15%; line-height:25px; text-align:left">Ghi chú:</div>
-                    <div style="float:left; width:85%; line-height:25px; text-align:left">
+                    <div style="float:left; width:16%; line-height:25px; text-align:left">Ghi chú:</div>
+                    <div style="float:left; width:84%; line-height:25px; text-align:left">
                         <textarea spellcheck="false" name="docDTFile_ghichu" id="docDTFile_ghichu" cols="30" rows="5" class="text_area_small" tabindex="8">{$obj_info.docDTFile_ghichu}</textarea>
                     </div>
                     <div style="float:left; width:15%; line-height:25px; text-align:left">Trạng thái:</div>
@@ -116,17 +116,17 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
         </table>
     </fieldset>
     <!------------------------------------DANH SACH---------------------------------------------->
-    <fieldset style="width:448px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px; height:137px">
+    <fieldset style="width:488px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px; height:137px">
         <legend class="legend">Danh sách: {$total_num_result}</legend>
     	<div style="float:left; height:5px; width:100%"></div>
-        <div style="float:left; height:25px; width:428px; border-top:1px solid #99bbe8; border-bottom:1px solid #99bbe8 ">
+        <div style="float:left; height:25px; width:468px; border-top:1px solid #99bbe8; border-bottom:1px solid #99bbe8 ">
             <div class="tbl_tit" style="width:30px; text-align:center"><b>STT</b></div>	
             <div class="tbl_tit" style="width:105px"><B>&nbsp;Tên tệp tin</B></div>
-            <div class="tbl_tit" style="width:199px"><B>&nbsp;Ghi chú</B></div>
+            <div class="tbl_tit" style="width:239px"><B>&nbsp;Ghi chú</B></div>
             <div class="tbl_tit" style="width:90px; text-align:center"><B>Chọn</B></div>
         </div>
         <div style="float:left; width:18px; height:25px">&nbsp;</div>
-        <div style="float:left; height:80px; width:448px; overflow-y:scroll">
+        <div style="float:left; height:80px; width:488px; overflow-y:scroll">
             {section name=pi loop=$obj_list}
             {if $smarty.section.pi.index is not div by 2} 
             {assign var="class_td" value="tbl_cont"} 
@@ -138,7 +138,7 @@ float:left; line-height:25px; border-right:1px solid #99bbe8; border-bottom:1px 
             <div class="{$class_td}" style="width:105px; white-space:nowrap" title="{$obj_list[pi]->docDTFile_name}">
             	&nbsp;<a href='javascript: void(0);' onclick="edit_me_DocDTFile({$obj_list[pi]->docDTFile_id})">{$obj_list[pi]->docDTFile_name|str_string_cut:"25":"1"}</a>
             </div>
-            <div class="{$class_td}" style="width:199px;" title="{$obj_list[pi]->docDTFile_ghichu}">
+            <div class="{$class_td}" style="width:239px;" title="{$obj_list[pi]->docDTFile_ghichu}">
                 &nbsp;{$obj_list[pi]->docDTFile_ghichu}
             </div>
             <div class="{$class_td}" style="width:30px; text-align:center">

@@ -31,6 +31,20 @@
 #file_hdban_menu{ float:left; width:99.7%; height:25px; padding-left:8px; position:absolute; margin-top:21px}
 /*----------------------end file div---------------------*/
 
+/*----------------------file div---------------------*/
+#file_dthdban_main_cont{ float:left; width:100%; height:410px; background-color:#ccd8e7}
+#file_dthdban_tab_bar_tit{ float:left; font-weight:bold; text-transform:uppercase; line-height:20px; padding-left:8px; width:80%;cursor:move; color:#15428b;}
+#file_dthdban_tab_bar_icon{ float:right; width:10%; text-align:right; padding-top:2px; padding-right:6px}
+#file_dthdban_content_outsign{ float:left; width:97%; height:380px; background-color:#ffffff; margin-left:8px; border:1px solid #99bbe8}
+#file_dthdban_content_insign{ float:left; width:99.7%; height:358px; background-color:#dfe8f6; margin-left:1px;}
+#list_dthdban_file_cont{ float:left; width:99.6%; height:379px; background-color:#dfe8f6; margin-left:1px;}
+#file_dthdban_clear_txt{ float:left; width:100%; height:1px}
+#file_dthdban_tool_bar{ float:left; width:99.7%; height:20px; background-color:#dfe8f6; margin-left:1px}
+#file_dthdban_search_area{ float:left; width:120px; height:20px; padding-left:2px}
+#file_dthdban_page_area{ float:left; width:40px; height:20px; padding-left:2px}
+#file_dthdban_menu{ float:left; width:99.7%; height:25px; padding-left:8px; position:absolute; margin-top:21px}
+/*----------------------end file div---------------------*/
+
 /*----------------------thanhcong div---------------------*/
 #thanhcong_main_cont{ float:left; width:100%; height:100px; background-color:#ccd8e7}
 #thanhcong_tab_bar_tit{ float:left; font-weight:bold; text-transform:uppercase; line-height:20px; padding-left:8px; width:80%;cursor:move; color:#15428b;}
@@ -149,6 +163,10 @@ function change_style_hdban(obj){
                 document.getElementById('c_menu_hdban_' + i).style.height = '25px';
                 document.getElementById('c_menu_hdban_' + i).style.marginTop = '0px';
             }
+
+            if(parseInt(obj)==6){
+                document.getElementById('c_menu_hdban_5').style.borderRight = '1px solid #99bbe8';
+            }
 		}
 		else{
             if(document.getElementById('c_menu_hdban_'+i) === null) {
@@ -217,7 +235,7 @@ function change_style_hdban(obj){
     </div>
 </div>
 
-<div id="list_file_hdban" onclick="javascript: change_bgcl_hdban('list_file_hdban')" style="width:620px; float:left; font-weight:normal; position:absolute; display:none; margin:90px 0 0 690px; background-color:#ffffff; border:1px solid #99bbe8; z-index:1010; padding: 0px 1px 1px 1px">
+<div id="list_file_hdban" onclick="javascript: change_bgcl_hdban('list_file_hdban')" style="width:320px; float:left; font-weight:normal; position:absolute; display:none; margin:90px 0 0 690px; background-color:#ffffff; border:1px solid #99bbe8; z-index:1010; padding: 0px 1px 1px 1px">
 	<div id="file_hdban_main_cont">
         <div id="file_hdban_tab_bar_tit">Tệp tin hợp đồng</div>
         <div id="file_hdban_tab_bar_icon">
@@ -231,7 +249,7 @@ function change_style_hdban(obj){
     </div>
 </div>
 
-<div id="list_file_dthdban" onclick="javascript: change_bgcl_hdban('list_file_dthdban')" style="width:320px; float:left; font-weight:normal; position:absolute; display:none; margin:90px 0 0 690px; background-color:#ffffff; border:1px solid #99bbe8; z-index:1010; padding: 0px 1px 1px 1px">
+<div id="list_file_dthdban" onclick="javascript: change_bgcl_hdban('list_file_dthdban')" style="width:620px; float:left; font-weight:normal; position:absolute; display:none; margin:90px 0 0 490px; background-color:#ffffff; border:1px solid #99bbe8; z-index:1010; padding: 0px 1px 1px 1px">
     <div id="file_dthdban_main_cont">
         <div id="file_dthdban_tab_bar_tit">Tiến trình dự thảo hợp đồng</div>
         <div id="file_dthdban_tab_bar_icon">

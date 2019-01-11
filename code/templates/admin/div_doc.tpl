@@ -363,7 +363,7 @@ function change_style_doc(obj){
     </div>
 </div>
 
-<div id="list_file_dt" onclick="javascript: change_bgcl_doc('list_file_dt')" style="width:480px; float:left; font-weight:normal; position:absolute; display:none; margin:90px 0 0 690px; background-color:#ffffff; border:1px solid #99bbe8; z-index:1010; padding: 0px 1px 1px 1px">
+<div id="list_file_dt" onclick="javascript: change_bgcl_doc('list_file_dt')" style="width:520px; float:left; font-weight:normal; position:absolute; display:none; margin:90px 0 0 690px; background-color:#ffffff; border:1px solid #99bbe8; z-index:1010; padding: 0px 1px 1px 1px">
     <div id="file_dt_main_cont">
         <div id="file_dt_tab_bar_tit">Tệp tin văn bản dự thảo</div>
         <div id="file_dt_tab_bar_icon">

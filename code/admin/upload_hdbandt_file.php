@@ -29,7 +29,7 @@ class FileUploader {
 	function __construct($fileTypesAllowed = 'jpg, jpeg, png, pdf', $fileSizeMax = 15, $uploadDir = '../hopdong_uploads') {
 		$this->fileTypesAllowed = strtolower($fileTypesAllowed);
 		$this->fileSizeMax = $fileSizeMax;
-		$this->uploadDir = $uploadDir.'_'.date('Y').'/hdmua/';
+		$this->uploadDir = $uploadDir.'_'.date('Y').'/hdbandt/';
 	}
 	/*
 	Function: Show form upload
@@ -56,6 +56,8 @@ class FileUploader {
 				<tr><td>Định dạng cho phép:</td><td><b>'.$this->fileTypesAllowed.'</b></td></tr>
 				<tr><td>Chọn tệp:<br><!--<a href="javascript:void(0)" onclick="addFile()">Thêm tệp khác</a>--></td><td id="list"><input name="filesUpload[]" type="file"></td></tr>
 			</table>
+			<input type="hidden" name="form_file" value="'.$_GET['form_file'].'">
+			<input type="hidden" name="field_file" value="'.$_GET['field_file'].'">
 			<input type="submit" name="submit" value="Tải lên">
 		</form>
 		<div id="wait"></div>
@@ -147,8 +149,8 @@ class FileUploader {
 			$link = '[url='.$link.']Tải xuống[/url]';
 		}
 		$return .= "<tr><td>BBCode:</td><td><input type=\"text\" onclick=\"this.select()\" value=\"$link\" size=\"50\"></td></tr></table>";
-		$return .= "<tr><td colspan=\"2\"><A href=\"Javascript: window.opener.document.frmList_HdmuaFile.hdfile_path.value='$link_bs';window.close();window.history.go(1);\">Hoàn tất thao tác</A></td> </tr></table>";
-		return $return;
+        $return .= "<tr><td colspan=\"2\"><A href=\"Javascript: window.opener.document.".$_POST['form_file'].".".$_POST['field_file'].".value='$link_bs';window.close();window.history.go(1);\">Hoàn tất thao tác</A></td> </tr></table>";
+        return $return;
 	}
 }
 ?>

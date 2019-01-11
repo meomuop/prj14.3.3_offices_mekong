@@ -14,19 +14,19 @@ class hdbandtFile_class extends dbBasic {
     var  $hdfile_ykien;
     var  $user_id;
     var  $hdfile_date;
-    var  $hdfile_active;
+    var  $hdfile_status;
 
     var $pfields = array (
         'hdfile_id',
-        'hdban_id',
-        'hdban_sohd',
+        'dthdban_id',
+        'dthdban_sohd',
         'hdfile_name',
         'hdfile_path',
         'hdfile_phanhoi',
         'hdfile_ykien',
         'user_id',
         'hdfile_date',
-        'hdfile_active'); //table private fields
+        'hdfile_status'); //table private fields
 
     var $pkeys = array ('hdfile_id'); //key fields
 
