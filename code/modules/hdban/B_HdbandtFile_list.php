@@ -59,12 +59,22 @@
             $obj = new hdbandtFile_class();
             $obj->readForm();
             if ((is_null($error)) || ($error == "")) {
-                $obj->hdfile_date = date("Y-m-d");
-                $obj->user_id = $_SESSION['user_id'];
+                if($vars['hdfile_path'] != ""){
+                    $obj->hdfile_ngayduthao = date("Y-m-d");
+                    $obj->hdfile_nguoiduthao = $_SESSION['user_id'];
+                }
+                if($vars['hdfile_phanhoi'] != ""){
+                    $obj->hdfile_ngayykien = date("Y-m-d");
+                    $obj->hdfile_nguoiykien = $_SESSION['user_id'];
+                }
 
                 $obj->insertnew();
                 $complete = "Đã thêm mới thành công!";
                 unset($obj);
+
+                $obj_dthdban = new hdbandt_class();
+                $obj_dthdban->updateTinhtrang($vars['dthdban_id'],$vars['dthdban_tt_file']);
+                unset($obj_dthdban);
             }
         }else{
             $obj = new hdbandtFile_class();
@@ -72,12 +82,18 @@
             if ((is_null($error)) || ($error == "")) {
                 if ($obj->is_already_used($obj->tablename, "hdfile_id", $obj->hdfile_id))
                 {
-                    $obj->hdfile_date = date("Y-m-d");
-                    $obj->user_id = $_SESSION['user_id'];
+                    if($vars['hdfile_phanhoi'] != "" && $vars['hdfile_nguoiykien'] < 1){
+                        $obj->hdfile_ngayykien = date("Y-m-d");
+                        $obj->hdfile_nguoiykien = $_SESSION['user_id'];
+                    }
 
                     $obj->update();
                     $complete = "Đã cập nhật thành công!";
                     unset($obj);
+
+                    $obj_dthdban = new hdbandt_class();
+                    $obj_dthdban->updateTinhtrang($vars['dthdban_id'],$vars['dthdban_tt_file']);
+                    unset($obj_dthdban);
                 }
             }
         }

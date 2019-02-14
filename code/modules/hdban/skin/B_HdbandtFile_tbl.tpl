@@ -17,42 +17,56 @@
 <div id="file_dthdban_content_insign">
 	<form method="post" name="frmList_HdbandtFile" action="?listHdbandtFile{$vars.arg}" id="frmList_HdbandtFile">
     <!------------------------------------------THEM MOI------------------------------------>
-    <fieldset style="width:588px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px">
-        <legend class="legend">Thêm/Chỉnh sửa</legend>
+    <fieldset style="width:788px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px">
+        <legend class="legend_list" style="width: 80%">
+            Dự thảo hợp đồng: {$dthdban_info.dthdban_sohd}&nbsp;|&nbsp;
+            <span class="msg">Thông báo: <font color="#FF0000">{$error}</font>{$complete}</span>
+            <span id="lblError_HdbandtFile" class="error">Thông báo: (*) là các mục bắt buộc!</span>
+        </legend>
         <table width="98%" cellspacing="0" cellpadding="0" border="0" style="margin-left:5px">
-            <tr height="20">
-                <td colspan="2">
-                    {if $error or $complete}
-                        <span class="msg">Thông báo: <font color="#FF0000">{$error}</font>{$complete}</span>{/if}
-                    <span id="lblError_HdbandtFile" class="error">Thông báo: (*) là các mục bắt buộc!</span>
-                </td>
-            </tr>
-            <tr height="20"><td colspan="2">Hợp đồng: {$dthdban_info.dthdban_sohd}</td></tr>
             <tr>
-                <td align="center" valign="top" width="50%">
-                    <div style="float:left; width:30%; line-height:25px; text-align:left">Tên tệp tin <font color="#FF0000">*</font>:</div>
-                    <div style="float:left; width:70%; line-height:25px; text-align:left">
+                <td align="center" valign="top" width="34%" style="border-right: 1px dashed #99bbe8">
+                    <div style="float:left; width:100%; line-height:25px; text-align:left"><u>Người dự thảo:</u></div>
+                    <div style="float:left; width:31%; line-height:25px; text-align:left">Tên tệp tin <font color="#FF0000">*</font>:</div>
+                    <div style="float:left; width:69%; line-height:25px; text-align:left">
                         <input type="text" id="hdfile_name" name="hdfile_name" class="text_short" value="{if $obj_info.hdfile_name neq ''}{$obj_info.hdfile_name}{else}{$dthdban_info.dthdban_sohd} (Lần {$solan}){/if}" onfocus="hide_message_HdbandtFile();"/>
                     </div>
-                    <div style="float:left; width:30%; line-height:25px; text-align:left">File dự thảo <font color="#FF0000">*</font>:</div>
-                    <div style="float:left; width:70%; line-height:25px; text-align:left">
+                    <div style="float:left; width:31%; line-height:25px; text-align:left">File dự thảo <font color="#FF0000">*</font>:</div>
+                    <div style="float:left; width:69%; line-height:25px; text-align:left">
                         <input type="text" class="text_short" name="hdfile_path" id="hdfile_path" value="{$obj_info.hdfile_path}" onfocus="hide_message_HdbandtFile();">&nbsp;<a href="javascript:void(0)" onclick="javascript:window.open('upload_hdbandt_file.php?form_file=frmList_HdbandtFile&field_file=hdfile_path','new_page','width=410,height=225')" >[ Tải lên ]</a>
                     </div>
                 </td>
-                <td align="center" valign="top">
-                    <div style="float:left; width:30%; line-height:25px; text-align:left">Ghi chú:</div>
-                    <div style="float:left; width:70%; line-height:25px; text-align:left">
-                        <input type="text" id="hdfile_ykien" name="hdfile_ykien" class="text_middle" value="{$obj_info.hdfile_ykien}"/>
+                <td align="center" valign="top" style="padding-left: 5px;">
+                    <div style="float:left; width:100%; line-height:25px; text-align:left"><u>Người phê duyệt:</u></div>
+                    <div style="float:left; width:18%; line-height:25px; text-align:left">Ý kiến:</div>
+                    <div style="float:left; width:82%; line-height:25px; text-align:left">
+                        <textarea spellcheck="false" name="hdfile_ykien" id="hdfile_ykien" cols="30" rows="5" class="text_area_small">{$obj_info.hdfile_ykien}</textarea>
                     </div>
-                    <div style="float:left; width:30%; line-height:25px; text-align:left">File phản hồi:</div>
-                    <div style="float:left; width:70%; line-height:25px; text-align:left">
+                    <div style="float:left; width:18%; line-height:25px; text-align:left">File phản hồi:</div>
+                    <div style="float:left; width:37%; line-height:25px; text-align:left">
                         <input type="text" class="text_short" name="hdfile_phanhoi" id="hdfile_phanhoi" value="{$obj_info.hdfile_phanhoi}" onfocus="hide_message_HdbandtFile();">&nbsp;<a href="javascript:void(0)" onclick="javascript:window.open('upload_hdbandt_file.php?form_file=frmList_HdbandtFile&field_file=hdfile_phanhoi','new_page','width=410,height=225')" >[ Tải lên ]</a>
                     </div>
-                    <div style="float:left; width:30%; line-height:25px; text-align:left">&nbsp;</div>
-                    <div style="float:left; width:70%; line-height:25px; text-align:left">
+                    <div style="float:left; width:15%; line-height:25px; text-align:left">Tình trạng:</div>
+                    <div style="float:left; width:30%; line-height:25px; text-align:left">
+                        <select name="dthdban_tt_file" id="dthdban_tt_file" class="select_short" tabindex="17">
+                            <option value="1" {if $obj_info.dthdban_tt_file eq 1}selected="selected"{/if}>-&nbsp;Mới dự thảo</option>
+                            <option value="2" {if $obj_info.dthdban_tt_file eq 2}selected="selected"{/if}>-&nbsp;Trưởng phòng đã duyệt</option>
+                            <option value="3" {if $obj_info.dthdban_tt_file eq 3}selected="selected"{/if}>-&nbsp;Giám đốc đã duyệt</option>
+                            <option value="4" {if $obj_info.dthdban_tt_file eq 4}selected="selected"{/if}>-&nbsp;Đã ký kết</option>
+                            <option value="5" {if $obj_info.dthdban_tt_file eq 5}selected="selected"{/if}>-&nbsp;Đã hủy bỏ</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div style="float:left; width:23%; line-height:25px; text-align:left">&nbsp;</div>
+                    <div style="float:left; width:77%; line-height:25px; text-align:left">
                         <input type="button" name="btnSub_HdbandtFile" id="btnSub_HdbandtFile" value="Ghi lại" class="button" tabindex="14"/>
                         <input type="hidden" name="hdfile_id" id="hdfile_id" value="{$obj_info.hdfile_id}">
                         <input type="hidden" name="dthdban_sohd" id="dthdban_sohd" value="{$dthdban_info.dthdban_sohd}">
+                        <input type="hidden" name="hdfile_nguoiduthao" id="hdfile_nguoiduthao" value="{$dthdban_info.hdfile_nguoiduthao}">
+                        <input type="hidden" name="hdfile_ngayduthao" id="hdfile_ngayduthao" value="{$dthdban_info.hdfile_ngayduthao}">
                         <input type="hidden" name="dthdban_id" id="dthdban_id" value="{if $dthdban_id neq ''}{$dthdban_id}{else}{$dthdban_info.dthdban_id}{/if}">
                         <input type="reset" name="Reset" value="Hủy bỏ" class="button" tabindex="15"/>
                         {literal}
@@ -79,6 +93,11 @@
                                         var dthdban_sohd 	= $form.find('input#dthdban_sohd').val();
                                         var hdfile_id 		= $form.find('input#hdfile_id').val();
 
+                                        var hdfile_nguoiduthao 		= $form.find('input#hdfile_nguoiduthao').val();
+                                        var hdfile_ngayduthao 		= $form.find('input#hdfile_ngayduthao').val();
+
+                                        var dthdban_tt_file = $form.find('select#dthdban_tt_file :selected').val();
+
                                         //begin validate form
                                         if (hdfile_name == "" || hdfile_path == "" || dthdban_id == ""){
                                             $('#lblError_HdbandtFile').show();
@@ -93,6 +112,10 @@
                                                     dthdban_id:dthdban_id,
                                                     dthdban_sohd:dthdban_sohd,
                                                     hdfile_id:hdfile_id,
+                                                    dthdban_tt_file:dthdban_tt_file,
+
+                                                    hdfile_nguoiduthao:hdfile_nguoiduthao,ư
+                                                    hdfile_ngayduthao:hdfile_ngayduthao
                                                 },
                                                 function(data){
                                                     $('#list_dthdban_file_cont').html(data);
@@ -112,18 +135,20 @@
         </table>
     </fieldset>
     <!------------------------------------DANH SACH---------------------------------------------->
-    <fieldset style="width:588px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px; height:204px">
+    <fieldset style="width:788px; border:1px solid #99bbe8; margin-left:3px; margin-top:5px; height:194px">
         <legend class="legend"><div style="width:130px; float:left">Danh sách: {$total_num_result}</div></legend>
         <div style="float:left; height:5px; width:100%"></div>
-        <div style="float:left; height:25px; width:570px; border-top:1px solid #99bbe8; border-bottom:1px solid #99bbe8 ">
+        <div style="float:left; height:25px; width:770px; border-top:1px solid #99bbe8; border-bottom:1px solid #99bbe8 ">
             <div class="tbl_tit" style="width:30px; text-align:center"><b>STT</b></div>
             <div class="tbl_tit" style="width:150px"><B>&nbsp;Tên tệp tin</B></div>
+            <div class="tbl_tit" style="width:90px"><B>&nbsp;Ngày dự thảo</B></div>
             <div class="tbl_tit" style="width:60px"><B>&nbsp;Dự thảo</B></div>
-            <div class="tbl_tit" style="width:60px"><B>&nbsp;Phản hồi</B></div>
-            <div class="tbl_tit" style="width:205px"><B>&nbsp;Ghi chú</B></div>
-            <div class="tbl_tit" style="width:90px; text-align:center"><B>Chọn</B></div>
+            <div class="tbl_tit" style="width:222px; color: #000000"><B>&nbsp;Ý kiến phản hồi</B></div>
+            <div class="tbl_tit" style="width:90px; color: #000000"><B>&nbsp;Ngày phản hồi</B></div>
+            <div class="tbl_tit" style="width:60px; color: #000000"><B>&nbsp;Phản hồi</B></div>
+            <div class="tbl_tit" style="width:60px; text-align:center"><B>Chọn</B></div>
         </div>
-        <div style="float:left; height:150px; width:588px; overflow-y:scroll">
+        <div style="float:left; height:140px; width:788px; overflow-y:scroll">
             {section name=pi loop=$obj_list}
                 {if $smarty.section.pi.index is not div by 2}
                     {assign var="class_td" value="tbl_cont"}
@@ -138,29 +163,37 @@
                             &nbsp;<a href='javascript: void(0);' onclick="edit_me_HdbandtFile({$obj_list[pi]->hdfile_id})">{$obj_list[pi]->hdfile_name|str_string_cut:"25":"1"}</a>
                         {else}{$obj_list[pi]->hdfile_name}{/if}
                     </div>
+                    <div class="{$class_td}" style="width:90px; text-align:center">
+                        {$obj_list[pi]->hdfile_ngayduthao|date_format:"%d/%m/%Y"}
+                    </div>
                     <div class="{$class_td}" style="width:60px; text-align:center">
                         <a href='{$obj_list[pi]->hdfile_path}' target="new">[Xem file]</a>
                     </div>
-                    <div class="{$class_td}" style="width:60px; text-align:center">
+                    <div class="{$class_td}" style="width:222px; color: #000000 white-space:nowrap" title="{$obj_list[pi]->hdfile_ykien}">
+                        {if $obj_list[pi]->hdfile_ykien}
+                            {$obj_list[pi]->hdfile_ykien|str_string_cut:"45":"1"}
+                        {else}&nbsp;{/if}
+                    </div>
+                    <div class="{$class_td}" style="width:90px; color: #000000; text-align:center">
+                        {if $obj_list[pi]->hdfile_ngayykien neq ''}
+                        {$obj_list[pi]->hdfile_ngayykien|date_format:"%d/%m/%Y"}
+                        {else}
+                            &nbsp;
+                        {/if}
+                    </div>
+                    <div class="{$class_td}" style="width:60px; color: #000000; text-align:center">
                         {if $obj_list[pi]->hdfile_phanhoi neq ''}
                         <a href='{$obj_list[pi]->hdfile_phanhoi}' target="new">[Xem file]</a>
                         {else}
                             Chưa có
                         {/if}
                     </div>
-                    <div class="{$class_td}" style="width:205px; white-space:nowrap" title="{$obj_list[pi]->hdfile_ykien}">
-                        {if $obj_list[pi]->hdfile_ykien}
-                            {$obj_list[pi]->hdfile_ykien|str_string_cut:"45":"1"}
-                        {else}&nbsp;{/if}
+                    <div class="{$class_td}" style="width:29px; text-align:center">
+                        <a href='javascript: void(0);' onclick="edit_me_HdbandtFile({$obj_list[pi]->hdfile_id})">
+                            <img src="../images/admin/b_edit.png" width="11" height="11" border="0" title="Sửa"></a>
                     </div>
                     <div class="{$class_td}" style="width:29px; text-align:center">
-                        {if $obj_list[pi]->user_id eq $access_user_id}
-                            <a href='javascript: void(0);' onclick="edit_me_HdbandtFile({$obj_list[pi]->hdfile_id})">
-                                <img src="../images/admin/b_edit.png" width="11" height="11" border="0" title="Sửa"></a>
-                        {else}-{/if}
-                    </div>
-                    <div class="{$class_td}" style="width:29px; text-align:center">
-                        {if $obj_list[pi]->user_id eq $access_user_id}
+                        {if $obj_list[pi]->hdfile_nguoiduthao eq $access_user_id}
                             <a href='javascript: void(0)' onClick="delItems_HdbandtFile('{$processurl}', {$obj_list[pi]->hdfile_id});">
                                 <img src="../images/admin/b_drop.png" width="11" height="11" border="0" title="Xóa"></a>
                         {else}-{/if}

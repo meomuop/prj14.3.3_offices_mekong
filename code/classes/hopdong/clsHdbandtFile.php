@@ -10,10 +10,12 @@ class hdbandtFile_class extends dbBasic {
     var  $dthdban_sohd;
     var  $hdfile_name;
     var  $hdfile_path;
+    var  $hdfile_ngayduthao;
+    var  $hdfile_nguoiduthao;
     var  $hdfile_phanhoi;
     var  $hdfile_ykien;
-    var  $user_id;
-    var  $hdfile_date;
+    var  $hdfile_ngayykien;
+    var  $hdfile_nguoiykien;
     var  $hdfile_status;
 
     var $pfields = array (
@@ -22,10 +24,12 @@ class hdbandtFile_class extends dbBasic {
         'dthdban_sohd',
         'hdfile_name',
         'hdfile_path',
+        'hdfile_ngayduthao',
+        'hdfile_nguoiduthao',
         'hdfile_phanhoi',
         'hdfile_ykien',
-        'user_id',
-        'hdfile_date',
+        'hdfile_ngayykien',
+        'hdfile_nguoiykien',
         'hdfile_status'); //table private fields
 
     var $pkeys = array ('hdfile_id'); //key fields
